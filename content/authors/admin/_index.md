@@ -1,48 +1,50 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include Computational Hydrology, Climate Research, Data Visualization, and Science Communication
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
+  - course: PhD in Geography (in progress)
+    institution: University of North Carolina - Chapel Hill
+    year: 2021
+  - course: MA in Geography
+    institution: University of Cincinnati
+    year: 2016
+  - course: BA in Geography
+    institution: University of Cincinnati
     year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
 email: ""
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-name: Nelson Bighetti
+- Computational Hydrology
+- Climate Change
+- Data Visualization
+- Science Communication
+name: Andrew Murray
 organizations:
-- name: Stanford University
+- name: University of North Carolina - Chapel Hill
   url: ""
-role: Professor of Artificial Intelligence
+role: PhD Student
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/A_MURRAY89
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?hl=en&user=UTeWBUI2G30C
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/ARMurray
 superuser: true
 user_groups:
 - Researchers
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+I am a PhD student in the [Carbonshed lab] (http://diegori.web.unc.edu/) at the University of North Carolina - Chapel Hill working
+under the advisement of Dr. Diego Riveros-Iregui. My research interests focus on surface-groundwater interactions
+and vulnerability to human health from various sources of contamination. I am currently researching carbon flux
+rates from freshwater streams and rivers to the atmosphere. I am also researching potential vulnerability of private water well
+systems to contamination from hydraulic fracturing activities accross the United States.
