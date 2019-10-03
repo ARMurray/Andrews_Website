@@ -13,7 +13,7 @@ education:
   - course: BA in Geography
     institution: University of Cincinnati
     year: 2012
-email: ""
+email: "armurray@live.unc.edu"
 interests:
 - Computational Hydrology
 - Climate Change
