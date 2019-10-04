@@ -28,8 +28,53 @@
   </url>
   
   <url>
+    <loc>/authors/admin/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/journal-article/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/robert-ford/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/source-themes/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2065-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -43,11 +88,6 @@
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/publication_types/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
@@ -55,31 +95,6 @@
   <url>
     <loc>/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -103,8 +118,168 @@
   </url>
   
   <url>
+    <loc>/tags/fracking/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/methane/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/wells/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/andrew-murray/</loc>
+    <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/ok_wells/</loc>
+    <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/fran-kremer/</loc>
+    <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/james-weaver/</loc>
+    <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/bo-yang/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/christopher-nietch/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/beck_2017/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/dana-macke/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/erich-emery/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/garrett-stillings/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/haibin-suh/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/hongxing-liu/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/jade-young/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/joseph-harwood/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/kevin-berling/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/mark-martin/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/min-xu/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/molly-reif/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/qiusheng-wu/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/richard-beck/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/richard-stump/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/shengan-zhan/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/shujie-wang/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/song-shu/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/susanna-tong/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/yan-huang/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/zhaoxia-ye/</loc>
+    <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/beck_2016/</loc>
+    <lastmod>2016-06-01T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -140,21 +315,6 @@
   <url>
     <loc>/post/getting-started/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/robert-ford/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

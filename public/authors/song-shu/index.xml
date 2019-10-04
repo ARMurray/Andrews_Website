@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Song Shu on Andrew Murray</title>
+    <link>/authors/song-shu/</link>
+    <description>Recent content in Song Shu on Andrew Murray</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 May 2017 00:00:00 -0400</lastBuildDate>
+    
+	    <atom:link href="/authors/song-shu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comparison of Satellite Reflectance Algorithms for Estimating Phycocyanin Values and Cyanobacterial Total Biovolume in a Temperate Reservoir Using Coincident Hyperspectral Aircraft Imagery and Dense Coincident Surface Observations</title>
+      <link>/publication/beck_2017/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/beck_2017/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
+      <link>/publication/beck_2016/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/beck_2016/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
