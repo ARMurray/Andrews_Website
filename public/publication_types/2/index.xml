@@ -6,7 +6,7 @@
     <description>Recent content in 2 on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2065 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>An example journal article</title>
       <link>/publication/journal-article/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Sep 2065 00:00:00 +0000</pubDate>
       
       <guid>/publication/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
@@ -30,6 +30,36 @@
 &lt;/div&gt;
 
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Estimation of the proximity of private domestic wells to underground storage tanks: Oklahoma pilot study</title>
+      <link>/publication/ok_wells/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/ok_wells/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparison of Satellite Reflectance Algorithms for Estimating Phycocyanin Values and Cyanobacterial Total Biovolume in a Temperate Reservoir Using Coincident Hyperspectral Aircraft Imagery and Dense Coincident Surface Observations</title>
+      <link>/publication/beck_2017/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/beck_2017/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
+      <link>/publication/beck_2016/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/beck_2016/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
