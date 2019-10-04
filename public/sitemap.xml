@@ -35,6 +35,7 @@
   <url>
     <loc>/publication_types/2/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -45,16 +46,19 @@
   <url>
     <loc>/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -65,16 +69,19 @@
   <url>
     <loc>/authors/robert-ford/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/source-themes/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2065-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -90,6 +97,7 @@
   <url>
     <loc>/publication_types/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -110,6 +118,7 @@
   <url>
     <loc>/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -118,23 +127,26 @@
   </url>
   
   <url>
-    <loc>/tags/fracking/</loc>
-    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/methane/</loc>
-    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>/tags/fracking/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/methane/</loc>
+    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/wells/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -145,6 +157,7 @@
   <url>
     <loc>/authors/andrew-murray/</loc>
     <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -155,21 +168,25 @@
   <url>
     <loc>/authors/fran-kremer/</loc>
     <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/james-weaver/</loc>
     <lastmod>2017-12-31T00:00:00-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/bo-yang/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/christopher-nietch/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -180,101 +197,121 @@
   <url>
     <loc>/authors/dana-macke/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/erich-emery/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/garrett-stillings/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/haibin-suh/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/hongxing-liu/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/jade-young/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/joseph-harwood/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/kevin-berling/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/mark-martin/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/min-xu/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/molly-reif/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/qiusheng-wu/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/richard-beck/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/richard-stump/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/shengan-zhan/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/shujie-wang/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/song-shu/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/susanna-tong/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/yan-huang/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/zhaoxia-ye/</loc>
     <lastmod>2017-05-03T00:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -285,11 +322,13 @@
   <url>
     <loc>/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/demo/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -305,11 +344,13 @@
   <url>
     <loc>/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/academic/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -320,6 +361,7 @@
   <url>
     <loc>/categories/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -328,28 +370,33 @@
   </url>
   
   <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/r/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/1/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
