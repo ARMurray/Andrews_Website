@@ -48,3 +48,5 @@ under the advisement of Dr. Diego Riveros-Iregui. My research interests focus on
 and vulnerability to human health from various sources of contamination. I am currently researching carbon flux
 rates from freshwater streams and rivers to the atmosphere. I am also researching potential vulnerability of private water well
 systems to contamination from hydraulic fracturing activities accross the United States.
+
+<a class="twitter-timeline" data-width="1000" data-height="850" href="https://twitter.com/A_MURRAY89?ref_src=twsrc%5Etfw">Tweets by A_MURRAY89</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
