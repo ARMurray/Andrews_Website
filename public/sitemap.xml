@@ -106,17 +106,6 @@
   </url>
   
   <url>
-    <loc>/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
@@ -315,6 +304,23 @@
   </url>
   
   <url>
+    <loc>/tags/carbon/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/climate/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/endeavors/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -363,11 +369,12 @@
   </url>
   
   <url>
-    <loc>/slides/soil_moisture/</loc>
+    <loc>/tags/hurricanes/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/hurricanes/</loc>
+    <loc>/slides/</loc>
     <priority>0</priority>
   </url>
   
@@ -383,6 +390,10 @@
   <url>
     <loc>/tags/water/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/slides/soil_moisture/slides/</loc>
   </url>
   
 </urlset>

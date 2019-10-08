@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carbon on Andrew Murray</title>
+    <link>/tags/carbon/</link>
+    <description>Recent content in Carbon on Andrew Murray</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/tags/carbon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Climate Game Changers</title>
+      <link>/post/endeavors/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/endeavors/</guid>
+      <description>&lt;p&gt;Check out the story on our field work in Ecuador this past summer as it appears in the UNC endeavors magazine.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
