@@ -2,32 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Garrett Stillings on Andrew Murray</title>
-    <link>/authors/garrett-stillings/</link>
+    <link>https://amurraygeo.com/authors/garrett-stillings/</link>
     <description>Recent content in Garrett Stillings on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 May 2017 00:00:00 -0400</lastBuildDate>
     
-	    <atom:link href="/authors/garrett-stillings/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/authors/garrett-stillings/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Comparison of Satellite Reflectance Algorithms for Estimating Phycocyanin Values and Cyanobacterial Total Biovolume in a Temperate Reservoir Using Coincident Hyperspectral Aircraft Imagery and Dense Coincident Surface Observations</title>
-      <link>/publication/beck_2017/</link>
+      <link>https://amurraygeo.com/publication/beck_2017/</link>
       <pubDate>Wed, 03 May 2017 00:00:00 -0400</pubDate>
       
-      <guid>/publication/beck_2017/</guid>
+      <guid>https://amurraygeo.com/publication/beck_2017/</guid>
       <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
-      <link>/publication/beck_2016/</link>
-      <pubDate>Wed, 01 Jun 2016 00:00:00 -0400</pubDate>
+      <link>https://amurraygeo.com/publication/beck_2016/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/beck_2016/</guid>
-      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>https://amurraygeo.com/publication/beck_2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;We compared 10 established and 2 new satellite reflectance algorithms for estimating chlorophyll-a (Chl-a) in a temperate reservoir in southwest Ohio using coincident hyperspectral aircraft imagery and dense coincident surface observations collected within 1 h of image acquisition to develop simple proxies for algal blooms in water bodies sensitive to algal blooms (especially toxic or harmful algal blooms (HABs)) and to facilitate portability between multispectral satellite imagers for regional algal bloom monitoring. All algorithms were compared with narrow band hyperspectral aircraft images. These images were subsequently upscaled spectrally and spatially to simulate 5 current and near future satellite imaging systems. Established and new Chl-a algorithms were then applied to the synthetic satellite images and compared to coincident surface observations of Chl-a collected from 44 sites within 1 h of aircraft acquisition of the imagery. We found several promising algorithm/satellite imager combinations for routine Chl-a estimation in smaller inland water bodies with operational and near-future satellite systems. The CI, MCI, FLH, NDCI, 2BDA and 3 BDA Chl-a algorithms worked well with CASI imagery. The NDCI, 2BDA, and 3BDA Chl-a algorithms worked well with simulated WorldView-2 and 3, Sentinel-2, and MERIS-like imagery. NDCI was the most widely applicable Chl-a algorithm with good performance for CASI, WorldView 2 and 3, Sentinel-2 and MERIS-like imagery and limited performance with MODIS imagery. A new fluorescence line height “greenness” algorithm yielded the best Chl-a estimates with simulated Landsat-8 imagery.&lt;/p&gt;
 </description>
     </item>
     

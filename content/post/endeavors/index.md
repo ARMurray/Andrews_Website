@@ -1,5 +1,5 @@
 ---
-date: "2016-04-27T00:00:00Z"
+date: "2019-10-03T00:00:00Z"
 external_link: 
 image:
   caption: Photo by Alysa LaFaro
@@ -13,5 +13,5 @@ title: Climate Game Changers
 
 ---
 
-Check out the story on our field work in Ecuador this past summer as it appears in the UNC endeavors magazine.
+Check out the story on our field work in Ecuador this past summer as it appears in the [UNC endeavors magazine](https://endeavors.unc.edu/climate-game-changers/).
 
