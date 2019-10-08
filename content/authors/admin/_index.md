@@ -37,6 +37,7 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/ARMurray
+
 superuser: true
 user_groups:
 - Researchers

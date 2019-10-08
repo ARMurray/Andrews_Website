@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Andrew Murray</title>
-    <link>/authors/andrew-murray/</link>
+    <link>https://amurraygeo.com/authors/andrew-murray/</link>
     <description>Recent content on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 Dec 2017 00:00:00 -0500</lastBuildDate>
     
-	    <atom:link href="/authors/andrew-murray/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/authors/andrew-murray/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Estimation of the proximity of private domestic wells to underground storage tanks: Oklahoma pilot study</title>
-      <link>/publication/ok_wells/</link>
+      <link>https://amurraygeo.com/publication/ok_wells/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 -0500</pubDate>
       
-      <guid>/publication/ok_wells/</guid>
+      <guid>https://amurraygeo.com/publication/ok_wells/</guid>
       <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Comparison of Satellite Reflectance Algorithms for Estimating Phycocyanin Values and Cyanobacterial Total Biovolume in a Temperate Reservoir Using Coincident Hyperspectral Aircraft Imagery and Dense Coincident Surface Observations</title>
-      <link>/publication/beck_2017/</link>
+      <link>https://amurraygeo.com/publication/beck_2017/</link>
       <pubDate>Wed, 03 May 2017 00:00:00 -0400</pubDate>
       
-      <guid>/publication/beck_2017/</guid>
+      <guid>https://amurraygeo.com/publication/beck_2017/</guid>
       <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
-      <link>/publication/beck_2016/</link>
+      <link>https://amurraygeo.com/publication/beck_2016/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 -0400</pubDate>
       
-      <guid>/publication/beck_2016/</guid>
+      <guid>https://amurraygeo.com/publication/beck_2016/</guid>
       <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
