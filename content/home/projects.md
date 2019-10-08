@@ -26,8 +26,16 @@ subtitle = ""
     tag = "*"
   
   [[content.filter_button]]
-    name = "Deep Learning"
-    tag = "Deep Learning"
+    name = "Water"
+    tag = "Water"
+  
+  [[content.filter_button]]
+    name = "Carbon"
+    tag = "Carbon"
+    
+  [[content.filter_button]]
+    name = "Climate"
+    tag = "Climate"
   
   [[content.filter_button]]
     name = "Other"
