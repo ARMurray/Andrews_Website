@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Andrew Murray</title>
-    <link>https://amurraygeo.com/</link>
+    <link>/</link>
     <description>Recent content on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Example Page 1</title>
-      <link>https://amurraygeo.com/courses/example/example1/</link>
+      <link>/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/example/example1/</guid>
+      <guid>/courses/example/example1/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
@@ -49,20 +49,20 @@
     
     <item>
       <title>Lecture 1</title>
-      <link>https://amurraygeo.com/courses/watershed/topic1/</link>
+      <link>/courses/watershed/topic1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/watershed/topic1/</guid>
+      <guid>/courses/watershed/topic1/</guid>
       <description>&lt;p&gt;Welcome to Watershed Hydrology!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Example Page 2</title>
-      <link>https://amurraygeo.com/courses/example/example2/</link>
+      <link>/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/example/example2/</guid>
+      <guid>/courses/example/example2/</guid>
       <description>
 
 &lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
@@ -95,10 +95,10 @@
     
     <item>
       <title>Example Talk</title>
-      <link>https://amurraygeo.com/talk/example/</link>
+      <link>/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/talk/example/</guid>
+      <guid>/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -119,20 +119,20 @@
     
     <item>
       <title>Climate Game Changers</title>
-      <link>https://amurraygeo.com/post/endeavors/</link>
+      <link>/post/endeavors/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/post/endeavors/</guid>
+      <guid>/post/endeavors/</guid>
       <description>&lt;p&gt;Check out the story on our field work in Ecuador this past summer as it appears in the &lt;a href=&#34;https://endeavors.unc.edu/climate-game-changers/&#34; target=&#34;_blank&#34;&gt;UNC endeavors magazine&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Vulnerability to Domestic Wells from Hydraulic Fracturing</title>
-      <link>https://amurraygeo.com/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</link>
+      <link>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</guid>
+      <guid>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</guid>
       <description>&lt;p&gt;##Update&lt;/p&gt;
 
 &lt;p&gt;Follow along with my research on understanding domestic wells at risk to effects from methane migration stemming from hydraulic fracturing activity. &lt;a href=&#34;https://amurraygeo.com/project/domestic-wells-and-fracking/&#34; target=&#34;_blank&#34;&gt;This living document&lt;/a&gt; is being created in the spirit of open and reproducible research. Most of the analysis is done with the R statistical language and is presented exactly as executed. All of the data is free and publicly accessible. This will allow others to reproduce everything exactly, or plug in their own data. It also allows others to offer critiques or feedback on the methods.&lt;/p&gt;
@@ -140,31 +140,35 @@
     </item>
     
     <item>
-      <title>Estimation of the proximity of private domestic wells to underground storage tanks: Oklahoma pilot study</title>
-      <link>https://amurraygeo.com/publication/ok_wells/</link>
-      <pubDate>Sun, 31 Dec 2017 00:00:00 -0500</pubDate>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/publication/ok_wells/</guid>
-      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Comparison of Satellite Reflectance Algorithms for Estimating Phycocyanin Values and Cyanobacterial Total Biovolume in a Temperate Reservoir Using Coincident Hyperspectral Aircraft Imagery and Dense Coincident Surface Observations</title>
-      <link>https://amurraygeo.com/publication/beck_2017/</link>
-      <pubDate>Wed, 03 May 2017 00:00:00 -0400</pubDate>
+      <title>Estimation of the proximity of private domestic wells to underground storage tanks: Oklahoma pilot study</title>
+      <link>/publication/weaver_2017/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/publication/beck_2017/</guid>
-      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>/publication/weaver_2017/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;For protecting drinking water supplies, the locations of areas with reliance on private domestic wells (hereafter referred to as “wells”) and their relationship to contaminant sources need to be determined. A key resource in the U.S. was the 1990 Census where the source of domestic drinking water was a survey question. Two methods are developed to update estimates of the areal density of well use using readily accessible data. The first uses well logs reported to the states and the addition of housing units reported to the Census Bureau at the county, census tract and census block group scales. The second uses housing units reported to the Census and an estimated well use fraction. To limit the scope and because of abundant data, Oklahoma was used for a pilot project. The resulting well density estimates were consistent among spatial scales, and were statistically similar. High rates of well use were identified to the north and east of Oklahoma City, primarily in expanding cities located over a productive aquifer. In contrast, low rates of well use were identified in rural areas without public water systems and in Oklahoma&amp;rsquo;s second largest city, Tulsa, each attributable to lack of suitable ground water. High densities of well use may be expected in rural areas without public water systems, expanding cities and suburbs, and legacy areas of well usage. The completeness of reported well logs was tested by counts from neighborhoods with known reliance on wells which showed reporting rates of 20% to 98%. Well densities in these neighborhoods were higher than the larger-scale estimates indicating that locally high densities typically exist within analysis units. A Monte Carlo procedure was used to determine that 27% of underground storage tanks that had at least one well within a typical distance of concern of 300 m (1000 ft).&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
-      <link>https://amurraygeo.com/publication/beck_2016/</link>
+      <link>/publication/beck_2016/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/publication/beck_2016/</guid>
+      <guid>/publication/beck_2016/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -175,56 +179,28 @@
     
     <item>
       <title>Soil Moisture</title>
-      <link>https://amurraygeo.com/project/soil-moisture/</link>
+      <link>/project/soil-moisture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/project/soil-moisture/</guid>
+      <guid>/project/soil-moisture/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-true
-&lt;/div&gt;
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;R Markdown&lt;/h2&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;When you click the &lt;strong&gt;Knit&lt;/strong&gt; button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;soil-moisture-and-groundwater-vulnerability&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Soil Moisture and Groundwater Vulnerability&lt;/h2&gt;
+&lt;p&gt;Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn’t matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:soilTexture&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: USDA Soil Texture Triangle
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;including-plots&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Including Plots&lt;/h2&gt;
 &lt;p&gt;You can also embed plots, for example:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/project/Soil-Moisture/index_files/figure-html/pressure-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Soil-Moisture/index_files/figure-html/pressure-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Note that the &lt;code&gt;echo = FALSE&lt;/code&gt; parameter was added to the code chunk to prevent printing of the R code that generated the plot.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slides_try</title>
-      <link>https://amurraygeo.com/slides/soil_moisture/slides/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://amurraygeo.com/slides/soil_moisture/slides/</guid>
-      <description>
-
-
-&lt;div id=&#34;soil-moisture-and-hurricanes-a-dope-presentation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Soil Moisture and Hurricanes | A dope presentation&lt;/h2&gt;
-&lt;p&gt;These slides will guide you through the relationships between soil moisture, land use and geophysical variables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;this-is-another-slide&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;This is another slide&lt;/h1&gt;
-&lt;div id=&#34;is-this-a-third-slide&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Is this a third slide?&lt;/h2&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

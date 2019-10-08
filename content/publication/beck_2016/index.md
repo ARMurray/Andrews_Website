@@ -30,9 +30,7 @@ image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
   focal_point: ""
   preview_only: false
-links:
-- name: Custom Link
-  url: http://example.org
+
 projects:
 - internal-project
 publication: In *Remote Sensing of the Environment*
@@ -53,7 +51,6 @@ url_project: ""
 url_slides: ""
 url_source: 
 url_video:
-url_custom:
 
 
 ---

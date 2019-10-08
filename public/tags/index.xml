@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Andrew Murray</title>
-    <link>https://amurraygeo.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Carbon</title>
-      <link>https://amurraygeo.com/tags/carbon/</link>
+      <link>/tags/carbon/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/carbon/</guid>
+      <guid>/tags/carbon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Climate</title>
-      <link>https://amurraygeo.com/tags/climate/</link>
+      <link>/tags/climate/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/climate/</guid>
+      <guid>/tags/climate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fracking</title>
-      <link>https://amurraygeo.com/tags/fracking/</link>
+      <link>/tags/fracking/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/fracking/</guid>
+      <guid>/tags/fracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>methane</title>
-      <link>https://amurraygeo.com/tags/methane/</link>
+      <link>/tags/methane/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/methane/</guid>
+      <guid>/tags/methane/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wells</title>
-      <link>https://amurraygeo.com/tags/wells/</link>
+      <link>/tags/wells/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/wells/</guid>
+      <guid>/tags/wells/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Water</title>
-      <link>https://amurraygeo.com/tags/water/</link>
+      <link>/tags/water/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/water/</guid>
+      <guid>/tags/water/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hurricanes</title>
-      <link>https://amurraygeo.com/tags/hurricanes/</link>
+      <link>/tags/hurricanes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/hurricanes/</guid>
+      <guid>/tags/hurricanes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Soil Moisture</title>
-      <link>https://amurraygeo.com/tags/soil-moisture/</link>
+      <link>/tags/soil-moisture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/soil-moisture/</guid>
+      <guid>/tags/soil-moisture/</guid>
       <description></description>
     </item>
     

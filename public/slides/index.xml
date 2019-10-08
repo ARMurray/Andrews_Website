@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on Andrew Murray</title>
-    <link>https://amurraygeo.com/slides/</link>
+    <link>/slides/</link>
     <description>Recent content in Slides on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     
-	    <atom:link href="https://amurraygeo.com/slides/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/slides/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>slides_try</title>
-      <link>https://amurraygeo.com/slides/soil_moisture/slides/</link>
+      <link>/slides/soil_moisture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/slides/soil_moisture/slides/</guid>
+      <guid>/slides/soil_moisture/</guid>
       <description>
 
 

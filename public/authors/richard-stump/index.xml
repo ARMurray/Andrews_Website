@@ -2,31 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richard Stump on Andrew Murray</title>
-    <link>https://amurraygeo.com/authors/richard-stump/</link>
+    <link>/authors/richard-stump/</link>
     <description>Recent content in Richard Stump on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 May 2017 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/authors/richard-stump/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/authors/richard-stump/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Comparison of Satellite Reflectance Algorithms for Estimating Phycocyanin Values and Cyanobacterial Total Biovolume in a Temperate Reservoir Using Coincident Hyperspectral Aircraft Imagery and Dense Coincident Surface Observations</title>
-      <link>https://amurraygeo.com/publication/beck_2017/</link>
-      <pubDate>Wed, 03 May 2017 00:00:00 -0400</pubDate>
-      
-      <guid>https://amurraygeo.com/publication/beck_2017/</guid>
-      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
-      <link>https://amurraygeo.com/publication/beck_2016/</link>
+      <link>/publication/beck_2016/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/publication/beck_2016/</guid>
+      <guid>/publication/beck_2016/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
