@@ -2,102 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Andrew Murray</title>
-    <link>https://amurraygeo.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2065 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Source Themes</title>
-      <link>https://amurraygeo.com/tags/source-themes/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <link>/tags/source-themes/</link>
+      <pubDate>Tue, 01 Sep 2065 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/source-themes/</guid>
+      <guid>/tags/source-themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fracking</title>
-      <link>https://amurraygeo.com/tags/fracking/</link>
+      <link>/tags/fracking/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/fracking/</guid>
+      <guid>/tags/fracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>methane</title>
-      <link>https://amurraygeo.com/tags/methane/</link>
+      <link>/tags/methane/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/methane/</guid>
+      <guid>/tags/methane/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wells</title>
-      <link>https://amurraygeo.com/tags/wells/</link>
+      <link>/tags/wells/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/wells/</guid>
+      <guid>/tags/wells/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>https://amurraygeo.com/tags/deep-learning/</link>
+      <link>/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/deep-learning/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>https://amurraygeo.com/tags/demo/</link>
+      <link>/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Academic</title>
-      <link>https://amurraygeo.com/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://amurraygeo.com/tags/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>https://amurraygeo.com/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://amurraygeo.com/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>plot</title>
-      <link>https://amurraygeo.com/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://amurraygeo.com/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>regression</title>
-      <link>https://amurraygeo.com/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://amurraygeo.com/tags/regression/</guid>
+      <guid>/tags/demo/</guid>
       <description></description>
     </item>
     

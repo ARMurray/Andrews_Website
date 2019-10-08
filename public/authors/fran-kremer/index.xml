@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fran Kremer on Andrew Murray</title>
-    <link>https://amurraygeo.com/authors/fran-kremer/</link>
+    <link>/authors/fran-kremer/</link>
     <description>Recent content in Fran Kremer on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 Dec 2017 00:00:00 -0500</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/authors/fran-kremer/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/authors/fran-kremer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Estimation of the proximity of private domestic wells to underground storage tanks: Oklahoma pilot study</title>
-      <link>https://amurraygeo.com/publication/ok_wells/</link>
+      <link>/publication/ok_wells/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 -0500</pubDate>
       
-      <guid>https://amurraygeo.com/publication/ok_wells/</guid>
+      <guid>/publication/ok_wells/</guid>
       <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
