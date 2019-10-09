@@ -29,19 +29,16 @@ url_video: ""
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(soiltexture)
-```
+
 
 ## Soil Moisture and Groundwater Vulnerability
 
 Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn't matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water. 
 
-```{r soilTexture, echo=FALSE, fig.cap= "USDA Soil Texture Triangle", fig.width= 12, fig.height= 12}
-TT.plot( class.sys = "USDA.TT" )
-
-```
+<div class="figure">
+<img src="/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png" alt="USDA Soil Texture Triangle" width="1152" />
+<p class="caption">Figure 1: USDA Soil Texture Triangle</p>
+</div>
 Soil texture is one of the major drivers in a landscapes ability to handle water. It is not just percent sand / percent clay/ percent silt however, it is more complex than that. What is the slope of the land? Is it in a valley? How much sun does it get? Has the land been developed? How high is the water table? ... These are just a few questions that compound the difficulty of fully understanding how soil moisture changes through time and therefore how different landscapes respond to water received from extreme precipitation or other inputs such as overland flow caused by flooding (maybe extreme precipitation happened upstream). Luckily for us, we have access to an abundance of data that can be used to try to establish some of these relationships which may help us predict how different landscapes respond to extreme precipitation. If we can do this, we can then use this information to estimate areas that may be particularly vulnerable to groundwater contamination.
 
 ## Soil Moisture Data

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Overview on Andrew Murray</title>
-    <link>https://amurraygeo.com/courses/watershed/</link>
+    <link>/courses/watershed/</link>
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lecture 1</title>
-      <link>https://amurraygeo.com/courses/watershed/topic1/</link>
+      <link>/courses/watershed/topic1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/watershed/topic1/</guid>
+      <guid>/courses/watershed/topic1/</guid>
       <description>&lt;p&gt;Welcome to Watershed Hydrology!&lt;/p&gt;
 </description>
     </item>
