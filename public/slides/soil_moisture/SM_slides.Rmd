@@ -1,21 +1,26 @@
 ---
-title: "Habits"
-author: John Doe
-date: March 22, 2005
-output: ioslides_presentation
+title: "Soil Moisture Response to Extreme Precipitation Events"
+author: Andrew Murray
+date: 
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
 ---
-  
-  # In the morning
-  
-  ## Getting up
-  
-  - Turn off alarm
-- Get out of bed
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
 
-## Breakfast
+```
 
+
+## <span style="color:white">Hurricane</span> {data-background="C:/Users/ARMur/OneDrive - University of North Carolina at Chapel Hill/website_rebuild/Andrews_Website/static/img/hurricane_space.jpg"}
+
+<span style="color:white">
 - Eat eggs
 - Drink coffee
+
+</span>
 
 # In the evening
 
