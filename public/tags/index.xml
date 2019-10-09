@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hurricanes</title>
+      <link>/tags/hurricanes/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hurricanes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Soil Moisture</title>
+      <link>/tags/soil-moisture/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/soil-moisture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Water</title>
+      <link>/tags/water/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/water/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Carbon</title>
@@ -53,33 +80,6 @@
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/wells/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Water</title>
-      <link>/tags/water/</link>
-      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/water/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hurricanes</title>
-      <link>/tags/hurricanes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hurricanes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Soil Moisture</title>
-      <link>/tags/soil-moisture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/soil-moisture/</guid>
       <description></description>
     </item>
     
