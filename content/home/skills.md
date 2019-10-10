@@ -18,18 +18,29 @@ subtitle = ""
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "90%"
+  description = "Geocomputation / Data Vizualization / Statistics"
+
+[[feature]]
+  icon = "map-marked-alt"
+  icon_pack = "fas"
+  name = "GIS"
+  description = "Expert in ESRI Products"
   
 [[feature]]
-  icon = "chart-line"
+  icon = "globe-americas"
   icon_pack = "fas"
-  name = "Statistics"
-  description = "100%"  
+  name = "Remote Sensing"
+  description = "ENVI"  
   
 [[feature]]
-  icon = "camera-retro"
-  icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  icon = "python"
+  icon_pack = "fab"
+  name = "Python"
+  description = "Scripting"
+  
+[[feature]]
+  icon = "github"
+  icon_pack = "fab"
+  name = "Github"
 
 +++

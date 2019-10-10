@@ -21,3 +21,7 @@ Requisites: Prerequisite, ENEC 202 or GEOG 110; permission of the instructor for
 Gen Ed: PL, EE- Field Work.
 Grading status: Letter grade.
 
+
+### Book for the course
+![](/img/hornberger.jpg)
+
