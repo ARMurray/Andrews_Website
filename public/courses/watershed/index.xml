@@ -17,7 +17,27 @@
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
       <guid>/courses/watershed/topic1/</guid>
-      <description>&lt;p&gt;Welcome to Watershed Hydrology!&lt;/p&gt;
+      <description>
+
+&lt;h2 id=&#34;what-is-hydrology&#34;&gt;What is Hydrology?&lt;/h2&gt;
+
+&lt;p&gt;Water (quite literally) shapes the planet. It is something that relates to almost everything important in our lives. The study of hydrology is a broad one and encompasses everything relating to the physical movement of water and the effects that water movement has on both the natural and built environments. Hornberger states that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;Hydrological science has aspects related to &amp;ldquo;curiosity-driven&amp;rdquo; questions and to &amp;ldquo;problem-driven&amp;rdquo; questions. The first aspect relates to questions about how the Earth works, and specifically about the role of water in natural processes. The second relates to using scientific knowledge to provide a sound basis for the proper use and protection of water resources&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Curiosity-driven:&lt;/strong&gt; How was the Grand Canyon formed?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem-driven:&lt;/strong&gt; Where is all of this nitrogen coming from that&amp;rsquo;s in our drinking water?&lt;/p&gt;
+
+&lt;p&gt;The study of water has long been driven by both of these types of questions. Even thousands of years ago, humans were concerned with supplying water to irrigate land and providing a water source for their populations. As humanity has grown, our needs for water have grown in both volume and complexity. With the advancements in computing over the past fifty years, our ability to dive deeper into hydrological modelling has also grown. Today we use computers and mountains of data to try and tackle all sorts of interesting problems.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-will-we-study-hydrology-in-this-course&#34;&gt;How will we study Hydrology in this course?&lt;/h2&gt;
+
+&lt;p&gt;My goal for this course is for you to learn the major concepts presented in the book but also to be able to apply these concepts and leave with some real skills which you can put into action (and also on your CV!). To that end, I will be providing exercises which will guide you through some basic hydrological problems and investigations. We will learn where to find data, what we can do with that data, and how to do it. We will be doing this using the R coding language. If you have never coded before don&amp;rsquo;t worry! We&amp;rsquo;re going to work through this from the start. If you have some coding experience, these exercises will still help reinforce the concepts we are learning about so&amp;hellip; win-win! Throughout these documents I will strive to produce figures from real data that I have downloaded and include the code so you can start to see how these analyses are actually done instead of just memorizing the results someone else has produced. As you get more comfortable with the code, you will be able to reproduce what I present.&lt;/p&gt;
+
+&lt;h1 id=&#34;water-use-in-the-united-states&#34;&gt;Water use in the United States&lt;/h1&gt;
 </description>
     </item>
     

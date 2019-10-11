@@ -4,12 +4,28 @@ draft: false
 linktitle: Lecture 1
 menu:
   watershed:
-    parent: Topic 1
+    parent: The Science of Hydrology
     weight: 1
 title: Lecture 1
 toc: true
 type: docs
 weight: 2
 ---
+
+
+## What is Hydrology?
+
+  Water (quite literally) shapes the planet. It is something that relates to almost everything important in our lives. The study of hydrology is a broad one and encompasses everything relating to the physical movement of water and the effects that water movement has on both the natural and built environments. Hornberger states that:
   
-  Welcome to Watershed Hydrology!
+> *"Hydrological science has aspects related to "curiosity-driven" questions and to "problem-driven" questions. The first aspect relates to questions about how the Earth works, and specifically about the role of water in natural processes. The second relates to using scientific knowledge to provide a sound basis for the proper use and protection of water resources"*
+
+**Curiosity-driven:** How was the Grand Canyon formed?
+
+**Problem-driven:** Where is all of this nitrogen coming from that's in our drinking water?
+
+The study of water has long been driven by both of these types of questions. Even thousands of years ago, humans were concerned with supplying water to irrigate land and providing a water source for their populations. As humanity has grown, our needs for water have grown in both volume and complexity. With the advancements in computing over the past fifty years, our ability to dive deeper into hydrological modelling has also grown. Today we use computers and mountains of data to try and tackle all sorts of interesting problems.
+
+## How will we study Hydrology in this course?
+My goal for this course is for you to learn the major concepts presented in the book but also to be able to apply these concepts and leave with some real skills which you can put into action (and also on your CV!). To that end, I will be providing exercises which will guide you through some basic hydrological problems and investigations. We will learn where to find data, what we can do with that data, and how to do it. We will be doing this using the R coding language. If you have never coded before don't worry! We're going to work through this from the start. If you have some coding experience, these exercises will still help reinforce the concepts we are learning about so... win-win! Throughout these documents I will strive to produce figures from real data that I have downloaded and include the code so you can start to see how these analyses are actually done instead of just memorizing the results someone else has produced. As you get more comfortable with the code, you will be able to reproduce what I present.
+
+# Water use in the United States
