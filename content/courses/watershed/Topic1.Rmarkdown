@@ -28,4 +28,23 @@ The study of water has long been driven by both of these types of questions. Eve
 ## How will we study Hydrology in this course?
 My goal for this course is for you to learn the major concepts presented in the book but also to be able to apply these concepts and leave with some real skills which you can put into action (and also on your CV!). To that end, I will be providing exercises which will guide you through some basic hydrological problems and investigations. We will learn where to find data, what we can do with that data, and how to do it. We will be doing this using the R coding language. If you have never coded before don't worry! We're going to work through this from the start. If you have some coding experience, these exercises will still help reinforce the concepts we are learning about so... win-win! Throughout these documents I will strive to produce figures from real data that I have downloaded and include the code so you can start to see how these analyses are actually done instead of just memorizing the results someone else has produced. As you get more comfortable with the code, you will be able to reproduce what I present.
 
-# Water use in the United States
+## Water use in the United States
+
+
+## Back to the book material
+
+### The Hydrological Cycle (pg. 7)
+
+**Basic Water Balance Equation (pg. 11)**
+
+**LWE units**
+
+**freshwater definition (pg. 12)**
+
+**residence time definition**
+
+**Definition of a watershed (pg. 14)**
+
+**Create a practical example (pg 16)**
+
+**Code Example problems**

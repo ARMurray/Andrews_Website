@@ -73,7 +73,25 @@
 
 &lt;p&gt;My goal for this course is for you to learn the major concepts presented in the book but also to be able to apply these concepts and leave with some real skills which you can put into action (and also on your CV!). To that end, I will be providing exercises which will guide you through some basic hydrological problems and investigations. We will learn where to find data, what we can do with that data, and how to do it. We will be doing this using the R coding language. If you have never coded before don&amp;rsquo;t worry! We&amp;rsquo;re going to work through this from the start. If you have some coding experience, these exercises will still help reinforce the concepts we are learning about so&amp;hellip; win-win! Throughout these documents I will strive to produce figures from real data that I have downloaded and include the code so you can start to see how these analyses are actually done instead of just memorizing the results someone else has produced. As you get more comfortable with the code, you will be able to reproduce what I present.&lt;/p&gt;
 
-&lt;h1 id=&#34;water-use-in-the-united-states&#34;&gt;Water use in the United States&lt;/h1&gt;
+&lt;h2 id=&#34;water-use-in-the-united-states&#34;&gt;Water use in the United States&lt;/h2&gt;
+
+&lt;h2 id=&#34;back-to-the-book-material&#34;&gt;Back to the book material&lt;/h2&gt;
+
+&lt;h3 id=&#34;the-hydrological-cycle-pg-7&#34;&gt;The Hydrological Cycle (pg. 7)&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Basic Water Balance Equation (pg. 11)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LWE units&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;freshwater definition (pg. 12)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;residence time definition&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition of a watershed (pg. 14)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a practical example (pg 16)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Code Example problems&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
