@@ -55,25 +55,48 @@
       <guid>/courses/watershed/topic1/</guid>
       <description>
 
-&lt;h2 id=&#34;what-is-hydrology&#34;&gt;What is Hydrology?&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-hydrology&#34;&gt;What is Hydrology?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-will-we-study-hydrology-in-this-course&#34;&gt;How will we study Hydrology in this course?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#water-use-in-the-united-states&#34;&gt;Water use in the United States&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#back-to-the-book-material&#34;&gt;Back to the book material&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#the-hydrological-cycle-pg.-7&#34;&gt;The Hydrological Cycle (pg. 7)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
+&lt;p&gt;&lt;a href=&#34;%22/slides/soil_moisture/SM_slides.html%22&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;what-is-hydrology&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is Hydrology?&lt;/h2&gt;
 &lt;p&gt;Water (quite literally) shapes the planet. It is something that relates to almost everything important in our lives. The study of hydrology is a broad one and encompasses everything relating to the physical movement of water and the effects that water movement has on both the natural and built environments. Hornberger states that:&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&amp;ldquo;Hydrological science has aspects related to &amp;ldquo;curiosity-driven&amp;rdquo; questions and to &amp;ldquo;problem-driven&amp;rdquo; questions. The first aspect relates to questions about how the Earth works, and specifically about the role of water in natural processes. The second relates to using scientific knowledge to provide a sound basis for the proper use and protection of water resources&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“Hydrological science has aspects related to”curiosity-driven&#34; questions and to “problem-driven” questions. The first aspect relates to questions about how the Earth works, and specifically about the role of water in natural processes. The second relates to using scientific knowledge to provide a sound basis for the proper use and protection of water resources&#34;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;&lt;strong&gt;Curiosity-driven:&lt;/strong&gt; How was the Grand Canyon formed?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem-driven:&lt;/strong&gt; Where is all of this nitrogen coming from that&amp;rsquo;s in our drinking water?&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;Problem-driven:&lt;/strong&gt; Where is all of this nitrogen coming from that’s in our drinking water?&lt;/p&gt;
 &lt;p&gt;The study of water has long been driven by both of these types of questions. Even thousands of years ago, humans were concerned with supplying water to irrigate land and providing a water source for their populations. As humanity has grown, our needs for water have grown in both volume and complexity. With the advancements in computing over the past fifty years, our ability to dive deeper into hydrological modelling has also grown. Today we use computers and mountains of data to try and tackle all sorts of interesting problems.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-will-we-study-hydrology-in-this-course&#34;&gt;How will we study Hydrology in this course?&lt;/h2&gt;
-
-&lt;p&gt;My goal for this course is for you to learn the major concepts presented in the book but also to be able to apply these concepts and leave with some real skills which you can put into action (and also on your CV!). To that end, I will be providing exercises which will guide you through some basic hydrological problems and investigations. We will learn where to find data, what we can do with that data, and how to do it. We will be doing this using the R coding language. If you have never coded before don&amp;rsquo;t worry! We&amp;rsquo;re going to work through this from the start. If you have some coding experience, these exercises will still help reinforce the concepts we are learning about so&amp;hellip; win-win! Throughout these documents I will strive to produce figures from real data that I have downloaded and include the code so you can start to see how these analyses are actually done instead of just memorizing the results someone else has produced. As you get more comfortable with the code, you will be able to reproduce what I present.&lt;/p&gt;
-
-&lt;h1 id=&#34;water-use-in-the-united-states&#34;&gt;Water use in the United States&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-will-we-study-hydrology-in-this-course&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How will we study Hydrology in this course?&lt;/h2&gt;
+&lt;p&gt;My goal for this course is for you to learn the major concepts presented in the book but also to be able to apply these concepts and leave with some real skills which you can put into action (and also on your CV!). To that end, I will be providing exercises which will guide you through some basic hydrological problems and investigations. We will learn where to find data, what we can do with that data, and how to do it. We will be doing this using the R coding language. If you have never coded before don’t worry! We’re going to work through this from the start. If you have some coding experience, these exercises will still help reinforce the concepts we are learning about so… win-win! Throughout these documents I will strive to produce figures from real data that I have downloaded and include the code so you can start to see how these analyses are actually done instead of just memorizing the results someone else has produced. As you get more comfortable with the code, you will be able to reproduce what I present.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;water-use-in-the-united-states&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Water use in the United States&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-the-book-material&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Back to the book material&lt;/h2&gt;
+&lt;div id=&#34;the-hydrological-cycle-pg.-7&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The Hydrological Cycle (pg. 7)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Basic Water Balance Equation (pg. 11)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LWE units&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;freshwater definition (pg. 12)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;residence time definition&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition of a watershed (pg. 14)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Create a practical example (pg 16)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code Example problems&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -145,25 +168,34 @@
       <guid>/project/soil-moisture/</guid>
       <description>
 
-&lt;h2 id=&#34;soil-moisture-and-groundwater-vulnerability&#34;&gt;Soil Moisture and Groundwater Vulnerability&lt;/h2&gt;
-
-&lt;p&gt;Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn&amp;rsquo;t matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water.&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;1152&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Figure 1: USDA Soil Texture Triangle&lt;/p&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#soil-moisture-and-groundwater-vulnerability&#34;&gt;Soil Moisture and Groundwater Vulnerability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#soil-moisture-data&#34;&gt;Soil Moisture Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#smap-products&#34;&gt;SMAP Products&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
-Soil texture is one of the major drivers in a landscapes ability to handle water. It is not just percent sand / percent clay/ percent silt however, it is more complex than that. What is the slope of the land? Is it in a valley? How much sun does it get? Has the land been developed? How high is the water table? &amp;hellip; These are just a few questions that compound the difficulty of fully understanding how soil moisture changes through time and therefore how different landscapes respond to water received from extreme precipitation or other inputs such as overland flow caused by flooding (maybe extreme precipitation happened upstream). Luckily for us, we have access to an abundance of data that can be used to try to establish some of these relationships which may help us predict how different landscapes respond to extreme precipitation. If we can do this, we can then use this information to estimate areas that may be particularly vulnerable to groundwater contamination.&lt;/p&gt;
 
-&lt;h2 id=&#34;soil-moisture-data&#34;&gt;Soil Moisture Data&lt;/h2&gt;
-
-&lt;p&gt;Soil moisture data is available from a variety of sources and it ranges in both spatial and temporal resolution. Many other scientists throughout the United States are monitoring soil moisture for a variety of applications and have set up monitoring stations to log soil moisture through time. The &lt;a href=&#34;http://nationalsoilmoisture.com/&#34; target=&#34;_blank&#34;&gt;National Soil Moisture Network&lt;/a&gt; aims to make as much of this data publicly available as possible. Temporally, much of this data is robust, for example, &lt;a href=&#34;https://climate.ncsu.edu/econet&#34; target=&#34;_blank&#34;&gt;North Carolina EcoNet&lt;/a&gt; has 42 stations throughout North Carolina, some of which have been collecting data for decades. While these stations have recorded an abundance of data through time, they lack spatial resolution as they only record 42 points over the entire state. Airborne soil moisture data can be obtained using radar technology. Special sensors with either active radar (sends a signal which bounces of the earths surface then measures what comes back) or passive radiometer (only measures microwave radiation emitting from the surface) can and have been mounted to both airplanes and satellites. The &lt;a href=&#34;https://uavsar.jpl.nasa.gov/&#34; target=&#34;_blank&#34;&gt;Uninhabited Aerial Vehicle Synthetic Aperture Radar (UAVSAR)&lt;/a&gt; is mounted onto a plane owned by NASA and used for a range of scientific experiments, including data collection following major hurricanes. While valuable, the limitation of this data is both spatial and temporal coverage. Although it gives us valuable high resolution snapshots, because it requires a flight crew and is restricted to one aircraft, data collection is rare and only exists for targetted events.&lt;/p&gt;
-
-&lt;p&gt;Cue The &lt;a href=&#34;https://smap.jpl.nasa.gov/&#34; target=&#34;_blank&#34;&gt;Soil Moisture Active Passive (SMAP)&lt;/a&gt;satellite. This satellite, launched by NASA in 2015 was created for the sole purpose of investigating soil moisture, globally and continuously. SMAP had two sensors mounted onto it to detect soil moisture; one was an active radar sensor and the other is a passive radiometer. I say was and is due to the fact that the active radar instrument failed roughly 3 months after the launch of SMAP. As of this writing it is still unclear why the instrument failed. However the radiometer is still in operation and NASA has succesfully been working with the European Space Agency (ESA) in assimilating data from the Sentinal 1 satellites to pick up some of the slack in being able to create the original data products planned by NASA.&lt;/p&gt;
-
-&lt;h2 id=&#34;smap-products&#34;&gt;SMAP Products&lt;/h2&gt;
-
-&lt;p&gt;The NASA Distributed Archive Center at the National Snow and Ice Data Center processes and distributes a wide range of products derived from the SMAP satellite. &lt;a href=&#34;https://nsidc.org/data/smap/smap-data.html&#34; target=&#34;_blank&#34;&gt;You can dig into all of them here&lt;/a&gt;, however, the two we will be focused on are the SMAP/Sentinel-1L2 Radiometer/Radar 3km product and the SMAP L4 Global 3-hourly 9 km EASE-Grid Surface and Root Zone Soil Moisture Analysis&lt;/p&gt;
+&lt;div id=&#34;soil-moisture-and-groundwater-vulnerability&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Soil Moisture and Groundwater Vulnerability&lt;/h2&gt;
+&lt;p&gt;Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn’t matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:soilTexture&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;1152&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: USDA Soil Texture Triangle
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Soil texture is one of the major drivers in a landscapes ability to handle water. It is not just percent sand / percent clay/ percent silt however, it is more complex than that. What is the slope of the land? Is it in a valley? How much sun does it get? Has the land been developed? How high is the water table? … These are just a few questions that compound the difficulty of fully understanding how soil moisture changes through time and therefore how different landscapes respond to water received from extreme precipitation or other inputs such as overland flow caused by flooding (maybe extreme precipitation happened upstream). Luckily for us, we have access to an abundance of data that can be used to try to establish some of these relationships which may help us predict how different landscapes respond to extreme precipitation. If we can do this, we can then use this information to estimate areas that may be particularly vulnerable to groundwater contamination.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;soil-moisture-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Soil Moisture Data&lt;/h2&gt;
+&lt;p&gt;Soil moisture data is available from a variety of sources and it ranges in both spatial and temporal resolution. Many other scientists throughout the United States are monitoring soil moisture for a variety of applications and have set up monitoring stations to log soil moisture through time. The &lt;a href=&#34;http://nationalsoilmoisture.com/&#34;&gt;National Soil Moisture Network&lt;/a&gt; aims to make as much of this data publicly available as possible. Temporally, much of this data is robust, for example, &lt;a href=&#34;https://climate.ncsu.edu/econet&#34;&gt;North Carolina EcoNet&lt;/a&gt; has 42 stations throughout North Carolina, some of which have been collecting data for decades. While these stations have recorded an abundance of data through time, they lack spatial resolution as they only record 42 points over the entire state. Airborne soil moisture data can be obtained using radar technology. Special sensors with either active radar (sends a signal which bounces of the earths surface then measures what comes back) or passive radiometer (only measures microwave radiation emitting from the surface) can and have been mounted to both airplanes and satellites. The &lt;a href=&#34;https://uavsar.jpl.nasa.gov/&#34;&gt;Uninhabited Aerial Vehicle Synthetic Aperture Radar (UAVSAR)&lt;/a&gt; is mounted onto a plane owned by NASA and used for a range of scientific experiments, including data collection following major hurricanes. While valuable, the limitation of this data is both spatial and temporal coverage. Although it gives us valuable high resolution snapshots, because it requires a flight crew and is restricted to one aircraft, data collection is rare and only exists for targetted events.&lt;/p&gt;
+&lt;p&gt;Cue The &lt;a href=&#34;https://smap.jpl.nasa.gov/&#34;&gt;Soil Moisture Active Passive (SMAP)&lt;/a&gt;satellite. This satellite, launched by NASA in 2015 was created for the sole purpose of investigating soil moisture, globally and continuously. SMAP had two sensors mounted onto it to detect soil moisture; one was an active radar sensor and the other is a passive radiometer. I say was and is due to the fact that the active radar instrument failed roughly 3 months after the launch of SMAP. As of this writing it is still unclear why the instrument failed. However the radiometer is still in operation and NASA has succesfully been working with the European Space Agency (ESA) in assimilating data from the Sentinal 1 satellites to pick up some of the slack in being able to create the original data products planned by NASA.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;smap-products&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SMAP Products&lt;/h2&gt;
+&lt;p&gt;The NASA Distributed Archive Center at the National Snow and Ice Data Center processes and distributes a wide range of products derived from the SMAP satellite. &lt;a href=&#34;https://nsidc.org/data/smap/smap-data.html&#34;&gt;You can dig into all of them here&lt;/a&gt;, however, the two we will be focused on are the SMAP/Sentinel-1L2 Radiometer/Radar 3km product and the SMAP L4 Global 3-hourly 9 km EASE-Grid Surface and Root Zone Soil Moisture Analysis&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
