@@ -1,17 +1,21 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
+output:
+  blogdown::html_page:
+    toc: true
 linktitle: Lecture 1
 menu:
   watershed:
     parent: The Science of Hydrology
     weight: 1
 title: Lecture 1
-toc: true
 type: docs
 weight: 2
+
 ---
 
+[Slides are here!]("/slides/soil_moisture/SM_slides.html")
 
 ## What is Hydrology?
 

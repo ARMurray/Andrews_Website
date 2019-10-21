@@ -1,0 +1,12 @@
+---
+title: "Lecture 1 Slides"
+author: Andrew Murray
+date: 
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 2
+weight: 2
+external_link: "/slides/soil_moisture/SM_slides.html"
+url_slides: "/slides/soil_moisture/SM_slides.html"
+---
