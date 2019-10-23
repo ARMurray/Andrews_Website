@@ -15,7 +15,7 @@ weight: 2
 
 ---
 
-[Slides are here!]("/slides/soil_moisture/SM_slides.html")
+[Slides are here!]("https://amurraygeo.com/slides/watershed/Lecture_1#1")
 
 ## What is Hydrology?
 
