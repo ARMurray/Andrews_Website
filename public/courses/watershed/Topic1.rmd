@@ -15,7 +15,10 @@ weight: 2
 
 ---
 
-[Slides are here!]("https://amurraygeo.com/slides/watershed/Lecture_1#1")
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_1.html)
+
+
+
 
 ## What is Hydrology?
 
