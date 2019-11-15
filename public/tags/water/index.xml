@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Water on Andrew Murray</title>
-    <link>https://amurraygeo.com/tags/water/</link>
+    <link>/tags/water/</link>
     <description>Recent content in Water on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/tags/water/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/water/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Soil Moisture</title>
-      <link>https://amurraygeo.com/project/soil-moisture/</link>
+      <link>/project/soil-moisture/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/project/soil-moisture/</guid>
+      <guid>/project/soil-moisture/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -31,7 +31,7 @@
 &lt;h2&gt;Soil Moisture and Groundwater Vulnerability&lt;/h2&gt;
 &lt;p&gt;Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn’t matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:soilTexture&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://amurraygeo.com/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;1152&#34; /&gt;
+&lt;img src=&#34;/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;1152&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: USDA Soil Texture Triangle
 &lt;/p&gt;
@@ -52,10 +52,10 @@ Figure 1: USDA Soil Texture Triangle
     
     <item>
       <title>Comparison of satellite reflectance algorithms for estimating chlorophyll-a in a temperate reservoir using coincident hyperspectral aircraft imagery and dense coincident surface observations</title>
-      <link>https://amurraygeo.com/publication/beck_2016/</link>
+      <link>/publication/beck_2016/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/publication/beck_2016/</guid>
+      <guid>/publication/beck_2016/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
