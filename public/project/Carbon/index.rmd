@@ -1,0 +1,414 @@
+---
+title: "Carbon Flux in Andean Paramo Streams"
+author: "Andrew"
+date: "2019-11-27"
+output:
+  blogdown::html_page:
+    toc: true
+
+external_link: ""
+image:
+  caption: ''
+  focal_point: Smart
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/A_MURRAY89
+slides: 
+summary: This is ongoing work in the Paramo region of Ecuador studying the amount of Carbon moving from high elevation streams to the atmosphere.
+tags:
+- Water
+- Carbon
+- Climate
+- AGU
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(scales)
+library(wesanderson)
+
+change_here <- function(new_path){
+  new_root <- here:::.root_env
+  
+  new_root$f <- function(...){file.path(new_path, ...)}
+  
+  assignInNamespace(".root_env", new_root, ns = "here")
+}
+
+change_here("~/Documents/Projects/Ecuador")
+```
+
+# Data
+
+## Import data
+In this document we are going to calculate Evasion from the Vaisala Sensors and compare them to the eosFD flux measurements as well as see how they relate to other variables such as precipitation and temperature. First we import the data and for now we will filter so we are looking at non-injections
+```{r data, echo=FALSE, message=FALSE}
+df <- read.csv(here("data_4_analysis/All_Stream_Data.csv"))%>%
+  select(DateTime,Inj,V1,V2,V3,V4,DO1_mg.L,DO2_mg.L,DO4_mg.L,Flux_1,Flux_2,tempC_436,airTemp_c,ppt24Tot,ppt48Tot,ppt72Tot,stn1_Q,stn2_Q,stn3_Q,stn4_Q)%>%
+  filter(Inj == "No")
+df$DateTime <- as.POSIXct(df$DateTime)
+
+pptDaily <- read.csv(here("data_4_analysis/ppt.csv"))
+pptDaily$DateTime <- as.POSIXct(pptDaily$DateTime)
+```
+
+## Create new time variables for ease of plotting
+These new variables will help us plot each seperate day on a timescale of midnight -> midnight
+```{r}
+df$day <- as.factor(substr(as.character(df$DateTime),1,10))
+times <- substr(as.character(df$DateTime),12,16)
+df$time <- strftime(df$DateTime, format="%H:%M")
+df$time <- as.POSIXct(df$time, format="%H:%M")
+```
+
+# CO2 Change
+
+## Change in CO2
+  The first step in calculating flux from the stream is to calculate change in CO2 concentrations between two points within the stream. We will look at two pairs of sensors (1->3 & 3->4). Once we determine change in CO2 concentration, we will convert ppm to uMols and then account for stream metabolism (respiration and photosynthesis) to calculate flux. First, let's visualize change in CO2 accross the pairs of sensors
+```{r filt14PpmPlot, echo=FALSE, message=FALSE, warning=FALSE}
+filt13 <- df%>%
+  filter(!is.na(V1)&!is.na(V3))%>%
+  filter(DateTime > as.POSIXct("2019-07-13 00:00:00"))%>%
+  filter(DateTime < as.POSIXct("2019-08-13 19:00:00")|DateTime > as.POSIXct("2019-08-14 23:59"))%>%
+  filter(DateTime < as.POSIXct("2019-07-14 00:00")|DateTime > as.POSIXct("2019-07-14 23:59"))%>%
+  filter(!DateTime == as.POSIXct("2019-08-09 09:57:00"))%>%
+  filter(DateTime < as.POSIXct("2019-08-13 11:15:00") | DateTime > as.POSIXct("2019-08-13 12:00:00"))
+
+filt34 <- df%>%
+  filter(!is.na(V1)&!is.na(V4))%>%
+  filter(DateTime > as.POSIXct("2019-07-13 00:00:00"))%>%
+  filter(DateTime < as.POSIXct("2019-08-13 19:00:00")|DateTime > as.POSIXct("2019-08-14 23:59"))%>%
+  filter(DateTime < as.POSIXct("2019-07-14 00:00")|DateTime > as.POSIXct("2019-07-14 23:59"))%>%
+  filter(!DateTime == as.POSIXct("2019-08-09 09:57:00"))
+
+dayPoly <- data.frame(x = c(as.POSIXct("06:15", format = "%H:%M"),as.POSIXct("18:21", format = "%H:%M"),as.POSIXct("18:21", format = "%H:%M"),as.POSIXct("06:15", format = "%H:%M")),y=c(-2600,-2600,-100,-100))
+
+my_breaks <- c(0,15,50,166) # Create breaks
+
+plot13Ppm <- ggplot(filt13)+
+  geom_polygon(data = dayPoly,aes(x=x,y=y),fill="#f2e198")+
+  geom_vline(aes(xintercept = as.POSIXct("06:15", format = "%H:%M")))+
+  geom_vline(aes(xintercept = as.POSIXct("18:21", format = "%H:%M")))+
+  geom_point(aes(x = time, y = V3-V1,group = day, col=stn1_Q),lwd=2)+
+  scale_color_gradient(name = "Discharge (L/s)", trans = "log",
+                        breaks = my_breaks, labels = my_breaks)+
+  labs(x = "Time",y="DCO2", title = "DCO2 Change (station 3 minus station 1)")+
+  theme_bw()
+plot13Ppm
+
+plot34Ppm <- ggplot(filt34)+
+  geom_polygon(data = dayPoly,aes(x=x,y=y),fill="#f2e198")+
+  geom_vline(aes(xintercept = as.POSIXct("06:15", format = "%H:%M")))+
+  geom_vline(aes(xintercept = as.POSIXct("18:21", format = "%H:%M")))+
+  geom_point(aes(x = time, y = V4-V3,group = day, col=stn1_Q),lwd=2)+
+  scale_color_gradient(name = "Discharge (L/s)", trans = "log",
+                        breaks = my_breaks, labels = my_breaks)+
+  labs(x = "Time",y="DCO2", title = "DCO2 Change (station 4 minus station 3)")+
+  theme_bw()
+
+plot34Ppm
+```
+
+So now that we know what the change in CO2 between stations, it's time to account for stream metabolism. Stream metabolism includes Ecosystem Respiration (ER) and Gross Primary Production / phtosynthesis (GPP). Both of these processes include a 1:1 exchange of CO2 and DO molecules. 
+**Photosynthesis:** Use CO2 and create O2 (1:1 ratio). 
+
+**Respiration:** Use O2, create CO2 (1:1 ratio).
+
+Respiration can occur in the abscence of sunlight while photosynthesis cannot. At night, stream processes are respiration driven. During the day both respiration and photosynthesis occur. We can look at the changes in DO over the similar stretches of stream and time period. We did not have a DO sensor at station 3 but we did have one at station 2.
+
+# Dissolved Oxygen
+
+## Change in Dissolved Oxygen
+```{r DOchange, echo=FALSE, message=FALSE, warning=FALSE}
+dayPoly <- data.frame(x = c(as.POSIXct("06:15", format = "%H:%M"),as.POSIXct("18:21", format = "%H:%M"),as.POSIXct("18:21", format = "%H:%M"),as.POSIXct("06:15", format = "%H:%M")),y=c(-1,-1,4,4))
+
+plot12DO <- ggplot(filt13)+
+  geom_polygon(data = dayPoly,aes(x=x,y=y),fill="#f2e198")+
+  geom_vline(aes(xintercept = as.POSIXct("06:15", format = "%H:%M")))+
+  geom_vline(aes(xintercept = as.POSIXct("18:21", format = "%H:%M")))+
+  geom_point(aes(x = time, y = DO2_mg.L-DO1_mg.L,group = day, col=tempC_436),lwd=2)+
+  scale_color_gradient(name = "Discharge (L/s)", trans = "log",
+                        breaks = my_breaks, labels = my_breaks)+
+  labs(x = "Time",y="DO (mg/L)", title = "DO Change (station 2 minus station 1)")+
+  theme_bw()
+plot12DO
+
+plot24DO <- ggplot(filt34)+
+  geom_polygon(data = dayPoly,aes(x=x,y=y),fill="#f2e198")+
+  geom_vline(aes(xintercept = as.POSIXct("06:15", format = "%H:%M")))+
+  geom_vline(aes(xintercept = as.POSIXct("18:21", format = "%H:%M")))+
+  geom_point(aes(x = time, y = DO2_mg.L,group = day, col=tempC_436),lwd=2)+
+  scale_color_gradient(name = "Discharge (L/s)", trans = "log",
+                        breaks = my_breaks, labels = my_breaks)+
+  labs(x = "Time",y="DO (mg/L)", title = "DO Change (station 4 minus station 2)")+
+  theme_bw()
+plot24DO
+
+```
+
+# Mass Conversion
+
+## Convert CO2 from concentration to mass
+Now that we know the change in CO2 in terms of concentration (ppm), we can convert it to mass. Specifically, we will take this opportunity to convert to micromoles (uMols), which we will eventually use to express evasion.
+```{r CO2ppm2uMols}
+# Distances are 17,30,80
+
+filt13$uMols_13 <- ((filt13$V1-filt13$V3)/ 37.6) *.0018*(1000000/44.01)*filt13$stn1_Q/1000 
+
+filt34$uMols_34 <- ((filt34$V3-filt34$V4)/ 64) *.0018*(1000000/44.01)*filt34$stn3_Q/1000
+```
+
+# Plotting data
+
+## Histograms of change in CO2
+```{r CO2Hist, echo=FALSE, warning = FALSE, message=FALSE}
+ggplot(filt13)+
+  geom_histogram(aes(x = uMols_13),fill = "#767676",color="#4B9CD3",binwidth = 1)+
+  geom_vline(xintercept = 0, linetype="dotted", color = "#4B9CD3", size=1.5)+
+  xlim(-10,40)+
+  ylim(0,2200)+
+  labs(x = "Instantaneous CO2 Loss (uMols)", y="Count of values",title = "Station 1 -> 3")+
+  theme_bw()
+
+ggplot(filt34)+
+  geom_histogram(aes(x = uMols_34),fill = "#767676",color="#4B9CD3",binwidth = 1)+
+  geom_vline(xintercept = 0, linetype="dotted", color = "#4B9CD3", size=1.5)+
+  xlim(-10,40)+
+  ylim(0,2200)+
+  labs(x = "Instantaneous CO2 Loss (uMols)", y="Count of values",title = "Station 3 -> 4")+
+  theme_bw()
+```
+
+
+
+## CO2 Change over time
+```{r evasionTime, echo=FALSE, warning=FALSE}
+solarNoon <- as.POSIXct("12:19", format = "%H:%M")
+
+filt13$noonDif <- as.integer(filt13$time - solarNoon)
+filt34$noonDif <- as.integer(filt34$time - solarNoon)
+
+ggplot(filt13)+
+  geom_line(aes(x=DateTime, y= uMols_13, col = noonDif),lwd=2)+
+  scale_color_gradient2(low = "black",mid = "#f2db79", high = "black",name = "Time")+
+  theme_bw()
+
+ggplot(filt34)+
+  geom_line(aes(x=DateTime, y= uMols_34, col = noonDif),lwd=2)+
+  scale_color_gradient2(low = "black",mid = "#f2db79", high = "black",name = "Time")+
+  theme_bw()
+
+```
+
+
+##Change in CO2 (uMols)
+```{r CO2Change, echo = FALSE, message=FALSE, warning = FALSE}
+dayPoly <- data.frame(x = c(as.POSIXct("06:15", format = "%H:%M"),as.POSIXct("18:21", format = "%H:%M"),as.POSIXct("18:21", format = "%H:%M"),as.POSIXct("06:15", format = "%H:%M")),y=c(-10,-10,65,65))
+
+ggplot(filt13)+
+  geom_polygon(data = dayPoly,aes(x=x,y=y),fill="#f2e198")+
+  geom_vline(aes(xintercept = as.POSIXct("06:15", format = "%H:%M")))+
+  geom_vline(aes(xintercept = as.POSIXct("18:21", format = "%H:%M")))+
+  geom_line(aes(x = time, y = uMols_13,group = day, col=stn1_Q),lwd=2)+
+  scale_color_gradient(name = "Discharge (L/s)", trans = "log",
+                        breaks = my_breaks, labels = my_breaks)+
+  labs(x = "Time",y="Evasion", title = "CO2 Change 1 -> 3 (uMols)")+
+  theme_bw()
+
+ggplot(filt34)+
+  geom_polygon(data = dayPoly,aes(x=x,y=y),fill="#f2e198")+
+  geom_vline(aes(xintercept = as.POSIXct("06:15", format = "%H:%M")))+
+  geom_vline(aes(xintercept = as.POSIXct("18:21", format = "%H:%M")))+
+  geom_line(aes(x = time, y = uMols_34,group = day, col=stn1_Q),lwd=2)+
+  scale_color_gradient(name = "Discharge (L/s)", trans = "log",
+                        breaks = my_breaks, labels = my_breaks)+
+  labs(x = "Time",y="Evasion", title = "CO2 Change 3 -> 4 (uMols)")+
+  theme_bw()
+
+
+```
+
+# Evasion Using Daily Stream Metabolism
+Using the USGS [streammetabolizer](http://usgs-r.github.io/streamMetabolizer/) package, daily estimates of GPP and ER can be calculated at each of the DO sensor locations. This is done in a seperate script located in: 'Ecuador/Analysis/Stream_Metabolism/metabolism.R'. The results are used to estimate daily evasion for the reach. The values expressed in the results of the streammetabolizer tool are grams of O2 / m^2 /d^-1. We need to convert this into uMols and then multiply by -1 to determine uMols CO2. 
+```{r evasionMetabolism, echo=FALSE, warning=FALSE, message=FALSE}
+pred1 <- read.csv(here("Analysis/Stream_Metabolism/ModelOutputs/DO_1_Predictions.csv"))%>%
+  select(date,GPP,ER)%>%
+  mutate(Station = "1")
+pred2 <- read.csv(here("Analysis/Stream_Metabolism/ModelOutputs/DO_2_Predictions.csv"))%>%
+  select(date,GPP,ER)%>%
+  mutate(Station = "2")
+pred4 <- read.csv(here("Analysis/Stream_Metabolism/ModelOutputs/DO_4_Predictions.csv"))%>%
+  select(date,GPP,ER)%>%
+  mutate(Station = "4")
+
+metab <- rbind(pred1,pred2,pred4)%>%
+  mutate(DateTime = as.POSIXct(date))
+
+metab%>%
+  plot_ly(x = ~DateTime, y = ~GPP,hoverinfo = "text",
+        text = ~paste("Station: ", Station,
+        "<br> Date: ", DateTime,
+        "<br> ER: ", round(ER,2)))%>%
+  add_markers(color = ~Station)%>%
+  layout(
+    title = "Gross Primary Productivity (DO)",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "GPP (g/m^2/d^-1)")
+  )
+
+metab%>%
+  plot_ly(x = ~DateTime, y = ~ER,hoverinfo = "text",
+        text = ~paste("Station: ", Station,
+        "<br> Date: ", DateTime,
+        "<br> GPP: ", round(GPP,2)))%>%
+  add_markers(color = ~Station)%>%
+  layout(
+    title = "Ecosystem Respiration (DO)",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "GPP (g/m^2/d^-1)")
+  )
+
+```
+
+## Estimate daily ER and GPP in uMols of CO2
+1 mole of CO2 = 31.9988 grams.
+```{r metabConvert, echo=FALSE, warning=FALSE, message=FALSE}
+metabCO2 <- metab%>%
+  mutate(GPP_CO2uMol = GPP/31.9988*-1000000,
+         ER_CO2uMol = ER/31.9988*-1000000)
+
+metabCO2%>%
+  plot_ly(x = ~DateTime, y = ~GPP_CO2uMol,hoverinfo = "text",
+        text = ~paste("Station: ", Station,
+        "<br> Date: ", DateTime,
+        "<br> ER: ", round(ER_CO2uMol,2)))%>%
+  add_markers(color = ~Station)%>%
+  layout(
+    title = "Gross Primary Productivity (uMols CO2)",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "GPP (uMols/m^2/d^-1)")
+  )
+
+
+metabCO2%>%
+  plot_ly(x = ~DateTime, y = ~ER_CO2uMol,hoverinfo = "text",
+        text = ~paste("Station: ", Station,
+        "<br> Date: ", DateTime,
+        "<br> ER: ", round(GPP_CO2uMol,2)))%>%
+  add_markers(color = ~Station)%>%
+  layout(
+    title = "Ecosystem Respiration (uMols CO2)",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "ER (uMols/m^2/d^-1)")
+  )
+```
+
+## Average ER and GPP Values for Stations 1 & 2
+We average the GPP and ER values at station 1 & 2 for use with change in CO2 between station 1 and 3. We use GPP and ER estimates from station 4 for the change in CO2 between stations 3 and 4.
+```{r, warning=FALSE, message=FALSE}
+stn12 <- metabCO2%>%
+  filter(Station < 4)%>%
+  group_by(DateTime)%>%
+  mutate(GPP_CO2uMol12 = mean(GPP_CO2uMol),
+         ER_CO2uMol12 = mean(ER_CO2uMol))%>%
+  ungroup()
+
+stn4 <- metabCO2%>%
+  filter(Station == 4)%>%
+  mutate(GPP_CO2uMol34 = GPP_CO2uMol,
+         ER_CO2uMol34 = ER_CO2uMol)
+
+metabCO2avg <- left_join(stn12,stn4, by="date")
+```
+
+# Evasion Calculations
+
+## Convert CO2 Change into Daily Values
+```{r evasionDaily, warning=FALSE, message = FALSE}
+DCO2Daily13 <- filt13%>%
+  group_by(day)%>%
+  mutate(DailyChange13 = mean(uMols_13*86400))%>%
+  select(day,DailyChange13)%>%
+  distinct()%>%
+  rename("date"="day")
+
+DCO2Daily <- filt34%>%
+  group_by(day)%>%
+  mutate(DailyChange34 = mean(uMols_34*86400))%>%
+  select(day,DailyChange34)%>%
+  distinct()%>%
+  rename("date"="day")%>%
+  left_join(DCO2Daily13, by="date")
+```
+
+
+## Merge 'Daily Change' with stream metabolism to get metabolism adjusted evasion
+```{r evasionPlots, echo=FALSE, warning=FALSE, message=FALSE}
+metabAvg <- metabCO2avg%>%
+  select(date,GPP_CO2uMol12,ER_CO2uMol12,GPP_CO2uMol34,ER_CO2uMol34)%>%
+  distinct()
+
+adjustEvasion <- metabAvg%>%
+  left_join(DCO2Daily,by="date")%>%
+  mutate(AdjEvasion12 = DailyChange13+GPP_CO2uMol12+ER_CO2uMol12,
+         AdjEvasion34 = DailyChange34+GPP_CO2uMol34+ER_CO2uMol34,
+         date = as.POSIXct(date))
+
+color = wes_palette("Zissou1")[c(1,3,5)]
+
+
+up <- adjustEvasion%>%
+  select(date,AdjEvasion12,ER_CO2uMol12,GPP_CO2uMol12)%>%
+  rename("Evasion" = "AdjEvasion12", "Respiration"="ER_CO2uMol12", "Photosynthesis" = "GPP_CO2uMol12")%>%
+  gather(Var,Val,-date)
+
+var <- levels(up$Var)
+
+# Upstream Plot
+up%>%
+  plot_ly(x = ~date, y = ~abs(Val))%>%
+  add_markers(color = ~Var,
+              colors = ~setNames(color, var),  size=50)%>%
+  layout(
+    title = "Daily Evasion & Respiration (Upstream)",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "uMols m<sup>2</sup>d<sup>-1</sup>", type = "log")
+  )
+
+
+# Downstream Plot
+down <- adjustEvasion%>%
+  select(date,AdjEvasion34,ER_CO2uMol34,GPP_CO2uMol34)%>%
+  rename("Evasion" = "AdjEvasion34", "Respiration"="ER_CO2uMol34", "Photosynthesis" = "GPP_CO2uMol34")%>%
+  gather(Var,Val,-date)
+
+down%>%
+  plot_ly(x = ~date, y = ~abs(Val))%>%
+  add_markers(color = ~Var,
+              colors = ~setNames(color, var),  size=50)%>%
+  layout(
+    title = "Daily Evasion & Respiration (Downstream)",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "uMols m<sup>2</sup>d<sup>-1</sup>", type = "log")
+  )
+
+# Try changing to mols
+# Try changing to per second
+
+
+```
+
+
+
+## Compare with eosFD numbers
+Synoptic points show ~ 19g per day of CO2 / 1 uMol
