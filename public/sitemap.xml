@@ -1,327 +1,307 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://amurraygeo.com/courses/example/example1/</loc>
+    <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/courses/watershed/</loc>
+    <loc>/courses/watershed/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/courses/watershed/topic1/</loc>
+    <loc>/courses/watershed/topic1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/courses/example/example2/</loc>
+    <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/courses/example/</loc>
+    <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/courses/watershed/lecture2/</loc>
+    <lastmod>2019-11-13T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/talk/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/talk/</loc>
+    <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/hurricanes/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/talk/example/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/project/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/talk/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/soil-moisture/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/tags/agu/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/project/soil-moisture/</loc>
+    <loc>/tags/carbon/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/carbon/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/climate/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/water/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hurricanes/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/</loc>
+    <loc>/tags/soil-moisture/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/water/</loc>
+    <loc>/project/soil-moisture/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/carbon/</loc>
+    <loc>/post/endeavors/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/climate/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/post/endeavors/</loc>
+    <loc>/post/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/post/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
+    <loc>/tags/fracking/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/fracking/</loc>
+    <loc>/tags/methane/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/methane/</loc>
+    <loc>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/tags/wells/</loc>
+    <loc>/tags/wells/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/publication_types/2/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/andrew-murray/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/authors/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/publication/weaver_2017/</loc>
+    <loc>/publication_types/2/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/fran-kremer/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/authors/james-weaver/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/publication_types/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/publication/</loc>
+    <loc>/authors/andrew-murray/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/bo-yang/</loc>
+    <loc>/authors/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/weaver_2017/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/fran-kremer/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/james-weaver/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/bo-yang/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/christopher-nietch/</loc>
-    <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/publication/beck_2016/</loc>
+    <loc>/authors/christopher-nietch/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/dana-macke/</loc>
+    <loc>/publication/beck_2016/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/erich-emery/</loc>
+    <loc>/authors/dana-macke/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/garrett-stillings/</loc>
+    <loc>/authors/erich-emery/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/haibin-suh/</loc>
+    <loc>/authors/garrett-stillings/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/hongxing-liu/</loc>
+    <loc>/authors/haibin-suh/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/jade-young/</loc>
+    <loc>/authors/hongxing-liu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/joseph-harwood/</loc>
+    <loc>/authors/jade-young/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/kevin-berling/</loc>
+    <loc>/authors/joseph-harwood/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/mark-martin/</loc>
+    <loc>/authors/kevin-berling/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/min-xu/</loc>
+    <loc>/authors/mark-martin/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/molly-reif/</loc>
+    <loc>/authors/min-xu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/qiusheng-wu/</loc>
+    <loc>/authors/molly-reif/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/richard-beck/</loc>
+    <loc>/authors/qiusheng-wu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/richard-stump/</loc>
+    <loc>/authors/richard-beck/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/shengan-zhan/</loc>
+    <loc>/authors/richard-stump/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/shujie-wang/</loc>
+    <loc>/authors/shengan-zhan/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/song-shu/</loc>
+    <loc>/authors/shujie-wang/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/susanna-tong/</loc>
+    <loc>/authors/song-shu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/yan-huang/</loc>
+    <loc>/authors/susanna-tong/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/zhaoxia-ye/</loc>
+    <loc>/authors/yan-huang/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/zhaoxia-ye/</loc>
+    <lastmod>2016-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/2018-10-11-vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/authors/admin/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://amurraygeo.com/post/2018-10-11-vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amurraygeo.com/courses/</loc>
+    <loc>/courses/</loc>
   </url>
   
 </urlset>
