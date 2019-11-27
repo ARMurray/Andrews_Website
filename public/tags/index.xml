@@ -6,46 +6,10 @@
     <description>Recent content in Tags on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>AGU</title>
-      <link>/tags/agu/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/agu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Carbon</title>
-      <link>/tags/carbon/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/carbon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Climate</title>
-      <link>/tags/climate/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/climate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Water</title>
-      <link>/tags/water/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/water/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Hurricanes</title>
@@ -62,6 +26,33 @@
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/soil-moisture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Water</title>
+      <link>/tags/water/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/water/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carbon</title>
+      <link>/tags/carbon/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/carbon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Climate</title>
+      <link>/tags/climate/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/climate/</guid>
       <description></description>
     </item>
     
