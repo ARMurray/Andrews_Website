@@ -48,12 +48,42 @@
   </url>
   
   <url>
-    <loc>/tags/hurricanes/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+    <loc>/tags/agu/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/carbon/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/carbon/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/climate/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/project/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/water/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hurricanes/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -65,26 +95,6 @@
   <url>
     <loc>/project/soil-moisture/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/water/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/carbon/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/climate/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -283,11 +293,6 @@
   
   <url>
     <loc>/post/2018-10-11-vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/project/carbon/</loc>
     <priority>0</priority>
   </url>
   
