@@ -17,7 +17,7 @@
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/endeavors/</guid>
-      <description>&lt;p&gt;Check out the story on our field work in Ecuador this past summer as it appears in the &lt;a href=&#34;https://endeavors.unc.edu/climate-game-changers/&#34; target=&#34;_blank&#34;&gt;UNC endeavors magazine&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Check out the story on our field work in Ecuador this past summer as it appears in the &lt;a href=&#34;https://endeavors.unc.edu/climate-game-changers/&#34;&gt;UNC endeavors magazine&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -28,8 +28,7 @@
       
       <guid>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</guid>
       <description>&lt;p&gt;##Update&lt;/p&gt;
-
-&lt;p&gt;Follow along with my research on understanding domestic wells at risk to effects from methane migration stemming from hydraulic fracturing activity. &lt;a href=&#34;https://amurraygeo.com/project/domestic-wells-and-fracking/&#34; target=&#34;_blank&#34;&gt;This living document&lt;/a&gt; is being created in the spirit of open and reproducible research. Most of the analysis is done with the R statistical language and is presented exactly as executed. All of the data is free and publicly accessible. This will allow others to reproduce everything exactly, or plug in their own data. It also allows others to offer critiques or feedback on the methods.&lt;/p&gt;
+&lt;p&gt;Follow along with my research on understanding domestic wells at risk to effects from methane migration stemming from hydraulic fracturing activity. &lt;a href=&#34;https://amurraygeo.com/project/domestic-wells-and-fracking/&#34;&gt;This living document&lt;/a&gt; is being created in the spirit of open and reproducible research. Most of the analysis is done with the R statistical language and is presented exactly as executed. All of the data is free and publicly accessible. This will allow others to reproduce everything exactly, or plug in their own data. It also allows others to offer critiques or feedback on the methods.&lt;/p&gt;
 </description>
     </item>
     

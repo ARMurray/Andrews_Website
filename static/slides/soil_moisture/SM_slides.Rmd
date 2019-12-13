@@ -15,9 +15,7 @@ library(imager)
 ```
 
 
-## <span style="color:white">Hurricane Florence, 2018 (Credit: NASA)</span> {data-background="C:/Users/ARMur/OneDrive - University of North Carolina at Chapel Hill/website_rebuild/Andrews_Website/static/img/hurricane_space.jpg"}
-
-
+## <span style="color:black">Hurricane Florence, 2018 (Credit: NASA)</span> {data-background="C:/Users/ARMur/OneDrive - University of North Carolina at Chapel Hill/website_rebuild/Andrews_Website/static/img/hurricane_space.jpg"}
 
 ## Overarching Question
 ### When extreme precipitation occurs, such as from tropical depressions and hurricanes, large volumes of water move through the landscape and have the potential to mobilize contaminants into drinking water resources. How do land use, soil moisture and other hydrogeologic variables relate to groundwater vulnerability, and specifically, privately owned drinking water wells?

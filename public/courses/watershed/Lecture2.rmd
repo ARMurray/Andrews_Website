@@ -1,0 +1,30 @@
+---
+date: "2019-11-13T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+linktitle: Lecture 2
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 2
+title: Lecture 2
+type: docs
+weight: 3
+
+---
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_2.html)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Precipitation and Evapotranspiration
+
+**Exceedance probability of extreme rainfall events** (pg.35)
+
+**Interception** (pg. 39)
+
