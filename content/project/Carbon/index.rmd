@@ -45,7 +45,7 @@ change_here <- function(new_path){
   assignInNamespace(".root_env", new_root, ns = "here")
 }
 
-change_here("D:/OneDrive/OneDrive - University of North Carolina at Chapel Hill/Ecuador/Github/Ecuador")
+change_here("C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Ecuador/Github/Ecuador")
 ```
 
 ## Import data
