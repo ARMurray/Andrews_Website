@@ -27,5 +27,34 @@ library(imager)
 
 **Problem-driven:** Where is all of this nitrogen coming from that's in our drinking water?
 
+## What We're Here to Do
 
+This course will cover the structure of drainage networks, nested catchments, and distribution and controls of precipitation, evaporation, runoff, soil moisture, and groundwater flow.
 
+Basically we're here to talk about the way water moves through the landscape. We will talk about the ways in which hydrologists and others investigate issues relating to water and we will learn how to do some of these analyses.
+
+Part of the goal for this course is for you to come away with actual skills that you can take with you and use in the future ... even if you do not end up with a career in the hydrological sciences.
+
+## Coding and the Geosciences
+
+Welcome to 2020 where coding is no longer an optional skill when it comes to the Geosciences
+
+Why we code:
+
+>- Reproducibility
+>- Transparency
+>- Breadcrumbs
+>- Computers are better at math than us (well at least me)
+>- Science Communication (Figures Figures Figures!)
+
+The good news, if you have no experience coding, is that there are a TON of great resources (including me) to get going and fast.
+
+## R - 
+![](D:/OneDrive/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/Rlogo.png) 
+R is a computer language that has a long history and is based on previous languages before it. It's main intention was for statistical computing but it has become one of the most popular languages in the world with millions of users. Among the many reasons for its popularity are that it is free and open source and it can be run on any computer (Mac / Windows / Linux).
+
+It is:
+
+>- Extendable
+>- User Friendly
+>- Well Supported (Globally and here UNC)
