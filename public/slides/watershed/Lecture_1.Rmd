@@ -49,12 +49,21 @@ Why we code:
 
 The good news, if you have no experience coding, is that there are a TON of great resources (including me) to get going and fast.
 
-## R - 
-![](D:/OneDrive/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/Rlogo.png) 
-R is a computer language that has a long history and is based on previous languages before it. It's main intention was for statistical computing but it has become one of the most popular languages in the world with millions of users. Among the many reasons for its popularity are that it is free and open source and it can be run on any computer (Mac / Windows / Linux).
+##
+
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/Rlogo.png){width=100px} R is a computer language that has a long history and is based on previous languages before it. It's main intention was for statistical computing but it has become one of the most popular languages in the world with millions of users. Among the many reasons for its popularity are that it is free and open source and it can be run on any computer (Mac / Windows / Linux).
 
 It is:
 
 >- Extendable
 >- User Friendly
 >- Well Supported (Globally and here UNC)
+
+R is just a language and therefore can be run in a command prompt, meaning typing straight code into the computer (Nobody does this!) 
+
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/wallofcode.jpg){width=300px }
+
+This is where R Studio comes in...
+
+## R Studio
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/RStudio.png){width=800px}

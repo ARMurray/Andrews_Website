@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Overview on Andrew Murray</title>
-    <link>/courses/watershed/</link>
+    <link>https://amurraygeo.com/courses/watershed/</link>
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lecture 1</title>
-      <link>/courses/watershed/topic1/</link>
+      <link>https://amurraygeo.com/courses/watershed/topic1/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/topic1/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/topic1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -66,29 +66,6 @@
 &lt;p&gt;&lt;strong&gt;Create a practical example (pg 16)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Code Example problems&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Lecture 2</title>
-      <link>/courses/watershed/lecture2/</link>
-      <pubDate>Wed, 13 Nov 2019 00:00:00 +0100</pubDate>
-      
-      <guid>/courses/watershed/lecture2/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#precipitation-and-evapotranspiration&#34;&gt;Precipitation and Evapotranspiration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/lecture_2.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;precipitation-and-evapotranspiration&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Precipitation and Evapotranspiration&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Exceedance probability of extreme rainfall events&lt;/strong&gt; (pg.35)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Interception&lt;/strong&gt; (pg. 39)&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
