@@ -48,7 +48,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Water Use in the United States
 The U.S. Geological Survey tracks water use (to the best of their abilities) for the country. Check out their report [HERE](https://www.usgs.gov/mission-areas/water-resources/science/water-use-united-states?qt-science_center_objects=0#qt-science_center_objects)
-![](/img/)
+![](/img/dailywateruse.png){height=500px}
+
+## Private Wells
+![](/img/welluseblock.png){height=500px}
 
 ## Humans **did not** just start modifying the landscape to our advantage
 
@@ -88,6 +91,8 @@ The U.S. Geological Survey tracks water use (to the best of their abilities) for
 
 >- **1850-1960s:** Environmental concerns, e.g., Cuyahoga River
 
+>- **1962:** Silent Spring is published
+
 >- **1972:** Clean Water Act
 >- **1974:** Safe Drinking Water Act
 >- **Late 1900s-2000:** Drinking water issues
@@ -113,7 +118,7 @@ The U.S. Geological Survey tracks water use (to the best of their abilities) for
 (2) Rates of water movement are nonlinear functions of the controlling quantities: “the whole is different from the sum of the pieces”
 
 ## Water Balance Concept (Conservation of Mass!){width=600px}
-![]{/img/waterbalance.png}
+![](/img/waterbalance.png)
 ### Inputs = Outputs ± Change in Storage
 
 ## Open vs. Closed Systems
