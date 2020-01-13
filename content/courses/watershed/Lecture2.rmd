@@ -15,7 +15,7 @@ weight: 30
 
 ---
 
-[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_2.html)
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_2_slides.html)
 
 
 ```{r setup, include=FALSE}
