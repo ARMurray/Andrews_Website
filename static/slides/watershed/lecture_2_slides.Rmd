@@ -1,0 +1,63 @@
+---
+title: "Lecture 2"
+author: Andrew Murray
+date: 
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+- What is hydrology?
+- Conservation of mass and energy
+- The hydrologic cycle
+- Distribution of Water on Earth
+- Observations
+
+## Hydrology (Water Science)
+### Study of the occurrence, circulation, and distribution of the water of the earth and its atmosphere
+- The global hydrologic cycle:
+  - Terrestrial
+  - Oceanic
+  - Atmospheric
+- The land phase of the hydrologic cycle:
+  - Water on and under the earth’s surface
+  - Physical, chemical, biological processes
+
+## Mass and Energy
+- Principle of Conservation of Mass
+  - Anthony Lavoisier: “Mass of the Reactants = Mass of the Products”
+
+- Law of Conservation of Energy
+  - Energy can be neither created nor destroyed, but 	can be transformed (Galileo’s pendulum test)
+
+## Global Hydrological Cycle
+![](/img/water_cycle.jpg){width=800px}
+
+## Global Distribution of Water
+![](/img/EarthsWater-BarChart.png){width=800px}
+
+## 
+![](/img/water_distribution_table.png){width=800px}
+
+
+## Water Use in the United States
+The U.S. Geological Survey tracks water use (to the best of their abilities) for the country. Check out their report [HERE](https://www.usgs.gov/mission-areas/water-resources/science/water-use-united-states?qt-science_center_objects=0#qt-science_center_objects)
+![](/img/)
+
+## Humans **did not** just start modifying the landscape to our advantage
+
+- 5,000-6,000 YBP, Hydraulic structures (canals, wells, etc.) in Pakistan, Mesopotamia, China & Egypt.
+![](img/aqueduct.jpg){width=400px}
+
+- 3,800 YBP, Egyptians monitor river flow.
+
+
+- 3,000 YPB, Solomon’s concept of the hydrologic cycle – “All the rivers run into the sea; yet the sea is not full; unto the place from whence the rivers come, thither they return again.”
+
+- 753 BC - 1461 AD, Romans use hydraulics to construct extensive aqueduct system.
