@@ -74,6 +74,8 @@ The U.S. Geological Survey tracks water use (to the best of their abilities) for
 >- 1862, Nathanial Beard’s “Manual of Hydrology”
   - **Rainfall -> Streamflow**
 
+## Hisotrically cont'd...
+
 >- 1904, Daniel Mead’s text in hydrology for civil engineers.
 
 >- 1922, International Union of Geodesy and Geophysics “Scientific Hydrology Section” formed.
@@ -81,6 +83,7 @@ The U.S. Geological Survey tracks water use (to the best of their abilities) for
 >- 1930, Birth of American Geophysical Union “Hydrology Section”
 
 >- Mid 1900s – present, Hazen, Langbein - statistics; Meinzer, Theis, Hubbert - groundwater theory; Von Karman, Chow, Gilbert - stream hydraulics; Horton & Leopold - runoff; Thornthwaite & Penman - ET; Wolman & Garrels - water quality. 
+
 ## Moving into Modern Times
 
 >- **1850-1960s:** Environmental concerns, e.g., Cuyahoga River
