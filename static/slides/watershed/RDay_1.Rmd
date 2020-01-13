@@ -1,0 +1,67 @@
+---
+title: "R Day #1"
+author: Andrew Murray
+date: 
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(imager)
+```
+
+## R User Community
+  R has a huge global user community, and a lot of people who use R are active online.
+  
+  -Coding &#8800; Memorization<br><br>
+  -Coding is mostly Googling
+  
+  My advice is to resist staring at your screen and to switch over to google or stack exchange and start typing questions. Chances are if you are thinking about it, someone else has already coded it, so save yourself some work and go find it.
+  
+## Resources
+- [The Research Hub at Davis Library](https://library.unc.edu/data/) provides some really great resources for R
+
+- [R Open Labs](http://ropenlabs.web.unc.edu/) (Thursdays 2:00-3:30) / [Consultations](https://guides.lib.unc.edu/mattjansen)
+
+- [Stack Overflow](https://stackexchange.com/) is the #1 online community for coders helping coders. From beginner questions to extremely advanced problems, you can usually find the answers here. When you Google a question about r, a stack exchange page will almost always be right at the top of your results. The norm in these online forums is to provide reproducible code, meaning data that other people can use to help you solve your problem. For example, check out [This Solution](https://stackoverflow.com/questions/51041946/r-dplyr-filter-by-multiple-conditions).
+
+- [Google](google.com) is honestly where I go for all of my problems. Most of the code that I know or I learn is stuff I teach myself from pages I find while googling around. Remember to always include 'r' in any search.
+
+- [Data Camp](https://www.datacamp.com/) is a really great website that is totally focused on learning to code. The people who have designed the individual courses are some of the top data scientists and teachers in the country / world. As part of this class you have unlimited access to everything that typically costs money so I encourage you to make use of it. The first homework will be on datacamp.
+
+## Installation
+### Installing R
+Okay, let's get to the installation. R is mainatained by CRAN, which stands for the the Comprehensive R Archive Network. [CLICK HERE FOR THE DOWNLOAD PAGE](https://cran.r-project.org/) and select the version for whichever operating system you are using then follow the installation instructions.
+
+### Installing R Studio
+R studio is a company which is seperate from CRAN. They provide a software or IDE (interactive Developement Environment) that interacts with the R programming language and this is what we will use to write our code. [CLICK HERE FOR THE DOWNLOAD PAGE](https://rstudio.com/products/rstudio/download/#download) and select the version for whichever operating system you are using and follow the installation instructions.
+  
+## 
+Once you have R and R Studio installed, open and run R Studio. When you first open R Studio it will look something like this:<br>
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/RStudio_initial.png){width=500px}
+
+Green Box : This is the 'console'. Here you can write code and execute it but it won't be saved anywhere. This is good for doing things quickly or testing something before you put it into your script.
+
+Blue Box: This is your 'environment'. In R studio you will use data which will be imported from files like csv or text files. When you import them they will show up here. Also when you create new things using your code, like a new table or a graph it will also appear here.
+
+Orange Box: Everything else. You will notice the tabs at the top. You can navigate through files and see what packages you have loaded etc... Plots will also appear here
+
+## Creating a Project
+- Click on File in the top-left corner and select 'New Project'.
+- Select 'New Directory' then select 'New Project' and name it as YOURONYEN_Watershed. 
+- In the box titled 'Create project as a subdirectory of:' navigate to a folder on your computer where you want to store your files for this class. 
+- When you have done this click on 'Create Project'.
+
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/RStudio_project.png){width=500px}
+
+
+
+<div class="notes">
+In the image above you will now see that you have a 'project' open and that it is located in your specified folder. You can also now see the files you have in this folder in the bottom right window. You don't have to use projects to execute code but it will make your life MUCH easier down the road by keeping everything very organized. We will use this project for the entire semester and all of the work we do will live inside of it.
+</div>
+
+## R Studio
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/RStudio.png){width=800px}
