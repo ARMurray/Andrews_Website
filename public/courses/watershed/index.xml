@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Overview on Andrew Murray</title>
-    <link>https://amurraygeo.com/courses/watershed/</link>
+    <link>/courses/watershed/</link>
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lecture 1</title>
-      <link>https://amurraygeo.com/courses/watershed/topic1/</link>
+      <link>/courses/watershed/topic1/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/watershed/topic1/</guid>
+      <guid>/courses/watershed/topic1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -66,6 +66,85 @@
 &lt;p&gt;&lt;strong&gt;Create a practical example (pg 16)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Code Example problems&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lecture 2</title>
+      <link>/courses/watershed/lecture2/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/lecture2/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#precipitation-and-evapotranspiration&#34;&gt;Precipitation and Evapotranspiration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/lecture_2.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;precipitation-and-evapotranspiration&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Precipitation and Evapotranspiration&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Exceedance probability of extreme rainfall events&lt;/strong&gt; (pg.35)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interception&lt;/strong&gt; (pg. 39)&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Friday (1)</title>
+      <link>/courses/watershed/friday_1/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/friday_1/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-started-with-r-and-r-studio&#34;&gt;Getting Started with R and R studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-r&#34;&gt;Installing R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-r-studio&#34;&gt;Installing R Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-started-with-r-studio&#34;&gt;Getting Started with R Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#okay-lets-code&#34;&gt;Okay let’s code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/RDay_1.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;getting-started-with-r-and-r-studio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Started with R and R studio&lt;/h2&gt;
+&lt;p&gt;R is a programming language that we install on our computer, whereas R studio is the program we will use to interact with the language. R studio is great because it has a large number of things that save time and help us code with as little memorization as possible. For example, it has all of the documentation and help files for every function in R built in. If you start to type the name of a file or the name of a function, r studio will auto-complete it (which saves a huge amount of time). If you are unfamiliar with what a ‘function’, think of it as a tool that has a specific purpose. For example, in microsoft excel, when you want to add up the numbers from a bunch of different cells you would click in an empty cell and type ‘=SUM(A2:A10)’ or something like that. In this case ‘SUM’ is the function that excel is using. R is built on functions and some are really simple (like SUM) and some are realllllly complicated, but the beauty is that once someone else has written the function, we don’t really have to mess with it, we can just use it the same way we would use any other tool. A good way to think about this is buying a power saw at a hardware store (or insert other complex machine). I can use a a power saw to cut wood, but I’m certainly not going to build a power saw from parts to do it. I’m going to buy a power saw that someone else built.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing R&lt;/h2&gt;
+&lt;p&gt;Okay, let’s get to the installation. R is mainatained by CRAN, which stands for the the Comprehensive R Archive Network. &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;CLICK HERE FOR THE DOWNLOAD PAGE&lt;/a&gt; and select the version for whichever operating system you are using then follow the installation instructions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-r-studio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing R Studio&lt;/h2&gt;
+&lt;p&gt;R studio is a company which is seperate from CRAN. They provide a software or IDE (interactive Developement Environment) that interacts with the R programming language and this is what we will use to write our code. &lt;a href=&#34;https://rstudio.com/products/rstudio/download/#download&#34;&gt;CLICK HERE FOR THE DOWNLOAD PAGE&lt;/a&gt; and select the version for whichever operating system you are using and follow the installation instructions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-started-with-r-studio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Started with R Studio&lt;/h2&gt;
+&lt;p&gt;Once you have R and R Studio installed, open and run R Studio. When you first open R Studio it will look something like this:
+&lt;img src=&#34;/img/RStudio_initial.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Green Box : This is the ‘console’. Here you can write code and execute it but it won’t be saved anywhere. This is good for doing things quickly or testing something before you put it into your script.&lt;/p&gt;
+&lt;p&gt;Blue Box: This is your ‘environment’. In R studio you will use data which will be imported from files like csv or text files. When you import them they will show up here. Also when you create new things using your code, like a new table or a graph it will also appear here.&lt;/p&gt;
+&lt;p&gt;Orange Box: This is where everything else goes. You will notice the tabs at the top. You can navigate through files and see what packages you have loaded etc… This is also where plots will appear when you create them (This is where you can view a plot as opposed to the ‘data item’ that is the plot in the environment).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Click on File in the top-left corner and select ‘New Project’.&lt;/li&gt;
+&lt;li&gt;Select ‘New Directory’ then select ‘New Project’ and name it as YOURONYEN_Watershed.&lt;/li&gt;
+&lt;li&gt;In the box titled ‘Create project as a subdirectory of:’ navigate to a folder on your computer where you want to store your files for this class.&lt;/li&gt;
+&lt;li&gt;When you have done this click on ‘Create Project’.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/RStudio_project.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In the image above you will now see that you have a ‘project’ open and that it is locateed in your specified folder. You can also now see the files you have in this folder in the bottom right window. You don’t have to use projects to execute code but it will make your life MUCH easier down the road by keeping everything very organized. We will use this project for the entire semester and all of the work we do will live inside of it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;okay-lets-code&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Okay let’s code&lt;/h2&gt;
+&lt;p&gt;Click on the &lt;img src=&#34;/img/newscript.png&#34; /&gt; image and choose ‘R Script’. This will open a new pane in the top left where you can write and save scripts. click the save button or ‘ctrl’+‘s’ to save the empty script immediately to your folder. create a new folder called ‘day1’ and save your script as gettingStarted.r&lt;/p&gt;
+&lt;p&gt;Copy and paste the following into your script:&lt;/p&gt;
+&lt;p&gt;To execute a single line of code, click the line you want to run and then press ‘ctrl’+‘enter’. You can also highlight a line of code and click the &lt;img src=&#34;/img/run.png&#34; /&gt; button.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

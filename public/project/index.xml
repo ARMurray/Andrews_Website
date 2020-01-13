@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Andrew Murray</title>
-    <link>https://amurraygeo.com/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/project/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Carbon Dioxide Evasion in Tropical Alpine Streams</title>
-      <link>https://amurraygeo.com/project/carbon/</link>
+      <link>/project/carbon/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/project/carbon/</guid>
+      <guid>/project/carbon/</guid>
       <description>
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://amurraygeo.com/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -198,10 +198,10 @@ DCO2Daily &amp;lt;- filt34%&amp;gt;%
     
     <item>
       <title>Soil Moisture</title>
-      <link>https://amurraygeo.com/project/soil-moisture/</link>
+      <link>/project/soil-moisture/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://amurraygeo.com/project/soil-moisture/</guid>
+      <guid>/project/soil-moisture/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -216,7 +216,7 @@ DCO2Daily &amp;lt;- filt34%&amp;gt;%
 &lt;h2&gt;Soil Moisture and Groundwater Vulnerability&lt;/h2&gt;
 &lt;p&gt;Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn’t matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:soilTexture&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://amurraygeo.com/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;1152&#34; /&gt;
+&lt;img src=&#34;/project/Soil-Moisture/index_files/figure-html/soilTexture-1.png&#34; alt=&#34;USDA Soil Texture Triangle&#34; width=&#34;1152&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: USDA Soil Texture Triangle
 &lt;/p&gt;
