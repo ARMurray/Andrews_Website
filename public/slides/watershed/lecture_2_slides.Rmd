@@ -37,13 +37,13 @@ knitr::opts_chunk$set(echo = TRUE)
   - Energy can be neither created nor destroyed, but 	can be transformed (Galileo’s pendulum test)
 
 ## Global Hydrological Cycle
-![](/img/water_cycle.jpg){height=700px}
+![](/img/water_cycle.jpg){height=500px}
 
 ## Global Distribution of Water
-![](/img/EarthsWater-BarChart.png){height=700px}
+![](/img/EarthsWater-BarChart.png){height=500px}
 
 ## 
-![](/img/water_distribution_table.png){height=700px}
+![](/img/water_distribution_table.png){height=500px}
 
 
 ## Water Use in the United States
@@ -113,7 +113,7 @@ The U.S. Geological Survey tracks water use (to the best of their abilities) for
 (2) Rates of water movement are nonlinear functions of the controlling quantities: “the whole is different from the sum of the pieces”
 
 ## Water Balance Concept (Conservation of Mass!){width=600px}
-![]{/img/waterbalance.img}
+![]{/img/waterbalance.png}
 ### Inputs = Outputs ± Change in Storage
 
 ## Open vs. Closed Systems
@@ -156,3 +156,11 @@ Groundwater
 
 ## Water Balance Parameters
 ### Storage
+
+- Atmosphere / Clouds
+- Lakes / Rivers / Reservoirs
+- Glaciers
+- Canopy / Biomass
+- Soil Moisture
+- Aquifers (Groundwater)
+- Ocean
