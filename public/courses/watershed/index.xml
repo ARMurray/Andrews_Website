@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Overview on Andrew Murray</title>
-    <link>https://amurraygeo.com/courses/watershed/</link>
+    <link>/courses/watershed/</link>
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lecture 1</title>
-      <link>https://amurraygeo.com/courses/watershed/topic1/</link>
+      <link>/courses/watershed/topic1/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/watershed/topic1/</guid>
+      <guid>/courses/watershed/topic1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -71,11 +71,57 @@
     </item>
     
     <item>
+      <title>Lecture 2</title>
+      <link>/courses/watershed/lecture2/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/lecture2/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#reading-hornberger-chapter-1&#34;&gt;&lt;strong&gt;Reading:&lt;/strong&gt; Hornberger Chapter #1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#outline&#34;&gt;Outline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hydrology-water-science&#34;&gt;Hydrology (Water Science)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/lecture_2.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;reading-hornberger-chapter-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Reading:&lt;/strong&gt; Hornberger Chapter #1&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Outline&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What is hydrology?&lt;/li&gt;
+&lt;li&gt;Conservation of mass and energy&lt;/li&gt;
+&lt;li&gt;The hydrologic cycle&lt;/li&gt;
+&lt;li&gt;Distribution of Water on Earth&lt;/li&gt;
+&lt;li&gt;Observations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hydrology-water-science&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Hydrology (Water Science)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Study of the occurrence, circulation, and distribution of the water of the earth and its atmosphere
+– The global hydrologic cycle:
+— Terrestrial
+— Oceanic
+— Atmospheric
+– The land phase of the hydrologic cycle:
+— Water on and under the earth’s surface
+— Physical, chemical, biological processes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Friday (1)</title>
-      <link>https://amurraygeo.com/courses/watershed/friday_1/</link>
+      <link>/courses/watershed/friday_1/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/courses/watershed/friday_1/</guid>
+      <guid>/courses/watershed/friday_1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

@@ -22,9 +22,22 @@ weight: 30
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Precipitation and Evapotranspiration
+## **Reading:** Hornberger Chapter #1
 
-**Exceedance probability of extreme rainfall events** (pg.35)
+## Outline
+- What is hydrology?
+- Conservation of mass and energy
+- The hydrologic cycle
+- Distribution of Water on Earth
+- Observations
 
-**Interception** (pg. 39)
+## Hydrology (Water Science)
+- Study of the occurrence, circulation, and distribution of the water of the earth and its atmosphere
+-- The global hydrologic cycle:
+--- Terrestrial
+--- Oceanic
+--- Atmospheric
+-- The land phase of the hydrologic cycle:
+--- Water on and under the earth’s surface
+--- Physical, chemical, biological processes
 
