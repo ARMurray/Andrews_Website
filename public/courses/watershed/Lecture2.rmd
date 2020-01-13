@@ -1,9 +1,9 @@
 ---
 date: "2020-01-12T00:00:00+01:00"
-draft: true
+draft: false
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
 linktitle: Lecture 2
 menu:
   watershed:
@@ -22,9 +22,20 @@ weight: 30
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Precipitation and Evapotranspiration
+## Outline
+- What is hydrology?
+- Conservation of mass and energy
+- The hydrologic cycle
+- Distribution of Water on Earth
+- Observations
 
-**Exceedance probability of extreme rainfall events** (pg.35)
-
-**Interception** (pg. 39)
+## Hydrology (Water Science)
+### Study of the occurrence, circulation, and distribution of the water of the earth and its atmosphere
+- The global hydrologic cycle:
+  - Terrestrial
+  - Oceanic
+  - Atmospheric
+- The land phase of the hydrologic cycle:
+  - Water on and under the earth’s surface
+  - Physical, chemical, biological processes
 
