@@ -1,6 +1,6 @@
 ---
 date: "2020-01-12T00:00:00+01:00"
-draft: true
+draft: false
 output:
   blogdown::html_page:
     toc: true
@@ -15,7 +15,7 @@ weight: 30
 
 ---
 
-[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_2.html)
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_2_slides.html)
 
 
 ```{r setup, include=FALSE}
@@ -26,18 +26,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Outline
 - What is hydrology?
-- Conservation of mass and energy
-- The hydrologic cycle
-- Distribution of Water on Earth
-- Observations
+  - Conservation of mass and energy
+    - The hydrologic cycle
+      - Distribution of Water on Earth
+        - How we use Water in the U.S.
+          - Observations
 
 ## Hydrology (Water Science)
 - Study of the occurrence, circulation, and distribution of the water of the earth and its atmosphere
--- The global hydrologic cycle:
---- Terrestrial
---- Oceanic
---- Atmospheric
--- The land phase of the hydrologic cycle:
---- Water on and under the earth’s surface
---- Physical, chemical, biological processes
+  - The global hydrologic cycle:
+    - Terrestrial
+    - Oceanic
+    - Atmospheric
+  - The land phase of the hydrologic cycle:
+    - Water on and under the earth’s surface
+    - Physical, chemical, biological processes
 
