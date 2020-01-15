@@ -9,7 +9,7 @@ menu:
   watershed:
     parent: The Science of Hydrology
     weight: 2
-title: Lecture 2
+title: Lecture 3
 type: docs
 weight: 40
 
