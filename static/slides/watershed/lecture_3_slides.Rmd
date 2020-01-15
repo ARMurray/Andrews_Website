@@ -23,3 +23,28 @@ knitr::opts_chunk$set(echo = TRUE)
 ## {data-background=/img/watershed/lecture3/WB2.png data-background-size=cover}
 ## {data-background=/img/watershed/lecture3/WB3.png data-background-size=cover}
 ## {data-background=/img/watershed/lecture3/WB4.png data-background-size=cover}
+
+## Residence Time
+
+$Tr = \frac{V}{I}$
+
+"Residence time has dimensions of time because volume divided by volume per time is time"
+
+- [T] is time...
+  - r refers to the 'residence'
+- [V] is volume
+- I is inflow
+
+Remember this is at steady state where inflow and outflow rates are identical.
+
+So what are the units...?
+
+## {data-background=/img/watershed/lecture3/residence.png data-background-size=cover}
+
+## Runoff Ratio
+
+### The proportion of precipitation that becomes runoff
+
+$R_r = \frac{\overline{r_s}}{\overline{p}}$
+
+AKA - How mch rain does not get absorbed by the ground, plants etc...

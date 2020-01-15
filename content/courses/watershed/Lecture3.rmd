@@ -17,6 +17,7 @@ weight: 40
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/lecture_3_slides.html)
 
+[More Slides on Watersheds Here!](https://amurraygeo.com/slides/watershed/Lecture3_watersheds.pdf)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
