@@ -1,0 +1,25 @@
+---
+title: "Lecture 3"
+author: "Andrew"
+date: "Wednesday, January 15, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+- The water balance equation
+- Residence time
+- Runoff ratio
+- Observations
+- The watershed as the fundamental unit
+
+## {data-background=/img/watershed/lecture3/WB1.png data-background-size=cover}
+## {data-background=/img/watershed/lecture3/WB2.png data-background-size=cover}
+## {data-background=/img/watershed/lecture3/WB3.png data-background-size=cover}
+## {data-background=/img/watershed/lecture3/WB4.png data-background-size=cover}

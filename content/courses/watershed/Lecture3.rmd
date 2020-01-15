@@ -1,0 +1,31 @@
+---
+date: "2020-01-15T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 3
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 2
+title: Lecture 2
+type: docs
+weight: 40
+
+---
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_3_slides.html)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+- The water balance equation
+- Residence time
+- Runoff ratio
+- Observations
+- The watershed as the fundamental unit
+
