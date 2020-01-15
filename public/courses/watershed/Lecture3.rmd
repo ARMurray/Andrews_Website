@@ -17,8 +17,6 @@ weight: 40
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/lecture_3_slides.html)
 
-[More Slides on Watersheds Here!](https://amurraygeo.com/slides/watershed/Lecture3_watersheds.pdf)
-
 If we have time we can take a look through [THIS](https://amurraygeo.com/slides/watershed/CountyWaterBudgets.html), which is a presentation a gave awhile ago looking at high level water budgets for US counties.
 
 ```{r setup, include=FALSE}
