@@ -1,5 +1,5 @@
 ---
-date: "2019-05-05T00:00:00+01:00"
+date: "2020-01-03T00:00:00+01:00"
 draft: false
 output:
   blogdown::html_page:
@@ -11,13 +11,17 @@ menu:
     weight: 1
 title: Lecture 1
 type: docs
-weight: 2
+weight: 20
 
 ---
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/lecture_1.html)
 
+## Videos:
 
+[**Pumped Dry**](https://www.youtube.com/watch?v=RjsThobgq7Q)
+
+[**Extreme Weather 101**](https://www.youtube.com/watch?v=pNMm90nzT4o)
 
 
 ## What is Hydrology?

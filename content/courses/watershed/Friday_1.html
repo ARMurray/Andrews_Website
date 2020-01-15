@@ -1,0 +1,62 @@
+---
+title: "Friday (1)"
+date: "2020-01-10T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+linktitle: Friday (1)
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 1
+    type: docs
+weight: 40
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-started-with-r-and-r-studio">Getting Started with R and R studio</a></li>
+<li><a href="#installing-r">Installing R</a></li>
+<li><a href="#installing-r-studio">Installing R Studio</a></li>
+<li><a href="#getting-started-with-r-studio">Getting Started with R Studio</a></li>
+<li><a href="#okay-lets-code">Okay let’s code</a></li>
+</ul>
+</div>
+
+<p><a href="https://amurraygeo.com/slides/watershed/RDay_1.html">Slides are here!</a></p>
+<div id="getting-started-with-r-and-r-studio" class="section level2">
+<h2>Getting Started with R and R studio</h2>
+<p>R is a programming language that we install on our computer, whereas R studio is the program we will use to interact with the language. R studio is great because it has a large number of things that save time and help us code with as little memorization as possible. For example, it has all of the documentation and help files for every function in R built in. If you start to type the name of a file or the name of a function, r studio will auto-complete it (which saves a huge amount of time). If you are unfamiliar with what a ‘function’, think of it as a tool that has a specific purpose. For example, in microsoft excel, when you want to add up the numbers from a bunch of different cells you would click in an empty cell and type ‘=SUM(A2:A10)’ or something like that. In this case ‘SUM’ is the function that excel is using. R is built on functions and some are really simple (like SUM) and some are realllllly complicated, but the beauty is that once someone else has written the function, we don’t really have to mess with it, we can just use it the same way we would use any other tool. A good way to think about this is buying a power saw at a hardware store (or insert other complex machine). I can use a a power saw to cut wood, but I’m certainly not going to build a power saw from parts to do it. I’m going to buy a power saw that someone else built.</p>
+</div>
+<div id="installing-r" class="section level2">
+<h2>Installing R</h2>
+<p>Okay, let’s get to the installation. R is mainatained by CRAN, which stands for the the Comprehensive R Archive Network. <a href="https://cran.r-project.org/">CLICK HERE FOR THE DOWNLOAD PAGE</a> and select the version for whichever operating system you are using then follow the installation instructions.</p>
+</div>
+<div id="installing-r-studio" class="section level2">
+<h2>Installing R Studio</h2>
+<p>R studio is a company which is seperate from CRAN. They provide a software or IDE (interactive Developement Environment) that interacts with the R programming language and this is what we will use to write our code. <a href="https://rstudio.com/products/rstudio/download/#download">CLICK HERE FOR THE DOWNLOAD PAGE</a> and select the version for whichever operating system you are using and follow the installation instructions.</p>
+</div>
+<div id="getting-started-with-r-studio" class="section level2">
+<h2>Getting Started with R Studio</h2>
+<p>Once you have R and R Studio installed, open and run R Studio. When you first open R Studio it will look something like this:
+<img src="/img/RStudio_initial.png" /></p>
+<p>Green Box : This is the ‘console’. Here you can write code and execute it but it won’t be saved anywhere. This is good for doing things quickly or testing something before you put it into your script.</p>
+<p>Blue Box: This is your ‘environment’. In R studio you will use data which will be imported from files like csv or text files. When you import them they will show up here. Also when you create new things using your code, like a new table or a graph it will also appear here.</p>
+<p>Orange Box: This is where everything else goes. You will notice the tabs at the top. You can navigate through files and see what packages you have loaded etc… This is also where plots will appear when you create them (This is where you can view a plot as opposed to the ‘data item’ that is the plot in the environment).</p>
+<ul>
+<li>Click on File in the top-left corner and select ‘New Project’.</li>
+<li>Select ‘New Directory’ then select ‘New Project’ and name it as YOURONYEN_Watershed.</li>
+<li>In the box titled ‘Create project as a subdirectory of:’ navigate to a folder on your computer where you want to store your files for this class.</li>
+<li>When you have done this click on ‘Create Project’.</li>
+</ul>
+<p><img src="/img/RStudio_project.png" /></p>
+<p>In the image above you will now see that you have a ‘project’ open and that it is locateed in your specified folder. You can also now see the files you have in this folder in the bottom right window. You don’t have to use projects to execute code but it will make your life MUCH easier down the road by keeping everything very organized. We will use this project for the entire semester and all of the work we do will live inside of it.</p>
+</div>
+<div id="okay-lets-code" class="section level2">
+<h2>Okay let’s code</h2>
+<p>Click on the <img src="/img/newscript.png" /> image and choose ‘R Script’. This will open a new pane in the top left where you can write and save scripts. click the save button or ‘ctrl’+‘s’ to save the empty script immediately to your folder. create a new folder called ‘day1’ and save your script as gettingStarted.r</p>
+<p>Copy and paste the following into your script:</p>
+<p>To execute a single line of code, click the line you want to run and then press ‘ctrl’+‘enter’. You can also highlight a line of code and click the <img src="/img/run.png" /> button.</p>
+</div>

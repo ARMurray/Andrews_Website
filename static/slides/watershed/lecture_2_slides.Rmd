@@ -1,0 +1,171 @@
+---
+title: "Lecture 2"
+author: Andrew Murray
+date: 
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+- What is hydrology?
+- Conservation of mass and energy
+- The hydrologic cycle
+- Distribution of Water on Earth
+- Observations
+
+## Hydrology (Water Science)
+### Study of the occurrence, circulation, and distribution of the water of the earth and its atmosphere
+- The global hydrologic cycle:
+  - Terrestrial
+  - Oceanic
+  - Atmospheric
+- The land phase of the hydrologic cycle:
+  - Water on and under the earth’s surface
+  - Physical, chemical, biological processes
+
+## Mass and Energy
+- Principle of Conservation of Mass
+  - Anthony Lavoisier: “Mass of the Reactants = Mass of the Products”
+
+- Law of Conservation of Energy
+  - Energy can be neither created nor destroyed, but 	can be transformed (Galileo’s pendulum test)
+
+## Global Hydrological Cycle
+![](/img/water_cycle.jpg){height=500px}
+
+## Global Distribution of Water
+![](/img/EarthsWater-BarChart.png){height=500px}
+
+## 
+![](/img/water_distribution_table.png){height=500px}
+
+
+## Water Use in the United States
+The U.S. Geological Survey tracks water use (to the best of their abilities) for the country. Check out their report [HERE](https://www.usgs.gov/mission-areas/water-resources/science/water-use-united-states?qt-science_center_objects=0#qt-science_center_objects)
+![](/img/dailywateruse.png){height=500px}
+
+## Private Wells
+![](/img/welluseblock.png){height=500px}
+
+## Humans **did not** just start modifying the landscape to our advantage
+
+- 5,000-6,000 YBP, Hydraulic structures (canals, wells, etc.) in Pakistan, Mesopotamia, China & Egypt.
+![](/img/aqueduct.png){width=400px}
+
+- 3,800 YBP, Egyptians monitor river flow.
+
+
+- 3,000 YPB, Solomon’s concept of the hydrologic cycle – “All the rivers run into the sea; yet the sea is not full; unto the place from whence the rivers come, thither they return again.”
+
+- 753 BC - 1461 AD, Romans use hydraulics to construct extensive aqueduct system.
+
+## Historically…
+>- 1,500, Leonardo da Vinci (Italy) - “ water in rivers comes from rain, constantly circulating and returning.”
+
+>- 1,670-80s, Perrault & Marriotte - Modern approach – published measurements that quantified rainfall and as origin of stream flow.
+
+>- 1750, Term “hydrology” first used
+
+>- 1856, Henry Darcy’s work on flow through porous material - groundwater flow equation.
+
+>- 1862, Nathanial Beard’s “Manual of Hydrology”
+  - **Rainfall -> Streamflow**
+
+## Hisotrically cont'd...
+
+>- 1904, Daniel Mead’s text in hydrology for civil engineers.
+
+>- 1922, International Union of Geodesy and Geophysics “Scientific Hydrology Section” formed.
+
+>- 1930, Birth of American Geophysical Union “Hydrology Section”
+
+>- Mid 1900s – present, Hazen, Langbein - statistics; Meinzer, Theis, Hubbert - groundwater theory; Von Karman, Chow, Gilbert - stream hydraulics; Horton & Leopold - runoff; Thornthwaite & Penman - ET; Wolman & Garrels - water quality. 
+
+## Moving into Modern Times
+
+>- **1850-1960s:** Environmental concerns, e.g., Cuyahoga River
+
+>- **1962:** Silent Spring is published
+
+>- **1972:** Clean Water Act
+>- **1974:** Safe Drinking Water Act
+>- **Late 1900s-2000:** Drinking water issues
+>- **2015:** WOTUS
+  - Rapinoe v U.S. [Kennedy Opinion](https://www.law.cornell.edu/supct/html/04-1034.ZC1.html)
+>- **Today:** Environmental Concerns / Drinking Water Concerns + Climate Change 
+
+## Types of Hydrology
+- Chemical hydrology
+- Ecohydrology
+- Vadose zone hydrology
+- Hydrogeology
+- Hydrometeorology
+- Limnology
+- Surface hydrology
+
+## A Cautionary Tale of Simplification
+“We must be aware that an understanding of the basic physics of such processes as evaporation, snowmelt, and infiltration as they occur instantaneously at a given point does not always extrapolate easily to an understanding of the hydrology of a finite area, such as a drainage basin, over a finite time.” (Dingman, 2002)
+
+### WHY?
+(1) Hydrologic quantities and the factors that control them vary greatly in space and time (temporal/spatial heterogeneity).  It is both difficult and expensive/impossible to make measurements over such large scales.
+
+(2) Rates of water movement are nonlinear functions of the controlling quantities: “the whole is different from the sum of the pieces”
+
+## Water Balance Concept (Conservation of Mass!){width=600px}
+![](/img/waterbalance.png)
+### Inputs = Outputs ± Change in Storage
+
+## Open vs. Closed Systems
+The hydrologic cycle is an open system (open to energy)
+
+- Instances can be considered closed systems
+
+The problem is that we erroneously think of the hydrologic cycle independent of the energy balance.
+
+- But how are the water cycle and the terrestrial energy balance related? 
+
+## Land Phase of the Water Cycle
+![What are the two main drivers of water movement in this cycle?](/img/landphaseWC.png)
+
+
+## Water Balance Parameters
+### Inputs
+
+- Precipitation
+  - Rain
+  - Snow/Ice
+  - Fog/Mist
+Surface Runoff
+  - Runoff (Overland Flow)
+  - Soil Water (interflow)
+Groundwater
+
+## Water Balance Parameters
+### Outputs
+
+- Evaporation
+  - Open Water
+  - Bare Soil
+  - Leaf/Plant Surfaces
+- Transpiration
+- Surface Water
+  - Runoff (overland flow)
+  - Soil Water (interflow)
+- Groundwater
+
+## Water Balance Parameters
+### Storage
+
+- Atmosphere / Clouds
+- Lakes / Rivers / Reservoirs
+- Glaciers
+- Canopy / Biomass
+- Soil Moisture
+- Aquifers (Groundwater)
+- Ocean

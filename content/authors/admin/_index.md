@@ -44,7 +44,7 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD student in the [Carbonshed lab] (http://diegori.web.unc.edu/) at the University of North Carolina - Chapel Hill working
+I am a PhD student in the [Carbonshed lab](http://diegori.web.unc.edu/) at the University of North Carolina - Chapel Hill working
 under the advisement of Dr. Diego Riveros-Iregui. My research interests focus on surface-groundwater interactions
 and vulnerability to human health from various sources of contamination. I am currently researching carbon flux
 rates from freshwater streams and rivers to the atmosphere. I am also researching potential vulnerability of private water well

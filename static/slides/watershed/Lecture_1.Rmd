@@ -14,6 +14,37 @@ library(imager)
 
 ```
 
+## Water and Global Extremes
+  As you are sitting in this classroom you probably agree that water is pretty important to a lot of things... Let's start with an exercise just to see where our minds are...
+  
+  Take a piece of paper and write down the number one water-related issue of concern you can think of. This can be something local or global ... something short or long term... doesn't matter, just write something down.
+  
+## Water can affect anyone, anywhere, in different ways...
+
+### Not enough water...
+[**Pumped Dry**](https://www.youtube.com/watch?v=RjsThobgq7Q)
+
+### Too much water...
+
+[**Extreme Weather 101**](https://www.youtube.com/watch?v=pNMm90nzT4o)
+
+### Wrong kind of water...
+
+[**Ghost Forests**](https://www.sciencefriday.com/videos/the-seeds-of-ghost-forests/)
+
+<div class="notes">
+- Pumped Dry: Play 2:50
+- Extreme Weather: Play whole thing
+- Ghost Forests: Play 4:00
+</div>
+
+## Introductions
+Let's all take a moment to introduce ourselves...
+
+- Name
+- Something you identify with or care about (could be a hobby, your major, your family... anything!)
+- Why you're taking this class
+- What you wrote on your piece of paper
 
 ## What is Hydrology?
 
@@ -27,5 +58,66 @@ library(imager)
 
 **Problem-driven:** Where is all of this nitrogen coming from that's in our drinking water?
 
+## What We're Here to Do
 
+This course will cover the structure of drainage networks, nested catchments, and distribution and controls of precipitation, evaporation, runoff, soil moisture, and groundwater flow.
 
+Basically we're here to talk about the way water moves through the landscape. We will talk about the ways in which hydrologists and others investigate issues relating to water and we will learn how to do some of these analyses.
+
+Part of the goal for this course is for you to come away with actual skills that you can take with you and use in the future ... even if you do not end up with a career in the hydrological sciences.
+
+## How We're Going to Do It!
+ This class is first and foremost based on the Hornberger textbook. The material we discuss in class and the questions you are asked to answer on midterms / final will almost entirely be based on it. The lectures will build on and explore hydrological concepts drawn directly from this book.
+ 
+ The Plan:
+ - Mondays / Wednesdays will be material based
+ - Fridays will be application based
+ 
+ It's important to learn the major concepts in this class but it is just as important to learn to apply them. We will be coding in this class to reenforce the concepts learned and to give you skills to take with you.
+ 
+[Syllabus](/docs/syllabus_441.pdf)
+
+It is likely that the Syllabus will change over the course of the semester. The most up-to-date syllabus will always be the one on sakai under the syllabus tab.
+
+## Course Materials
+Lecture and coding materials can be found on my personal website, amurraygeo.com, under Courses -> Geog 441 [OR CLICK HERE](https://amurraygeo.com/courses/watershed/). In general I will try to post lectures the night before class and they will remain available for the semester.
+
+### Office Hours
+My office hours are in 3101 Murray Hall between 11:00 and 12:00 on Wednesday and Thursday.
+
+Office Hours are a time that I am guaranteed to be in my office and you can come by for any reason at all. Question about the homework? Perfect!, Talk about future plans and goals? Great! Totally unrelated question about pancakes? Awesome, I love pancakes!
+
+If you cannot make it to my office hours you can always set up a meeting with me or just send me an email.
+
+## Coding and the Geosciences
+
+Welcome to 2020 where coding is no longer an optional skill when it comes to the Geosciences
+
+Why we code:
+
+>- Reproducibility
+>- Transparency
+>- Breadcrumbs
+>- Computers are better at math than us (well at least me)
+>- Science Communication (Figures Figures Figures!)
+
+The good news, if you have no experience coding, is that there are a TON of great resources (including me) to get going and fast.
+
+##
+
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/Rlogo.png){width=100px} R is a computer language that has a long history and is based on previous languages before it. It's main intention was for statistical computing but it has become one of the most popular languages in the world with millions of users. Among the many reasons for its popularity are that it is free and open source and it can be run on any computer (Mac / Windows / Linux).
+
+It is:
+
+>- Extendable
+>- User Friendly
+>- Well Supported (Globally and here UNC)
+
+R is just a language and therefore can be run in a command prompt, meaning typing straight code into the computer (Nobody does this!) 
+
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/wallofcode.jpg){width=300px }
+
+This is where R Studio comes in...
+
+## R Studio
+![](C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/images/RStudio.png){width=800px}
