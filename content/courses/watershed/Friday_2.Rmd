@@ -1,0 +1,34 @@
+---
+title: "Friday (2)"
+date: "2020-01-16T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Friday (2)
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 50
+    type: docs
+
+---
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/RDay_2.html)
+
+## Water Balance and Budgets for Watersheds
+
+[**The National Hydrography Dataset**](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-dataset?qt-science_support_page_related_con=0#qt-science_support_page_related_con) is made up of all the water features in the United States, as defined by the U.S. Geological Survey and is the most commonly used dataset for water features. Although it will soon be replaced by [NHDPlus High Resolution](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/nhdplus-high-resolution) which has not been completed for the entore U.S. yet.
+
+Today, we will be walking through how to calculate a water budget for a watershed using R. Follow the [slides](https://amurraygeo.com/slides/watershed/RDay_2.html) to get started.
+
+## **Resources**
+
+[Find Your Watershed](https://water.usgs.gov/wsc/map_index.html)
+
+[PRISM Precipitation Data](http://www.prism.oregonstate.edu/)
+
+[R Studio Cheat Sheet](https://rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)
+
+### R Package Documentation:
+[USGS NHDPlus](https://cran.r-project.org/web/packages/nhdplusTools/nhdplusTools.pdf)

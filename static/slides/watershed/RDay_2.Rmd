@@ -1,0 +1,110 @@
+---
+title: "R Day #2"
+author: Andrew Murray
+date: "January 17, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Water Balance and Budgets for Watersheds
+
+### Data:
+
+- USGS NHD / Gauge Data
+- PRISM
+
+So many people use R now that many agencies and research groups are now making data directly available through their own packages. 
+
+**dataRetrieval**
+
+- package that downloads USGS and EPA water data from the National Water Information System.
+
+**prism**
+
+- package that downloads precipitation and temperature data from the Prism Climate Group at Oregan State
+
+## USGS Data
+[**The National Hydrography Dataset**](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-dataset?qt-science_support_page_related_con=0#qt-science_support_page_related_con) is made up of all the water features in the United States, as defined by the U.S. Geological Survey and is the most commonly used dataset for water features. Although it will soon be replaced by [NHDPlus High Resolution](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/nhdplus-high-resolution) which has not been completed for the entore U.S. yet.
+
+## Hydrography Data Includes:
+
+- Area Features: These are polygons such as lakes, ponds, swamps, reservoirs, estuaries etc...
+- Point Features: Mostly gauges, but also dams, locks, waterfalls etc...
+- Events: More points .. could be gauge issues such as going offline.
+- Tables: Metadata
+
+Hydrography data encompasses the physical boundaries and points we use to conduct hydrological research.
+
+## Hydrological Unit Codes
+USGS assigns every watershed a code which is nested within a region.
+
+[Which watershed(s) do you live in?](https://water.usgs.gov/wsc/map_index.html)
+![](/img/watershed/rday3/huc.png){height=500px}
+
+## National Water Information System
+The [NWIS](https://waterdata.usgs.gov/nwis) is the place to go for all of your water data needs. It brings together data from USGS and EPA and makes it accessible to everyone. Today we are going to take a look at water data for the swift creek at a [gauging station](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=0208773375) in Johnston County.
+
+## Prism Data
+Prism CLimate group is based at Oregon State and collects data from around the United States, runs it through algorithims which they have written and produces national precipitation and temperature data each day.
+
+You can read more [HERE](http://www.prism.oregonstate.edu/)
+
+## Getting help
+Every package that is created for use with R must have accompanying documentation in order for it to be published. This includes specific help pages for every function and for some includes tutorials. The popular packages, such as dplyr or sf which are packages for managing data and geometries (anything spatial) respectively, have extensive online examples posted by people who use them.
+
+**prism:** [tutorial](https://rpubs.com/collnell/get_prism) / [documentation](https://cran.r-project.org/web/packages/prism/prism.pdf)
+**sf:** [tutorial](https://r-spatial.github.io/sf/articles/sf1.html) / [documentation](https://cran.r-project.org/web/packages/sf/sf.pdf)
+**dataRetrieval:** [tutorial](https://owi.usgs.gov/R/dataRetrieval.html#1) / [documentation](https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf)
+
+
+## Accessing data in R
+
+Open R studio and if you have not already created a project for this class, do so now following [these steps](https://amurraygeo.com/slides/watershed/rday_1#6)
+
+Create a new file by clicking the icon that looks like a blank page with a green circle with a white plus sign (directly underneath file) and select 'R Script'. Save this new file as 'waterBalance.r'
+
+**To install packages:**
+Copy and paste the code below into the console of your R studio and run it to install the NHD package. We do this in a console because you only need to install a package once (just like installing R). Once it is installed, whenever you open R studio, you will need to 'load' the package by using the function ```library()```
+
+```{r,eval=FALSE, echo=TRUE}
+install.packages('dataRetrieval')
+```
+
+## Other packages you will need
+
+Also install the following packages:
+
+- ```'tidyverse'```
+- ```'sf'```
+- ```'here'```
+- ```'raster'```
+- ```'here'```
+- ```'prism'```
+- ```'mapview'```
+- ```'plotly'```
+
+## Assignment for next week
+
+Open [THIS LINK](/files/watershed/day2.R) and copy the code into your script window that you already created.
+
+**The Assignment:**
+
+- Read through and run the script
+- Wherever you see a '#' to the right of a line of code, to the right of the '#' write one sentence on what that line does.
+- Answer the questions at the bottom.
+
+There are 21 '#' markers each worth 2 pts.
+Each question has the points listed next to it. 
+The total for the assignment is 94 pts (which will be recalculated to 100 to be worth the same as other homeworks).
+
+Due date is next Friday (Jan 24) by Noon
+
+
+
+

@@ -9,9 +9,9 @@ linktitle: Friday (1)
 menu:
   watershed:
     parent: The Science of Hydrology
-    weight: 1
+    weight: 20
     type: docs
-weight: 40
+weight: 20
 ---
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/RDay_1.html)

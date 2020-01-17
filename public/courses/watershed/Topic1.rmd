@@ -8,10 +8,10 @@ linktitle: Lecture 1
 menu:
   watershed:
     parent: The Science of Hydrology
-    weight: 1
+    weight: 10
 title: Lecture 1
 type: docs
-weight: 20
+weight: 10
 
 ---
 
