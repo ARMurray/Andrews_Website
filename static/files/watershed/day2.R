@@ -24,8 +24,12 @@ swiftCreek <- readNWISuv(siteNumbers = siteNo,
                          endDate = end.date)%>%
   renameNWISColumns()
 
+# Convert cubic feet per second to cubic meters per second in a new column.
+swiftCreek$Flow_Inst_m <- swiftCreek$Flow_Inst * 0.0283168
+
+
 # Make a simple hydrograph with base R
-plot(swiftCreek$Flow_Inst~swiftCreek$dateTime)
+plot(swiftCreek$Flow_Inst_m~swiftCreek$dateTime)
 
 
 # Download some precipitation data for the same year
@@ -40,13 +44,13 @@ ppt <- raster(here("data/PRISM_ppt_stable_4kmM3_2014_bil/PRISM_ppt_stable_4kmM3_
 plot(ppt)    # Tries to make a simple plot of the data
 
 # Import the watershed boundary
-wbd <- st_read(here("day2/WBD.shp"))    #
+wbd <- st_read(here("data/WBD.shp"))    #
 
 # Crop the rainfall raster layer to the watershed
 pptCrop <- crop(ppt,wbd)        #
 
 # Make a map of the watershed with ppt
-mapview(pptSwift)+          #
+mapview(pptCrop)+          #
   mapview(wbd)+             #
   mapview(gauge_sf)         #
 
@@ -67,8 +71,8 @@ meanPpt <- mean(swiftPpt[,1],na.rm=TRUE)   #
 # to deterine the area of the watershed. Remember that the sf package has functions for geometries.
 # try searching the sf package help page for 'area'
 
-area <- 'FIND CORRECT FUNCTION'(wbd)    #
-totPpt <- meanPpt*area                  #
+area <- 'FIND CORRECT FUNCTION'(wbd)                #
+totPpt <- meanPpt*as.numeric(area) / 1000           #
 
 # Answer:
 
@@ -80,8 +84,10 @@ totPpt <- meanPpt*area                  #
 monthlyQ <- swiftCreek%>%                       #
   mutate(Month = substr(dateTime,6,7))%>%       #
   group_by(Month)%>%                            #
-  mutate(Discharge = sum(Flow_Inst*60*15))%>%   #
-  ungroup()                                     #
+  mutate(Discharge = sum(Flow_Inst_m*60*15))%>%   #
+  ungroup()%>%
+  dplyr::select(Month, Discharge)%>%            #
+  distinct()                                    #
 
 monthlyQ%>%                                     #
   plot_ly(x=~Month, y=~Discharge)%>%            #
@@ -95,7 +101,7 @@ monthlyQ%>%                                     #
 
 totQ <- sum(monthlyQ$Discharge)                 #
 
-balance <- as.numeric(totPpt)-totQ              #
+balance <- totPpt-totQ                          #
 
 # Answer: 
 
