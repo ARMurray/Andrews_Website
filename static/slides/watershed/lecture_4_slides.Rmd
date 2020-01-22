@@ -46,14 +46,12 @@ knitr::opts_chunk$set(echo = TRUE)
 - When we think of watersheds we immediately think of steep hill slopes feeding into flood plains / rivers / oceans etc... but this is not always the case
 
 
-## “This is the Sand Hills; you’re only two weeks away from the next drought.”
+## {data-background=/img/watershed/lecture4/sandHills2.png data-background-size=cover}
 
-![](/img/watershed/lecture4/sandhills2.png){height=700px}
+![](/img/watershed/lecture4/sandHills2.png){height=700px}
 
 
-## The Divide 
-
-![](/img/watershed/lecture4/divide.png data-background-size=cover){height=700px}
+## The Divide ## {data-background=/img/watershed/lecture4/divide.png data-background-size=cover}
 
 ## REMEMBER!... The Watershed Concept is Based on Surface Water
 
@@ -80,3 +78,11 @@ At the scale of small watersheds where measurements are lacking, ‘watershed ar
 ## {data-background=/img/watershed/lecture4/DA3.png data-background-size=cover}
 ## {data-background=/img/watershed/lecture4/DA4.png data-background-size=cover}
 ## {data-background=/img/watershed/lecture4/units.png data-background-size=cover}
+
+## Prism
+**ABSTRACT:** Spatial climate data sets of 1971–2000 mean monthly precipitation and minimum and maximum temperature were developed for the conterminous United States. These 30-arcsec (∼800-m) grids are the official spatial climate data sets of the U.S. Department of Agriculture. The PRISM (Parameter-elevation Relationships on Independent Slopes Model)interpolation method was used to develop data sets that reflected, as closely as possible, the current state of knowledge of spatial climate patterns in the United States. PRISM calculates a climate–elevation regression for each digital elevation
+model (DEM) grid cell, and stations entering the regression are assigned weights based primarily on the physiographic similarity of the station to the grid cell. Factors considered are location, elevation, coastal proximity, topographic facet
+orientation, vertical atmospheric layer, topographic position, and orographic effectiveness of the terrain. Surface stations used in the analysis numbered nearly 13 000 for precipitation and 10 000 for temperature. Station data were spatially quality
+controlled, and short-period-of-record averages adjusted to better reflect the 1971–2000 period. PRISM interpolation uncertainties were estimated with cross-validation (C-V) mean absolute error (MAE) and the 70%
+prediction interval of the climate–elevation regression function. The two measures were not well correlated at the point level, but were similar when averaged over large regions. The PRISM data set was compared with the WorldClim and Daymet spatial climate data sets. The comparison demonstrated that using a relatively dense station data set and the
+physiographically sensitive PRISM interpolation process resulted in substantially improved climate grids over those of WorldClim and Daymet. The improvement varied, however, depending on the complexity of the region. Mountainous and coastal areas of the western United States, characterized by sparse data coverage, large elevation gradients, rain shadows, inversions, cold air drainage, and coastal effects, showed the greatest improvement. The PRISM data set benefited from a peer review procedure that incorporated local knowledge and data into the development process. Copyright 2008 Royal Meteorological Society

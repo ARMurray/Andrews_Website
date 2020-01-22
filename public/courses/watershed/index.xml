@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Overview on Andrew Murray</title>
-    <link>/courses/watershed/</link>
+    <link>https://amurraygeo.com/courses/watershed/</link>
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lecture 1</title>
-      <link>/courses/watershed/topic1/</link>
+      <link>https://amurraygeo.com/courses/watershed/topic1/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/topic1/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/topic1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>Friday (1)</title>
-      <link>/courses/watershed/friday_1/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_1/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_1/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -104,7 +104,7 @@
 &lt;div id=&#34;getting-started-with-r-studio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Getting Started with R Studio&lt;/h2&gt;
 &lt;p&gt;Once you have R and R Studio installed, open and run R Studio. When you first open R Studio it will look something like this:
-&lt;img src=&#34;/img/RStudio_initial.png&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://amurraygeo.com/img/RStudio_initial.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Green Box : This is the ‘console’. Here you can write code and execute it but it won’t be saved anywhere. This is good for doing things quickly or testing something before you put it into your script.&lt;/p&gt;
 &lt;p&gt;Blue Box: This is your ‘environment’. In R studio you will use data which will be imported from files like csv or text files. When you import them they will show up here. Also when you create new things using your code, like a new table or a graph it will also appear here.&lt;/p&gt;
 &lt;p&gt;Orange Box: This is where everything else goes. You will notice the tabs at the top. You can navigate through files and see what packages you have loaded etc… This is also where plots will appear when you create them (This is where you can view a plot as opposed to the ‘data item’ that is the plot in the environment).&lt;/p&gt;
@@ -114,24 +114,24 @@
 &lt;li&gt;In the box titled ‘Create project as a subdirectory of:’ navigate to a folder on your computer where you want to store your files for this class.&lt;/li&gt;
 &lt;li&gt;When you have done this click on ‘Create Project’.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/RStudio_project.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/RStudio_project.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In the image above you will now see that you have a ‘project’ open and that it is locateed in your specified folder. You can also now see the files you have in this folder in the bottom right window. You don’t have to use projects to execute code but it will make your life MUCH easier down the road by keeping everything very organized. We will use this project for the entire semester and all of the work we do will live inside of it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;okay-lets-code&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Okay let’s code&lt;/h2&gt;
-&lt;p&gt;Click on the &lt;img src=&#34;/img/newscript.png&#34; /&gt; image and choose ‘R Script’. This will open a new pane in the top left where you can write and save scripts. click the save button or ‘ctrl’+‘s’ to save the empty script immediately to your folder. create a new folder called ‘day1’ and save your script as gettingStarted.r&lt;/p&gt;
+&lt;p&gt;Click on the &lt;img src=&#34;https://amurraygeo.com/img/newscript.png&#34; /&gt; image and choose ‘R Script’. This will open a new pane in the top left where you can write and save scripts. click the save button or ‘ctrl’+‘s’ to save the empty script immediately to your folder. create a new folder called ‘day1’ and save your script as gettingStarted.r&lt;/p&gt;
 &lt;p&gt;Copy and paste the following into your script:&lt;/p&gt;
-&lt;p&gt;To execute a single line of code, click the line you want to run and then press ‘ctrl’+‘enter’. You can also highlight a line of code and click the &lt;img src=&#34;/img/run.png&#34; /&gt; button.&lt;/p&gt;
+&lt;p&gt;To execute a single line of code, click the line you want to run and then press ‘ctrl’+‘enter’. You can also highlight a line of code and click the &lt;img src=&#34;https://amurraygeo.com/img/run.png&#34; /&gt; button.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Lecture 4</title>
-      <link>/courses/watershed/lecture4/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture4/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture4/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture4/</guid>
       <description>
 
 
@@ -155,10 +155,10 @@
     
     <item>
       <title>Friday (2)</title>
-      <link>/courses/watershed/friday_2/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_2/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_2/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_2/</guid>
       <description>
 
 
@@ -183,10 +183,10 @@
     
     <item>
       <title>Lecture 3</title>
-      <link>/courses/watershed/lecture3/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture3/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture3/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture3/</guid>
       <description>
 
 
@@ -207,10 +207,10 @@
     
     <item>
       <title>Lecture 2</title>
-      <link>/courses/watershed/lecture2/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture2/</link>
       <pubDate>Sun, 12 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture2/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture2/</guid>
       <description>
 
 
