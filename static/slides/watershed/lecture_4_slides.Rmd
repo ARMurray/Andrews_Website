@@ -73,6 +73,10 @@ At the scale of small watersheds where measurements are lacking, ‘watershed ar
 ![](/img/watershed/lecture4/aerobic.png){width=800px}
 
 
-## Relationships (Grain Size)
+## {data-background=/img/watershed/lecture4/gradient.png data-background-size=cover}
 
-![](/img/watershed/lecture4/grainSize.png){width=700px}
+## {data-background=/img/watershed/lecture4/DA1.png data-background-size=cover}
+## {data-background=/img/watershed/lecture4/DA2.png data-background-size=cover}
+## {data-background=/img/watershed/lecture4/DA3.png data-background-size=cover}
+## {data-background=/img/watershed/lecture4/DA4.png data-background-size=cover}
+## {data-background=/img/watershed/lecture4/units.png data-background-size=cover}
