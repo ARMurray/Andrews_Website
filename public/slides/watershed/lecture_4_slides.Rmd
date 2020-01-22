@@ -1,0 +1,29 @@
+---
+title: "Lecture 4"
+author: Andrew Murray
+date: "January 22, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+
+- Watersheds continued
+- Additional considerations
+- Dynamic Modelling
+- Precipitation
+
+## Watersheds
+
+### Watershed Definition Revisited
+
+**From Hornberger et al., 1998:** “An area of land in which water flowing across the land surface drains into a particular stream or river and ultimately flows through a single point or outlet on that stream or river.”
+![](/img/watershed/lecture4/watershed.png){height = 400px}
+### What's Wrong with this Definition?
+
