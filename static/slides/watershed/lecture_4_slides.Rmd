@@ -48,7 +48,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## “This is the Sand Hills; you’re only two weeks away from the next drought.”
 
-![](img/watershed/lecture4/sandhills2.png){height=700px}
+![](/img/watershed/lecture4/sandhills2.png){height=700px}
 
 
 ## The Divide 
@@ -63,10 +63,16 @@ knitr::opts_chunk$set(echo = TRUE)
   - How else might it get out?
   
 ## Groundwater vs. Surface Water Divide
-![](/img/watershed/lecture4/groundwaterDivide.png)
+
+![](/img/watershed/lecture4/groundwaterDivide.png){width=800px}
 
 
 ## Characterizing Smaller Watersheds
 At the scale of small watersheds where measurements are lacking, ‘watershed area’ is often used to compare spatial patterns of soil water content.
 
 ![](/img/watershed/lecture4/aerobic.png){width=800px}
+
+
+## Relationships (Grain Size)
+
+![](/img/watershed/lecture4/grainSize.png){width=700px}
