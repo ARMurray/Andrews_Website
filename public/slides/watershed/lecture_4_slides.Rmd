@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Watershed Definition Revisited
 
 <div style= "float:right;position: relative; top: -80px;">
-![](/img/watershed/lecture4/watershed.png){height=200px}
+![](/img/watershed/lecture4/watershed.png){height=350px}
 </div>
 
 **From Hornberger et al., 1998:** “An area of land in which water flowing across the land surface drains into a particular stream or river and ultimately flows through a single point or outlet on that stream or river.”
@@ -38,12 +38,22 @@ knitr::opts_chunk$set(echo = TRUE)
 > - Hard to apply across all systems, e.g., ‘windsheds’
 
 ## 'Traditional' Watersheds?
+<div style= "float:right;position: relative; top: -80px;">
+![](/img/watershed/lecture4/sandHills.png){height=350px}
+</div>
 
 - Watersheds are not all the same and should not be treated as such
 - When we think of watersheds we immediately think of steep hill slopes feeding into flood plains / rivers / oceans etc... but this is not always the case
-![](/img/watershed/lecture4/sandHills.png){height=200px}
-
-## “This is the Sand Hills; you’re only two weeks away from the next drought.” (data-background=/img/watershed/lecture4/sandhills2.png data-background-size=cover)
 
 
-## The Divide (data-background=img/watershed/lecture4/divide.png data-background-size=cover)
+## “This is the Sand Hills; you’re only two weeks away from the next drought.” (data-background=/watershed/lecture4/sandhills2.png data-background-size=cover)
+
+
+## The Divide (data-background=watershed/lecture4/divide.png data-background-size=cover)
+
+## REMEMBER!... The Watershed Concept is Based on Surface Water
+
+- Groundwater table divides beneath the watershed DO NOT ALWAYS mimic surface water divides.
+
+- Groundwater MAY NOT leave the watershed via the stream “cross-section”
+  - How else might it get out?
