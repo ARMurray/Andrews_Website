@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
 > - Hard to apply across all systems, e.g., ‘windsheds’
 
 ## 'Traditional' Watersheds?
-<div style= "float:right;position: relative; top: -80px;">
+<div style= "float:right;position: relative; top: -120px;">
 ![](/img/watershed/lecture4/sandHills.png){height=350px}
 </div>
 
@@ -46,10 +46,14 @@ knitr::opts_chunk$set(echo = TRUE)
 - When we think of watersheds we immediately think of steep hill slopes feeding into flood plains / rivers / oceans etc... but this is not always the case
 
 
-## “This is the Sand Hills; you’re only two weeks away from the next drought.” (data-background=/watershed/lecture4/sandhills2.png data-background-size=cover)
+## “This is the Sand Hills; you’re only two weeks away from the next drought.”
+
+![](img/watershed/lecture4/sandhills2.png){height=700px}
 
 
-## The Divide (data-background=watershed/lecture4/divide.png data-background-size=cover)
+## The Divide 
+
+![](/img/watershed/lecture4/divide.png data-background-size=cover){height=700px}
 
 ## REMEMBER!... The Watershed Concept is Based on Surface Water
 
@@ -57,3 +61,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Groundwater MAY NOT leave the watershed via the stream “cross-section”
   - How else might it get out?
+  
+## Groundwater vs. Surface Water Divide
+![](/img/watershed/lecture4/groundwaterDivide.png)
+
+
+## Characterizing Smaller Watersheds
+At the scale of small watersheds where measurements are lacking, ‘watershed area’ is often used to compare spatial patterns of soil water content.
+
+![](/img/watershed/lecture4/aerobic.png){width=800px}
