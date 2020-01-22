@@ -18,6 +18,8 @@ type: docs
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_4_slides.html)
+
 ## Outline
 
 - Watersheds – continued
