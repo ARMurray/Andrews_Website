@@ -1,0 +1,30 @@
+---
+title: "Intro to Spatial Analysis in R"
+author: Andrew Murray
+date: "January 23, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+- R has powerful GIS capabilities which are constantly growing thanks to the expanding number of available packages.
+- ```sf``` is the most important R package to handle vector data. ```sf``` is a successor of ```sp```, but it's still evolving. Moreover, many older R packages depend on the functions and classes for the ```sp``` package (though this is becoming less and less so).
+- ```raster``` is an extension of spatial data classes to work with rasters.
+- There are many ways to vizualize spatial data in R, for example ```ggplot2```, ```rasterVis```, ```tmap```, ```leaflet```, and ```mapview``` packages
+- It is easy to connect R with a GIS software - GRASS GIS (rgrass7), SAGA (RSAGA), QGIS (RQGIS), and ArcGIS (arcgisbinding)
+
+## Vector Data
+### The ```sf``` package
+
+The ```sf``` package is the implementation of the [simple features standard](https://r-spatial.github.io/sf/articles/sf1.html) and incorporates:
+- Most of the functions start with the prefix st_
+  - st_read()
+  - st_area()
+  - st_transform()

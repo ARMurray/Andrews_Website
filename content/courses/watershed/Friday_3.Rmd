@@ -1,0 +1,30 @@
+---
+title: "Friday (3) - Spatial Analysis"
+date: "2020-01-23T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Friday (2)
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 70
+    type: docs
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Back to Basics: Spatial Analysis in R
+[Slides are here!](https://amurraygeo.com/slides/watershed/RDay_3.html)
+[Code is here!](https://amurraygeo.com/files/watershed/day3.R)
+
+## Outline:
+
+- Vector Data
+- Raster Data
+- Vector / Raster Interactions
+- Advanced Map Making
+
