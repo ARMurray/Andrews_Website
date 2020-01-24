@@ -69,6 +69,46 @@ class(HUC8)
 ```sf``` objects usually have two classes - sf and data.frame. Two main differences comparing to a regular data.frame object are spatial metadata (geometry type, dimension, bbox, epsg (SRID), proj4string) and additional column - typically named geom or geometry.
 
 ```{r}
+# brackets[] subset a vector by [rows,columns]
 HUC8[1:4,10:12]
+```
+
+## Attributes
+
+sf object can be used as a regular data.frame object in many operations
+```head (HUC8)```
+```nrow(HUC8)```
+```ncol(HUC8)```
+```HUC8[,c(10,)]```
+```HUC8[1:5,2]```
+
+The 'geometry' column of an sf object is what is used to draw a spatial object. This can be changed or removed using:
+```st_set_geometry(HUC8, NULL)```
+
+## The ```dplyr``` package and ```sf```
+
+- ```dplyr``` is a package used to manage and organize your data (filtering, ordering, making new columns from old columns etc...)
+
+- ```select``` for example allows you to keep only the columns you want.
+
+```{r}
+HUC8_sel <- select(HUC8, GNIS_ID, Name, States, HUC8, AreaSqKm)
+```
+
+## The ```dplyr``` package and ```sf```
+
+```arrange()```
+
+```{r}
+HUC8_arr <- arrange(HUC8_sel,Name)
+HUC8_arr
+```
+
+## The ```dplyr``` package and ```sf```
+
+```filter()```
+```{r}
+HUC8_NC <- filter(HUC8_sel, States %in% "NC")
+HUC8_NC
 ```
 

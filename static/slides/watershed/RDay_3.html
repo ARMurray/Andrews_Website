@@ -3231,7 +3231,8 @@ write_sf(gauges_sf,here(&quot;shp/gauges.shp&quot;))</pre>
 
 <p><code>sf</code> objects usually have two classes - sf and data.frame. Two main differences comparing to a regular data.frame object are spatial metadata (geometry type, dimension, bbox, epsg (SRID), proj4string) and additional column - typically named geom or geometry.</p>
 
-<pre class = 'prettyprint lang-r'>HUC8[1:4,10:12]</pre>
+<pre class = 'prettyprint lang-r'># brackets[] subset a vector by [rows,columns]
+HUC8[1:4,10:12]</pre>
 
 <pre >## Simple feature collection with 4 features and 3 fields
 ## geometry type:  MULTIPOLYGON
@@ -3243,7 +3244,103 @@ write_sf(gauges_sf,here(&quot;shp/gauges.shp&quot;))</pre>
 ## 1            Deep     NC 03030003 MULTIPOLYGON (((-79.96105 3...
 ## 2 Upper Cape Fear     NC 03030004 MULTIPOLYGON (((-78.85116 3...
 ## 3 Lower Cape Fear     NC 03030005 MULTIPOLYGON (((-78.731 34....
-## 4           Black     NC 03030006 MULTIPOLYGON (((-78.7296 35...</pre></article></slide>
+## 4           Black     NC 03030006 MULTIPOLYGON (((-78.7296 35...</pre>
+
+</article></slide><slide class=""><hgroup><h2>Attributes</h2></hgroup><article  class="smaller " id="attributes">
+
+<p>sf object can be used as a regular data.frame object in many operations <code>head (HUC8)</code></p>
+
+<pre class = 'prettyprint lang-nrow(huc8)```'>```ncol(HUC8)```
+```HUC8[,c(10,)]```
+```HUC8[1:5,2]```
+
+The &#39;geometry&#39; column of an sf object is what is used to draw a spatial object. This can be changed or removed using:
+```st_set_geometry(HUC8, NULL)```
+
+## The ```dplyr``` package and ```sf```
+
+- ```dplyr``` is a package used to manage and organize your data (filtering, ordering, making new columns from old columns etc...)
+
+- ```select``` for example allows you to keep only the columns you want.
+
+
+```r
+HUC8_sel &lt;- select(HUC8, GNIS_ID, Name, States, HUC8, AreaSqKm)</pre>
+
+</article></slide><slide class=""><hgroup><h2>The <code>dplyr</code> package and <code>sf</code></h2></hgroup><article  class="smaller " id="the-dplyr-package-and-sf">
+
+<pre class = 'prettyprint lang-arrange()```'>
+
+```r
+HUC8_arr &lt;- arrange(HUC8_sel,Name)
+HUC8_arr</pre>
+
+<pre >## Simple feature collection with 203 features and 5 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: -90.6235 ymin: 24.39533 xmax: -75.3981 ymax: 37.52103
+## epsg (SRID):    4269
+## proj4string:    +proj=longlat +datum=NAD83 +no_defs
+## First 10 features:
+##    GNIS_ID                    Name States     HUC8 AreaSqKm
+## 1        0                  Alafia     FL 03100204  1091.84
+## 2        0                 Alapaha  FL,GA 03110202  4664.27
+## 3        0               Albemarle  NC,VA 03010205 11189.95
+## 4        0                Altamaha     GA 03070106  4307.81
+## 5        0 Apalachee Bay-St. Marks  FL,GA 03120001  3403.38
+## 6        0            Apalachicola  FL,GA 03130011  2876.69
+## 7        0        Apalachicola Bay     FL 03130014  1251.05
+## 8        0                 Aucilla  FL,GA 03110103  2467.10
+## 9        0                Banister     VA 03010105  1545.63
+## 10       0       Big Cypress Swamp     FL 03090204  8311.48
+##                          geometry
+## 1  MULTIPOLYGON (((-82.07899 2...
+## 2  MULTIPOLYGON (((-83.62522 3...
+## 3  MULTIPOLYGON (((-76.0244 36...
+## 4  MULTIPOLYGON (((-82.50036 3...
+## 5  MULTIPOLYGON (((-83.99985 3...
+## 6  MULTIPOLYGON (((-84.75181 3...
+## 7  MULTIPOLYGON (((-84.5167 29...
+## 8  MULTIPOLYGON (((-83.83397 3...
+## 9  MULTIPOLYGON (((-79.27349 3...
+## 10 MULTIPOLYGON (((-81.77536 2...</pre>
+
+</article></slide><slide class=""><hgroup><h2>The <code>dplyr</code> package and <code>sf</code></h2></hgroup><article  class="smaller " id="the-dplyr-package-and-sf-1">
+
+<pre class = 'prettyprint lang-filter()```'>
+```r
+HUC8_NC &lt;- filter(HUC8_sel, States %in% &quot;NC&quot;)
+HUC8_NC</pre>
+
+<pre >## Simple feature collection with 20 features and 5 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: -81.16715 ymin: 33.76852 xmax: -75.47986 ymax: 36.54083
+## epsg (SRID):    4269
+## proj4string:    +proj=longlat +datum=NAD83 +no_defs
+## First 10 features:
+##    GNIS_ID                Name States     HUC8 AreaSqKm
+## 1        0                Deep     NC 03030003  3755.81
+## 2        0     Upper Cape Fear     NC 03030004  4221.60
+## 3        0     Lower Cape Fear     NC 03030005  2860.06
+## 4        0               Black     NC 03030006  4076.63
+## 5        0 Northeast Cape Fear     NC 03030007  4510.43
+## 6        0        South Yadkin     NC 03040102  2347.89
+## 7        0        Lower Yadkin     NC 03040103  3081.68
+## 8        0       Lower Roanoke     NC 03010107  3392.08
+## 9        0        Middle Neuse     NC 03020202  2758.90
+## 10       0           Upper Tar     NC 03020101  3379.48
+##                          geometry
+## 1  MULTIPOLYGON (((-79.96105 3...
+## 2  MULTIPOLYGON (((-78.85116 3...
+## 3  MULTIPOLYGON (((-78.731 34....
+## 4  MULTIPOLYGON (((-78.7296 35...
+## 5  MULTIPOLYGON (((-78.00561 3...
+## 6  MULTIPOLYGON (((-80.84891 3...
+## 7  MULTIPOLYGON (((-80.05984 3...
+## 8  MULTIPOLYGON (((-77.70413 3...
+## 9  MULTIPOLYGON (((-77.35876 3...
+## 10 MULTIPOLYGON (((-78.82794 3...</pre></article></slide>
 
 
   <slide class="backdrop"></slide>
