@@ -5,11 +5,15 @@ date: "January 23, 2020"
 output:
   ioslides_presentation:
     widescreen: true
-    smaller: false
+    smaller: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(sf)
+library(raster)
+library(dplyr)
+library(here)
 ```
 
 ## Overview
@@ -24,7 +28,47 @@ knitr::opts_chunk$set(echo = TRUE)
 ### The ```sf``` package
 
 The ```sf``` package is the implementation of the [simple features standard](https://r-spatial.github.io/sf/articles/sf1.html) and incorporates:
+
 - Most of the functions start with the prefix st_
   - st_read()
   - st_area()
   - st_transform()
+- You need a recent version of the GDAL, GEOS, Proj.4, and UDUNITS libraries installed for this to work on Mac and Linux.
+
+## Reading Spatial Data
+
+```{r}
+HUC8 <- st_read(here('shp/HUC8.shp'))
+```
+
+## Reading Spatial Data from a text file
+```{r}
+gauges <- read.csv(here("csv/gaugesR02.csv"))
+colnames(gauges)
+gauges_sf <- st_as_sf(gauges, coords = c("LONGDD","LATDD"))
+gauges_sf
+```
+
+## Writing spatial Data
+
+```{r}
+# Make sure data is formatted the way we want it (In this case, site number should be text)
+class(gauges_sf$SITENO)
+gauges_sf$SITENO <- as.character(gauges_sf$SITENO)
+
+# Write the file
+write_sf(gauges_sf,here("shp/gauges.shp"))
+```
+
+## ```sf``` structure
+
+```{r}
+class(HUC8)
+```
+
+```sf``` objects usually have two classes - sf and data.frame. Two main differences comparing to a regular data.frame object are spatial metadata (geometry type, dimension, bbox, epsg (SRID), proj4string) and additional column - typically named geom or geometry.
+
+```{r}
+HUC8[1:4,10:12]
+```
+
