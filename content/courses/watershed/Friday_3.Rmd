@@ -19,7 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Back to Basics: Spatial Analysis in R
 [Slides are here!](https://amurraygeo.com/slides/watershed/RDay_3.html)
-[Code and Data are here!](https://amurraygeo.com/files/watershed/day3.zip)
+
+[Code and Data are here!](https://drive.google.com/drive/folders/1A2-pENtCSQToDxUVenDyndRihArWXHFm?usp=sharing)
 
 ## Outline:
 
