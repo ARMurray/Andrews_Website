@@ -8,7 +8,7 @@ linktitle: Lecture 4 - Watersheds / Dimensional Analysis
 menu:
   watershed:
     parent: The Science of Hydrology
-    weight: 40
+    weight: 60
 title: Lecture 4
 type: docs
 

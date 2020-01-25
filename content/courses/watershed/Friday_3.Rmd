@@ -5,7 +5,7 @@ draft: false
 output:
   blogdown::html_page:
     toc: false
-linktitle: Friday (2)
+linktitle: Friday (3)
 menu:
   watershed:
     parent: The Science of Hydrology
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Back to Basics: Spatial Analysis in R
 [Slides are here!](https://amurraygeo.com/slides/watershed/RDay_3.html)
-[Code is here!](https://amurraygeo.com/files/watershed/day3.R)
+[Code and Data are here!](https://amurraygeo.com/files/watershed/day3.zip)
 
 ## Outline:
 

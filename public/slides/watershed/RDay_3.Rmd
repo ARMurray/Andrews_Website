@@ -1,0 +1,260 @@
+---
+title: "Intro to Spatial Analysis in R"
+author: Andrew Murray
+date: "January 23, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(mapview)
+library(sf)
+library(raster)
+library(dplyr)
+library(here)
+library(rnaturalearth)
+```
+
+## Overview
+
+- R has powerful GIS capabilities which are constantly growing thanks to the expanding number of available packages.
+- ```sf``` is the most important R package to handle vector data. ```sf``` is a successor of ```sp```, but it's still evolving. Moreover, many older R packages depend on the functions and classes for the ```sp``` package (though this is becoming less and less so).
+- ```raster``` is an extension of spatial data classes to work with rasters.
+- There are many ways to vizualize spatial data in R, for example ```ggplot2```, ```rasterVis```, ```tmap```, ```leaflet```, and ```mapview``` packages
+- It is easy to connect R with a GIS software - GRASS GIS (rgrass7), SAGA (RSAGA), QGIS (RQGIS), and ArcGIS (arcgisbinding)
+
+## Vector Data
+### The ```sf``` package
+
+The ```sf``` package is the implementation of the [simple features standard](https://r-spatial.github.io/sf/articles/sf1.html) and incorporates:
+
+- Most of the functions start with the prefix st_
+  - st_read()
+  - st_area()
+  - st_transform()
+- You need a recent version of the GDAL, GEOS, Proj.4, and UDUNITS libraries installed for this to work on Mac and Linux.
+
+## Reading Spatial Data
+
+```{r}
+HUC8 <- st_read(here('shp/HUC8.shp'))
+```
+
+## Reading Spatial Data from a text file
+```{r}
+gauges <- read.csv(here("csv/gaugesR02.csv"))
+colnames(gauges)
+gauges_sf <- st_as_sf(gauges, coords = c("LONGDD","LATDD"))
+gauges_sf
+```
+
+## Writing spatial Data
+
+```{r}
+# Make sure data is formatted the way we want it (In this case, site number should be text)
+class(gauges_sf$SITENO)
+gauges_sf$SITENO <- as.character(gauges_sf$SITENO)
+
+# Write the file
+write_sf(gauges_sf,here("shp/gauges.shp"))
+```
+
+## ```sf``` structure
+
+```{r}
+class(HUC8)
+```
+
+```sf``` objects usually have two classes - sf and data.frame. Two main differences comparing to a regular data.frame object are spatial metadata (geometry type, dimension, bbox, epsg (SRID), proj4string) and additional column - typically named geom or geometry.
+
+```{r}
+# brackets[] subset a vector by [rows,columns]
+HUC8[1:4,10:12]
+```
+
+## Attributes
+
+sf object can be used as a regular data.frame object in many operations
+```{r sf, eval=FALSE}
+# About
+head(HUC8)
+nrow(HUC8)
+ncol(HUC8)
+
+# Subset
+HUC8[,c(10,)]
+
+HUC8[1:5,2]
+```
+
+
+The 'geometry' column of an sf object is what is used to draw a spatial object. This can be changed or removed using:
+
+```st_set_geometry(HUC8, NULL)```
+
+## The ```dplyr``` package and ```sf```
+
+- ```dplyr``` is a package used to manage and organize your data (filtering, ordering, making new columns from old columns etc...)
+
+- ```select``` for example allows you to keep only the columns you want.
+
+```{r}
+HUC8_sel <- select(HUC8, GNIS_ID, Name, States, HUC8, AreaSqKm)
+```
+
+## ```arrange()```
+
+```{r}
+HUC8_arr <- arrange(HUC8_sel,Name)
+HUC8_arr
+```
+
+## ```filter()```
+```{r}
+HUC8_NC <- filter(HUC8_sel, States %in% "NC")
+HUC8_NC
+```
+
+
+## ```mutate()```
+
+```{r}
+HUC8_mut <- mutate(HUC8_sel, AreaSqMi = AreaSqKm * .386102)
+head(HUC8_mut)
+```
+
+## ```summarize()```
+Run statistics on the data
+```{r}
+HUC8_sum <- summarize(HUC8_mut, Area_sum = sum(AreaSqMi, na.rm = TRUE),
+                      Area_mean = mean(AreaSqMi, na.rm = TRUE))
+HUC8_sum
+```
+
+## **C**oordinate **R**eference **S**ystems (CRS)
+
+A CRS is a set of instructions that tell the computer how to draw points onto the earths surface, so it is really important that we make sure they are in the right places.
+
+```{r}
+st_crs(HUC8)
+```
+
+## Changing a projection
+You can make a list of available CRS codes using:
+```{r}
+crs <- rgdal::make_EPSG()
+```
+
+Let's reproject to UTM 17N (better for southeast U.S.)
+```{r}
+HUC8_17N <- st_transform(HUC8, 2958)
+```
+
+## UTM 17N
+```{r, fig.align='center', fig.show='hold'}
+plot(st_geometry(HUC8_17N))
+
+```
+
+
+## 
+
+```{r, echo=FALSE}
+world <- ne_countries(scale = "medium", returnclass = "sf")%>%
+  filter(sovereignt %in% c("United States of America","Mexico"))
+```
+
+
+What if we tell it it's in a different CRS?
+```{r, echo=FALSE}
+HUC8_12N <- st_set_crs(HUC8_17N, 2956)
+
+ggplot()+
+  geom_sf(data = world)+
+  geom_sf(data = HUC8_12N, fill = "#4B9CD3")+
+  coord_sf(xlim = c(-130, -100), ylim = c(20, 40), expand = FALSE)
+```
+
+## Making Basic Maps - Static
+
+Use the ```plot()``` function along with the layer and then the column name (or number) in brackets
+```{r}
+plot(HUC8_17N["States"])
+```
+
+## Making Basic Maps - Interactive
+
+```{r}
+mapview(HUC8_17N, zcol = 'States')
+```
+
+## Rasters
+Rasters are continuous surface data layers where 'area' is represented as pixels. The spatial resolution refers to the size of the pixel and every pixel in a raster is exactly the same size.
+
+Common Rasters:
+
+- Precipitation
+- Digital Elevation
+- Anything from a satellite
+  - Google Earth
+  - Solar Radiation
+  
+## Handling Rasters in R
+We use the ```sf``` package to handle vector data but rasters need to be handles with their own package, aptly names ```raster```. Most of the commands are similar but you cannot use the functions from ```sf``` and ```raster``` interchangeably.
+
+### Reading
+```{r}
+ppt <- raster(here('tif/ppt.tif'))
+```
+
+### Writing
+```{r}
+#writeRaster(ppt, here('tif/ppt_new.tif'))
+```
+
+## Raster Structure
+```{r}
+ppt
+```
+
+## CRS with Rasters
+
+Just like with vectors, Rasters need to have a CRS and we need a way to set them.
+
+Check crs:
+```{r}
+crs(ppt)
+```
+
+Project to a different crs:
+```{r}
+ppt_17N <- projectRaster(ppt,crs = "+proj=utm +zone=17 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs")
+ppt_17N
+```
+
+## Raster CRS cont'd
+
+### Assign a different crs
+```{r}
+crs(ppt) <- "+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs"
+```
+
+## Rasters and Vectors Together
+Unlike ArcGIS or some of the other popular GIS softwares, R does not 'project on the fly' so you need to make sure your data is projected the same way before you try to combine two layers.
+
+## ```crop()```
+```{r}
+ppt_crop <- crop(ppt_17N,HUC8_17N)
+plot(ppt_crop)
+```
+
+## ```mask()```
+```{r}
+ppt_mask <- mask(ppt_17N,HUC8_17N)
+plot(ppt_mask)
+```
+
