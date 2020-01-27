@@ -1,0 +1,105 @@
+---
+title: "DA_LA_slides_01272020"
+author: Andrew Murray
+date: "January 27, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+
+- Dimensional Analysis
+  - Dimensions vs. Units
+  - Scale (Spatial and Temporal)
+- Land / Atmosphere Interactions
+  - Precipitation
+  - Vapor Pressure and Vapor Pressure Deficit
+  - Formation of Precipitation
+  - Measuring Precipitation
+  - Observations
+  
+## Dimensional Analysis
+
+More often than not, the process scale (the scale at which processes occur) is much larger or much smaller than the observation scale (The scale at which we see or collect data). To bridge the gap between observation scale and the scale of our ultimate interest, ‘scaling’ is needed. 
+
+![](/img/watershed/scale.png){width=600px}
+
+<div class="notes">
+This figure illustrates subsurface spatial heterogeneity in a catchment. At the local scale, soils often exhibit macropores such as cracks, root holes or wormholes.  These can transport the bulk of the flow with a minimum contribution of the soil matrix.  For the macropore flow to become operative, certain thresholds in precipitation intensity and antecedent moisture may need to be met. 
+</div>
+
+## Scale of flow
+
+- On a single hillslope, water may follow a single path (or multiple)
+- At the catchment scale, processes occur as an arrangement of unique hillslopes, and water reaches the stream channel differentially – some portions of the landscape will preferentially contribute more water to the stream channel than others.
+- Areas of the landscape can contribute water to the stream channel during (or right after) precipitation events, or during snowmelt for snowmelt controlled systems (these periods can account for ~2-20% of channel flow duration, depending on the system).  These areas of sporadic contribution will do so after their individual thresholds are also met and are manifested in the hydrograph as stormflow.
+
+<div class="notes">
+It is important for you to visualize all the simultaneous processes that control water flow through catchments, the range of spatial and temporal scales at which different processes occur (e.g., frequency of rain, the temporal lag introduced by infiltration, the timing of breakthrough curve observed in the stream).  Also, visualize heterogeneities in the soil physical properties, macropores, flowpaths, and the geology, and think about how differences of simple variables such as landscape morphology can impose a temporal signature (i.e., manifested as a lag) in the delivery of water to the stream channel. 
+</div>
+
+## Upscaling
+Upscaling, typically, consists of two steps.  Consider the problem of estimating catchment rainfall from one rain gauge (or a small number of rain gauges), i.e. upscaling rainfall measured over an area no bigger than a dinner plate (cm2 scale) to a km2 scale. The first step involves distributing the small-scale precipitation over the catchment (e.g., as a function of topography).  The second step consists of aggregating the spatial distribution of rainfall into one single value. 
+
+
+## Downscaling
+downscaling involves disaggregating and singling out to individual points.  Consider also the problem of precipitation, but this time consider precipitation measurements performed via Doppler radar with a fixed spatial resolution that is coarser than your scale of interest.
+
+## What to remember
+
+- Scale matters!
+- The law of averages usually prevails... as we move to larger scales, it's easier to make assumptions... as we move to finer scales, assumptions become dangerous.
+- Catchments and hydrological processes show organization in many ways, including drainage networks, geology, and vegetation.  Identification of organization is a key factor in scaling.
+- Stream network analysis neglects geology
+
+## Land / Atmoshpere Interactions
+
+### Types of Precipitation:
+
+- Liquid
+  - Rain
+  - Drizzle (droplets < 0.5 mm in diameter)
+  - Dew
+  - Fog-drip
+- Solid
+  - Snow flakes / grains / graupel 
+  - Frozen rain
+  - Frost
+  - Hail
+
+## Precipitation Formation
+- Creation of Saturated Conditions in the Atmosphere
+- Condensation of water vapor into liquid water
+- Growth of small droplets by collision until large enough to precipitate
+
+## Vapor Pressure
+Saturated conditions typically arise in the atmosphere when an air mass is cooled by being lifted vertically. 
+
+The vapor pressure $e$ is a measure of how much water vapor is in the air.
+
+Units: $\frac{N}{m^2} = Pa$
+
+N: newton
+m: meters
+Pa: pascals
+
+## Saturated Vapor Pressure
+<div style= "float:left;position: relative; top: -100px;">
+![](/img/watershed/saturation.png){width=300px}
+</div>
+
+Warm air can hold more water vapor, cool air can hold less.
+
+The saturation vapor pressure $e_{sat}$ is the value of $e$ for saturated conditions. This value is strongly dependent on the air temperature.
+
+Teten’s approximation (O. Tetens, 1930):
+
+$e_s = 0.611*exp(\frac{17.3*T}{T+237.3})$
+
+Cooling an air mass tends to produce saturated conditions, because esat is reduced. 
