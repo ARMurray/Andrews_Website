@@ -93,7 +93,7 @@ m: meters
 Pa: pascals
 
 ## Saturated Vapor Pressure
-<div style= "float:left;position: relative; top: -300px;">
+<div style= "float:left;position: relative; top: 250px;">
 ![](/img/watershed/lecture5/saturation.png){width=300px}
 </div>
 
@@ -114,3 +114,93 @@ Cooling an air mass tends to produce saturated conditions, because esat is reduc
 If the air is gradually cooled while maintaining the moisture content constant, the relative humidity will rise until it reaches 100%. 
 
 ![](/img/watershed/lecture5/Dew_Point.png)
+
+## Dew Point
+![](/img/watershed/lecture5/CH_Dewpoint.png){height=300px}
+![](/img/watershed/lecture5/Bozeman_Dewpoint.png){height=300px}
+
+## Relative Humidity vs. VPD
+![](/img/watershed/lecture5/Humidity_v_VPD){width=750px}
+
+**Atmospheric demand for moisture is quantified by VPD**
+
+## Observations at Newton Ridge, CO
+![](/img/watershed/lecture5/VP_Temp.png){width=700px}
+
+## Condensation
+<div style= "float:left;position: relative; top: 250px;">
+![](/img/watershed/lecture5/condensation.png){width=300px}
+</div>
+
+Condensation is the **phase change** whereby water vapor becomes liquid water.
+
+- Saturated conditions
+- Condensation nuclei (dust particles, ice, and more…)
+
+Cooling is the key mechanism, and it can happen in a number of ways in the atmosphere
+[Video](https://www.youtube.com/watch?v=n9yUGxIEfYU&lr=1)
+
+## Uplift
+In order for precipitation to happen, saturated air has to exist in the atmosphere, and in order for it to to get there, it has to lift up from the earth's surface. There are a few different ways this can happen:
+
+>- Orographic Uplift
+>- Convective Uplift
+>- Frontal Uplift
+>- Convergent Uplift
+
+## Orographic Uplift
+![](/img/watershed/lecture5/orographic.png){width=750px}
+
+- Occurs when air is forced upwards by the landscape
+
+<div class="notes">
+Can someone give an example of where they have seen this happen and what a rain shadow is? Ecuador... The Rocky Mountains...
+</div>
+## Convective Uplift
+![](/img/watershed/lecture5/convective.png){width=750px}
+- This happens when air near the surface is heated and causes air to rapidly rise into the atmosphere.
+
+<div class="notes">
+Hot and muggy days may call for isolated afternoon thunderstorms... Air at the surface is heated in the morning and turns into localized afternoon thunderstorms
+</div>
+
+## Frontal Uplift
+![](/img/watershed/lecture5/frontal.png){width=750px}
+- This occurs when a warm front encounters a cooler air mass and is _wedged_ upwards into the atmosphere. 
+
+<div class="notes">
+This is typically what happens in the southeast with the rolling showers that work up the east coast
+</div>
+
+## Convergent Uplift
+![](/img/watershed/lecture5/convergent.png){width=750px}
+
+- This occurs when an air mass funnels into a low pressure area and rises into the atmosphere.
+
+<div class="notes">
+Hurricanes!
+</div>
+
+## Measurement At A Point
+
+- Accurate precipitation measurements are essential.
+- Also important, the rate of precipitation and the areal extension.
+
+- Concerns for accuracy
+  - Accuracy of point measurements?
+  - Accuracy of scaling?
+
+Hornberger (pg. 28): "In a study involving a dense gage network and a NEXRAD, numerous storms foe which radar estimates indicated hourly precipitation exceeding 50mm (~2") were missed _completely_ by the gage network" (Smith, Seo, et al., 1996)
+
+## Precipitation Gauges - Storage
+![](/img/watershed/lecture5/storage.png){width=750px}
+
+## Precipitation Gauges - Weighing
+![](/img/watershed/lecture5/weighing.png){width=750px}
+
+## Precipitation Gauges - Tipping
+![](/img/watershed/lecture5/tipping.png){width=750px}
+
+## Precipitation Gauges - Optical
+![](/img/watershed/lecture5/optical.png){width=750px}
+
