@@ -52,7 +52,7 @@ Upscaling, typically, consists of two steps.  Consider the problem of estimating
 downscaling involves disaggregating and singling out to individual points.  Consider also the problem of precipitation, but this time consider precipitation measurements performed via Doppler radar with a fixed spatial resolution that is coarser than your scale of interest.
 
 ## Spatial Variance
-![](/img/watershed/lecture5/US_Hydrographs.png)
+![](/img/watershed/lecture5/US_Hydrographs.png){width=750px}
 
 ## What to remember
 
@@ -93,7 +93,7 @@ m: meters
 Pa: pascals
 
 ## Saturated Vapor Pressure
-<div style= "float:left;position: relative; top: -100px;">
+<div style= "float:left;position: relative; top: -300px;">
 ![](/img/watershed/lecture5/saturation.png){width=300px}
 </div>
 
@@ -109,3 +109,8 @@ Cooling an air mass tends to produce saturated conditions, because esat is reduc
 
 ## Vapor Pressure Deficit
 ![](/img/watershed/lecture5/VP_Deficit.png){width=700px}
+## Temperature
+
+If the air is gradually cooled while maintaining the moisture content constant, the relative humidity will rise until it reaches 100%. 
+
+![](/img/watershed/lecture5/Dew_Point.png)
