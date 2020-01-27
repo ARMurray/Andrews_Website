@@ -1,5 +1,5 @@
 ---
-title: "DA_LA_slides_01272020"
+title: "Lecture 5"
 author: Andrew Murray
 date: "January 27, 2020"
 output:
@@ -47,10 +47,10 @@ It is important for you to visualize all the simultaneous processes that control
 ## Upscaling
 Upscaling, typically, consists of two steps.  Consider the problem of estimating catchment rainfall from one rain gauge (or a small number of rain gauges), i.e. upscaling rainfall measured over an area no bigger than a dinner plate (cm2 scale) to a km2 scale. The first step involves distributing the small-scale precipitation over the catchment (e.g., as a function of topography).  The second step consists of aggregating the spatial distribution of rainfall into one single value. 
 
-
+![](/img/watershed/lecture5/Scaling.png)
 ## Downscaling
 downscaling involves disaggregating and singling out to individual points.  Consider also the problem of precipitation, but this time consider precipitation measurements performed via Doppler radar with a fixed spatial resolution that is coarser than your scale of interest.
-
+![](/img/watershed/lecture5/downscaling.png)
 ## Spatial Variance
 ![](/img/watershed/lecture5/US_Hydrographs.png){width=750px}
 
@@ -93,7 +93,7 @@ m: meters
 Pa: pascals
 
 ## Saturated Vapor Pressure
-<div style= "float:left;position: relative; top: 250px;">
+<div style= "float:left;position: relative; top: 50px;">
 ![](/img/watershed/lecture5/saturation.png){width=300px}
 </div>
 
@@ -120,7 +120,7 @@ If the air is gradually cooled while maintaining the moisture content constant, 
 ![](/img/watershed/lecture5/Bozeman_Dewpoint.png){height=300px}
 
 ## Relative Humidity vs. VPD
-![](/img/watershed/lecture5/Humidity_v_VPD){width=750px}
+![](/img/watershed/lecture5/Humidity_v_VPD.png){width=750px}
 
 **Atmospheric demand for moisture is quantified by VPD**
 
@@ -128,7 +128,7 @@ If the air is gradually cooled while maintaining the moisture content constant, 
 ![](/img/watershed/lecture5/VP_Temp.png){width=700px}
 
 ## Condensation
-<div style= "float:left;position: relative; top: 250px;">
+<div style= "float:left;position: relative; top: 50px;">
 ![](/img/watershed/lecture5/condensation.png){width=300px}
 </div>
 
@@ -181,7 +181,7 @@ This is typically what happens in the southeast with the rolling showers that wo
 Hurricanes!
 </div>
 
-## Measurement At A Point
+## Measurement at a Point
 
 - Accurate precipitation measurements are essential.
 - Also important, the rate of precipitation and the areal extension.
