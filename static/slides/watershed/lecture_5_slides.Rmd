@@ -47,10 +47,12 @@ It is important for you to visualize all the simultaneous processes that control
 ## Upscaling
 Upscaling, typically, consists of two steps.  Consider the problem of estimating catchment rainfall from one rain gauge (or a small number of rain gauges), i.e. upscaling rainfall measured over an area no bigger than a dinner plate (cm2 scale) to a km2 scale. The first step involves distributing the small-scale precipitation over the catchment (e.g., as a function of topography).  The second step consists of aggregating the spatial distribution of rainfall into one single value. 
 
-![](/img/watershed/lecture5/Scaling.png)
+![](/img/watershed/lecture5/Scaling.png){width=750px}
+
 ## Downscaling
-downscaling involves disaggregating and singling out to individual points.  Consider also the problem of precipitation, but this time consider precipitation measurements performed via Doppler radar with a fixed spatial resolution that is coarser than your scale of interest.
-![](/img/watershed/lecture5/downscaling.png)
+Downscaling involves disaggregating and singling out to individual points.  Consider also the problem of precipitation, but this time consider precipitation measurements performed via Doppler radar with a fixed spatial resolution that is coarser than your scale of interest.
+![](/img/watershed/lecture5/downscaling.png){width=750px}
+
 ## Spatial Variance
 ![](/img/watershed/lecture5/US_Hydrographs.png){width=750px}
 
