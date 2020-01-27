@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 More often than not, the process scale (the scale at which processes occur) is much larger or much smaller than the observation scale (The scale at which we see or collect data). To bridge the gap between observation scale and the scale of our ultimate interest, ‘scaling’ is needed. 
 
-![](/img/watershed/scale.png){width=600px}
+![](/img/watershed/lecture5/scale.png){width=600px}
 
 <div class="notes">
 This figure illustrates subsurface spatial heterogeneity in a catchment. At the local scale, soils often exhibit macropores such as cracks, root holes or wormholes.  These can transport the bulk of the flow with a minimum contribution of the soil matrix.  For the macropore flow to become operative, certain thresholds in precipitation intensity and antecedent moisture may need to be met. 
@@ -50,6 +50,9 @@ Upscaling, typically, consists of two steps.  Consider the problem of estimating
 
 ## Downscaling
 downscaling involves disaggregating and singling out to individual points.  Consider also the problem of precipitation, but this time consider precipitation measurements performed via Doppler radar with a fixed spatial resolution that is coarser than your scale of interest.
+
+## Spatial Variance
+![](/img/watershed/lecture5/US_Hydrographs.png)
 
 ## What to remember
 
@@ -91,7 +94,7 @@ Pa: pascals
 
 ## Saturated Vapor Pressure
 <div style= "float:left;position: relative; top: -100px;">
-![](/img/watershed/saturation.png){width=300px}
+![](/img/watershed/lecture5/saturation.png){width=300px}
 </div>
 
 Warm air can hold more water vapor, cool air can hold less.
@@ -103,3 +106,6 @@ Teten’s approximation (O. Tetens, 1930):
 $e_s = 0.611*exp(\frac{17.3*T}{T+237.3})$
 
 Cooling an air mass tends to produce saturated conditions, because esat is reduced. 
+
+## Vapor Pressure Deficit
+![](/img/watershed/lecture5/VP_Deficit.png){width=700px}
