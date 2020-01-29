@@ -1,0 +1,191 @@
+---
+title: "Lecture 6"
+author: Andrew Murray
+date: "January 29, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE,warning = FALSE)
+library(sf)
+library(dplyr)
+library(here)
+library(ggplot2)
+```
+
+## Outline
+
+- Precipitation (continued)
+- Frequency analysis
+- Climate networks in the U.S.
+- Areal Precipitation
+
+## Precipitation
+<div style= "float:left;position: relative; top: 50px;">
+![](/img/watershed/lecture6/ppt_sercc.png){height=500px}
+</div>
+
+- This is a typical precipitation map for the southeastern United States which is produced by the [Southeast Regional Climate Center](https://sercc.com/).
+
+- Anyone know where the SERCC is???
+
+- [Each region](https://www.ncdc.noaa.gov/customer-support/partnerships/regional-climate-centers) of the U.S. has a Climate Center that is tasked with not only observing the weather, but observing and studying long-term climate trends.
+
+## Climate Sites in NC
+![](/img/watershed/lecture6/ppt_sercc.png){width=750px}
+
+Observations include:
+
+- Temperature (high-low)
+- Degree days
+- Precipitation
+- Snowfall
+- Wind speed (max-mean)
+- Solar radiation
+- Cloudiness
+- Relative Humidity
+
+## Frequency Analysis
+<div style= "float:left;position: relative; top: 50px;">
+![](/img/watershed/lecture6/hyetograph.png){height=500px}
+</div>
+
+- Intensity: $[L*T^{-1}]$
+- Duration: $[T]$
+- Frequency: $[T^{-1}]$
+- Recurrence: $[T]$
+
+## Frquency Analysis
+<div style= "float:left;position: relative; top: 50px;">
+![](/img/watershed/lecture6/FrequencyAnalysis.png){height=500px}
+</div>
+
+$z = \frac{x - \overline{x}}{S_{x}}$
+
+$z$: The normalized outcome for which the probability is desired
+$x$: Desired Outcome
+$\overline{x}$: mean
+$S_{x}$: Standard Deviation
+
+Soooo... How many standard deviations are we away from the mean???
+
+## Normal Distribution
+
+![](/img/watershed/lecture6/normalDistribution.png){width=750px}
+Standard normal distribution theory says that roughly 68% of population in a normal distribution lies within 1 S.D., 95% within 2 S.Ds, 99% within 3 S.Ds, 99.99% within 4 S.Ds and so on and so forth...
+
+## $z$ value probability of exceedance and return period
+
+Let's run some numbers:
+```{r}
+df <- data.frame(Year = c(1975:1984), Annual_PPT = c(1020,987,894,1040,995,780,1004,930,1192,950))
+df
+```
+
+## Finding the Exceedance Probability
+Let's check the probability that precipitation will $\le$ 1,100 mm
+
+Recall: $z = \frac{x - \overline{x}}{S_{x}}$
+
+```{r}
+a <- 1100
+xBar <- mean(df$Annual_PPT)
+stdDev <- sd(df$Annual_PPT)
+
+z <- (a-xBar)/stdDev
+z
+```
+
+We have come up with a $z$-score of 1.1359 so let's take this on over to the cumulative distribution function table and check our probability:
+
+.9131 tells us that in a given year there is a 91.31% chance that average rainfall will be below 1,100 mm
+
+To get the exceedance probability we just subtract this from 1 (or 100%)
+
+## Finding the return period
+If we ant to know what amount of precipitation we can expect to exceed every three years:
+
+- We give $G(z)$ (The probability of exceedance): which is 33% / .33 (every three years). We work backwards to get the $z$-value from the table: 1-.33 = 0.67, $z=.404$ which we then sub into the equation to determine $a$
+
+```{r return}
+z <- .404
+
+a <- z * stdDev + xBar
+a
+```
+
+Chances are that precipitation will exceed 1,022 mm once every three years.
+
+## Radar Stations
+### [NEXRAD](https://www.youtube.com/watch?v=KdKouCnhvPs)
+
+![](/img/watershed/lecture6/nexrad.png){width=750px}
+## TDWR
+
+![](/img/watershed/lecture6/radarvs.png){width=750px}
+
+##{data-background=/img/watershed/lecture6/pptslides/Slide12.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide13.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide14.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide15.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide16.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide17.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide18.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide19.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide20.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide21.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide22.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide23.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide24.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide25.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide26.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide27.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide28.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide29.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide30.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide31.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide32.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide33.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide34.png data-background-size=cover}
+##{data-background=/img/watershed/lecture6/pptslides/Slide35.png data-background-size=cover}
+
+## Data Loading
+```{r data, echo=TRUE, message=FALSE, warning=FALSE}
+sf <- st_read(here("shp/NC_ppt_stations.shp"))%>%
+  st_transform(sf, crs=2958)
+sf$ppt <- rnorm(nrow(sf),mean = 3)
+
+catchment <- st_read(here("shp/HUC8.shp"))[6,]%>%
+  st_transform(crs = 2958)
+pts <- st_crop(sf,catchment)
+```
+## Arithmetic
+```{r arithmetic}
+ggplot()+
+  geom_sf(data=catchment)+
+  geom_sf(data = pts, aes(col = ppt), size = 4)
+```
+
+
+## Thiessen / Voroni Method
+```{r thiessen}
+union <- st_union(sf) # Turn data frame of polygons into list
+voroni <- st_cast(st_voronoi(union))
+voroni_sf <- st_as_sf(voroni)%>%
+  cbind(sf)
+```
+
+
+```{r thiessenMap, echo=FALSE}
+ggplot()+
+  geom_sf(data=voroni_sf, aes(fill = ppt))+
+  geom_sf(data=sf)+
+  xlim(350000,550000)+ylim(3900000,4000000)
+```
+
+## Isohyetal method
+
+
