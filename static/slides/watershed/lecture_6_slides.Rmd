@@ -35,7 +35,7 @@ library(ggplot2)
 - [Each region](https://www.ncdc.noaa.gov/customer-support/partnerships/regional-climate-centers) of the U.S. has a Climate Center that is tasked with not only observing the weather, but observing and studying long-term climate trends.
 
 ## Climate Sites in NC
-![](/img/watershed/lecture6/ppt_sercc.png){width=750px}
+![](/img/watershed/lecture6/climatesites.png){width=750px}
 
 Observations include:
 
@@ -122,35 +122,35 @@ Chances are that precipitation will exceed 1,022 mm once every three years.
 ## Radar Stations
 ### [NEXRAD](https://www.youtube.com/watch?v=KdKouCnhvPs)
 
-![](/img/watershed/lecture6/nexrad.png){width=750px}
+![](/img/watershed/lecture6/nexrad.png){width=550px}
 ## TDWR
 
 ![](/img/watershed/lecture6/radarvs.png){width=750px}
 
-##{data-background=/img/watershed/lecture6/pptslides/Slide12.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide13.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide14.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide15.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide16.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide17.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide18.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide19.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide20.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide21.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide22.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide23.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide24.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide25.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide26.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide27.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide28.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide29.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide30.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide31.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide32.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide33.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide34.png data-background-size=cover}
-##{data-background=/img/watershed/lecture6/pptslides/Slide35.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide12.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide13.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide14.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide15.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide16.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide17.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide18.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide19.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide20.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide21.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide22.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide23.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide24.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide25.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide26.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide27.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide28.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide29.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide30.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide31.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide32.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide33.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide34.png data-background-size=cover}
+## {data-background=/img/watershed/lecture6/pptslides/Slide35.png data-background-size=cover}
 
 ## Data Loading
 ```{r data, echo=TRUE, message=FALSE, warning=FALSE}
