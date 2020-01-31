@@ -77,7 +77,7 @@ Soooo... How many standard deviations are we away from the mean???
 ![](/img/watershed/lecture6/normalDistribution.png){width=750px}
 Standard normal distribution theory says that roughly 68% of population in a normal distribution lies within 1 S.D., 95% within 2 S.Ds, 99% within 3 S.Ds, 99.99% within 4 S.Ds and so on and so forth...
 
-## $z$ value probability of exceedance and return period
+## z value probability of exceedance and return period
 
 Let's run some numbers:
 ```{r}
@@ -88,7 +88,7 @@ df
 ## Finding the Exceedance Probability
 Let's check the probability that precipitation will $\le$ 1,100 mm
 
-Recall: $z = \frac{x - \overline{x}}{S_{x}}$
+Recall: $z = \frac{a - \overline{x}}{S_{x}}$
 
 ```{r}
 a <- 1100
@@ -108,7 +108,7 @@ To get the exceedance probability we just subtract this from 1 (or 100%)
 ## Finding the return period
 If we ant to know what amount of precipitation we can expect to exceed every three years:
 
-- We give $G(z)$ (The probability of exceedance): which is 33% / .33 (every three years). We work backwards to get the $z$-value from the table: 1-.33 = 0.67, $z=.404$ which we then sub into the equation to determine $a$
+- We give $G(z)$ (The probability of exceedance): which is 33% / .33 (every three years). Since $G(z)+F(z)=1$, $1-.33 = .67$ We work backwards to get the $z$-value from the table: 0.67, $z=.404$ which we then sub into the equation to determine $a$
 
 ```{r return}
 z <- .404
@@ -162,6 +162,7 @@ catchment <- st_read(here("shp/HUC8.shp"))[6,]%>%
   st_transform(crs = 2958)
 pts <- st_crop(sf,catchment)
 ```
+
 ## Arithmetic
 ```{r arithmetic}
 ggplot()+

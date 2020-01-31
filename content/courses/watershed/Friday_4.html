@@ -23,7 +23,7 @@ menu:
 <li><a href="#the-lab">The Lab!</a><ul>
 <li><a href="#selecting-and-downloading-a-watershed">Selecting and downloading a Watershed</a></li>
 <li><a href="#task-1">Task 1</a></li>
-<li><a href="#task-2-using-your-watershed-download-a-10-yr-span-of-precipitation-data-from-either-prism-or-noaa-and-create-a-probability-curve-for-fz.">Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).</a></li>
+<li><a href="#task-2">Task 2:</a></li>
 </ul></li>
 </ul>
 </div>
@@ -31,7 +31,7 @@ menu:
 <div id="calculating-exceedance" class="section level2">
 <h2>Calculating Exceedance</h2>
 <p>Calculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions. Can we estimate what will happen if or when something specific occurs?</p>
-<p>To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the <em>probability that the outcome of a random process, <span class="math inline">\(x\)</span> (precipitation next year), will be less than or equal to the chosen value</em>. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a <span class="math inline">\(z\)</span> value lookup table (Hornberger table A3.2)</p>
+<p>To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the <em>probability that the outcome of a random process,</em> <span class="math inline">\(x\)</span> <em>(precipitation next year), will be less than or equal to the chosen value</em>. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a <span class="math inline">\(z\)</span> value lookup table (Hornberger table A3.2)</p>
 <div id="we-can-duplicate-table-a3.2-by-first-creating-our-own-normal-distribution" class="section level3">
 <h3>We can duplicate table A3.2 by first creating our own normal distribution</h3>
 <pre class="r"><code>#install.packages(c(&quot;bayestestR&quot;,kableExtra))
@@ -1210,12 +1210,10 @@ for(n in 700:1200){
   FzVals &lt;- rbind(FzVals,newRow)
 }
 
-plot(FzVals$Fz~FzVals$a)</code></pre>
-<p><img src="/courses/watershed/Friday_4_files/figure-html/Fz-1.png" width="672" /></p>
-<pre class="r"><code>ggplot(FzVals)+
+ggplot(FzVals)+
   geom_line(aes(x=a,y=Fz*100))+
   labs(x = &quot;mm of Rain (a)&quot;, y = &quot;Percent  [F(z)]&quot;, title = &quot;Percent chance yearly rainfall will be below [a]&quot;)</code></pre>
-<p><img src="/courses/watershed/Friday_4_files/figure-html/Fz-2.png" width="672" /></p>
+<p><img src="/courses/watershed/Friday_4_files/figure-html/Fz-1.png" width="672" /></p>
 </div>
 <div id="the-lab" class="section level1">
 <h1>The Lab!</h1>
@@ -1234,7 +1232,7 @@ plot(FzVals$Fz~FzVals$a)</code></pre>
 </div>
 <div id="task-1" class="section level2">
 <h2>Task 1</h2>
-<p>For task 1, you’re going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use three methods to calculate areal precipitation for the watershed.</p>
+<p>For task 1, you’re going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use the arithmetic mean method to calculate areal precipitation for the watershed.</p>
 <pre class="r"><code>library(sf)
 library(here)
 library(rnoaa)
@@ -1282,23 +1280,29 @@ annuals &lt;- all_data%&gt;%
     distinct()
 
 # From here, you should be able to use the st_area function and calculate basic statistics for your watershed.</code></pre>
-<div id="q1.-where-is-your-watershed-what-is-the-huc-4-code---20-pts" class="section level3">
-<h3>Q1. Where is your watershed? What is the HUC-4 code? - 20 pts</h3>
+<div id="q1." class="section level3">
+<h3>Q1.</h3>
+<p>Where is your watershed? What is the HUC-4 code? - 20 pts</p>
 </div>
-<div id="q2.-what-is-the-average-precipitation-for-your-watershed-using-the-arithmetic-mean-method-make-sure-you-have-the-units-correct-you-know-what-units-noaa-is-using.-it-doesnt-matter-if-you-answer-in-mm-or-inches-as-long-as-you-say-what-they-are.-your-answer-should-be-a-number-with-units---20-pts" class="section level3">
-<h3>Q2. What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn’t matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts</h3>
+<div id="q2." class="section level3">
+<h3>Q2.</h3>
+<p>What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn’t matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts</p>
 </div>
-<div id="q3.-calculate-the-mean-precipitation-for-your-watershed-again-but-do-so-using-prism-data.-make-sure-you-download-data-from-the-same-year.-your-answer-should-be-a-number-with-units---20-pts" class="section level3">
-<h3>Q3. Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts</h3>
+<div id="q3." class="section level3">
+<h3>Q3.</h3>
+<p>Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts</p>
 </div>
 </div>
-<div id="task-2-using-your-watershed-download-a-10-yr-span-of-precipitation-data-from-either-prism-or-noaa-and-create-a-probability-curve-for-fz." class="section level2">
-<h2>Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).</h2>
-<div id="q4-write-code-to-create-a-bar-plot-showing-annual-precipitation-for-your-watershed-over-the-10-yr-span.-your-answer-should-be-a-plot-with-a-title-and-x-and-y-labels---20-pts" class="section level3">
-<h3>Q4: Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts</h3>
+<div id="task-2" class="section level2">
+<h2>Task 2:</h2>
+<p>Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for <span class="math inline">\(F(z)\)</span>.</p>
+<div id="q4" class="section level3">
+<h3>Q4:</h3>
+<p>Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts</p>
 </div>
-<div id="q5-write-code-to-create-a-probability-curve-for-fz-for-your-watershed.-your-answer-should-be-a-plot-like-the-one-showed-in-class-with-a-title-and-x-and-y-labels-at-the-top-of-this-doc.---20-pts" class="section level3">
-<h3>Q5: Write code to create a probability curve for F(z) for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts</h3>
+<div id="q5" class="section level3">
+<h3>Q5:</h3>
+<p>Write code to create a probability curve for <span class="math inline">\(F(z)\)</span> for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts</p>
 </div>
 </div>
 </div>

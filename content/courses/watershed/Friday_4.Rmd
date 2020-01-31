@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Calculating Exceedance
   Calculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions. Can we estimate what will happen if or when something specific occurs?
   
-To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the _probability that the outcome of a random process, $x$ (precipitation next year), will be less than or equal to the chosen value_. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a $z$ value lookup table (Hornberger table A3.2)
+To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the _probability that the outcome of a random process,_ $x$ _(precipitation next year), will be less than or equal to the chosen value_. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a $z$ value lookup table (Hornberger table A3.2)
 
 ### We can duplicate table A3.2 by first creating our own normal distribution 
 ```{r norm, warning=FALSE, message=FALSE}
@@ -116,9 +116,6 @@ for(n in 700:1200){
   FzVals <- rbind(FzVals,newRow)
 }
 
-plot(FzVals$Fz~FzVals$a)
-
-
 ggplot(FzVals)+
   geom_line(aes(x=a,y=Fz*100))+
   labs(x = "mm of Rain (a)", y = "Percent  [F(z)]", title = "Percent chance yearly rainfall will be below [a]")
@@ -142,7 +139,7 @@ Here you can check the thumbnail image to see if it is the watershed you want to
 
 
 ## Task 1
-For task 1, you're going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use three methods to calculate areal precipitation for the watershed.
+For task 1, you're going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use the arithmetic mean method to calculate areal precipitation for the watershed.
 
 ```{r task1, echo=TRUE, eval=FALSE}
 library(sf)
@@ -194,14 +191,20 @@ annuals <- all_data%>%
 # From here, you should be able to use the st_area function and calculate basic statistics for your watershed.
 
 ```
-### Q1. Where is your watershed? What is the HUC-4 code? - 20 pts
+### Q1. 
+Where is your watershed? What is the HUC-4 code? - 20 pts
 
-### Q2. What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn't matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts
+### Q2.
+What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn't matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts
 
-### Q3. Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts
+### Q3. 
+Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts
 
-## Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z). 
+## Task 2: 
+Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for $F(z)$. 
 
-### Q4: Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts
+### Q4: 
+Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts
 
-### Q5: Write code to create a probability curve for F(z) for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts
+### Q5: 
+Write code to create a probability curve for $F(z)$ for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts
