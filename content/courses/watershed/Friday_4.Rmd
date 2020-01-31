@@ -1,0 +1,207 @@
+---
+title: "Friday (4)"
+date: "2020-01-31T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 2
+linktitle: Friday (4)
+menu:
+  watershed:
+    parent: The Science of Hydrology
+    weight: 100
+    type: docs
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Calculating Exceedance
+  Calculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions. Can we estimate what will happen if or when something specific occurs?
+  
+To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the _probability that the outcome of a random process, $x$ (precipitation next year), will be less than or equal to the chosen value_. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a $z$ value lookup table (Hornberger table A3.2)
+
+### We can duplicate table A3.2 by first creating our own normal distribution 
+```{r norm, warning=FALSE, message=FALSE}
+#install.packages(c("bayestestR",kableExtra))
+library(bayestestR)
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+
+x <- distribution_normal(n = 1000000, mean = 0, sd = 1)
+
+x %>% 
+  density() %>%  # Compute density function
+  as.data.frame() %>% 
+  ggplot(aes(x=x, y=y)) +
+  geom_line()
+```
+
+### Duplicate Table A3.2 by computing a cumulative distribution function for the normal distribution.
+```{r}
+P <- ecdf(x)
+plot.ecdf(P)
+```
+
+### Now we can use this function to reconstruct the table
+Sidenote: we can make it pretty by using [kable](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#table_styles), but simply calling table on the last line will do the trick as well.
+```{r kable, message=FALSE, warning=FALSE}
+table <- data.frame(z = seq(0,2.9,.1))
+for(n in seq(0,.09,.01)){
+  x <- n
+  Fz <- P(seq(0,2.9,.1)+n)
+  newColumn <- as.data.frame(Fz)
+  table <- cbind(table,newColumn)
+}
+colnames(table) <- c("z",seq(0,.09,.01))
+
+kable(table) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+Instead of using the table, we can also plug in a value to get $F(z)$. For example if we have a z-value of 1.034 we can call the following:
+
+```{r}
+P(1.034)
+```
+
+## Calculating Recurrence
+Let's bring it back to the example in the Hornberger book (Appendix 3). Hornberger gives us the following data for some non-specific place:
+
+```{r}
+df <- data.frame(Year = (1975:1984), ppt = c(1020,987,894,1040,995,780,1004,930,1192,950))
+df
+```
+
+We can plot it:
+```{r}
+ggplot(df)+
+  geom_col(aes(x=as.factor(Year), y=ppt))+
+  labs(x = "Year", y = "Precipitation [mm]", title = "Annual Precipitation")
+```
+
+Okay so Hornberger wants us to find the liklihood that in 1985, the annual precipitation will be less than 1,100 mm and to do this we're going to use _equation A3.10_ which looks like: $z=\frac{a-\overline{x}}{S_{x}}$. Recall that $z$ is the $z$-value, $a$ is the value we're interested in (1,100 mm in this case), $\overline{x}$ is the mean precipitation over all of the years, and $S_{x}$ is the standard deviation of all of years of precipitation.
+
+To get the $z$ value now we just define the variables and write the equation:
+```{r}
+a <- 1100
+x <- mean(df$ppt)
+s <- sd(df$ppt)
+
+z <- (a-x)/s
+z
+```
+
+Now that we have the z-value, we can input that into our cumulative distribution function to get $F(z)$:
+
+```{r}
+Fz <- P(z)
+Fz
+```
+
+Looks like we have returned a value of .872, which indicates that there is an 87.2% chance that next year (1985) there will be less than 1,100 mm of precipitation. Similarly there is a 12.8% chance that precipitation will exceed 1,100 mm in 1985.
+
+One of the really powerful things about coding this instead of typing it out on a calculator is the ability to run hundreds or thousands of scenarios quickly.
+
+```{r Fz, message=FALSE, warning=FALSE}
+FzVals <- data.frame()
+for(n in 700:1200){
+  a <-  n
+  z <- (a-x)/s
+  Fz <- P(z)
+  newRow <- data.frame(a=n,Fz = Fz)
+  FzVals <- rbind(FzVals,newRow)
+}
+
+plot(FzVals$Fz~FzVals$a)
+
+
+ggplot(FzVals)+
+  geom_line(aes(x=a,y=Fz*100))+
+  labs(x = "mm of Rain (a)", y = "Percent  [F(z)]", title = "Percent chance yearly rainfall will be below [a]")
+```
+
+
+# The Lab!
+First things first, let's start a new project for this lab, we'll call it: 'YourONYEN_Friday4.rproj'. YOu should save this in a new folder on your computer. In the same folder where your .rproj file lives, create a new folder called 'data'. This is where your data will live for this lab. Once you have your project opened, create a script and title it 'submission.r'
+
+For the lab, we'll repeat what we just did, but first you will choose a watershed of interest, calculate areal estimates of precipitation using various methods. Then you will estimate exceedance and revisit rates.
+
+## Selecting and downloading a Watershed
+
+Go to the [USGS National Map](https://viewer.nationalmap.gov/basic/) and download HUC-4 data. First, move the map to the area yo are interested in, then check the box titled _"Hydrography (NHDPlus HR, NHD, WBD)"_, then check the box titled _"National Hydrography Dataset (NHD)"_, then select _"HU-4 Subregion"_ and choose 'shp (shapefile)'Shapefile' as the file format.
+
+- Click 'Find Products'
+
+Here you can check the thumbnail image to see if it is the watershed you want to work with. If it is, click download!
+
+- Extract the zip file to the data folder you created for your project
+
+
+## Task 1
+For task 1, you're going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use three methods to calculate areal precipitation for the watershed.
+
+```{r task1, echo=TRUE, eval=FALSE}
+library(sf)
+library(here)
+library(rnoaa)
+library(dplyr)
+
+wbd <- st_read(here("data/Shape/WBDHU4.shp"))
+
+cntrd <- st_centroid(wbd)%>%
+  st_coordinates()%>%
+  as.data.frame()
+
+# Create input for NOAA tool
+HUC4 <- data.frame(id="HUC4", latitude = cntrd$Y, longitude = cntrd$X)
+
+# Load all of the stations
+station_data <- ghcnd_stations()
+
+# Find nearby stations with precipitation data
+stations <- meteo_nearby_stations(lat_lon_df = HUC4, station_data = station_data,
+                                  radius = 75, var = "PRCP",
+                                  year_min = 2015, year_max = 2015)
+
+# Create spatial layer of stations
+df <- as.data.frame(stations)
+sf <- st_as_sf(df, coords = c("HUC4.longitude","HUC4.latitude"), crs = 4269)
+
+# Does everything look right?
+mapview(wbd)+
+  mapview(sf)
+
+# Extract IDs from stations
+ids <- df$HUC4.id
+
+# Download data
+all_data <- meteo_pull_monitors(ids)
+
+
+# Calculate Annual precipitation by station
+annuals <- all_data%>%
+  select(id, date, prcp)%>%
+  group_by(id)%>%
+    mutate(Annual_ppt = sum(prcp, na.rm = TRUE))%>%
+    ungroup()%>%
+  select(id,Annual_ppt)%>%
+    distinct()
+
+# From here, you should be able to use the st_area function and calculate basic statistics for your watershed.
+
+```
+### Q1. Where is your watershed? What is the HUC-4 code? - 20 pts
+
+### Q2. What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn't matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts
+
+### Q3. Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts
+
+## Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z). 
+
+### Q4: Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts
+
+### Q5: Write code to create a probability curve for F(z) for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts

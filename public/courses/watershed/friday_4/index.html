@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andrew Murray">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Calculating ExceedanceCalculating RecurrenceThe Lab!Selecting and downloading a WatershedTask 1Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).Calculating ExceedanceCalculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://amurraygeo.com/courses/watershed/friday_4/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.2a54e1c1b0c7de720cad7691aa020e9b.css">
+
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', '125661405', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://amurraygeo.com/courses/watershed/friday_4/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@AMURRAY_89">
+  <meta property="twitter:creator" content="@AMURRAY_89">
+  
+  <meta property="og:site_name" content="Andrew Murray">
+  <meta property="og:url" content="https://amurraygeo.com/courses/watershed/friday_4/">
+  <meta property="og:title" content="Friday (4) | Andrew Murray">
+  <meta property="og:description" content="Calculating ExceedanceCalculating RecurrenceThe Lab!Selecting and downloading a WatershedTask 1Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).Calculating ExceedanceCalculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions."><meta property="og:image" content="https://amurraygeo.com/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2020-01-31T00:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2020-01-31T00:00:00&#43;01:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Friday (4) | Andrew Murray</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Andrew Murray</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Friday (4)</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2020-01-31 00:00:00 &#43;0100 &#43;0100" itemprop="datePublished">
+<meta content="2020-01-31 00:00:00 &#43;0100 &#43;0100" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jan 31, 2020</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://amurraygeo.com/courses/watershed/friday_4/&amp;text=Friday%20%284%29" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://amurraygeo.com/courses/watershed/friday_4/&amp;t=Friday%20%284%29" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Friday%20%284%29&amp;body=https://amurraygeo.com/courses/watershed/friday_4/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://amurraygeo.com/courses/watershed/friday_4/&amp;title=Friday%20%284%29" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Friday%20%284%29%20https://amurraygeo.com/courses/watershed/friday_4/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://amurraygeo.com/courses/watershed/friday_4/&amp;title=Friday%20%284%29" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#calculating-exceedance">Calculating Exceedance</a></li>
+<li><a href="#calculating-recurrence">Calculating Recurrence</a></li>
+<li><a href="#the-lab">The Lab!</a><ul>
+<li><a href="#selecting-and-downloading-a-watershed">Selecting and downloading a Watershed</a></li>
+<li><a href="#task-1">Task 1</a></li>
+<li><a href="#task-2-using-your-watershed-download-a-10-yr-span-of-precipitation-data-from-either-prism-or-noaa-and-create-a-probability-curve-for-fz.">Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="calculating-exceedance" class="section level2">
+<h2>Calculating Exceedance</h2>
+<p>Calculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions. Can we estimate what will happen if or when something specific occurs?</p>
+<p>To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the <em>probability that the outcome of a random process, <span class="math inline">\(x\)</span> (precipitation next year), will be less than or equal to the chosen value</em>. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a <span class="math inline">\(z\)</span> value lookup table (Hornberger table A3.2)</p>
+<div id="we-can-duplicate-table-a3.2-by-first-creating-our-own-normal-distribution" class="section level3">
+<h3>We can duplicate table A3.2 by first creating our own normal distribution</h3>
+<pre class="r"><code>#install.packages(c(&quot;bayestestR&quot;,kableExtra))
+library(bayestestR)
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+
+x &lt;- distribution_normal(n = 1000000, mean = 0, sd = 1)
+
+x %&gt;% 
+  density() %&gt;%  # Compute density function
+  as.data.frame() %&gt;% 
+  ggplot(aes(x=x, y=y)) +
+  geom_line()</code></pre>
+<p><img src="/courses/watershed/Friday_4_files/figure-html/norm-1.png" width="672" /></p>
+</div>
+<div id="duplicate-table-a3.2-by-computing-a-cumulative-distribution-function-for-the-normal-distribution." class="section level3">
+<h3>Duplicate Table A3.2 by computing a cumulative distribution function for the normal distribution.</h3>
+<pre class="r"><code>P &lt;- ecdf(x)
+plot.ecdf(P)</code></pre>
+<p><img src="/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="now-we-can-use-this-function-to-reconstruct-the-table" class="section level3">
+<h3>Now we can use this function to reconstruct the table</h3>
+<p>Sidenote: we can make it pretty by using <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#table_styles">kable</a>, but simply calling table on the last line will do the trick as well.</p>
+<pre class="r"><code>table &lt;- data.frame(z = seq(0,2.9,.1))
+for(n in seq(0,.09,.01)){
+  x &lt;- n
+  Fz &lt;- P(seq(0,2.9,.1)+n)
+  newColumn &lt;- as.data.frame(Fz)
+  table &lt;- cbind(table,newColumn)
+}
+colnames(table) &lt;- c(&quot;z&quot;,seq(0,.09,.01))
+
+kable(table) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;))</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+z
+</th>
+<th style="text-align:right;">
+0
+</th>
+<th style="text-align:right;">
+0.01
+</th>
+<th style="text-align:right;">
+0.02
+</th>
+<th style="text-align:right;">
+0.03
+</th>
+<th style="text-align:right;">
+0.04
+</th>
+<th style="text-align:right;">
+0.05
+</th>
+<th style="text-align:right;">
+0.06
+</th>
+<th style="text-align:right;">
+0.07
+</th>
+<th style="text-align:right;">
+0.08
+</th>
+<th style="text-align:right;">
+0.09
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.500000
+</td>
+<td style="text-align:right;">
+0.503989
+</td>
+<td style="text-align:right;">
+0.507978
+</td>
+<td style="text-align:right;">
+0.511966
+</td>
+<td style="text-align:right;">
+0.515953
+</td>
+<td style="text-align:right;">
+0.519939
+</td>
+<td style="text-align:right;">
+0.523922
+</td>
+<td style="text-align:right;">
+0.527903
+</td>
+<td style="text-align:right;">
+0.531881
+</td>
+<td style="text-align:right;">
+0.535856
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.1
+</td>
+<td style="text-align:right;">
+0.539828
+</td>
+<td style="text-align:right;">
+0.543795
+</td>
+<td style="text-align:right;">
+0.547758
+</td>
+<td style="text-align:right;">
+0.551717
+</td>
+<td style="text-align:right;">
+0.555670
+</td>
+<td style="text-align:right;">
+0.559618
+</td>
+<td style="text-align:right;">
+0.563560
+</td>
+<td style="text-align:right;">
+0.567495
+</td>
+<td style="text-align:right;">
+0.571424
+</td>
+<td style="text-align:right;">
+0.575346
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+0.579260
+</td>
+<td style="text-align:right;">
+0.583166
+</td>
+<td style="text-align:right;">
+0.587065
+</td>
+<td style="text-align:right;">
+0.590954
+</td>
+<td style="text-align:right;">
+0.594835
+</td>
+<td style="text-align:right;">
+0.598706
+</td>
+<td style="text-align:right;">
+0.602568
+</td>
+<td style="text-align:right;">
+0.606420
+</td>
+<td style="text-align:right;">
+0.610261
+</td>
+<td style="text-align:right;">
+0.614092
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.3
+</td>
+<td style="text-align:right;">
+0.617912
+</td>
+<td style="text-align:right;">
+0.621720
+</td>
+<td style="text-align:right;">
+0.625516
+</td>
+<td style="text-align:right;">
+0.629300
+</td>
+<td style="text-align:right;">
+0.633072
+</td>
+<td style="text-align:right;">
+0.636831
+</td>
+<td style="text-align:right;">
+0.640577
+</td>
+<td style="text-align:right;">
+0.644309
+</td>
+<td style="text-align:right;">
+0.648027
+</td>
+<td style="text-align:right;">
+0.651732
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:right;">
+0.655422
+</td>
+<td style="text-align:right;">
+0.659097
+</td>
+<td style="text-align:right;">
+0.662757
+</td>
+<td style="text-align:right;">
+0.666402
+</td>
+<td style="text-align:right;">
+0.670032
+</td>
+<td style="text-align:right;">
+0.673645
+</td>
+<td style="text-align:right;">
+0.677242
+</td>
+<td style="text-align:right;">
+0.680823
+</td>
+<td style="text-align:right;">
+0.684386
+</td>
+<td style="text-align:right;">
+0.687933
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+0.691463
+</td>
+<td style="text-align:right;">
+0.694974
+</td>
+<td style="text-align:right;">
+0.698468
+</td>
+<td style="text-align:right;">
+0.701944
+</td>
+<td style="text-align:right;">
+0.705402
+</td>
+<td style="text-align:right;">
+0.708841
+</td>
+<td style="text-align:right;">
+0.712260
+</td>
+<td style="text-align:right;">
+0.715661
+</td>
+<td style="text-align:right;">
+0.719043
+</td>
+<td style="text-align:right;">
+0.722405
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.6
+</td>
+<td style="text-align:right;">
+0.725747
+</td>
+<td style="text-align:right;">
+0.729069
+</td>
+<td style="text-align:right;">
+0.732371
+</td>
+<td style="text-align:right;">
+0.735653
+</td>
+<td style="text-align:right;">
+0.738914
+</td>
+<td style="text-align:right;">
+0.742154
+</td>
+<td style="text-align:right;">
+0.745373
+</td>
+<td style="text-align:right;">
+0.748571
+</td>
+<td style="text-align:right;">
+0.751748
+</td>
+<td style="text-align:right;">
+0.754903
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.7
+</td>
+<td style="text-align:right;">
+0.758037
+</td>
+<td style="text-align:right;">
+0.761148
+</td>
+<td style="text-align:right;">
+0.764238
+</td>
+<td style="text-align:right;">
+0.767305
+</td>
+<td style="text-align:right;">
+0.770350
+</td>
+<td style="text-align:right;">
+0.773373
+</td>
+<td style="text-align:right;">
+0.776373
+</td>
+<td style="text-align:right;">
+0.779350
+</td>
+<td style="text-align:right;">
+0.782305
+</td>
+<td style="text-align:right;">
+0.785236
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.8
+</td>
+<td style="text-align:right;">
+0.788145
+</td>
+<td style="text-align:right;">
+0.791030
+</td>
+<td style="text-align:right;">
+0.793892
+</td>
+<td style="text-align:right;">
+0.796731
+</td>
+<td style="text-align:right;">
+0.799546
+</td>
+<td style="text-align:right;">
+0.802338
+</td>
+<td style="text-align:right;">
+0.805106
+</td>
+<td style="text-align:right;">
+0.807850
+</td>
+<td style="text-align:right;">
+0.810571
+</td>
+<td style="text-align:right;">
+0.813267
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:right;">
+0.815940
+</td>
+<td style="text-align:right;">
+0.818589
+</td>
+<td style="text-align:right;">
+0.821214
+</td>
+<td style="text-align:right;">
+0.823815
+</td>
+<td style="text-align:right;">
+0.826392
+</td>
+<td style="text-align:right;">
+0.828944
+</td>
+<td style="text-align:right;">
+0.831473
+</td>
+<td style="text-align:right;">
+0.833977
+</td>
+<td style="text-align:right;">
+0.836457
+</td>
+<td style="text-align:right;">
+0.838913
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+0.841345
+</td>
+<td style="text-align:right;">
+0.843753
+</td>
+<td style="text-align:right;">
+0.846136
+</td>
+<td style="text-align:right;">
+0.848495
+</td>
+<td style="text-align:right;">
+0.850830
+</td>
+<td style="text-align:right;">
+0.853141
+</td>
+<td style="text-align:right;">
+0.855428
+</td>
+<td style="text-align:right;">
+0.857691
+</td>
+<td style="text-align:right;">
+0.859929
+</td>
+<td style="text-align:right;">
+0.862144
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.1
+</td>
+<td style="text-align:right;">
+0.864334
+</td>
+<td style="text-align:right;">
+0.866501
+</td>
+<td style="text-align:right;">
+0.868643
+</td>
+<td style="text-align:right;">
+0.870762
+</td>
+<td style="text-align:right;">
+0.872857
+</td>
+<td style="text-align:right;">
+0.874928
+</td>
+<td style="text-align:right;">
+0.876976
+</td>
+<td style="text-align:right;">
+0.879000
+</td>
+<td style="text-align:right;">
+0.881000
+</td>
+<td style="text-align:right;">
+0.882977
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.2
+</td>
+<td style="text-align:right;">
+0.884931
+</td>
+<td style="text-align:right;">
+0.886861
+</td>
+<td style="text-align:right;">
+0.888768
+</td>
+<td style="text-align:right;">
+0.890652
+</td>
+<td style="text-align:right;">
+0.892513
+</td>
+<td style="text-align:right;">
+0.894351
+</td>
+<td style="text-align:right;">
+0.896166
+</td>
+<td style="text-align:right;">
+0.897958
+</td>
+<td style="text-align:right;">
+0.899728
+</td>
+<td style="text-align:right;">
+0.901475
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+0.903200
+</td>
+<td style="text-align:right;">
+0.904902
+</td>
+<td style="text-align:right;">
+0.906583
+</td>
+<td style="text-align:right;">
+0.908241
+</td>
+<td style="text-align:right;">
+0.909878
+</td>
+<td style="text-align:right;">
+0.911492
+</td>
+<td style="text-align:right;">
+0.913085
+</td>
+<td style="text-align:right;">
+0.914657
+</td>
+<td style="text-align:right;">
+0.916207
+</td>
+<td style="text-align:right;">
+0.917736
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.919244
+</td>
+<td style="text-align:right;">
+0.920731
+</td>
+<td style="text-align:right;">
+0.922197
+</td>
+<td style="text-align:right;">
+0.923642
+</td>
+<td style="text-align:right;">
+0.925067
+</td>
+<td style="text-align:right;">
+0.926471
+</td>
+<td style="text-align:right;">
+0.927855
+</td>
+<td style="text-align:right;">
+0.929220
+</td>
+<td style="text-align:right;">
+0.930564
+</td>
+<td style="text-align:right;">
+0.931888
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+0.933193
+</td>
+<td style="text-align:right;">
+0.934479
+</td>
+<td style="text-align:right;">
+0.935745
+</td>
+<td style="text-align:right;">
+0.936992
+</td>
+<td style="text-align:right;">
+0.938220
+</td>
+<td style="text-align:right;">
+0.939430
+</td>
+<td style="text-align:right;">
+0.940621
+</td>
+<td style="text-align:right;">
+0.941793
+</td>
+<td style="text-align:right;">
+0.942947
+</td>
+<td style="text-align:right;">
+0.944083
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.6
+</td>
+<td style="text-align:right;">
+0.945201
+</td>
+<td style="text-align:right;">
+0.946302
+</td>
+<td style="text-align:right;">
+0.947384
+</td>
+<td style="text-align:right;">
+0.948450
+</td>
+<td style="text-align:right;">
+0.949498
+</td>
+<td style="text-align:right;">
+0.950529
+</td>
+<td style="text-align:right;">
+0.951543
+</td>
+<td style="text-align:right;">
+0.952541
+</td>
+<td style="text-align:right;">
+0.953522
+</td>
+<td style="text-align:right;">
+0.954486
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.7
+</td>
+<td style="text-align:right;">
+0.955435
+</td>
+<td style="text-align:right;">
+0.956368
+</td>
+<td style="text-align:right;">
+0.957284
+</td>
+<td style="text-align:right;">
+0.958185
+</td>
+<td style="text-align:right;">
+0.959071
+</td>
+<td style="text-align:right;">
+0.959941
+</td>
+<td style="text-align:right;">
+0.960797
+</td>
+<td style="text-align:right;">
+0.961637
+</td>
+<td style="text-align:right;">
+0.962462
+</td>
+<td style="text-align:right;">
+0.963274
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.8
+</td>
+<td style="text-align:right;">
+0.964070
+</td>
+<td style="text-align:right;">
+0.964853
+</td>
+<td style="text-align:right;">
+0.965621
+</td>
+<td style="text-align:right;">
+0.966375
+</td>
+<td style="text-align:right;">
+0.967116
+</td>
+<td style="text-align:right;">
+0.967844
+</td>
+<td style="text-align:right;">
+0.968558
+</td>
+<td style="text-align:right;">
+0.969259
+</td>
+<td style="text-align:right;">
+0.969946
+</td>
+<td style="text-align:right;">
+0.970621
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.9
+</td>
+<td style="text-align:right;">
+0.971284
+</td>
+<td style="text-align:right;">
+0.971934
+</td>
+<td style="text-align:right;">
+0.972572
+</td>
+<td style="text-align:right;">
+0.973197
+</td>
+<td style="text-align:right;">
+0.973811
+</td>
+<td style="text-align:right;">
+0.974412
+</td>
+<td style="text-align:right;">
+0.975003
+</td>
+<td style="text-align:right;">
+0.975581
+</td>
+<td style="text-align:right;">
+0.976149
+</td>
+<td style="text-align:right;">
+0.976705
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+0.977250
+</td>
+<td style="text-align:right;">
+0.977785
+</td>
+<td style="text-align:right;">
+0.978309
+</td>
+<td style="text-align:right;">
+0.978822
+</td>
+<td style="text-align:right;">
+0.979325
+</td>
+<td style="text-align:right;">
+0.979818
+</td>
+<td style="text-align:right;">
+0.980301
+</td>
+<td style="text-align:right;">
+0.980774
+</td>
+<td style="text-align:right;">
+0.981238
+</td>
+<td style="text-align:right;">
+0.981692
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.1
+</td>
+<td style="text-align:right;">
+0.982136
+</td>
+<td style="text-align:right;">
+0.982571
+</td>
+<td style="text-align:right;">
+0.982997
+</td>
+<td style="text-align:right;">
+0.983415
+</td>
+<td style="text-align:right;">
+0.983823
+</td>
+<td style="text-align:right;">
+0.984223
+</td>
+<td style="text-align:right;">
+0.984614
+</td>
+<td style="text-align:right;">
+0.984997
+</td>
+<td style="text-align:right;">
+0.985372
+</td>
+<td style="text-align:right;">
+0.985738
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.2
+</td>
+<td style="text-align:right;">
+0.986097
+</td>
+<td style="text-align:right;">
+0.986448
+</td>
+<td style="text-align:right;">
+0.986791
+</td>
+<td style="text-align:right;">
+0.987127
+</td>
+<td style="text-align:right;">
+0.987455
+</td>
+<td style="text-align:right;">
+0.987776
+</td>
+<td style="text-align:right;">
+0.988090
+</td>
+<td style="text-align:right;">
+0.988397
+</td>
+<td style="text-align:right;">
+0.988697
+</td>
+<td style="text-align:right;">
+0.988990
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.3
+</td>
+<td style="text-align:right;">
+0.989276
+</td>
+<td style="text-align:right;">
+0.989556
+</td>
+<td style="text-align:right;">
+0.989830
+</td>
+<td style="text-align:right;">
+0.990097
+</td>
+<td style="text-align:right;">
+0.990359
+</td>
+<td style="text-align:right;">
+0.990614
+</td>
+<td style="text-align:right;">
+0.990863
+</td>
+<td style="text-align:right;">
+0.991106
+</td>
+<td style="text-align:right;">
+0.991344
+</td>
+<td style="text-align:right;">
+0.991576
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.4
+</td>
+<td style="text-align:right;">
+0.991803
+</td>
+<td style="text-align:right;">
+0.992024
+</td>
+<td style="text-align:right;">
+0.992240
+</td>
+<td style="text-align:right;">
+0.992451
+</td>
+<td style="text-align:right;">
+0.992657
+</td>
+<td style="text-align:right;">
+0.992858
+</td>
+<td style="text-align:right;">
+0.993054
+</td>
+<td style="text-align:right;">
+0.993245
+</td>
+<td style="text-align:right;">
+0.993431
+</td>
+<td style="text-align:right;">
+0.993613
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.5
+</td>
+<td style="text-align:right;">
+0.993791
+</td>
+<td style="text-align:right;">
+0.993964
+</td>
+<td style="text-align:right;">
+0.994133
+</td>
+<td style="text-align:right;">
+0.994297
+</td>
+<td style="text-align:right;">
+0.994458
+</td>
+<td style="text-align:right;">
+0.994614
+</td>
+<td style="text-align:right;">
+0.994767
+</td>
+<td style="text-align:right;">
+0.994916
+</td>
+<td style="text-align:right;">
+0.995060
+</td>
+<td style="text-align:right;">
+0.995202
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.6
+</td>
+<td style="text-align:right;">
+0.995339
+</td>
+<td style="text-align:right;">
+0.995473
+</td>
+<td style="text-align:right;">
+0.995604
+</td>
+<td style="text-align:right;">
+0.995731
+</td>
+<td style="text-align:right;">
+0.995855
+</td>
+<td style="text-align:right;">
+0.995976
+</td>
+<td style="text-align:right;">
+0.996093
+</td>
+<td style="text-align:right;">
+0.996208
+</td>
+<td style="text-align:right;">
+0.996319
+</td>
+<td style="text-align:right;">
+0.996428
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.7
+</td>
+<td style="text-align:right;">
+0.996534
+</td>
+<td style="text-align:right;">
+0.996636
+</td>
+<td style="text-align:right;">
+0.996736
+</td>
+<td style="text-align:right;">
+0.996834
+</td>
+<td style="text-align:right;">
+0.996929
+</td>
+<td style="text-align:right;">
+0.997021
+</td>
+<td style="text-align:right;">
+0.997110
+</td>
+<td style="text-align:right;">
+0.997198
+</td>
+<td style="text-align:right;">
+0.997283
+</td>
+<td style="text-align:right;">
+0.997365
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.8
+</td>
+<td style="text-align:right;">
+0.997445
+</td>
+<td style="text-align:right;">
+0.997523
+</td>
+<td style="text-align:right;">
+0.997599
+</td>
+<td style="text-align:right;">
+0.997673
+</td>
+<td style="text-align:right;">
+0.997745
+</td>
+<td style="text-align:right;">
+0.997815
+</td>
+<td style="text-align:right;">
+0.997882
+</td>
+<td style="text-align:right;">
+0.997948
+</td>
+<td style="text-align:right;">
+0.998012
+</td>
+<td style="text-align:right;">
+0.998074
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2.9
+</td>
+<td style="text-align:right;">
+0.998135
+</td>
+<td style="text-align:right;">
+0.998193
+</td>
+<td style="text-align:right;">
+0.998250
+</td>
+<td style="text-align:right;">
+0.998306
+</td>
+<td style="text-align:right;">
+0.998359
+</td>
+<td style="text-align:right;">
+0.998412
+</td>
+<td style="text-align:right;">
+0.998462
+</td>
+<td style="text-align:right;">
+0.998511
+</td>
+<td style="text-align:right;">
+0.998559
+</td>
+<td style="text-align:right;">
+0.998606
+</td>
+</tr>
+</tbody>
+</table>
+<p>Instead of using the table, we can also plug in a value to get <span class="math inline">\(F(z)\)</span>. For example if we have a z-value of 1.034 we can call the following:</p>
+<pre class="r"><code>P(1.034)</code></pre>
+<pre><code>## [1] 0.849432</code></pre>
+</div>
+</div>
+<div id="calculating-recurrence" class="section level2">
+<h2>Calculating Recurrence</h2>
+<p>Let’s bring it back to the example in the Hornberger book (Appendix 3). Hornberger gives us the following data for some non-specific place:</p>
+<pre class="r"><code>df &lt;- data.frame(Year = (1975:1984), ppt = c(1020,987,894,1040,995,780,1004,930,1192,950))
+df</code></pre>
+<pre><code>##    Year  ppt
+## 1  1975 1020
+## 2  1976  987
+## 3  1977  894
+## 4  1978 1040
+## 5  1979  995
+## 6  1980  780
+## 7  1981 1004
+## 8  1982  930
+## 9  1983 1192
+## 10 1984  950</code></pre>
+<p>We can plot it:</p>
+<pre class="r"><code>ggplot(df)+
+  geom_col(aes(x=as.factor(Year), y=ppt))+
+  labs(x = &quot;Year&quot;, y = &quot;Precipitation [mm]&quot;, title = &quot;Annual Precipitation&quot;)</code></pre>
+<p><img src="/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Okay so Hornberger wants us to find the liklihood that in 1985, the annual precipitation will be less than 1,100 mm and to do this we’re going to use <em>equation A3.10</em> which looks like: <span class="math inline">\(z=\frac{a-\overline{x}}{S_{x}}\)</span>. Recall that <span class="math inline">\(z\)</span> is the <span class="math inline">\(z\)</span>-value, <span class="math inline">\(a\)</span> is the value we’re interested in (1,100 mm in this case), <span class="math inline">\(\overline{x}\)</span> is the mean precipitation over all of the years, and <span class="math inline">\(S_{x}\)</span> is the standard deviation of all of years of precipitation.</p>
+<p>To get the <span class="math inline">\(z\)</span> value now we just define the variables and write the equation:</p>
+<pre class="r"><code>a &lt;- 1100
+x &lt;- mean(df$ppt)
+s &lt;- sd(df$ppt)
+
+z &lt;- (a-x)/s
+z</code></pre>
+<pre><code>## [1] 1.135924</code></pre>
+<p>Now that we have the z-value, we can input that into our cumulative distribution function to get <span class="math inline">\(F(z)\)</span>:</p>
+<pre class="r"><code>Fz &lt;- P(z)
+Fz</code></pre>
+<pre><code>## [1] 0.872006</code></pre>
+<p>Looks like we have returned a value of .872, which indicates that there is an 87.2% chance that next year (1985) there will be less than 1,100 mm of precipitation. Similarly there is a 12.8% chance that precipitation will exceed 1,100 mm in 1985.</p>
+<p>One of the really powerful things about coding this instead of typing it out on a calculator is the ability to run hundreds or thousands of scenarios quickly.</p>
+<pre class="r"><code>FzVals &lt;- data.frame()
+for(n in 700:1200){
+  a &lt;-  n
+  z &lt;- (a-x)/s
+  Fz &lt;- P(z)
+  newRow &lt;- data.frame(a=n,Fz = Fz)
+  FzVals &lt;- rbind(FzVals,newRow)
+}
+
+plot(FzVals$Fz~FzVals$a)</code></pre>
+<p><img src="/courses/watershed/Friday_4_files/figure-html/Fz-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(FzVals)+
+  geom_line(aes(x=a,y=Fz*100))+
+  labs(x = &quot;mm of Rain (a)&quot;, y = &quot;Percent  [F(z)]&quot;, title = &quot;Percent chance yearly rainfall will be below [a]&quot;)</code></pre>
+<p><img src="/courses/watershed/Friday_4_files/figure-html/Fz-2.png" width="672" /></p>
+</div>
+<div id="the-lab" class="section level1">
+<h1>The Lab!</h1>
+<p>First things first, let’s start a new project for this lab, we’ll call it: ‘YourONYEN_Friday4.rproj’. YOu should save this in a new folder on your computer. In the same folder where your .rproj file lives, create a new folder called ‘data’. This is where your data will live for this lab. Once you have your project opened, create a script and title it ‘submission.r’</p>
+<p>For the lab, we’ll repeat what we just did, but first you will choose a watershed of interest, calculate areal estimates of precipitation using various methods. Then you will estimate exceedance and revisit rates.</p>
+<div id="selecting-and-downloading-a-watershed" class="section level2">
+<h2>Selecting and downloading a Watershed</h2>
+<p>Go to the <a href="https://viewer.nationalmap.gov/basic/">USGS National Map</a> and download HUC-4 data. First, move the map to the area yo are interested in, then check the box titled <em>“Hydrography (NHDPlus HR, NHD, WBD)”</em>, then check the box titled <em>“National Hydrography Dataset (NHD)”</em>, then select <em>“HU-4 Subregion”</em> and choose ‘shp (shapefile)’Shapefile’ as the file format.</p>
+<ul>
+<li>Click ‘Find Products’</li>
+</ul>
+<p>Here you can check the thumbnail image to see if it is the watershed you want to work with. If it is, click download!</p>
+<ul>
+<li>Extract the zip file to the data folder you created for your project</li>
+</ul>
+</div>
+<div id="task-1" class="section level2">
+<h2>Task 1</h2>
+<p>For task 1, you’re going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use three methods to calculate areal precipitation for the watershed.</p>
+<pre class="r"><code>library(sf)
+library(here)
+library(rnoaa)
+library(dplyr)
+
+wbd &lt;- st_read(here(&quot;data/Shape/WBDHU4.shp&quot;))
+
+cntrd &lt;- st_centroid(wbd)%&gt;%
+  st_coordinates()%&gt;%
+  as.data.frame()
+
+# Create input for NOAA tool
+HUC4 &lt;- data.frame(id=&quot;HUC4&quot;, latitude = cntrd$Y, longitude = cntrd$X)
+
+# Load all of the stations
+station_data &lt;- ghcnd_stations()
+
+# Find nearby stations with precipitation data
+stations &lt;- meteo_nearby_stations(lat_lon_df = HUC4, station_data = station_data,
+                                  radius = 75, var = &quot;PRCP&quot;,
+                                  year_min = 2015, year_max = 2015)
+
+# Create spatial layer of stations
+df &lt;- as.data.frame(stations)
+sf &lt;- st_as_sf(df, coords = c(&quot;HUC4.longitude&quot;,&quot;HUC4.latitude&quot;), crs = 4269)
+
+# Does everything look right?
+mapview(wbd)+
+  mapview(sf)
+
+# Extract IDs from stations
+ids &lt;- df$HUC4.id
+
+# Download data
+all_data &lt;- meteo_pull_monitors(ids)
+
+
+# Calculate Annual precipitation by station
+annuals &lt;- all_data%&gt;%
+  select(id, date, prcp)%&gt;%
+  group_by(id)%&gt;%
+    mutate(Annual_ppt = sum(prcp, na.rm = TRUE))%&gt;%
+    ungroup()%&gt;%
+  select(id,Annual_ppt)%&gt;%
+    distinct()
+
+# From here, you should be able to use the st_area function and calculate basic statistics for your watershed.</code></pre>
+<div id="q1.-where-is-your-watershed-what-is-the-huc-4-code---20-pts" class="section level3">
+<h3>Q1. Where is your watershed? What is the HUC-4 code? - 20 pts</h3>
+</div>
+<div id="q2.-what-is-the-average-precipitation-for-your-watershed-using-the-arithmetic-mean-method-make-sure-you-have-the-units-correct-you-know-what-units-noaa-is-using.-it-doesnt-matter-if-you-answer-in-mm-or-inches-as-long-as-you-say-what-they-are.-your-answer-should-be-a-number-with-units---20-pts" class="section level3">
+<h3>Q2. What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn’t matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts</h3>
+</div>
+<div id="q3.-calculate-the-mean-precipitation-for-your-watershed-again-but-do-so-using-prism-data.-make-sure-you-download-data-from-the-same-year.-your-answer-should-be-a-number-with-units---20-pts" class="section level3">
+<h3>Q3. Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts</h3>
+</div>
+</div>
+<div id="task-2-using-your-watershed-download-a-10-yr-span-of-precipitation-data-from-either-prism-or-noaa-and-create-a-probability-curve-for-fz." class="section level2">
+<h2>Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).</h2>
+<div id="q4-write-code-to-create-a-bar-plot-showing-annual-precipitation-for-your-watershed-over-the-10-yr-span.-your-answer-should-be-a-plot-with-a-title-and-x-and-y-labels---20-pts" class="section level3">
+<h3>Q4: Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts</h3>
+</div>
+<div id="q5-write-code-to-create-a-probability-curve-for-fz-for-your-watershed.-your-answer-should-be-a-plot-like-the-one-showed-in-class-with-a-title-and-x-and-y-labels-at-the-top-of-this-doc.---20-pts" class="section level3">
+<h3>Q5: Write code to create a probability curve for F(z) for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts</h3>
+</div>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      <img class="portrait mr-3" src="https://s.gravatar.com/avatar/218e31353c28b75c87a7d492d0b018f9?s=200')" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://amurraygeo.com/">Andrew Murray</a></h5>
+      <h6 class="card-subtitle">PhD Student</h6>
+      <p class="card-text" itemprop="description">My research interests include Computational Hydrology, Climate Research, Data Visualization, and Science Communication</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/A_MURRAY89" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?hl=en&amp;user=UTeWBUI2G30C" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/ARMurray" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAb9pnaPoR6EnC_JvtHwXVtb_2IXxIW1uU"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.3394a224b26ce58ff36f44c54743e0ab.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

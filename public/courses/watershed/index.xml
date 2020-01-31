@@ -127,6 +127,1304 @@
     </item>
     
     <item>
+      <title>Friday (4)</title>
+      <link>https://amurraygeo.com/courses/watershed/friday_4/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://amurraygeo.com/courses/watershed/friday_4/</guid>
+      <description>
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#calculating-exceedance&#34;&gt;Calculating Exceedance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#calculating-recurrence&#34;&gt;Calculating Recurrence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-lab&#34;&gt;The Lab!&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#selecting-and-downloading-a-watershed&#34;&gt;Selecting and downloading a Watershed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1&#34;&gt;Task 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-using-your-watershed-download-a-10-yr-span-of-precipitation-data-from-either-prism-or-noaa-and-create-a-probability-curve-for-fz.&#34;&gt;Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;calculating-exceedance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calculating Exceedance&lt;/h2&gt;
+&lt;p&gt;Calculating exceedance probabilities is a fundamental skill in hydrology, particularly at the catchment scale. When we study catchment scale hydrology and processes, one of the first questions we ask as scientists is how we can aply our research to future conditions. Can we estimate what will happen if or when something specific occurs?&lt;/p&gt;
+&lt;p&gt;To do this we use the cumulative distribution function(CDF) (Hornberger Appendix 3), which is the &lt;em&gt;probability that the outcome of a random process, &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; (precipitation next year), will be less than or equal to the chosen value&lt;/em&gt;. We apply the CDF by first normalizing the distribution of precipitation and then feeding it into the CDF or by using a &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; value lookup table (Hornberger table A3.2)&lt;/p&gt;
+&lt;div id=&#34;we-can-duplicate-table-a3.2-by-first-creating-our-own-normal-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;We can duplicate table A3.2 by first creating our own normal distribution&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(c(&amp;quot;bayestestR&amp;quot;,kableExtra))
+library(bayestestR)
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+
+x &amp;lt;- distribution_normal(n = 1000000, mean = 0, sd = 1)
+
+x %&amp;gt;% 
+  density() %&amp;gt;%  # Compute density function
+  as.data.frame() %&amp;gt;% 
+  ggplot(aes(x=x, y=y)) +
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/norm-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duplicate-table-a3.2-by-computing-a-cumulative-distribution-function-for-the-normal-distribution.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Duplicate Table A3.2 by computing a cumulative distribution function for the normal distribution.&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;P &amp;lt;- ecdf(x)
+plot.ecdf(P)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;now-we-can-use-this-function-to-reconstruct-the-table&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Now we can use this function to reconstruct the table&lt;/h3&gt;
+&lt;p&gt;Sidenote: we can make it pretty by using &lt;a href=&#34;https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#table_styles&#34;&gt;kable&lt;/a&gt;, but simply calling table on the last line will do the trick as well.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;table &amp;lt;- data.frame(z = seq(0,2.9,.1))
+for(n in seq(0,.09,.01)){
+  x &amp;lt;- n
+  Fz &amp;lt;- P(seq(0,2.9,.1)+n)
+  newColumn &amp;lt;- as.data.frame(Fz)
+  table &amp;lt;- cbind(table,newColumn)
+}
+colnames(table) &amp;lt;- c(&amp;quot;z&amp;quot;,seq(0,.09,.01))
+
+kable(table) %&amp;gt;%
+  kable_styling(bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+z
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.01
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.02
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.03
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.04
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.05
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.06
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.07
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.08
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.09
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.500000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.503989
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.507978
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.511966
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.515953
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.519939
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.523922
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.527903
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.531881
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.535856
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.539828
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.543795
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.547758
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.551717
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.555670
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.559618
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.563560
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.567495
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.571424
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.575346
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.579260
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.583166
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.587065
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.590954
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.594835
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.598706
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.602568
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.606420
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.610261
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.614092
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.617912
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.621720
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.625516
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.629300
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.633072
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.636831
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.640577
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.644309
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.648027
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.651732
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.655422
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.659097
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.662757
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.666402
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.670032
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.673645
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.677242
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.680823
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.684386
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.687933
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.691463
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.694974
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.698468
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.701944
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.705402
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.708841
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.712260
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.715661
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.719043
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.722405
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.725747
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.729069
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.732371
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.735653
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.738914
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.742154
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.745373
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.748571
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.751748
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.754903
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.758037
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.761148
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.764238
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.767305
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.770350
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.773373
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.776373
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.779350
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.782305
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.785236
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.788145
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.791030
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.793892
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.796731
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.799546
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.802338
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.805106
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.807850
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.810571
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.813267
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.815940
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.818589
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.821214
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.823815
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.826392
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.828944
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.831473
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.833977
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.836457
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.838913
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.841345
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.843753
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.846136
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.848495
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.850830
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.853141
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.855428
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.857691
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.859929
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.862144
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.864334
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.866501
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.868643
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.870762
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.872857
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.874928
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.876976
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.879000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.881000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.882977
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.884931
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.886861
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.888768
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.890652
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.892513
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.894351
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.896166
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.897958
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.899728
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.901475
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.903200
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.904902
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.906583
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.908241
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.909878
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.911492
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.913085
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.914657
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.916207
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.917736
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.919244
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.920731
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.922197
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.923642
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.925067
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.926471
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.927855
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.929220
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.930564
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.931888
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.933193
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.934479
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.935745
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.936992
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.938220
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.939430
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.940621
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.941793
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.942947
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.944083
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.945201
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.946302
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.947384
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.948450
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.949498
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.950529
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.951543
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.952541
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.953522
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.954486
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.955435
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.956368
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.957284
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.958185
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.959071
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.959941
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.960797
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.961637
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.962462
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.963274
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.964070
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.964853
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.965621
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.966375
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.967116
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.967844
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.968558
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.969259
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.969946
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.970621
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.971284
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.971934
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.972572
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.973197
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.973811
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.974412
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.975003
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.975581
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.976149
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.976705
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.977250
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.977785
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.978309
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.978822
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.979325
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.979818
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.980301
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.980774
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.981238
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.981692
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.982136
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.982571
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.982997
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.983415
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.983823
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.984223
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.984614
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.984997
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.985372
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.985738
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.986097
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.986448
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.986791
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.987127
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.987455
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.987776
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.988090
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.988397
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.988697
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.988990
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.989276
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.989556
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.989830
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.990097
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.990359
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.990614
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.990863
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.991106
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.991344
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.991576
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.991803
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.992024
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.992240
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.992451
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.992657
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.992858
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.993054
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.993245
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.993431
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.993613
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.993791
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.993964
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.994133
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.994297
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.994458
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.994614
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.994767
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.994916
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995060
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995202
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995339
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995473
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995604
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995731
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995855
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.995976
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996093
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996208
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996319
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996428
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996534
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996636
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996736
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996834
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.996929
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997021
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997110
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997198
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997283
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997365
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997445
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997523
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997599
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997673
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997745
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997815
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997882
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.997948
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998012
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998074
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998135
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998193
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998250
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998306
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998359
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998412
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998462
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998511
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998559
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.998606
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Instead of using the table, we can also plug in a value to get &lt;span class=&#34;math inline&#34;&gt;\(F(z)\)&lt;/span&gt;. For example if we have a z-value of 1.034 we can call the following:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;P(1.034)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.849432&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calculating-recurrence&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calculating Recurrence&lt;/h2&gt;
+&lt;p&gt;Let’s bring it back to the example in the Hornberger book (Appendix 3). Hornberger gives us the following data for some non-specific place:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df &amp;lt;- data.frame(Year = (1975:1984), ppt = c(1020,987,894,1040,995,780,1004,930,1192,950))
+df&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Year  ppt
+## 1  1975 1020
+## 2  1976  987
+## 3  1977  894
+## 4  1978 1040
+## 5  1979  995
+## 6  1980  780
+## 7  1981 1004
+## 8  1982  930
+## 9  1983 1192
+## 10 1984  950&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can plot it:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df)+
+  geom_col(aes(x=as.factor(Year), y=ppt))+
+  labs(x = &amp;quot;Year&amp;quot;, y = &amp;quot;Precipitation [mm]&amp;quot;, title = &amp;quot;Annual Precipitation&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Okay so Hornberger wants us to find the liklihood that in 1985, the annual precipitation will be less than 1,100 mm and to do this we’re going to use &lt;em&gt;equation A3.10&lt;/em&gt; which looks like: &lt;span class=&#34;math inline&#34;&gt;\(z=\frac{a-\overline{x}}{S_{x}}\)&lt;/span&gt;. Recall that &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-value, &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; is the value we’re interested in (1,100 mm in this case), &lt;span class=&#34;math inline&#34;&gt;\(\overline{x}\)&lt;/span&gt; is the mean precipitation over all of the years, and &lt;span class=&#34;math inline&#34;&gt;\(S_{x}\)&lt;/span&gt; is the standard deviation of all of years of precipitation.&lt;/p&gt;
+&lt;p&gt;To get the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; value now we just define the variables and write the equation:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;a &amp;lt;- 1100
+x &amp;lt;- mean(df$ppt)
+s &amp;lt;- sd(df$ppt)
+
+z &amp;lt;- (a-x)/s
+z&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.135924&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have the z-value, we can input that into our cumulative distribution function to get &lt;span class=&#34;math inline&#34;&gt;\(F(z)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Fz &amp;lt;- P(z)
+Fz&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.872006&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Looks like we have returned a value of .872, which indicates that there is an 87.2% chance that next year (1985) there will be less than 1,100 mm of precipitation. Similarly there is a 12.8% chance that precipitation will exceed 1,100 mm in 1985.&lt;/p&gt;
+&lt;p&gt;One of the really powerful things about coding this instead of typing it out on a calculator is the ability to run hundreds or thousands of scenarios quickly.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;FzVals &amp;lt;- data.frame()
+for(n in 700:1200){
+  a &amp;lt;-  n
+  z &amp;lt;- (a-x)/s
+  Fz &amp;lt;- P(z)
+  newRow &amp;lt;- data.frame(a=n,Fz = Fz)
+  FzVals &amp;lt;- rbind(FzVals,newRow)
+}
+
+plot(FzVals$Fz~FzVals$a)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/Fz-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(FzVals)+
+  geom_line(aes(x=a,y=Fz*100))+
+  labs(x = &amp;quot;mm of Rain (a)&amp;quot;, y = &amp;quot;Percent  [F(z)]&amp;quot;, title = &amp;quot;Percent chance yearly rainfall will be below [a]&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/Fz-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-lab&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;The Lab!&lt;/h1&gt;
+&lt;p&gt;First things first, let’s start a new project for this lab, we’ll call it: ‘YourONYEN_Friday4.rproj’. YOu should save this in a new folder on your computer. In the same folder where your .rproj file lives, create a new folder called ‘data’. This is where your data will live for this lab. Once you have your project opened, create a script and title it ‘submission.r’&lt;/p&gt;
+&lt;p&gt;For the lab, we’ll repeat what we just did, but first you will choose a watershed of interest, calculate areal estimates of precipitation using various methods. Then you will estimate exceedance and revisit rates.&lt;/p&gt;
+&lt;div id=&#34;selecting-and-downloading-a-watershed&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Selecting and downloading a Watershed&lt;/h2&gt;
+&lt;p&gt;Go to the &lt;a href=&#34;https://viewer.nationalmap.gov/basic/&#34;&gt;USGS National Map&lt;/a&gt; and download HUC-4 data. First, move the map to the area yo are interested in, then check the box titled &lt;em&gt;“Hydrography (NHDPlus HR, NHD, WBD)”&lt;/em&gt;, then check the box titled &lt;em&gt;“National Hydrography Dataset (NHD)”&lt;/em&gt;, then select &lt;em&gt;“HU-4 Subregion”&lt;/em&gt; and choose ‘shp (shapefile)’Shapefile’ as the file format.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Click ‘Find Products’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here you can check the thumbnail image to see if it is the watershed you want to work with. If it is, click download!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extract the zip file to the data folder you created for your project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 1&lt;/h2&gt;
+&lt;p&gt;For task 1, you’re going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use three methods to calculate areal precipitation for the watershed.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(sf)
+library(here)
+library(rnoaa)
+library(dplyr)
+
+wbd &amp;lt;- st_read(here(&amp;quot;data/Shape/WBDHU4.shp&amp;quot;))
+
+cntrd &amp;lt;- st_centroid(wbd)%&amp;gt;%
+  st_coordinates()%&amp;gt;%
+  as.data.frame()
+
+# Create input for NOAA tool
+HUC4 &amp;lt;- data.frame(id=&amp;quot;HUC4&amp;quot;, latitude = cntrd$Y, longitude = cntrd$X)
+
+# Load all of the stations
+station_data &amp;lt;- ghcnd_stations()
+
+# Find nearby stations with precipitation data
+stations &amp;lt;- meteo_nearby_stations(lat_lon_df = HUC4, station_data = station_data,
+                                  radius = 75, var = &amp;quot;PRCP&amp;quot;,
+                                  year_min = 2015, year_max = 2015)
+
+# Create spatial layer of stations
+df &amp;lt;- as.data.frame(stations)
+sf &amp;lt;- st_as_sf(df, coords = c(&amp;quot;HUC4.longitude&amp;quot;,&amp;quot;HUC4.latitude&amp;quot;), crs = 4269)
+
+# Does everything look right?
+mapview(wbd)+
+  mapview(sf)
+
+# Extract IDs from stations
+ids &amp;lt;- df$HUC4.id
+
+# Download data
+all_data &amp;lt;- meteo_pull_monitors(ids)
+
+
+# Calculate Annual precipitation by station
+annuals &amp;lt;- all_data%&amp;gt;%
+  select(id, date, prcp)%&amp;gt;%
+  group_by(id)%&amp;gt;%
+    mutate(Annual_ppt = sum(prcp, na.rm = TRUE))%&amp;gt;%
+    ungroup()%&amp;gt;%
+  select(id,Annual_ppt)%&amp;gt;%
+    distinct()
+
+# From here, you should be able to use the st_area function and calculate basic statistics for your watershed.&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;q1.-where-is-your-watershed-what-is-the-huc-4-code---20-pts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q1. Where is your watershed? What is the HUC-4 code? - 20 pts&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q2.-what-is-the-average-precipitation-for-your-watershed-using-the-arithmetic-mean-method-make-sure-you-have-the-units-correct-you-know-what-units-noaa-is-using.-it-doesnt-matter-if-you-answer-in-mm-or-inches-as-long-as-you-say-what-they-are.-your-answer-should-be-a-number-with-units---20-pts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q2. What is the average precipitation for your watershed using the arithmetic mean method? Make sure you have the units correct (you know what units NOAA is using). It doesn’t matter if you answer in mm or inches as long as you say what they are. Your answer should be a number (with units) - 20 pts&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q3.-calculate-the-mean-precipitation-for-your-watershed-again-but-do-so-using-prism-data.-make-sure-you-download-data-from-the-same-year.-your-answer-should-be-a-number-with-units---20-pts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q3. Calculate the mean precipitation for your watershed again, but do so using prism data. Make sure you download data from the same year. Your answer should be a number (with units) - 20 pts&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-2-using-your-watershed-download-a-10-yr-span-of-precipitation-data-from-either-prism-or-noaa-and-create-a-probability-curve-for-fz.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 2: Using your watershed, download a 10-yr span of precipitation data from either PRISM or NOAA and create a probability curve for F(z).&lt;/h2&gt;
+&lt;div id=&#34;q4-write-code-to-create-a-bar-plot-showing-annual-precipitation-for-your-watershed-over-the-10-yr-span.-your-answer-should-be-a-plot-with-a-title-and-x-and-y-labels---20-pts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q4: Write code to create a bar plot showing annual precipitation for your watershed over the 10-yr span. Your answer should be a plot with a title and x and y labels - 20 pts&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q5-write-code-to-create-a-probability-curve-for-fz-for-your-watershed.-your-answer-should-be-a-plot-like-the-one-showed-in-class-with-a-title-and-x-and-y-labels-at-the-top-of-this-doc.---20-pts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q5: Write code to create a probability curve for F(z) for your watershed. Your answer should be a plot like the one showed in class with a title and X and Y labels (at the top of this doc). - 20 pts&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Dimensional Analysis &amp; Land / Atmosphere Interactions</title>
       <link>https://amurraygeo.com/courses/watershed/lecture5/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0100</pubDate>
