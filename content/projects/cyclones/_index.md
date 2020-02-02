@@ -14,6 +14,7 @@ type: docs
 weight: 1
 ---
 
+
 ## Soil Moisture and Groundwater Vulnerability
 
 Soil moisture is an important indicator of the state of the hydrologic cycle. Typically, soil moisture is thought of as an important indicator for how well vegetation is doing such as in major agriculturl areas. For example, it doesn't matter how much it rained yesterday if the soil could not retain any of it. Whereas precipitation tells informs us of how much water is falling to the ground, soil moisture informs us how much water is available for uptake by vegetation. Related to this is the landscapes capacity to absorb water. 

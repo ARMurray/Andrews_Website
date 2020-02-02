@@ -15,6 +15,11 @@ type: docs
 
 ## Impact of Extreme Precipitation from Tropical Cyclones on the Southeastern United States
 
+```{r video, echo = FALSE}
+htmltools::tags$video(src = "/img/Florence.mp4")
+```
+
+
 ### Overview
   The southeastern U.S. experiences heavy rainfall each year from tropical cyclone related activity which are characterized by extrmely low pressure systems which originate in the Atlantic tropics and bring warm moisture north. The type of cyclones experienced by the southeastern United States vary greatly in their point of origin, wind strength, speed of movement and precipitation. Although the general public ties storm strength, typically denoted by the Saffir-Simpson scale (i.e. the category of a Hurricane) to potential precipitation, it is clear that there is no relationship between amount of precipitation and wind speed at landfall.
   
