@@ -1,0 +1,60 @@
+---
+title: "Exam 1 Review"
+author: Andrew Murray
+date: "February 3, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE,warning = FALSE)
+library(sf)
+library(dplyr)
+library(here)
+library(ggplot2)
+```
+
+## Main Points
+
+- Monday, February 10
+- 50 minute Exam
+- Bring a calculator
+- I will provide exam, no need for scantron or blue book
+
+### Format
+
+- Short Answer
+- Fill in the blank
+- Calculations
+- Fill in the graph
+
+### What to study
+
+- Read Chapter 1-2 & Appendix 1 & 3
+- Study the **Key Terms** from the chapters
+- Study the slides from class
+
+## Equations:
+
+- Water Balance Equation (Lecture 3)
+- Residence Time (Lecture 3)
+- Runoff Ratio (Lecture 3)
+
+## Watersheds
+
+### Be able to:
+- Define a watershed
+- Explain the water cycle in the context of a watershed
+- Explain the difference between surface and groundwater
+
+## Scale
+You need to be able to talk about the effects of scale in hydrology. Make sure to understand the differences in process scale and observtion scale. Be able to effectively communicate the differences in areal precipitation estimation methods.
+
+## Units
+You should be familiar with the following unit conversions:
+
+Hectares [ha] to $m^2$
+
+
