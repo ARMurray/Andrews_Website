@@ -18,7 +18,7 @@ type: docs
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Slides are here!](https://amurraygeo.com/slides/watershed/Exam_1_slides.html)
+
 
 ## Main Points
 
@@ -45,6 +45,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Water Balance Equation (Lecture 3)
 - Residence Time (Lecture 3)
 - Runoff Ratio (Lecture 3)
+- Exceedance probability (Lecture 6)
 
 ## Watersheds
 
@@ -60,3 +61,7 @@ You need to be able to talk about the effects of scale in hydrology. Make sure t
 You should be familiar with the following basic unit conversions:
 
 Hectares [ha] to $m^2$ to [mm]
+
+You should be familiar with the concept of Dimensional Analysis (Lecture 4)
+
+- Units vs. Dimensions

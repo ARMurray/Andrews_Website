@@ -4,12 +4,12 @@ draft: false
 output:
   blogdown::html_page:
     toc: false
-linktitle: DA & Land - Atmosphere
+linktitle: Lecture 5
 menu:
   watershed:
     parent: The Science of Hydrology
     weight: 80
-title: Dimensional Analysis & Land / Atmosphere Interactions
+title: Lecture 5
 type: docs
 
 ---
