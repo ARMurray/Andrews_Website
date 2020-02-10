@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Added Parameters | Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products</title>
+  <meta name="description" content="This is the proposal for my dissertation topic at the University of North Carolina - Chapel Hill (department of Geography). The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Added Parameters | Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the proposal for my dissertation topic at the University of North Carolina - Chapel Hill (department of Geography). The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Added Parameters | Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products" />
+  
+  <meta name="twitter:description" content="This is the proposal for my dissertation topic at the University of North Carolina - Chapel Hill (department of Geography). The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Andrew Murray" />
+
+
+<meta name="date" content="2020-02-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="drastic.html"/>
+<link rel="next" href="chapter1.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.49.4/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.49.4/plotly-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Dissertation Proposal</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i><b>1.1</b> Abstract</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#committee-composition"><i class="fa fa-check"></i><b>1.2</b> Committee Composition</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>3</b> Hypothesis</a></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="drastic.html"><a href="drastic.html"><i class="fa fa-check"></i><b>5</b> DRASTIC</a><ul>
+<li class="chapter" data-level="5.1" data-path="drastic.html"><a href="drastic.html#depth-to-water"><i class="fa fa-check"></i><b>5.1</b> <strong>D</strong>epth to Water</a></li>
+<li class="chapter" data-level="5.2" data-path="drastic.html"><a href="drastic.html#recharge"><i class="fa fa-check"></i><b>5.2</b> <strong>R</strong>echarge</a></li>
+<li class="chapter" data-level="5.3" data-path="drastic.html"><a href="drastic.html#aquifer-media"><i class="fa fa-check"></i><b>5.3</b> <strong>A</strong>quifer Media</a></li>
+<li class="chapter" data-level="5.4" data-path="drastic.html"><a href="drastic.html#soil-media"><i class="fa fa-check"></i><b>5.4</b> <strong>S</strong>oil Media</a></li>
+<li class="chapter" data-level="5.5" data-path="drastic.html"><a href="drastic.html#topography"><i class="fa fa-check"></i><b>5.5</b> <strong>T</strong>opography</a></li>
+<li class="chapter" data-level="5.6" data-path="drastic.html"><a href="drastic.html#impact-of-the-vadose-zone"><i class="fa fa-check"></i><b>5.6</b> <strong>I</strong>mpact of the Vadose Zone</a></li>
+<li class="chapter" data-level="5.7" data-path="drastic.html"><a href="drastic.html#conductivity"><i class="fa fa-check"></i><b>5.7</b> <strong>C</strong>onductivity</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="parameters.html"><a href="parameters.html"><i class="fa fa-check"></i><b>6</b> Added Parameters</a><ul>
+<li class="chapter" data-level="6.1" data-path="parameters.html"><a href="parameters.html#soil-moisture"><i class="fa fa-check"></i><b>6.1</b> Soil Moisture</a></li>
+<li class="chapter" data-level="6.2" data-path="parameters.html"><a href="parameters.html#land-cover-imperviousness"><i class="fa fa-check"></i><b>6.2</b> Land Cover / Imperviousness</a></li>
+<li class="chapter" data-level="6.3" data-path="parameters.html"><a href="parameters.html#leaf-area-index"><i class="fa fa-check"></i><b>6.3</b> Leaf Area Index</a></li>
+<li class="chapter" data-level="6.4" data-path="parameters.html"><a href="parameters.html#well-use"><i class="fa fa-check"></i><b>6.4</b> Well Use</a></li>
+<li class="chapter" data-level="6.5" data-path="parameters.html"><a href="parameters.html#socio-economicx"><i class="fa fa-check"></i><b>6.5</b> Socio-Economicx</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chapter1.html"><a href="chapter1.html"><i class="fa fa-check"></i><b>7</b> Chapter 1</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="chapter1.html"><a href="chapter1.html#connecting-soil-moisture-precipitation-and-landcover"><i class="fa fa-check"></i><b>7.0.1</b> Connecting soil moisture, precipitation and Landcover</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>8</b> Chapter 2</a><ul>
+<li class="chapter" data-level="8.0.1" data-path="chapter2.html"><a href="chapter2.html#smap-assisted-estimation-of-hydraulic-conductivity-recharge-and-water-table-height."><i class="fa fa-check"></i><b>8.0.1</b> SMAP assisted estimation of hydraulic conductivity, recharge, and water table height.</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>9</b> Chapter 3</a><ul>
+<li class="chapter" data-level="9.0.1" data-path="chapter3.html"><a href="chapter3.html#drastic-1"><i class="fa fa-check"></i><b>9.0.1</b> DRASTIC+</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="outcomes.html"><a href="outcomes.html"><i class="fa fa-check"></i><b>10</b> Projected Outcomes</a></li>
+<li class="chapter" data-level="11" data-path="timeline.html"><a href="timeline.html"><i class="fa fa-check"></i><b>11</b> Timeline</a></li>
+<li class="chapter" data-level="12" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>12</b> Summary</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://amurraygeo.com/" target="blank">AMurrayGeo.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="parameters" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Added Parameters</h1>
+<div id="soil-moisture" class="section level2">
+<h2><span class="header-section-number">6.1</span> Soil Moisture</h2>
+</div>
+<div id="land-cover-imperviousness" class="section level2">
+<h2><span class="header-section-number">6.2</span> Land Cover / Imperviousness</h2>
+<p>Plants are generally categorized into three main root systems: tap roots, fibrous roots, and adventitious roots. Tap roots grow vertically downward and are usually deep-rooted. The primary root becomes the dominant root of the plant and secondary and tertiary roots develop from it. This system is found in dicotyledon plants like beans, mangoes, and almonds.</p>
+<p>Fibrous roots, on the other hand, have no single dominant root. All roots are thin and more or less equal in length. Rather than growing straight down, fibrous root systems grow every which way, creating a larger root zone and mass than tap root systems. Most fibrous root systems are not deep rooted. This system is found in monocotyledon plants like bananas and onions.</p>
+<p>Adventitious roots are a bit strange. These roots do not arise from the bottom or a primary root but instead grow out from other organs of the plant. Most of them originate from a stem and in a few cases, even leaves produce adventitious roots. This helps in advanced vegetative propagation in plants like ferns, mosses, and horsetails.</p>
+<p>While regional vegetation patterns are relatively consistent accross the coastal southeastern United States <span class="citation">(Mills et al. <a href="#ref-mills2013identification" role="doc-biblioref">2013</a>)</span>, specific vegetation types can vary greatly accross local spatial scales</p>
+</div>
+<div id="leaf-area-index" class="section level2">
+<h2><span class="header-section-number">6.3</span> Leaf Area Index</h2>
+<p>It is clear that vegetation plays an important role in the handling of precipitation, especially with respect to extreme precipitation events. For example, many have pointed to the historic flooding experienced in Houston, not just as a result of Hurricane Harvey, but over the past two decades. An estimated 30% of freshwater wetlands were lost in Harris county between 1992 and 2003 which is a fact many point to when describing how the intense flooding Harvey brought could have been partially offset <span class="citation">(Satija, <a href="#ref-satija2014" role="doc-biblioref">n.d.</a>)</span>. Much of Houston’s urban sprawl has claimed thousands of acres of prairie grass that would have otherwise helped absorb some of the blow from extreme precipitation events. These concepts come into play through hydraulic head and preferential pathways between the surface and subsurface. Under normal conditions, plant roots provide these preferential pathways since they have a higher hydraulic conductivity than unsaturated soil <span class="citation">(Caldwell and Richards <a href="#ref-caldwell1989hydraulic" role="doc-biblioref">1989</a>)</span>. Hydraulic lift can occur when the surface soil is much drier than the subsurface due to the differential hydraulic head. This means that normally, during the day water can be brought to the surface, and at night, water can be deposited into the subsurface via the preferential pathways offered by vegetation <span class="citation">(Hornberger et al. <a href="#ref-hornberger2014elements" role="doc-biblioref">2014</a>)</span>. Thus, when an extreme precipitation event occurs, if the subsurface is unsaturated and dense vegetation exists, water can be rapidly moved into the subsurface, decreasing total runoff. This of course is heavily dependent on vegetation type and root depth, which must be considered.
+While I have established that vegetation, among other things, is a key driver of infiltration rates, it is important to consider how dynamic of a driver it is. The presence of vegetation by itself does not define infiltration. Ecosystem maturity must also be considered. Plant maturity and density is of importance when considering this. The National Landcover Dataset is a good example for this point, as it may show identical landuse types across space, but may not reveal other important variables such as leaf area index (LAI). For example, the free throughfall coefficient of precipitation is a direct exponential function of LAI <span class="citation">(Pitman <a href="#ref-pitman1989rainfall" role="doc-biblioref">1989</a>)</span>. As infiltration and surface runoff rates are, by their nature, controlled first by interception, an ecosystem’s progression in succession may have a significant impact on interflow and runoff. Thus, land cover / land use change may have a similar effect but with even more complexity involved relating to root depth, root type etc… Similarly, it should be pointed out that while succession changes year-to-year, intra-seasonal factors must also be considered. Plants need oxygen at their roots and that oxygen is obtained by diffusion through pores in the soil <span class="citation">(Hornberger et al. <a href="#ref-hornberger2014elements" role="doc-biblioref">2014</a>)</span>. Therefore, if the soil is oversaturated, the plant may die. There are certainly exceptions to this rule. Sedges such as sawgrass, which are prevalent in the everglades, are capable of spending over a year completely submerged in water without dying off.
+From here we can discuss the topic of water tolerance as a precursor for contamination potential. While the typical focus of an extreme precipitation event is immediate contamination of surface and groundwater, this issue of water tolerance illustrates the possibility of broad ecosystem changes that could be brought on by extreme rainfall, leaving the landscape in a state of increased vulnerability for additional precipitation which may follow the initial storm.</p>
+</div>
+<div id="well-use" class="section level2">
+<h2><span class="header-section-number">6.4</span> Well Use</h2>
+</div>
+<div id="socio-economicx" class="section level2">
+<h2><span class="header-section-number">6.5</span> Socio-Economicx</h2>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-caldwell1989hydraulic">
+<p>Caldwell, Martyn M, and James H Richards. 1989. “Hydraulic Lift: Water Efflux from Upper Roots Improves Effectiveness of Water Uptake by Deep Roots.” <em>Oecologia</em> 79 (1): 1–5.</p>
+</div>
+<div id="ref-hornberger2014elements">
+<p>Hornberger, George M, Patricia L Wiberg, Jeffrey P Raffensperger, and Paolo D’Odorico. 2014. <em>Elements of Physical Hydrology</em>. JHU Press.</p>
+</div>
+<div id="ref-mills2013identification">
+<p>Mills, Richard Tran, Jitendra Kumar, Forrest M Hoffman, William W Hargrove, Joseph P Spruce, and Steven P Norman. 2013. “Identification and Visualization of Dominant Patterns and Anomalies in Remotely Sensed Vegetation Phenology Using a Parallel Tool for Principal Components Analysis.” <em>Procedia Computer Science</em> 18: 2396–2405.</p>
+</div>
+<div id="ref-pitman1989rainfall">
+<p>Pitman, John Iain. 1989. “Rainfall Interception by Bracken in Open Habitats—Relations Between Leaf Area, Canopy Storage and Drainage Rate.” <em>Journal of Hydrology</em> 105 (3-4): 317–34.</p>
+</div>
+<div id="ref-satija2014">
+<p>Satija, Neena. n.d. “When Climate Change Meets Sprawl: Why Houston’s ’Once-in-a-Lifetime’ Floods Keep Happening.” <em>Pro Publica</em>. <a href="https://projects.propublica.org/houston-cypress/">https://projects.propublica.org/houston-cypress/</a>.</p>
+</div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://proposal-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="drastic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown.pdf", "bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
