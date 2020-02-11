@@ -28,6 +28,8 @@ url_slides: ""
 url_video: ""
 ---
 
+[Download the poster from AGU '19 HERE](/files/AGU_Science_2019.pdf)
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -49,7 +51,8 @@ change_here("C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/
 ```
 
 ## Import data
-In this document we are going to calculate Evasion from the Vaisala Sensors and compare them to the eosFD flux measurements as well as see how they relate to other variables such as precipitation and temperature. First we import the data and for now we will filter so we are looking at non-injections
+
+Long thought to be a carbon sink, the Páramo region of the Andes may be a significant carbon source (Carrillo et al. 2019 AFM). We evaluated the spatiotemporal dynamics of CO2 concentration and flux in a high-elevation stream. We measured 15-min dissolved CO2, O2, and discharge, across a wetland-stream transition, characteristic of tropical, alpine environments. Here, we calculate evasion using Vaisala dissolved $CO_{2}$ Sensors and compare estimates to directly measured flux from an eoSense eosFD flux chamber. We also evaluate how evasion relates to other variables such as precipitation and temperature. Our field campaign included in-stream $CO_{2}$ injections to determine the impact of $CO_{2}$ concentration on evasion. Here we ignore these injections and filter them out while we import the rest of our measurements.
 ```{r data, echo=FALSE, message=FALSE}
 df <- read.csv(here::here("data_4_analysis/All_Stream_Data.csv"))%>%
   select(DateTime,Inj,V1,V2,V3,V4,DO1_mg.L,DO2_mg.L,DO4_mg.L,Flux_1,Flux_2,tempC_436,airTemp_c,ppt24Tot,ppt48Tot,ppt72Tot,stn1_Q,stn2_Q,stn3_Q,stn4_Q)%>%
@@ -123,10 +126,11 @@ filt34 <- df%>%
 ```
 
 
-# CO2 Change
+# CO<sub>2</sub> Change
 
-## Change in CO2
-  The first step in calculating flux from the stream is to calculate change in CO2 concentrations between two points within the stream. We will look at two pairs of sensors (1->3 & 3->4). Once we determine change in CO2 concentration, we will convert ppm to uMols and then account for stream metabolism (respiration and photosynthesis) to calculate flux. First, let's visualize change in CO2 accross the pairs of sensors
+## Change in CO<sub>2</sub>
+
+|       The first step in calculating evasion from the stream is to calculate change in $CO_{2}$ concentrations between two points within the stream. We will look at two pairs of sensors (1->3 & 3->4). Once we determine change in $CO_{2}$ concentration, we will convert ppm to $umol$ and then account for stream metabolism (respiration and photosynthesis) to calculate evasion. First, let's visualize change in $CO_{2}$ accross the pairs of sensors
 
  
 ```{r filt14PpmPlot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=8}
@@ -193,10 +197,10 @@ plotly34Ppm <- filt34%>%
 subplot(plotly13Ppm,plotly34Ppm, shareY = T)
 ```
 
-So now that we know what the change in CO2 between stations, it's time to account for stream metabolism. Stream metabolism includes Ecosystem Respiration (ER) and Gross Primary Production / phtosynthesis (GPP). Both of these processes include a 1:1 exchange of CO2 and DO molecules. 
-**Photosynthesis:** Use CO2 and create O2 (1:1 ratio). 
+So now that we know what the change in $CO_{2}$ between stations, it's time to account for stream metabolism. Stream metabolism includes Ecosystem Respiration (ER) and Gross Primary Production / phtosynthesis (GPP). Both of these processes include a 1:1 exchange of $CO_{2}$ and DO molecules. 
+**Photosynthesis:** Use $CO_{2}$ and create O2 (1:1 ratio). 
 
-**Respiration:** Use O2, create CO2 (1:1 ratio).
+**Respiration:** Use O2, create $CO_{2}$ (1:1 ratio).
 
 Respiration can occur in the abscence of sunlight while photosynthesis cannot. At night, stream processes are respiration driven. During the day both respiration and photosynthesis occur. We can look at the changes in DO over the similar stretches of stream and time period. We did not have a DO sensor at station 3 but we did have one at station 2.
 
@@ -267,8 +271,8 @@ subplot(plotly13DOPpm,plotly34DOPpm, shareY = T)
 
 # Mass Conversion
 
-## Convert CO2 from concentration to mass
-Now that we know the change in CO2 in terms of concentration [ppm], we can convert it to mass. Specifically, we will take this opportunity to convert to micromoles [umol], which we will eventually use to express evasion.
+## Convert CO<sub>2</sub> from concentration to mass
+Now that we know the change in $CO_{2}$ in terms of concentration [ppm], we can convert it to mass. Specifically, we will take this opportunity to convert to micromoles [umol], which we will eventually use to express evasion.
 ```{r CO2ppm2uMols}
 # Distances are 17,30,80
 
@@ -279,7 +283,7 @@ filt34$uMols_34 <- ((filt34$V3-filt34$V4)/ 64) *.0018*(1000000/44.01)*filt34$stn
 
 # Plotting data
 
-## Histograms of change in CO2
+## Histograms of change in CO<sub>2</sub>
 ```{r CO2Hist, echo=FALSE, warning = FALSE, message=FALSE, fig.width=8}
 hist13 <- ggplot(filt13)+
   geom_histogram(aes(x = uMols_13),fill = "#767676",color="#4B9CD3",binwidth = 1)+
@@ -302,7 +306,7 @@ subplot(hist13,hist34, shareY = TRUE, titleX = TRUE)
 
 
 
-## CO2 Change over time
+## CO<sub>2</sub> Change over time
 
 This plot shows how 
 ```{r CO2ChangeTime, echo=FALSE, warning=FALSE, fig.width= 10}
@@ -328,7 +332,7 @@ subplot(cChange13,cChange34, shareY = TRUE)
 ```
 
 
-## Change in CO2 (umols)
+## Change in CO<sub>2</sub> [umol]
 ```{r CO2Change, echo = FALSE, message=FALSE, warning = FALSE, fig.width=10}
 
 ## Plotly
@@ -458,7 +462,7 @@ resp
 #subplot(gpp,resp,shareY = TRUE)
 ```
 
-## Estimate daily ER and GPP in uMols of CO2
+## Estimate daily ER and GPP in umol of CO<sub>2</sub>
 1 mole of CO2 = 31.9988 grams.
 ```{r metabConvert, echo=FALSE, warning=FALSE, message=FALSE}
 metabCO2 <- metab%>%
@@ -530,7 +534,7 @@ metabCO2avg <- left_join(stn12,stn4, by="date")
 
 # Evasion Calculations
 
-## Convert CO2 Change into Daily Values
+## Convert CO<sub>2</sub> Change into Daily Values
 ```{r evasionDaily, warning=FALSE, message = FALSE}
 DCO2Daily13 <- filt13%>%
   group_by(day)%>%

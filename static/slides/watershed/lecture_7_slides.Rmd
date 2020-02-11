@@ -1,0 +1,18 @@
+---
+title: "Lecture 7"
+author: Andrew Murray
+date: "February 12, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE,warning = FALSE)
+library(sf)
+library(dplyr)
+library(here)
+library(ggplot2)
+```
+
