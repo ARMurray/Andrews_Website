@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Soil Moisture on Andrew Murray</title>
-    <link>https://amurraygeo.com/projects/cyclones/</link>
+    <link>/projects/cyclones/</link>
     <description>Recent content in Soil Moisture on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://amurraygeo.com/projects/cyclones/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/projects/cyclones/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tropical Cyclones</title>
-      <link>https://amurraygeo.com/projects/cyclones/intro/</link>
+      <link>/projects/cyclones/intro/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>https://amurraygeo.com/projects/cyclones/intro/</guid>
+      <guid>/projects/cyclones/intro/</guid>
       <description>
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://amurraygeo.com/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -38,7 +38,7 @@
 
 &lt;div id=&#34;impact-of-extreme-precipitation-from-tropical-cyclones-on-the-southeastern-united-states&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Impact of Extreme Precipitation from Tropical Cyclones on the Southeastern United States&lt;/h2&gt;
-&lt;video src=&#34;https://amurraygeo.com/img/Florence.mp4&#34;&gt;&lt;/video&gt;
+&lt;video src=&#34;/img/Florence.mp4&#34;&gt;&lt;/video&gt;
 &lt;div id=&#34;overview&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;The southeastern U.S. experiences heavy rainfall each year from tropical cyclone related activity which are characterized by extrmely low pressure systems which originate in the Atlantic tropics and bring warm moisture north. The type of cyclones experienced by the southeastern United States vary greatly in their point of origin, wind strength, speed of movement and precipitation. Although the general public ties storm strength, typically denoted by the Saffir-Simpson scale (i.e. the category of a Hurricane) to potential precipitation, it is clear that there is no relationship between amount of precipitation and wind speed at landfall.&lt;/p&gt;
