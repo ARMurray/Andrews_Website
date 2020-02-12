@@ -67,7 +67,7 @@ Water potential = hydraulic head
 
 ## Evapotranspiration
 
-![](/img/watershed/lecture7/evaporation.png){width = 750px}
+![](/img/watershed/lecture7/evaporation.png){width=750px}
 
 - Evaporation involves the change in phase from **liquid &rarr; vapor**
 - Transpiration is a physical process
@@ -89,7 +89,7 @@ Water potential = hydraulic head
 
 ## How does the unsaturated zone respond to precipitation?
 
-```{r video, echo = FALSE}
+```{r video, echo = FALSE, out.width="100%"}
 htmltools::tags$video(src = "/img/Florence.mp4")
 ```
 
@@ -98,3 +98,7 @@ htmltools::tags$video(src = "/img/Florence.mp4")
 ![](/img/dissertation/florence.png){width=750px}
 
 Can you think of some reasons why these two images are so much different?
+
+## Landcover
+
+![](/img/dissertation/boxplot.png){width=750px}
