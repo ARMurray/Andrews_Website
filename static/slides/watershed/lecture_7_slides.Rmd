@@ -28,11 +28,11 @@ library(ggplot2)
 - A suitable place for radioactive waste?
 
 ## Effect of Extreme Rainfall on Crops
-<div style= "float:left;position: relative; top: 50px;">
+<div style= "float:left;position: relative; top: 20px;">
 ![](/img/watershed/lecture7/crops.png){height=500px}
 </div>
 
-|       - The USDA tracks crop yield each year which can give some insight into how crops perform under different weather patterns
+       - The USDA tracks crop yield each year which can give some insight into how crops perform under different weather patterns
 
 |       - Subterranean crops like peanuts and sweet potatoes show a negative relationship with extreme rainfall, most likely due to a low water tolerance.
 
@@ -40,7 +40,7 @@ library(ggplot2)
 
 ## Three Divisions of the Unsaturated Zone
 <div style= "float:right;position: relative; top: 50px;">
-![](/img/watershed/lecture7/crops.png){height=500px}
+![](/img/watershed/lecture7/vadose.png){height=500px}
 </div>
 
 - **Soil Water Zone:** "That part of the lithosphere immediately below the surface, from which water is discharged into the atmosphere in perceptible quantities by the action of plants (transpiration) or by soil evaporation".     |
