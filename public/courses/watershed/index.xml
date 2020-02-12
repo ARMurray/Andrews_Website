@@ -1382,7 +1382,8 @@ ggplot(FzVals)+
 &lt;div id=&#34;task-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1&lt;/h2&gt;
 &lt;p&gt;For task 1, you’re going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use the arithmetic mean method to calculate areal precipitation for the watershed.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(sf)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(lubridate)
+library(sf)
 library(here)
 library(rnoaa)
 library(dplyr)
@@ -1423,6 +1424,7 @@ all_data &amp;lt;- meteo_pull_monitors(ids)
 # Calculate Annual precipitation by station
 annuals &amp;lt;- all_data%&amp;gt;%
   select(id, date, prcp)%&amp;gt;%
+  filter(date &amp;gt; ymd(&amp;quot;20141231&amp;quot;) &amp;amp; date &amp;lt; ymd(&amp;quot;20160101&amp;quot;))%&amp;gt;%
   group_by(id)%&amp;gt;%
     mutate(Annual_ppt = sum(prcp, na.rm = TRUE))%&amp;gt;%
     ungroup()%&amp;gt;%

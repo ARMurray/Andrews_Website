@@ -142,6 +142,7 @@ Here you can check the thumbnail image to see if it is the watershed you want to
 For task 1, you're going to use the NOAA r package to get weather station data for the watershed you selected. Then you will use the arithmetic mean method to calculate areal precipitation for the watershed.
 
 ```{r task1, echo=TRUE, eval=FALSE}
+library(lubridate)
 library(sf)
 library(here)
 library(rnoaa)
@@ -183,6 +184,7 @@ all_data <- meteo_pull_monitors(ids)
 # Calculate Annual precipitation by station
 annuals <- all_data%>%
   select(id, date, prcp)%>%
+  filter(date > ymd("20141231") & date < ymd("20160101"))%>%
   group_by(id)%>%
     mutate(Annual_ppt = sum(prcp, na.rm = TRUE))%>%
     ungroup()%>%
