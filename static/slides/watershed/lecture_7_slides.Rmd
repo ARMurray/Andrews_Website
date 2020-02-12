@@ -16,3 +16,73 @@ library(here)
 library(ggplot2)
 ```
 
+
+## The Unsaturated Zone
+
+- Unsaturated zone = the vadose zone
+- Soil moisture is the water content of the unsaturated zone
+  - If you dig a hole, you may not hit water but the soil will have some amount of water in it.
+- Vegetation draws both oxygen and water from the unsaturated zone via their root systems
+  - Different types of vegetation exhibit different levels of **water tolerance** which refers to how resilient they are to being inundated with water. subterrainean crops for example may die with too much rain.
+
+- A suitable place for radioactive waste?
+
+## Effect of Extreme Rainfall on Crops
+<div style= "float:left;position: relative; top: 50px;">
+![](/img/watershed/lecture7/crops.png){height=500px}
+</div>
+
+|       - The USDA tracks crop yield each year which can give some insight into how crops perform under different weather patterns
+
+|       - Subterranean crops like peanuts and sweet potatoes show a negative relationship with extreme rainfall, most likely due to a low water tolerance.
+
+|       - Corn and soybeans seem to handle excess precipitation more easily, exhibiting a boost in annual yield
+
+## Three Divisions of the Unsaturated Zone
+<div style= "float:right;position: relative; top: 50px;">
+![](/img/watershed/lecture7/crops.png){height=500px}
+</div>
+
+- **Soil Water Zone:** "That part of the lithosphere immediately below the surface, from which water is discharged into the atmosphere in perceptible quantities by the action of plants (transpiration) or by soil evaporation".     |
+
+- **Capillary Fringe:** "A zone in which the pressure is less than atmospheric, overlying the zone of saturation and containing capillary interstices some or all of which are filled with water that is continuois with the water in the zone of saturation but is held above that zone by capillarity acting against gravity."     |
+
+- **Intermediate zone:** The area between the soil water zone and the capillary fringe
+[Video](https://www.youtube.com/watch?v=5waNTa2b-yg)
+
+
+## Water Potential
+
+**From first principles**, the total water potential of a system consists of the sum of water potentials forces per unit area associated 
+
+Water potential = hydraulic head
+
+**Pressure (turgor) potential:** related to the hydrostatic pressure, as when someone is under water in a pool.
+
+**Osmotic potential:** The presence of solutes reduces the flow of water.  Imagine a U-shaped clear tube with equal amounts of water on each side, separated by a membrane at its base that is impermeable to sugar molecules (made from dialysis tubing). Sugar has been added to the water on one side. The height of the water on each side will change proportionally to the pressure of the solutions. Osmotic pressure causes the height of the water in the compartment containing the sugar to rise, due to movement of the pure water from the compartment without sugar into the compartment containing the sugar water. This process will stop once the pressures of the water and sugar water toward both sides of the membrane become equal
+
+**Matric potential:** interactions between water and solid surfaces act to reduce the flow of water. 
+
+**Gravity Potential:** a function of water density, the acceleration due to gravity and the height of the water reservoir above or below a reference height. 
+
+## Evapotranspiration
+
+![](/img/watershed/lecture7/evaporation.png){width = '100%'}
+
+- Evaporation involves the change in phase from **liquid &rarr; vapor**
+- Transpiration is a physical process
+  - The cohesive strength of water makes it work
+  - Osmotic pressure draws water into the roots
+  - Water moves upward because it flows downhill energetically!
+
+[Measuring Transpiration is HARD!](https://www.youtube.com/watch?v=gXocZZDDPaw)
+
+- This is why we study evapotranspiration...
+
+## Leaf Area Index
+
+  -Okay, so measuring transpiration is hard, but even if we could understand the rates for each of these different types of vegetation, quantifying the vegetation adds even more complexity
+  
+  - "The Leaf Area Index is defined as half the total area of green elements of the canopy per unit horizontal ground area. The satellite-derived value corresponds to the total green LAI of all the canopy layers, including the understory which may represent a very significant contribution, particularly for forests. Practically, the LAI quantifies the thickness of the vegetation cover."
+
+![](/img/watershed/lecture7/LAI300m_July2017.png){width='100%'}

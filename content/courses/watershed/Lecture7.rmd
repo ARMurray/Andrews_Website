@@ -22,12 +22,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Material:
 
-- Hornberger Chapter 3 (Principles of Fluid Dynamics)
+- Hornberger Chapter 8 (Water in the Unsaturated Zone)
 
 ## Outline
 
-- Forces on Fluids
-- Fluid Statics
-- Fluid Dynamics
-- Energy [Loss]
-- Laminar and Turbulent Flows
+- The [mostly] unsaturated zone
+- Evapotranspiration
+- Plants in the Water Cycle
+- Leaf Area Index
+- Transpiration – Stomatal Conductance
+- Observations
+
