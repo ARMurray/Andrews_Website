@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## {data-background-video="/video/florence.png" data-background-size=cover}
+## {data-background-video="/video/florence.mp4" data-background-size=cover}
 
 
 
