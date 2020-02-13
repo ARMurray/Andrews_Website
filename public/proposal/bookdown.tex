@@ -73,7 +73,7 @@
 
 \title{Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products}
 \author{Andrew Murray}
-\date{2020-02-10}
+\date{2020-02-12}
 
 \begin{document}
 \maketitle
@@ -123,15 +123,15 @@ The factors most closely associated with a person's view of their water quality 
 
 Currently, we have no way of estimating groundwater vulnerability to contamination following extreme precipitation events. Reports in the aftermath of Hurricane Matthew showed that soil saturation and precipitation in the 45 days prior to the storm amplified peak stream flows and the inundation extent during and after the storm\citep{musser2017}. It should be noted that while the bulk of attention is given to major hurricanes, there is no correlation between wind speed (storm category) and either precipitation intensity or mean precipitation over land \protect\hyperlink{fig:stormPts}{Figure \ref{fig:stormPts}}. Analytical complications are introduced by variability in land cover, which is known to directly affect soil water infiltration rates during and after rainfall events. In urban areas with variable density of impervious surface cover, infiltration rates can vary by up to 60\% over small spatial scales\citep{pauleit2000}, while in undeveloped land infiltration rates can vary between \textless{} .1 to \textgreater{} 10 m / day\citep{bouwer1999}. I seek to provide quantitative understanding of the vulnerability of groundwater resources to contamination during and after extreme precipitation events, using temporal changes in soil moisture (SM) in the days prior to and following an event and in combination with land use/land cover information. My research will utilize both passive and active satellite based and sub-orbital airborne sensors, in conjunction with established sources of geologic and atmospheric information.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{img/stormPts} \caption{Wind speed at landfall plotted against maximum total rainfall experienced at a single point per cyclone event and colored by average mean precipitation experienced over the impacted land area }\label{fig:stormPts}
-\end{figure}
+\hypertarget{htmlwidget-eccaa36fbe8ecb00120c}{}
+
+\label{fig:stormPts}Wind speed at landfall plotted against maximum total rainfall experienced at a single point per cyclone event and colored by average mean precipitation experienced over the impacted land area
 
 I propose to utilize L, C and X band sensors producing SM data in combination with land cover and a tried-and-true groundwater vulnerability indexing method to predict groundwater areas prone to contact with surface waters, and thus predict those most vulnerable to contamination from extreme events. My previous work at the Environmental Protection Agency (EPA) has shown that North Carolina, Florida, and Texas have the first, second, and fifth highest populations served by private domestic groundwater wells in the nation, respectively\citep{murray2020}. More than five million privately owned wells have been impacted by tropical cyclones since 2015 \protect\hyperlink{fig:pptWellsBar}{Figure \ref{fig:pptWellsBar}}. The Southeastern U.S. has high reliance on private water supplies, yet also displays heterogenous land use types and varying physical landscapes. For example, Houston is characterized by heavily urbanized and industrial landscapes, largely dominated by the oil and gas sector. The Florida coast represents low lying wetland landscapes heavily susceptible to groundwater contamination due to the prevalence of limestone. The eastern Carolinas are characterized by mixed rural and urban landscapes with a large portion of the economy built on agriculture, specifically intensive hog and poultry farming, highlighting the risk for agricultural contaminants to reach groundwater systems.\\
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{img/pptWellsBar} \caption{Estimated private wells in areas impacted by greater than 100mm of precipitation in a single event. Only tropical cyclonic events since 2015 considered here.}\label{fig:pptWellsBar}
-\end{figure}
+\hypertarget{htmlwidget-07c73a8e85e69c307290}{}
+
+\label{fig:pptWellsBar}Estimated private wells in areas impacted by greater than 100mm of precipitation in a single event. Only tropical cyclonic events since 2015 considered here.
 
 With recent developments in remotely sensed SM data products from multiple active and passive sensors using L, C and X bands, it is possible to create global coverage SM maps with high spatial resolution\citep{mohanty2017}. This information can be used to evaluate the temporal variability in hydraulic parameters such as conductivity and water retention(\citet{ahuja1993} \& \citet{chen1993}). The SM Active Passive (SMAP) satellite, equipped with a radiometer for passive L band (40 km2 resolution) and C band radar is used to produce a Level 4 SM data product (9 km resolution) quantifying daily SM measurements\citep{reichle2017}. Although the C band radar on SMAP failed two months after launch, recent work has been completed to assimilate the SMAP passive radiometer with Sentinel 1A and 1B active radar data (\citet{das2018} \& \citet{santi2018}), which is shown to outperform SMAP passive data alone when compared to in situ data measurements \citep{lievens2017}.
 
@@ -142,9 +142,9 @@ With recent developments in remotely sensed SM data products from multiple activ
 
 ~~~~~~Geophysical landscape features, temporal variability of SM, and land cover are major drivers of groundwater vulnerability to contamination. Extreme precipitation events, such as tropical cyclones, overwhelm and impose changes to each of these variables in measurable ways. My preliminary analysis suggests that landscapes respond to extreme precipitation differently relative to land cover patterns \protect\hyperlink{fig:boxPlot}{Figure \ref{fig:boxPlot}} and available groundwater storage leading up to an extreme event. Investigating the relationships and the ways in which to measure these impacts will enable future forecasting of vulnerability and better inform disaster response efforts, directly and positively affecting public health.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{img/boxplot} \caption{Drop in soil moisture following Hurricane Florence normalized by amount of precipitation and categorized by National Landcover Dataset classification}\label{fig:boxPlot}
-\end{figure}
+\hypertarget{htmlwidget-06ac727f030a77da3d00}{}
+
+\label{fig:boxPlot}Drop in soil moisture following Hurricane Florence normalized by amount of precipitation and categorized by National Landcover Dataset classification
 
 \hypertarget{methods}{%
 \chapter{Methods}\label{methods}}
@@ -205,13 +205,13 @@ While I have established that vegetation, among other things, is a key driver of
 
 ~~~~~~As I have discussed, soil moisture is tied directly to precipitation and vegetation. So far, it is clear that wetting is driven by precipitation \protect\hyperlink{fig:wettingPlot}{Figure \ref{fig:wettingPlot}} as is evidenced by a simple linear regression which returns an \(r^{2}\) value of \(0.79\).
 
-\hypertarget{htmlwidget-44c0ff79ebaf0aa2be7b}{}
+\hypertarget{htmlwidget-0609c5654294221d022d}{}
 
 \label{fig:wettingPlot}Wetting as defined in equation 4.1 for Hurricane Florence plotted against precipitation and colored by NLCD classification
 
 Drying rate is more complex \protect\hyperlink{fig:dryingPlot}{Figure \ref{fig:dryingPlot}} however, and is likely driven my multiple factors. Hornberger \citet{hornberger2014elements} explains that soil saturation is directly linked to both contributing area and slope. The problem with these relationships is that as you introduce more complexity of the landscape, especially with respect to the built environment, the relationships become more complex. Certainly vegetation and by extension, landcover play a role.
 
-\hypertarget{htmlwidget-25ff702423bacea4f569}{}
+\hypertarget{htmlwidget-075d1ca88ff62c033aa7}{}
 
 \label{fig:dryingPlot}Drying as defined in equation 4.2 for Hurricane Florence plotted against precipitation and colored by NLCD classification
 
