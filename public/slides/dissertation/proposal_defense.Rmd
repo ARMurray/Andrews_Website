@@ -1,0 +1,25 @@
+---
+title: "Dissertation Proposal Defense"
+author: Andrew Murray
+date: "February 17, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## What does Soil Moisture Change Look Like?
+```{r video, echo = FALSE, out.width="100%"}
+htmltools::tags$video(src = "/img/Florence.mp4")
+```
+
+## Does this look better?
+
+<video width="750" height="500" controls>
+  <source src="/img/Florence.mp4" type="video/mp4">
+</video>
