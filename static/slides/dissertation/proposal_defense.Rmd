@@ -14,11 +14,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## What does Soil Moisture Change Look Like?
-
-### Hurricane Florence:
+**Hurricane Florence:**
 
 <div class="centered">
-<video width="800" height="500" controls>
+<video width="800" height="450" controls>
   <source src="/img/Florence.mp4" type="video/mp4">
 </video>
 </div>
