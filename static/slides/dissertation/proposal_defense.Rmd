@@ -12,20 +12,19 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## 1 {data-background-video="/mp4/florence.mp4"}
+## 
 
-## 2 {data-background-video="mp4/florence.mp4"}
-
-## 3 {data-background-video=/mp4/florence.mp4}
-
-## 4 {data-background-video="florence.mp4"}
-
+<div class="centered">
+<video width="1000" height="563" controls autoplay>
+  <source src="/mp4/florence.mp4" type="video/mp4">
+</video>
+</div>
 
 ## What does Soil Moisture Change Look Like?
 **Hurricane Florence:**
 
 <div class="centered">
-<video width="800" height="450" controls>
+<video width="800" height="450" controls autoplay>
   <source src="/img/Florence.mp4" type="video/mp4">
 </video>
 </div>
