@@ -89,9 +89,11 @@ Water potential = hydraulic head
 
 ## How does the unsaturated zone respond to precipitation?
 
-```{r video, echo = FALSE, out.width="100%"}
-htmltools::tags$video(src = "/img/Florence.mp4")
-```
+<div class="centered">
+<video width="800" height="450" controls autoplay>
+  <source src="/img/Florence.mp4" type="video/mp4">
+</video>
+</div>
 
 ## Wetting vs. Drying
 
@@ -102,3 +104,13 @@ Can you think of some reasons why these two images are so much different?
 ## Landcover
 
 ![](/img/dissertation/boxplot.png){width=750px}
+
+
+
+## Introduction to ggplot
+
+```{r}
+ggplot(mtcars)+
+  geom_point(aes(x = wt, y = hp, color = as.factor(cyl)))
+```
+

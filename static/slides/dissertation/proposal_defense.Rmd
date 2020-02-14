@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 </video>
 </div>
 
-## What does Soil Moisture Change Look Like?
+## What does Soil Moisture Change Look Like from Space?
 **Hurricane Florence:**
 
 <div class="centered">
