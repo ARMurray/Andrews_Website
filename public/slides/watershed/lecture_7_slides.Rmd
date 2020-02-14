@@ -32,11 +32,11 @@ library(ggplot2)
 ![](/img/watershed/lecture7/crops.png){height=500px}
 </div>
 
-       - The USDA tracks crop yield each year which can give some insight into how crops perform under different weather patterns
+- The USDA tracks crop yield each year which can give some insight into how crops perform under different weather patterns
 
-|       - Subterranean crops like peanuts and sweet potatoes show a negative relationship with extreme rainfall, most likely due to a low water tolerance.
+- Subterranean crops like peanuts and sweet potatoes show a negative relationship with extreme rainfall, most likely due to a low water tolerance.
 
-|       - Corn and soybeans seem to handle excess precipitation more easily, exhibiting a boost in annual yield
+- Corn and soybeans seem to handle excess precipitation more easily, exhibiting a boost in annual yield
 
 ## Three Divisions of the Unsaturated Zone
 <div style= "float:right;position: relative; top: 50px;">
@@ -59,7 +59,11 @@ Water potential = hydraulic head
 
 **Pressure (turgor) potential:** related to the hydrostatic pressure, as when someone is under water in a pool.
 
+##
+
 **Osmotic potential:** The presence of solutes reduces the flow of water.  Imagine a U-shaped clear tube with equal amounts of water on each side, separated by a membrane at its base that is impermeable to sugar molecules (made from dialysis tubing). Sugar has been added to the water on one side. The height of the water on each side will change proportionally to the pressure of the solutions. Osmotic pressure causes the height of the water in the compartment containing the sugar to rise, due to movement of the pure water from the compartment without sugar into the compartment containing the sugar water. This process will stop once the pressures of the water and sugar water toward both sides of the membrane become equal
+
+##
 
 **Matric potential:** interactions between water and solid surfaces act to reduce the flow of water. 
 
@@ -68,6 +72,8 @@ Water potential = hydraulic head
 ## Evapotranspiration
 
 ![](/img/watershed/lecture7/evaporation.png){width=750px}
+
+##
 
 - Evaporation involves the change in phase from **liquid &rarr; vapor**
 - Transpiration is a physical process
