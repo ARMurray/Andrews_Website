@@ -1,0 +1,46 @@
+---
+title: "Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products"
+subtitle: "Dissertation Proposal"
+author: "Andrew Murray"
+date: "2020/02/17"
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    includes:
+      after_body: "afterInit.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+---
+
+<video width="100%" height="100%" controls id="my_video">
+    <source src="/mp4/florence.mp4" type="video/mp4">
+</video>
+
+---
+## My original try
+
+<div class="centered">
+<video width="1000" height="563" controls autoplay>
+  <source src="/mp4/florence.mp4" type="video/mp4">
+</video>
+</div>
+
+---
+## What does Soil Moisture Change Look Like from Space?
+**Hurricane Florence:**
+
+<div class="centered">
+<video width="800" height="450" controls autoplay>
+  <source src="/img/Florence.mp4" type="video/mp4">
+</video>
+</div>
+
+---
