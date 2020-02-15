@@ -51,7 +51,7 @@ knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
 ]
 
 .pull-right[
-![Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.]('img/dissertation/max_ppt.png')
+![Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.](img/dissertation/max_ppt.png)
 ]
 
 ---
