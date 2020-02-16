@@ -17,7 +17,7 @@ output:
 ---
 
 class: inverse, center, middle
-background-image: img/HurricaneSpace.png
+background-image: 'HurricaneSpace.png'
 background-size: cover
 
 # Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products
@@ -27,13 +27,16 @@ background-size: cover
 .large[Andrew Murray | University of North Carolina - Chapel Hill | 17 Feb 2020]
 
 ---
-background-image: /img/HurricaneSpace.png
-
+background-image: 'HurricaneSpace.png'
+background-size: cover
 ---
-background-image: 'img/HurricaneSpace.png'
-
+background-image: HurricaneSpace.png
+background-size: cover
 ---
 background-image: '/img/HurricaneSpace.png'
+
+---
+![](HurricaneSpace.png)
 
 ---
 exclude: true
