@@ -278,9 +278,8 @@ I calculated precipitation accross census block groups
 
 ## Main Points
 
---
-
 - ### Extreme Precipitation &#8594; Increase in Waterborne Disease
+  - Increased Connectivity means more pathways for contaminants
 --
 
 - ### Extreme Precipitation does not necesarrily come from Hurricanes
@@ -291,10 +290,7 @@ I calculated precipitation accross census block groups
   - Most people do not test their wells regularly
 --
 
-- ### It is important to understand where people are at risk of waterborne disease
-
----
-class: center, middle
+- ### If we can estimate where people are at higher risk, maybe we can prevent some of them from getting sick
 
 ---
 ### A Groundwater Vulnerability Index
@@ -379,6 +375,36 @@ Data I need to create:
 .med[SMAP assisted estimation of hydraulic conductivity, recharge, and water table height]
 ]
 ---
+
+.big[Soil Moisture is in the Driver's Seat...]
+.pull-left[
+- .med[The variables we're discussing here are [mostly] static
+  - Topography
+  - Land cover
+  - Soil and Geology
+  - Water Table
+
+These aren't going to change much over the course of a year]
+
+.big[BUT...]
+
+.med[A lot does change, even day to day:
+- Saturation of the soil:
+  - Hydraulic head / conductivity
+  - Recharge
+- Vegetation cover (LAI)
+]]
+
+.pull-right[
+.med[ The common denominator for much of this work is soil moisture:
+
+Soil Moisture, along with other common data sources can be used to calculate:
+- Recharge (Rushton et al., 2006)
+- Hydraulic conductivity (Vereecken et al., 1990)
+]
+
+This has not been attempted at regional scales using SMAP]
+---
 ## Soil Moisture Change from SMAP:
 **Hurricane Florence:**
 
@@ -404,3 +430,5 @@ References
 Exum, Natalie G., et al. "Extreme precipitation, public health emergencies, and safe drinking water in the USA." Current environmental health reports 5.2 (2018): 305-315.
 
 Jagai, Jyotsna S., et al. "Extreme precipitation and emergency room visits for gastrointestinal illness in areas with and without combined sewer systems: an analysis of Massachusetts data, 2003–2007." Environmental health perspectives 123.9 (2015): 873-879.
+
+Rushton, KR, VHM Eilers, and RC Carter. 2006. “Improved Soil Moisture Balance Methodology for Recharge Estimation.” Journal of Hydrology 318 (1-4): 379–99.
