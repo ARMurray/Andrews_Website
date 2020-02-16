@@ -39,27 +39,27 @@ library(scales)
 library(wesanderson)
 library(here)
 
-change_here <- function(new_path){
-  new_root <- here:::.root_env
+#change_here <- function(new_path){
+#  new_root <- here:::.root_env
   
-  new_root$f <- function(...){file.path(new_path, ...)}
+#  new_root$f <- function(...){file.path(new_path, ...)}
   
-  assignInNamespace(".root_env", new_root, ns = "here")
-}
+#  assignInNamespace(".root_env", new_root, ns = "here")
+#}
 
-change_here("C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Ecuador/Github/Ecuador")
+#change_here("C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Ecuador/Github/Ecuador")
 ```
 
 ## Import data
 
 Long thought to be a carbon sink, the Páramo region of the Andes may be a significant carbon source (Carrillo et al. 2019 AFM). We evaluated the spatiotemporal dynamics of CO2 concentration and flux in a high-elevation stream. We measured 15-min dissolved CO2, O2, and discharge, across a wetland-stream transition, characteristic of tropical, alpine environments. Here, we calculate evasion using Vaisala dissolved $CO_{2}$ Sensors and compare estimates to directly measured flux from an eoSense eosFD flux chamber. We also evaluate how evasion relates to other variables such as precipitation and temperature. Our field campaign included in-stream $CO_{2}$ injections to determine the impact of $CO_{2}$ concentration on evasion. Here we ignore these injections and filter them out while we import the rest of our measurements.
 ```{r data, echo=FALSE, message=FALSE}
-df <- read.csv(here::here("data_4_analysis/All_Stream_Data.csv"))%>%
+df <- read.csv(here::here("static/data/All_Stream_Data.csv"))%>%
   select(DateTime,Inj,V1,V2,V3,V4,DO1_mg.L,DO2_mg.L,DO4_mg.L,Flux_1,Flux_2,tempC_436,airTemp_c,ppt24Tot,ppt48Tot,ppt72Tot,stn1_Q,stn2_Q,stn3_Q,stn4_Q)%>%
   filter(Inj == "No")
 df$DateTime <- as.POSIXct(df$DateTime)
 
-pptDaily <- read.csv(here::here("data_4_analysis/ppt.csv"))
+pptDaily <- read.csv(here::here("static/data/ppt.csv"))
 pptDaily$DateTime <- as.POSIXct(pptDaily$DateTime)
 ```
 
@@ -401,13 +401,13 @@ subplot(CO2uMols13,CO2uMols34, shareY = T)
 # Evasion Using Daily Stream Metabolism
 Using the USGS [streammetabolizer](http://usgs-r.github.io/streamMetabolizer/) package, daily estimates of GPP and ER can be calculated at each of the DO sensor locations. This is done in a seperate script located in: 'Ecuador/Analysis/Stream_Metabolism/metabolism.R'. The results are used to estimate daily evasion for the reach. The values expressed in the results of the streammetabolizer tool are grams of O2 / m^2 /d^-1. We need to convert this into uMols and then multiply by -1 to determine uMols CO2. 
 ```{r evasionMetabolism, echo=FALSE, warning=FALSE, message=FALSE}
-pred1 <- read.csv(here("Analysis/Stream_Metabolism/ModelOutputs/DO_1_Predictions.csv"))%>%
+pred1 <- read.csv(here("static/data/DO_1_Predictions.csv"))%>%
   select(date,GPP,ER)%>%
   mutate(Station = "1")
-pred2 <- read.csv(here("Analysis/Stream_Metabolism/ModelOutputs/DO_2_Predictions.csv"))%>%
+pred2 <- read.csv(here("static/data/DO_2_Predictions.csv"))%>%
   select(date,GPP,ER)%>%
   mutate(Station = "2")
-pred4 <- read.csv(here("Analysis/Stream_Metabolism/ModelOutputs/DO_4_Predictions.csv"))%>%
+pred4 <- read.csv(here("static/data/DO_4_Predictions.csv"))%>%
   select(date,GPP,ER)%>%
   mutate(Station = "4")
 

@@ -15,8 +15,9 @@ output:
       countIncrementalSlides: false
     seal: false
 ---
+
 class: inverse, center, middle
-background-image: url(figs/p_and_p_cover.png)
+background-image: img/HurricaneSpace.png
 background-size: cover
 
 # Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products
@@ -26,9 +27,23 @@ background-size: cover
 .large[Andrew Murray | University of North Carolina - Chapel Hill | 17 Feb 2020]
 
 ---
-```{r setup}
+background-image: /img/HurricaneSpace.png
+
+---
+background-image: 'img/HurricaneSpace.png'
+
+---
+background-image: '/img/HurricaneSpace.png'
+
+---
+exclude: true
+
+```{r setup, echo=FALSE}
 knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
+library(xaringanthemer)
+
 ```
+---
 <video width="100%" height="100%" controls id="my_video">
     <source src="/mp4/florence.mp4" type="video/mp4">
 </video>
@@ -62,7 +77,7 @@ knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
 ]
 
 .pull-right[
-```{r stormPts,echo=FALSE, message=FALSE,warning=FALSE, fig.cap="Wind speed at landfall plotted against maximum total rainfall experienced at a single point per cyclone event and colored by average mean precipitation experienced over the impacted land area "}
+```{r stormPts,echo=FALSE, message=FALSE,warning=FALSE, fig.cap="Wind speed at landfall plotted against maximum total rainfall experienced at a single point per cyclone event and colored by average mean precipitation experienced over the impacted land area ", out.height = '350px'}
 library(plotly)
 library(here)
 
@@ -143,14 +158,23 @@ storms%>%
 ---
 class: center, middle
 
-## Soil Moisture Change from Space:
+## Soil Moisture Change from SMAP:
 **Hurricane Florence:**
 
+.left-column[.left[
+<br>
+- ####The Carolinas were saturated prior to landfall of Florence
+<br><br>
+- ####Note how long drying takes to occur and the variance accross the state
+]]
+
+.right-column[
 <div class="centered">
 <video width="800" height="450" controls autoplay>
   <source src="/img/Florence.mp4" type="video/mp4">
 </video>
 </div>
+]
 
 ---
 
