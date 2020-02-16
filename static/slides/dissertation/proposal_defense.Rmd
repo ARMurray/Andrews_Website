@@ -13,7 +13,6 @@ output:
       highlightLines: true
       highlightStyle: github
       countIncrementalSlides: false
-      countdown: 60000
     seal: false
 ---
 
@@ -272,6 +271,9 @@ df%>%
     legend = list(x = 100, y = 0.5))
 ```
 
+???
+I calculated precipitation accross census block groups
+
 ---
 
 ## Main Points
@@ -294,6 +296,89 @@ df%>%
 ---
 class: center, middle
 
+---
+### A Groundwater Vulnerability Index
+.left-column[
+.big[**D**].med[epth to water table]
+
+.big[**R**].med[echarge]
+
+.big[**A**].med[quifer Media]
+
+.big[**S**].med[oil Media]
+
+.big[**T**].med[opography]
+
+.big[**I**].med[mpact of the Vadose Zone]
+
+.big[**C**].med[onductivity]
+]
+
+.right-column[
+![](DRASTIC.png)
+]
+
+???
+
+The DRASTIC Index was a big project completed by the National groundwater well association and EPA in 1983.
+
+- It has largely gone unchanged since it's creation
+- It assumes conditions are static.
+- It ignores potentially significant inputs
+
+---
+###.center[ The Good, The Bad & The Missing]
+
+.pull-left[
+.med[Data that already exists:
+
+- Aquifer Media
+- Soil Media
+- Vadose Zone
+- Topography
+
+Data I need to create:
+
+- Depth to Water Table
+- Rate of Recharge
+- Hydraulic Conductivity
+]]
+
+.pull-right[
+.med[Probably Missing from the DRASTIC Index:
+
+- Land Cover / Land Use
+  - NLCD
+  - Imperviousness
+- Advanced Topography
+  - Slope
+  - Contributing Area
+- Spatial Characterization of Vegetation
+  - Leaf Area Index (LAI)
+- Antecedent Soil Moisture Conditions
+]]
+
+---
+
+### <br>Hypothesis:
+
+<br><br>.med[Geophysical landscape features, temporal variability of soil moisture, and land cover are major drivers of groundwater vulnerability to contamination. Extreme precipitation events such as **tropical cyclones overwhelm and impose changes to each of these variables in measurable ways**. Investigating the relationships and the ways in which to measure these impacts will enable future forecasting of vulnerability and better inform disaster response efforts, directly and positively affecting human health.]
+
+---
+
+### Research Goal: Establish an updated index for groundwater vulnerability, which is dynamic and more inclusive of both physical and social factors present in the southeastern United States.
+
+.pull-left[
+### Chapter 1:
+.med[Linking soil moisture, precipitation and Landcover / Vegetation]
+### Chapter 3:
+.med[Creation and application of DRASTIC+]
+]
+.pull-right[
+### Chapter 2:
+.med[SMAP assisted estimation of hydraulic conductivity, recharge, and water table height]
+]
+---
 ## Soil Moisture Change from SMAP:
 **Hurricane Florence:**
 
@@ -313,23 +398,6 @@ class: center, middle
 ]
 
 ---
-
- - Let's
---
-  - try
---
-+ some
---
-incremental
-- .smaller[points]
-
----
-Are
----
-these
----
-working?
-
 
 ---
 References

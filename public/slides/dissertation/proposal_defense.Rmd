@@ -30,7 +30,7 @@ background-size: cover
 exclude: true
 
 ```{r setup, echo=FALSE}
-knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE, eval = TRUE)
 
 
 ```
@@ -178,7 +178,7 @@ storms%>%
 ```
 ]
 ---
-###.center"["Waterborne disease outbreaks in the United States between 1948 and 1998 were **immediately preceded** by precipitation .red[events above the 80th percentile], with a two-month lag in groundwater"]
+###.center["Waterborne disease outbreaks in the United States between 1948 and 1998 were **immediately preceded** by precipitation .red[events above the 80th percentile], with a two-month lag in groundwater"]
 .right[-Curriero et al., 2001 ]
 
 ###.center["Public water systems in large metropolitan areas have substantial portions of their customer base at risk for a waterborne outbreak .red[during a flooding event]"]
@@ -194,8 +194,191 @@ storms%>%
 - What data is available... here it is public water utilities in Harris County, ER visits
 
 ---
+.pull-left[### Studies are only as good as their data...
+
+- I estimate that over **60 million people** in the United States obtain their water from privately owned, 'domestic' wells.
+
+
+### This is important because...
+
+- We still don't fully understand where all of these wells are
+  - Public Utilities don't disclose service areas
+  - Even if they did, there are over 150,000<br><br>
+- Private Wells are not regulated under the Safe Drinking Water Act
+  - Very few testing requirements
+  - Contamination sources are often unknown
+]
+
+???
+So we know that increased rainfall is linked to increased risk of getting sick from water
+But what do we not know?
+
+
+---
+
+.center[
+
+```{r img1, echo=FALSE, out.width='600px'}
+knitr::include_graphics('wellsUS.png')
+```
+
+]
+---
+
+```{r pptWellsBar,echo=FALSE,eval=TRUE, fig.cap="Estimated private wells in areas impacted by greater than 100mm of precipitation in a single event. Only tropical cyclone events since 2015 considered here.", out.width= "100%"}
+df <- read.csv(here::here("static/data/pptWellsBar.csv"))
+
+# Set up Fonts for Plots
+# Axis font
+xaxisFont <- list(
+  family = "Arial, sans-serif",
+  size = 16,
+  color = "black"
+)
+
+yaxisFont <- list(
+  family = "Arial, sans-serif",
+  size = 12,
+  color = "black"
+)
+
+labelFont <- list(
+  family = "Arial, sans-serif",
+  size = 18,
+  color = "black"
+)
+
+df%>%
+  arrange(Name)%>%
+  plot_ly(y=~Wells,x=~pptVal, color = ~Name, hoverinfo = "text",
+          text = ~paste("State: ",Name,"<br>",
+                        format(round(Wells),big.mark=",")," wells were impacted by <br> at least ", pptVal," mm of precipitation"))%>%
+  add_bars()%>%
+  layout(barmode = 'stack')%>%
+  layout(
+    xaxis = list(
+      title = "Precipitation Received [mm]", titlefont = labelFont,
+      showticklabels = TRUE,
+      tickangle = 0,
+      tickfont = xaxisFont),
+    title = "Number of Wells in Areas Defined by <br> Minimum Received Precipitation",
+    yaxis = list(title = "Estimated Private Wells",titlefont = labelFont,
+                 showticklabels = TRUE,
+                 tickangle = 0,
+                 tickfont = yaxisFont,
+                 tickformat= ","),
+    showlegend=T,
+    legend = list(x = 100, y = 0.5))
+```
+
+???
+I calculated precipitation accross census block groups
+
+---
+
+## Main Points
+
+--
+
+- ### Extreme Precipitation &#8594; Increase in Waterborne Disease
+--
+
+- ### Extreme Precipitation does not necesarrily come from Hurricanes
+  - But Tropical cyclones, in general, bring extreme precipitation to the southeastern U.S. and we have a lot of data for them
+--
+
+- ### 16.5% of the United States gets water from wells
+  - Most people do not test their wells regularly
+--
+
+- ### It is important to understand where people are at risk of waterborne disease
+
+---
 class: center, middle
 
+---
+### A Groundwater Vulnerability Index
+.left-column[
+.big[**D**].med[epth to water table]
+
+.big[**R**].med[echarge]
+
+.big[**A**].med[quifer Media]
+
+.big[**S**].med[oil Media]
+
+.big[**T**].med[opography]
+
+.big[**I**].med[mpact of the Vadose Zone]
+
+.big[**C**].med[onductivity]
+]
+
+.right-column[
+![](DRASTIC.png)
+]
+
+???
+
+The DRASTIC Index was a big project completed by the National groundwater well association and EPA in 1983.
+
+- It has largely gone unchanged since it's creation
+- It assumes conditions are static.
+- It ignores potentially significant inputs
+
+---
+###.center[ The Good, The Bad & The Missing]
+
+.pull-left[
+.med[Data that already exists:
+
+- Aquifer Media
+- Soil Media
+- Vadose Zone
+- Topography
+
+Data I need to create:
+
+- Depth to Water Table
+- Rate of Recharge
+- Hydraulic Conductivity
+]]
+
+.pull-right[
+.med[Probably Missing from the DRASTIC Index:
+
+- Land Cover / Land Use
+  - NLCD
+  - Imperviousness
+- Advanced Topography
+  - Slope
+  - Contributing Area
+- Spatial Characterization of Vegetation
+  - Leaf Area Index (LAI)
+- Antecedent Soil Moisture Conditions
+]]
+
+---
+
+### <br>Hypothesis:
+
+<br><br>.med[Geophysical landscape features, temporal variability of soil moisture, and land cover are major drivers of groundwater vulnerability to contamination. Extreme precipitation events such as **tropical cyclones overwhelm and impose changes to each of these variables in measurable ways**. Investigating the relationships and the ways in which to measure these impacts will enable future forecasting of vulnerability and better inform disaster response efforts, directly and positively affecting human health.]
+
+---
+
+### Research Goal: Establish an updated index for groundwater vulnerability, which is dynamic and more inclusive of both physical and social factors present in the southeastern United States.
+
+.pull-left[
+### Chapter 1:
+.med[Linking soil moisture, precipitation and Landcover / Vegetation]
+### Chapter 3:
+.med[Creation and application of DRASTIC+]
+]
+.pull-right[
+### Chapter 2:
+.med[SMAP assisted estimation of hydraulic conductivity, recharge, and water table height]
+]
+---
 ## Soil Moisture Change from SMAP:
 **Hurricane Florence:**
 
@@ -215,23 +398,6 @@ class: center, middle
 ]
 
 ---
-
- - Let's
---
-  - try
---
-+ some
---
-incremental
-- .smaller[points]
-
----
-Are
----
-these
----
-working?
-
 
 ---
 References
