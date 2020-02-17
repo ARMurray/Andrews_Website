@@ -1,0 +1,80 @@
+---
+title: "Lecture 8"
+author: "Andrew Murray"
+date: 'February 17 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction to Watershed Hydrology
+### Geog-441
+
+### Lecture 8: Ecohydrology
+#### Interactions Between Hydrological Processes and the Biota
+
+Material:
+- Hornberger Chapter 9
+
+<br><br><br> .center[**February 17, 2020**]
+
+---
+
+##Amount of Water Controls Biota
+
+$Ecology + Hydrology = Ecohydrology$
+
+.med[**Ecology:** The branch of biology that deals with the relations of organisms to one another and to their physical surroundings.
+
+**Hydrology:** The branch of science concerned with the properties of the earth's water, and especially its movement in relation to land.
+
+SOOOO....
+
+.center[.big[**Ecohydrologists investigate:**]
+
+ The effects of water on plants
+
+&
+
+ The effects of plants on water]
+]
+---
+
+###.center[ Hydrologic Controls on Plants and Soil Microorganisms]
+
+How does water flow through a plant? [Video](https://www.youtube.com/watch?v=CmBDVIUB19g)
+
+Key Terms:
+
+- **Xylem:** Capillary tubes within the plant<br><br>
+- **Stomata:** Tiny pores in the leaves of vascular plants by which gases (including $CO_{2}$, $O$ and $H_{2}O$) are exchanged with the atmosphere.
+- **Osmosis:** The transport of water molecules through semipermeable membranes from lower to higher solute concentrations.
+- **Xylem water potential:** The sum of the elevation head + capillary pressure head + osmotic potential
+
+- **Osmotic Potential:** = zero in pure water / negative in the prescence of solutes (decreases with increasing solutions)
+
+- .red[ In a steady flow, the rate of uptake = the transpiation rate]
+
+- Plants regulate the opening of the stomata to control rates of transpiration and carbon assimilation (phtosynthesis)
+
+.med[<br>The water and carbon cycles are strongly coupled through stomatal physiology (how stomata work)
+
+- As Hydroligists, we consider water transport in soil, roots and xylem to be laminar
+]
+
+???
+
+So what this means is that we assume the poors and pathways are so small, that forces are driven by hydraulic head / water potential.
+
+Therefore, the flow rate is proportional to the hydraulic head, and we don't consider the width of these pathways, because how could we?
