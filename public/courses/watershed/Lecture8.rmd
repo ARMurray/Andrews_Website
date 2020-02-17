@@ -14,7 +14,7 @@ type: docs
 
 ---
 
-[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_7_slides.html)
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_8_slides.html)
 
 ## Ecohydrology: Interactiona between Hydrological Process and the Biota
 
