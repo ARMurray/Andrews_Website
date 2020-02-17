@@ -51,7 +51,7 @@ myBib <- ReadBib("./mybib.bib", check = FALSE)
 </video>
 
 ???
-- Cyclones can have devestating impacts in various ways
+- Cyclones can have devastating impacts in various ways
   - Wind
   - Water
   - Homelessness
@@ -85,19 +85,24 @@ kable(strmSel2)%>%
 
 .pull-right[
 ![Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.](max_ppt.png)
+Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.
+
 ]
 
+???
+- Notice that landfalls range from May to late October
 
+- Here we only consider the maximum, so what this map is not showing is the recurrence of impacts (How many times places were hit)
 
 ---
-## .center[Cyclone Precipitation a Function of Windspeed?]
+## .center[Cyclone Precipitation a Function of Wind speed?]
 
 .pull-left[
-####<br> - There is no correlation between storm windspeed and either rainfall distribution or intensity
+####<br> - There is no correlation between storm wind speed and either rainfall distribution or intensity
 
-####<br> - Try to predict **max** rainfall from windspeed at landfall: $p = .25$ / $r^{2}=.019$
+####<br> - Try to predict **max** rainfall from wind speed at landfall: $p = .25$ / $r^{2}=.019$
 
-####<br> - Try to predict **mean** rainfall from windspeed at landfall: $p=.06$ / $r^{2}=.065$
+####<br> - Try to predict **mean** rainfall from wind speed at landfall: $p=.06$ / $r^{2}=.065$
 
 So why do we obsess over storm category when the real danger lies in the water?
 
@@ -177,6 +182,16 @@ storms%>%
     legend = list(x = 100, y = 1.5))
 ```
 ]
+
+???
+Notice the relationships here
+
+- Michael -> Bottom right, high wind, fast moving, low precipitation
+
+- Harvey -> top right, slow moving, high wind, high precipitation
+
+- Imelda, top left, low wind, high precip
+
 ---
 ###.center["Waterborne disease outbreaks in the United States between 1948 and 1998 were **immediately preceded** by precipitation .red[events above the 80th percentile], with a two-month lag in groundwater"]
 .right[-Curriero et al., 2001 ]
@@ -185,13 +200,16 @@ storms%>%
 .right[-Exum et al., 2018 ]
 
 
-###.center["There is an increased risk for GI illness among consumers whose drinking water source may be impacted by combines sewer overflows (CSOs) .red[after extreme precipitation.]"]
+###.center["There is an increased risk for GI illness among consumers whose drinking water source may be impacted by combined sewer overflows (CSOs) .red[after extreme precipitation.]"]
 .right[-Jagai et al., 2015 ]
 
 
 ???
 - Connectivity
 - What data is available... here it is public water utilities in Harris County, ER visits
+- We're really talking about two things here:
+  - Public vs private systems
+  - groundwater vs surface water
 
 ---
 .pull-left[### Studies are only as good as their data...
@@ -209,10 +227,17 @@ storms%>%
   - Contamination sources are often unknown
 ]
 
+.pull-right[
+![](well.png)
+]
+
 ???
 So we know that increased rainfall is linked to increased risk of getting sick from water
 But what do we not know?
 
+- Studies in the past have been restricted in their data
+
+- Jill Stewart, Andrew George
 
 ---
 
@@ -223,8 +248,30 @@ knitr::include_graphics('wellsUS.png')
 ```
 
 ]
----
 
+???
+Notice the distribution of wells across the east coast. Areas at risk of impacts of tropical cyclones are heavily reliant on well water
+
+---
+### In fact, five of the top ten states in the U.S. in terms of well numbers are in the southeast
+
+```{r wells, echo=FALSE, out.width='70%'}
+library(forcats)
+wells <- read.csv(here::here("/static/data/wells.csv"))%>%
+  mutate(Wells = as.numeric(gsub(",","",as.character(Wells))))%>%
+  arrange(desc(Wells))
+wells <- wells[1:51,]
+wells%>%
+  plot_ly(x=~Wells, y=~fct_reorder(State, Wells, .desc=FALSE))%>%
+  add_bars(orientation = 'h')%>%
+  layout(xaxis = list(title = "Total Private Wells"),
+         yaxis = list(title = "State"),
+         title = "Wells by State")
+```
+
+
+
+---
 ```{r pptWellsBar,echo=FALSE,eval=TRUE, fig.cap="Estimated private wells in areas impacted by greater than 100mm of precipitation in a single event. Only tropical cyclone events since 2015 considered here.", out.width= "100%"}
 df <- read.csv(here::here("static/data/pptWellsBar.csv"))
 
@@ -272,7 +319,9 @@ df%>%
 ```
 
 ???
-I calculated precipitation accross census block groups
+I calculated precipitation across census block groups
+
+- The earlier map, was essentially laid on top of well estimates at the block group level
 
 ---
 
@@ -282,7 +331,7 @@ I calculated precipitation accross census block groups
   - Increased Connectivity means more pathways for contaminants
 --
 
-- ### Extreme Precipitation does not necesarrily come from Hurricanes
+- ### Extreme Precipitation does not necessarily come from Hurricanes
   - But Tropical cyclones, in general, bring extreme precipitation to the southeastern U.S. and we have a lot of data for them
 --
 
@@ -366,7 +415,7 @@ Data I need to create:
 
 .pull-left[
 ### Chapter 1:
-.med[Linking soil moisture, precipitation and Landcover / Vegetation]
+.med[Linking soil moisture, precipitation and Land cover / Vegetation]
 ### Chapter 3:
 .med[Creation and application of DRASTIC+]
 ]
@@ -412,7 +461,7 @@ This has not been attempted at regional scales using SMAP]
 <br>
 - ####The Carolinas were saturated prior to landfall of Florence
 <br><br>
-- ####Note how long drying takes to occur and the variance accross the state
+- ####Note how long drying takes to occur and the variance across the state
 ]]
 
 .right-column[
@@ -424,11 +473,93 @@ This has not been attempted at regional scales using SMAP]
 ]
 
 ---
+##Patterns from SMAP are Evident
+![](florence.png)
 
 ---
-References
+## Incorporating Leaf Area Index
+
+.med[Looking at Hurricane Florence we can see there is something to be said for the relationship between land cover and drying rates:]
+
+```{r import, echo=FALSE,message=FALSE, results = 'hide'}
+library(sf)
+
+sf <- st_read(here::here("static/data/Florence.shp"))%>%
+  mutate(NLCD = ifelse(Lands == 11,NA,
+                       ifelse(Lands == 21, "Developed - Open",
+                              ifelse(Lands == 22, "Developed - Low",
+                                     ifelse(Lands == 23, "Developed - Med",
+                                            ifelse(Lands == 24, "Developed - High",
+                                                   ifelse(Lands == 31, "Barren Land",
+                                                          ifelse(Lands == 41, "Deciduos Forest",
+                                                                 ifelse(Lands == 42, " Evergreen Forest",
+                                                                        ifelse(Lands == 43, "Mixed Forest",
+                                                                               ifelse(Lands == 51, " Dwarf Scrub",
+                                                                                      ifelse(Lands == 52, "Shrub",
+                                                                                             ifelse(Lands == 71, "Grassland",
+                                                                                                    ifelse(Lands == 72, "Sedge",
+                                                                                                           ifelse(Lands == 73, "Lichens",
+                                                                                                                  ifelse(Lands == 74, "Moss",
+                                                                                                                         ifelse(Lands == 81, "Pasture",
+                                                                                                                                ifelse(Lands == 82, "Crops",
+                                                                                                                                       ifelse(Lands == 90, "Woody Wetlands",
+                                                                                                                                              ifelse(Lands == 95, "Emergent Wetlands",NA)))))))))
+                                                                                      )))))))))))
+```
+
+
+```{r boxPlot, echo=FALSE,message=FALSE, out.width='100%',out.height='50%'}
+sf%>%
+plot_ly(x = ~NLCD, y = ~fall/PPT)%>%
+  add_boxplot()%>%
+  layout(
+    xaxis = list(title = "NLCD Category"),
+    yaxis = list(title = "Soil Moisture Decrease [m<sup>3</sup>/m<sup>3</sup>] / PPT [mm]", type = "log")
+  )
+```
+
+.med[There is more to the story...]
+
+---
+## Summary:
+
+.big[
+- Extreme precipitation leads to waterborne illness
+- Improvement on a dated vulnerability index is needed
+- Substantial data is available for the establishment of relationships between landscape and extreme precipitation
+  - I have shown here that relationships exist
+- The success of this research may help in response efforts to extreme precipitation events and benefit public health
+- I am capable of conducting this research
+]
+---
+
+## Next Steps:
+
+.big[On to Chapter 1:]
+
+.med[
+- I have shown preliminary analyses for Hurricane Florence.
+  - These will need to be done for the other 19 cyclones
+- Generation of variables for statistical testing:
+  - Leaf Area Index
+  - Topographical variables
+      - Slope
+      - Contributing Area
+      - Aspect
+  - Imperviousness
+  - Various drying rates (Sensitivity Analysis for optimal drying times)
+]
+---
+
+.center[ 
+## References]
+
+Caldwell, Martyn M, and James H Richards. 1989. “Hydraulic Lift: Water Efflux from Upper Roots Improves Effectiveness of Water Uptake by Deep Roots.” Oecologia 79 (1): 1–5.
+
 Exum, Natalie G., et al. "Extreme precipitation, public health emergencies, and safe drinking water in the USA." Current environmental health reports 5.2 (2018): 305-315.
 
 Jagai, Jyotsna S., et al. "Extreme precipitation and emergency room visits for gastrointestinal illness in areas with and without combined sewer systems: an analysis of Massachusetts data, 2003–2007." Environmental health perspectives 123.9 (2015): 873-879.
 
 Rushton, KR, VHM Eilers, and RC Carter. 2006. “Improved Soil Moisture Balance Methodology for Recharge Estimation.” Journal of Hydrology 318 (1-4): 379–99.
+
+Vereecken, H, J Maes, and J Feyen. 1990. “Estimating Unsaturated Hydraulic Conductivity from Easily Measured Soil Properties.” Soil Science 149 (1): 1–12.
