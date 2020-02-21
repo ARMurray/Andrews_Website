@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Friday (5) - Watershed Delineation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+---
+### .center[Watershed Delineation]
+
+.pull-left[
+.med[
+- What is a Watershed?
+  - An area that drains to a certain point
+- How do we delineate it?
+  - It all comes down to some simple math and a bit of geometry.
+- Steps for delineating a waterhsed from a Digital Elevation Model (DEM):
+  - Fill the DEM
+  - Delineate a stream network
+  - Determine your pour point (outlet)
+  - Create a flow direction raster
+  - Delineate the Watershed
+]]
+
+.pull-right[
+![](watershed.png)
+]
+---
+## Digital Elevation Model (DEM)
+.med[
+- Raster data (Continuous Surface)
+- Resolution:
+  - Depends where it comes from... 1 inch to 30 meters...
+  - Entire U.S. available at 10 meters
+  - Some of U.S. available at 3.4 meters
+  - Some of U.S. available at 1 meter
+
+- Recall the difference between a vector and a raster:
+  - All vectors at their most basic definition are defined by points
+  - Rasters are continuous and defined by a 'bounding box'. They have cells which are always the same size
+]  
+???
+- 3DEP program is 8 years in and supposed to be finished in 10 years... not gonna happen!
+- goal is to map entire U.S. with LiDAR within 10 years
+
+---
+## Introducing Whitebox:
+
+.med[
+[Whitebox](https://jblindsay.github.io/ghrg/Whitebox/) is a free and open source GIS software package, like QGIS or GRASS, that is currently having all of it's tools implemented in R.
+]
+
+ This package is not on cran at the moment so installing it is slightly trickier
+
+```r
+if (!require(devtools)) install.packages('devtools')
+devtools::install_github("giswqs/whiteboxR")
+```
+
+Check out all of the available GIS tools [HERE](https://giswqs.github.io/whiteboxR/#available-tools)
+
+---
+
+
+```r
+library(raster)
+library(here)
+dem &lt;- raster(here("DEM_34.tif")
+plot(dem)
+```
+.pull-left[
+![](RDay_5_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+]
+
+.pull-right[
+.med[
+- Create a new R project in your Geog-441 Folder
+- Create a folder in the same folder as your r project and name it 'data'
+- [Click Here to Download the Raster](https://drive.google.com/open?id=1QPXzZMXR7vLOvAE-IiuPEkGGKPMF5J2M)
+  - Make sure to put the raster in your data folder
+]]
+
+---
+## Filling a DEM
+
+.med[
+DEMs often can have what we refer to as 'sinks' which are typically artifical potholes that show up in the data. When we delineate a watershed, we are only accounting for the flow of water and not the volume of water...
+]
+.big[This means...]
+
+.med[If the DEM thinks water flows into a sink, it will not allow it to flow out, which can mess with our watershed delineation.
+- A 'fill' tool will find a cell that is surrounded on all sides by higher elevation cells and move it's elevation upwards so that it is no longer a sink.
+]
+
+---
+
+## Running the code:
+
+.big[Whitebox is still new] .med[and so it does not 'play nicely' with all of the other packages. For example, your file path cannot have spaces in it, like they would if you are using OneDrive. Therefore I am placing all of my data on my desktop and pointing r to that folder]
+
+
+```r
+setwd("C:/Users/HP/Desktop/data/")
+```
+
+Now you can just type file names instead of entire file paths. Although in my code here, I am still using full pathnames because of the format of these slides.
+
+
+```r
+library(whitebox)
+dem &lt;-  "C:/Users/HP/Desktop/data/DEM_34.tif"
+wbt_fill_depressions(dem, output ='C:/Users/HP/Desktop/data/demFill.tif')
+```
+
+.med[So after you run this code, you should have a *'filled'* DEM with no sinks]
+
+---
+.center[## Flow Direction]
+.med[The next step is flow direction, where we look at each raster cell and figure out the steepest gradient. There are two types of flow direction rasters : D8 and D-Infinity]
+![](flowDirection.png)
+
+---
+.pull-left[
+
+### D8 = 8 possible directions using 'queen contiguity'
+![](d8.png)
+]
+
+.pull-right[
+### D-Infinity = Infinite possible directions by calculating linear differences between gradients
+![](dInfinity.png)
+
+]
+---
+### Calculate your flow direction raster:
+.pull-left[
+.med[ Now we need to call the filled raster we just created to run the flow direction tool]
+
+
+```r
+demFill &lt;- "C:/Users/HP/Desktop/data/demFill.tif"
+wbt_d8_pointer(demFill, "C:/Users/HP/Desktop/data/d8_Pointer.tif")
+```
+]
+.pull-right[
+![](RDay_5_files/figure-html/plotD8-1.png)&lt;!-- --&gt;
+]
+---
+.center[
+### Flow Accumulation
+]
+.pull-left[
+.med[Just like flow direction told us which cell water would flow into, flow accumulation tells us how many cells upstream of that cell will flow into it]
+
+```r
+wbt_d8_flow_accumulation(demFill, "C:/Users/HP/Desktop/data/d8_Accumulation.tif")
+```
+]
+
+.pull-right[
+
+```r
+plot(raster("C:/Users/HP/Desktop/data/d8_Accumulation.tif"))
+```
+
+![](RDay_5_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+]
+
+---
+## Finding Pour Points
+
+- Pour points are the outlets of the watersheds you wish to delineate
+- Your pour point has to be exact, or else you could end up with tiny watersheds
+- We'll find a 
+
+
+
+---
+
+Watershed
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -13,10 +13,10 @@
     
     <item>
       <title>Lecture 1</title>
-      <link>/courses/watershed/topic1/</link>
+      <link>/courses/watershed/lecture1/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/topic1/</guid>
+      <guid>/courses/watershed/lecture1/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -78,15 +78,6 @@
       <guid>/courses/watershed/friday_1/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#getting-started-with-r-and-r-studio&#34;&gt;Getting Started with R and R studio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#installing-r&#34;&gt;Installing R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#installing-r-studio&#34;&gt;Installing R Studio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#getting-started-with-r-studio&#34;&gt;Getting Started with R Studio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#okay-lets-code&#34;&gt;Okay let’s code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/RDay_1.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;getting-started-with-r-and-r-studio&#34; class=&#34;section level2&#34;&gt;
@@ -1479,6 +1470,19 @@ annuals &amp;lt;- all_data%&amp;gt;%
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Friday (5)</title>
+      <link>/courses/watershed/friday_5/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/friday_5/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/RDay_5.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

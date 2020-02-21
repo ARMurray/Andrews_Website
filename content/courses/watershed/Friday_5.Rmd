@@ -1,0 +1,17 @@
+---
+title: "Friday (5)"
+date: "2020-01-31T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 2
+linktitle: Friday (5)
+menu:
+  watershed:
+    parent: Fridays (R)
+    weight: 150
+    type: docs
+---
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/RDay_5.html)

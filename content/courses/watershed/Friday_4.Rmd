@@ -9,8 +9,8 @@ output:
 linktitle: Friday (4)
 menu:
   watershed:
-    parent: The Science of Hydrology
-    weight: 100
+    parent: Fridays (R)
+    weight: 140
     type: docs
 ---
 ```{r setup, include=FALSE}

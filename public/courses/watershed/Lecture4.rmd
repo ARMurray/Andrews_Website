@@ -7,8 +7,8 @@ output:
 linktitle: Lecture 4 
 menu:
   watershed:
-    parent: The Science of Hydrology
-    weight: 60
+    parent: Lectures
+    weight: 25
 title: Lecture 4
 type: docs
 

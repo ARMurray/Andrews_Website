@@ -8,8 +8,8 @@ output:
 linktitle: Friday (2)
 menu:
   watershed:
-    parent: The Science of Hydrology
-    weight: 50
+    parent: Fridays (R)
+    weight: 120
     type: docs
 
 ---
