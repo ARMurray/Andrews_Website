@@ -172,7 +172,7 @@ wbt_d8_flow_accumulation(demFill, "C:/Users/HP/Desktop/data/d8_Accumulation.tif"
 ]
 
 .pull-right[
-```{r}
+```{r plotAccum, echo=FALSE}
 plot(raster("C:/Users/HP/Desktop/data/d8_Accumulation.tif"))
 ```
 

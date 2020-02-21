@@ -1,19 +1,21 @@
 ---
-date: "2018-09-09T00:00:00Z"
+title: "Soil Moisture"
+date: "2020-02-21T00:00:00+01:00"
 draft: false
-lastmod: "2018-09-09T00:00:00Z"
+output:
+  blogdown::html_page:
+    toc: true
 linktitle: Soil Moisture
 menu:
   cyclones:
-    name: Soil Moisture and Extreme Precipitation
-    weight: 1
-summary: Impacts on Groundwater and Public Health
-title: Soil Moisture
-toc: true
+    parent: Topics
+    weight: 30
 type: docs
-weight: 1
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ## Soil Moisture and Groundwater Vulnerability
 

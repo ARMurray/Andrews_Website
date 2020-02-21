@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/watershed/</loc>
+    <loc>/projects/cyclones/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/</loc>
+    <loc>/courses/watershed/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -35,6 +35,11 @@
   <url>
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/cyclones/soilmoisture/</loc>
+    <lastmod>2020-02-21T00:00:00+01:00</lastmod>
   </url>
   
   <url>
