@@ -3,15 +3,10 @@ date: "2018-09-09T00:00:00Z"
 draft: false
 lastmod: "2018-09-09T00:00:00Z"
 linktitle: GEOG 441
-menu:
-  watershed:
-    name: Course Overview
-    weight: 1
 summary: Introduction to Watershed Systems
 title: Course Overview
 toc: true
 type: docs
-weight: 1
 ---
 
 # Intro to Watershed Systems

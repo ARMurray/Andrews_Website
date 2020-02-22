@@ -1,0 +1,123 @@
+---
+title: "Overview of Storms"
+date: "2020-01-10T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+linktitle: Overview of Storms
+menu:
+  cyclones:
+    parent: cyclones
+    weight: 10
+type: docs
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(plotly)
+library(here)
+library(dplyr)
+library(kableExtra)
+library(lubridate)
+```
+
+## Impact of Extreme Precipitation from Tropical Cyclones on the Southeastern United States
+
+```{r video, echo = FALSE}
+htmltools::tags$video(src = "/img/Florence.mp4")
+```
+
+
+### Overview
+  The southeastern U.S. experiences heavy rainfall each year from tropical cyclone related activity which are characterized by extrmely low pressure systems which originate in the Atlantic tropics and bring warm moisture north. The type of cyclones experienced by the southeastern United States vary greatly in their point of origin, wind strength, speed of movement and precipitation. Although the general public ties storm strength, typically denoted by the Saffir-Simpson scale (i.e. the category of a Hurricane) to potential precipitation, it is clear that there is no relationship between amount of precipitation and wind speed at landfall.
+
+```{r stormTable, echo=FALSE, eval=TRUE}
+storms <- read.csv(here::here("static/data/statsByStorm.csv"))%>%
+  mutate(Form = mdy(Form), Lf = mdy(Lf), Dis=mdy(Dis))
+
+strmSel <- storms%>%
+  select(Name,Lf,MaxCat)
+#knitr::kable(strmSel,'html')
+library(htmlTable)
+strmSel2 <- cbind(strmSel[1:10, ],strmSel[11:20, ])
+colnames(strmSel2) <- c("Name","Landfall","Max Cat","Name","Landfall","Max Cat")
+kable(strmSel2)%>%
+  kable_styling(font_size = 17)
+```
+  
+### Windspeed vs. Precipitation
+
+
+
+```{r statsByStorm, echo = FALSE, warning = FALSE, message = FALSE}
+storms <- read.csv(here::here("csv/cyclones/statsByStorm.csv"))
+
+# Set up Fonts for Plots
+# Axis font
+xaxisFont <- list(
+  family = "Arial, sans-serif",
+  size = 18,
+  color = "black"
+)
+
+yaxisFont <- list(
+  family = "Arial, sans-serif",
+  size = 18,
+  color = "black"
+)
+
+labelFont <- list(
+  family = "Arial, sans-serif",
+  size = 18,
+  color = "black"
+)
+
+# Color palette
+pal <- colorRampPalette(c("green","yellow","orange","red", "purple"))
+
+
+## Plot of wind speed at landfall vs. Max ppt amount
+storms%>%
+  plot_ly()%>%
+  add_markers(x=~LfWsKts, y=~maxPpt, 
+              marker = list(line = list(color = 'rgb(0, 0, 0)',
+                                        width = 2)),color =~meanPpt, colors = pal(50) , size=12, hoverinfo = "text",
+              text = ~paste("Storm: ", Name,"<br>",
+                            "Landfall: ",Lf,"<br>",
+                            "Max ppt: ",round(maxPpt,1)," mm","<br>",
+                            "Mean ppt: ", round(meanPpt,1)," mm","<br>",
+                            "Area Receiving Rain: ",rainArea, "km<sup>2"))%>%
+  colorbar(title = "Mean ppt [mm]")%>%
+  layout(
+    xaxis = list(
+      title = "Wind speed at Landfall [Kts]", titlefont = labelFont,
+      showticklabels = TRUE,
+      tickangle = 0,
+      tickfont = xaxisFont,
+      zeroline = TRUE,
+      showline = TRUE,
+      mirror = "ticks",
+      gridcolor = toRGB("gray50"),
+      gridwidth = 1,
+      zerolinecolor = toRGB("black"),
+      zerolinewidth = 1,
+      linecolor = toRGB("black"),
+      linewidth = 1),
+    title = "Storm Wind Intensity vs Precipitation",
+    yaxis = list(title = "Max ppt at Single Point [mm] ", titlefont = labelFont,
+                 showticklabels = TRUE,
+                 tickangle = 0,
+                 tickfont = yaxisFont,
+                 zeroline = TRUE,
+                 showline = TRUE,
+                 mirror = "ticks",
+                 gridcolor = toRGB("gray50"),
+                 gridwidth = 1,
+                 zerolinecolor = toRGB("black"),
+                 zerolinewidth = 1,
+                 linecolor = toRGB("black"),
+                 linewidth = 1),
+    showlegend=T,
+    legend = list(x = 100, y = 1.5))
+```
+

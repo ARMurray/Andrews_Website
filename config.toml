@@ -65,3 +65,41 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+
+
+## Weights for watershed course menu
+[[menu.watershed]]
+  name = "Course Overview"
+  weight = 5
+  url = "/courses/watershed/"
+
+[[menu.watershed]]
+  name = "Lectures"
+  weight = 10
+  identifier = "lectures"
+  
+[[menu.watershed]]
+  name = "Fridays (R)"
+  weight = 20
+  identifier = "fridays"
+
+[[menu.watershed]]
+  name = "Exams / Project"
+  weight = 30
+  identifier = "exams"
+
+## Weights for Tropical Cyclone Project
+[[menu.cyclones]]
+  name = "Overview"
+  weight = 5
+  url = "/projects/cyclones/"
+
+[[menu.cyclones]]
+  name = "Tropical Cyclones"
+  weight = 10
+  identifier = "cyclones"
+  
+[[menu.cyclones]]
+  name = "Drivers of Connectivity"
+  weight = 20
+  identifier = "drivers"  

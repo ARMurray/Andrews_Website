@@ -3,10 +3,6 @@ date: "2018-09-09T00:00:00Z"
 draft: false
 lastmod: "2018-09-09T00:00:00Z"
 linktitle: Extreme Precipitation & Connectivity
-menu:
-  cyclones: 
-    name: Extreme Precipitation & Connectivity
-    weight: 1
 summary: Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products
 title: Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products
 type: docs
@@ -34,16 +30,3 @@ Flooding in Chapel Hill after Hurricane Florence
 
 ![Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.](/img/dissertation/max_ppt.png)
 
-```{r stormTable, echo=FALSE, eval=TRUE}
-storms <- read.csv(here::here("static/data/statsByStorm.csv"))%>%
-  mutate(Form = mdy(Form), Lf = mdy(Lf), Dis=mdy(Dis))
-
-strmSel <- storms%>%
-  select(Name,Lf,MaxCat)
-#knitr::kable(strmSel,'html')
-library(htmlTable)
-strmSel2 <- cbind(strmSel[1:10, ],strmSel[11:20, ])
-colnames(strmSel2) <- c("Name","Landfall","Max Cat","Name","Landfall","Max Cat")
-kable(strmSel2)%>%
-  kable_styling(font_size = 17)
-```

@@ -7,7 +7,7 @@ output:
 linktitle: Lecture 7
 menu:
   watershed:
-    parent: Lectures
+    parent: lectures
     weight: 40
 title: Lecture 7
 type: docs

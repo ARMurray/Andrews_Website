@@ -1,0 +1,18 @@
+---
+title: "Tropical Storm Julia"
+date: "2020-01-10T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+linktitle: Julia (2016)
+menu:
+  cyclones:
+    parent: cyclones
+    weight: 70
+type: docs
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

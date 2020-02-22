@@ -1,0 +1,273 @@
+---
+title: "Overview of Storms"
+date: "2020-01-10T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+linktitle: Overview of Storms
+menu:
+  cyclones:
+    parent: cyclones
+    weight: 10
+type: docs
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#impact-of-extreme-precipitation-from-tropical-cyclones-on-the-southeastern-united-states">Impact of Extreme Precipitation from Tropical Cyclones on the Southeastern United States</a><ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#windspeed-vs.-precipitation">Windspeed vs. Precipitation</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="impact-of-extreme-precipitation-from-tropical-cyclones-on-the-southeastern-united-states" class="section level2">
+<h2>Impact of Extreme Precipitation from Tropical Cyclones on the Southeastern United States</h2>
+<video src="/img/Florence.mp4"></video>
+<div id="overview" class="section level3">
+<h3>Overview</h3>
+<p>The southeastern U.S. experiences heavy rainfall each year from tropical cyclone related activity which are characterized by extrmely low pressure systems which originate in the Atlantic tropics and bring warm moisture north. The type of cyclones experienced by the southeastern United States vary greatly in their point of origin, wind strength, speed of movement and precipitation. Although the general public ties storm strength, typically denoted by the Saffir-Simpson scale (i.e. the category of a Hurricane) to potential precipitation, it is clear that there is no relationship between amount of precipitation and wind speed at landfall.</p>
+<table class="table" style="font-size: 17px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+Landfall
+</th>
+<th style="text-align:left;">
+Max Cat
+</th>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+Landfall
+</th>
+<th style="text-align:left;">
+Max Cat
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Ana
+</td>
+<td style="text-align:left;">
+2015-05-10
+</td>
+<td style="text-align:left;">
+TS
+</td>
+<td style="text-align:left;">
+Irma
+</td>
+<td style="text-align:left;">
+2017-09-10
+</td>
+<td style="text-align:left;">
+H5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bill
+</td>
+<td style="text-align:left;">
+2015-06-16
+</td>
+<td style="text-align:left;">
+TD
+</td>
+<td style="text-align:left;">
+Emily
+</td>
+<td style="text-align:left;">
+2017-07-31
+</td>
+<td style="text-align:left;">
+TS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bonnie
+</td>
+<td style="text-align:left;">
+2016-05-29
+</td>
+<td style="text-align:left;">
+TS
+</td>
+<td style="text-align:left;">
+Alberto
+</td>
+<td style="text-align:left;">
+2018-05-28
+</td>
+<td style="text-align:left;">
+TS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Colin
+</td>
+<td style="text-align:left;">
+2016-06-07
+</td>
+<td style="text-align:left;">
+TS
+</td>
+<td style="text-align:left;">
+Gordon
+</td>
+<td style="text-align:left;">
+2018-09-04
+</td>
+<td style="text-align:left;">
+TS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hermine
+</td>
+<td style="text-align:left;">
+2016-09-02
+</td>
+<td style="text-align:left;">
+H1
+</td>
+<td style="text-align:left;">
+Florence
+</td>
+<td style="text-align:left;">
+2018-09-14
+</td>
+<td style="text-align:left;">
+H4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Julia
+</td>
+<td style="text-align:left;">
+2016-09-13
+</td>
+<td style="text-align:left;">
+TS
+</td>
+<td style="text-align:left;">
+Michael
+</td>
+<td style="text-align:left;">
+2018-08-10
+</td>
+<td style="text-align:left;">
+H5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Matthew
+</td>
+<td style="text-align:left;">
+2016-10-07
+</td>
+<td style="text-align:left;">
+H5
+</td>
+<td style="text-align:left;">
+Barry
+</td>
+<td style="text-align:left;">
+2019-07-13
+</td>
+<td style="text-align:left;">
+H1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Harvey
+</td>
+<td style="text-align:left;">
+2017-08-25
+</td>
+<td style="text-align:left;">
+H4
+</td>
+<td style="text-align:left;">
+Imelda
+</td>
+<td style="text-align:left;">
+2019-09-17
+</td>
+<td style="text-align:left;">
+TS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cindy
+</td>
+<td style="text-align:left;">
+2017-06-22
+</td>
+<td style="text-align:left;">
+TS
+</td>
+<td style="text-align:left;">
+Nestor
+</td>
+<td style="text-align:left;">
+2019-10-19
+</td>
+<td style="text-align:left;">
+TS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nate
+</td>
+<td style="text-align:left;">
+2017-10-08
+</td>
+<td style="text-align:left;">
+H1
+</td>
+<td style="text-align:left;">
+Dorian
+</td>
+<td style="text-align:left;">
+2019-09-06
+</td>
+<td style="text-align:left;">
+H5
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="windspeed-vs.-precipitation" class="section level3">
+<h3>Windspeed vs. Precipitation</h3>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"f84752529c9":["function () ","plotlyVisDat"]},"cur_data":"f84752529c9","attrs":{"f84752529c9":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"scatter","mode":"markers","marker":{"line":{"color":"rgb(0, 0, 0)","width":2}},"color":{},"colors":["#00FF00","#14FF00","#29FF00","#3EFF00","#53FF00","#68FF00","#7CFF00","#91FF00","#A6FF00","#BBFF00","#D0FF00","#E4FF00","#F9FF00","#FFF900","#FFF200","#FFEA00","#FFE300","#FFDC00","#FFD400","#FFCD00","#FFC600","#FFBE00","#FFB700","#FFB000","#FFA800","#FF9E00","#FF9000","#FF8300","#FF7500","#FF6800","#FF5A00","#FF4D00","#FF3F00","#FF3200","#FF2500","#FF1700","#FF0A00","#FD0004","#F50318","#ED052C","#E5083F","#DE0B53","#D60D66","#CE107A","#C6128E","#BF15A1","#B718B5","#AF1AC8","#A71DDC","#A020F0"],"size":12,"hoverinfo":"text","text":{},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Wind speed at Landfall [Kts]","titlefont":{"family":"Arial, sans-serif","size":18,"color":"black"},"showticklabels":true,"tickangle":0,"tickfont":{"family":"Arial, sans-serif","size":18,"color":"black"},"zeroline":true,"showline":true,"mirror":"ticks","gridcolor":"rgba(127,127,127,1)","gridwidth":1,"zerolinecolor":"rgba(0,0,0,1)","zerolinewidth":1,"linecolor":"rgba(0,0,0,1)","linewidth":1},"yaxis":{"domain":[0,1],"automargin":true,"title":"Max ppt at Single Point [mm] ","titlefont":{"family":"Arial, sans-serif","size":18,"color":"black"},"showticklabels":true,"tickangle":0,"tickfont":{"family":"Arial, sans-serif","size":18,"color":"black"},"zeroline":true,"showline":true,"mirror":"ticks","gridcolor":"rgba(127,127,127,1)","gridwidth":1,"zerolinecolor":"rgba(0,0,0,1)","zerolinewidth":1,"linecolor":"rgba(0,0,0,1)","linewidth":1},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":1.5,"x":100},"title":"Storm Wind Intensity vs Precipitation"},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[40,50,30,45,70,30,75,115,45,75,115,50,40,60,80,140,65,34.8,39,78],"y":[262.37200571224,409.01898956299,465.19199371338,246.5860004425,417.21798634529,227.42899347842,460.02100551128,1278.4879640341,481.08100128174,242.23100280762,532.08398604393,228.03300285339,371.26200354472,330.85198837519,903.10598707199,194.19600319862,530.0620059967,960.10002148151,163.85500335693,384.47500610352],"type":"scatter","mode":"markers","marker":{"colorbar":{"title":"meanPpt","ticklen":2},"cmin":22.0739721686694,"cmax":91.7542671825183,"colorscale":[["0","rgba(0,255,0,1)"],["0.0416666666666667","rgba(42,255,0,1)"],["0.0833333333333333","rgba(85,255,0,1)"],["0.125","rgba(127,255,0,1)"],["0.166666666666667","rgba(170,255,0,1)"],["0.208333333333333","rgba(212,255,0,1)"],["0.25","rgba(251,254,0,1)"],["0.291666666666667","rgba(255,240,0,1)"],["0.333333333333333","rgba(255,225,0,1)"],["0.375","rgba(255,209,0,1)"],["0.416666666666667","rgba(255,195,0,1)"],["0.458333333333333","rgba(255,180,0,1)"],["0.5","rgba(255,163,0,1)"],["0.541666666666667","rgba(255,137,0,1)"],["0.583333333333333","rgba(255,110,0,1)"],["0.625","rgba(255,82,0,1)"],["0.666666666666667","rgba(255,55,0,1)"],["0.708333333333333","rgba(255,28,0,1)"],["0.75","rgba(253,2,3,1)"],["0.791666666666667","rgba(239,5,40,1)"],["0.833333333333333","rgba(223,10,80,1)"],["0.875","rgba(207,16,119,1)"],["0.916666666666667","rgba(192,21,159,1)"],["0.958333333333333","rgba(175,26,199,1)"],["1","rgba(160,32,240,1)"]],"showscale":false,"color":[33.2297463259781,35.846615298151,62.9780226719471,28.8964127216149,42.4920101356357,29.5080177309673,67.7970636407585,91.7542671825183,44.6498153670162,32.0061153946725,78.7144506185401,22.0739721686694,54.0479275454653,38.0183218317434,56.9798169801145,23.4188658963426,38.9107259613805,39.7108973897521,32.3289593727486,26.9738168994451],"size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"colorbar":{"title":"","ticklen":2},"cmin":22.0739721686694,"cmax":91.7542671825183,"colorscale":[["0","rgba(0,255,0,1)"],["0.0416666666666667","rgba(42,255,0,1)"],["0.0833333333333333","rgba(85,255,0,1)"],["0.125","rgba(127,255,0,1)"],["0.166666666666667","rgba(170,255,0,1)"],["0.208333333333333","rgba(212,255,0,1)"],["0.25","rgba(251,254,0,1)"],["0.291666666666667","rgba(255,240,0,1)"],["0.333333333333333","rgba(255,225,0,1)"],["0.375","rgba(255,209,0,1)"],["0.416666666666667","rgba(255,195,0,1)"],["0.458333333333333","rgba(255,180,0,1)"],["0.5","rgba(255,163,0,1)"],["0.541666666666667","rgba(255,137,0,1)"],["0.583333333333333","rgba(255,110,0,1)"],["0.625","rgba(255,82,0,1)"],["0.666666666666667","rgba(255,55,0,1)"],["0.708333333333333","rgba(255,28,0,1)"],["0.75","rgba(253,2,3,1)"],["0.791666666666667","rgba(239,5,40,1)"],["0.833333333333333","rgba(223,10,80,1)"],["0.875","rgba(207,16,119,1)"],["0.916666666666667","rgba(192,21,159,1)"],["0.958333333333333","rgba(175,26,199,1)"],["1","rgba(160,32,240,1)"]],"showscale":false,"color":"rgb(0, 0, 0)","width":2}},"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"text":["Storm:  Ana <br> Landfall:  5/10/2015 <br> Max ppt:  262.4  mm <br> Mean ppt:  33.2  mm <br> Area Receiving Rain:    932,368 km<sup>2","Storm:  Bill <br> Landfall:  6/16/2015 <br> Max ppt:  409  mm <br> Mean ppt:  35.8  mm <br> Area Receiving Rain:  1,194,800 km<sup>2","Storm:  Bonnie <br> Landfall:  5/29/2016 <br> Max ppt:  465.2  mm <br> Mean ppt:  63  mm <br> Area Receiving Rain:  1,457,296 km<sup>2","Storm:  Colin <br> Landfall:  6/7/2016 <br> Max ppt:  246.6  mm <br> Mean ppt:  28.9  mm <br> Area Receiving Rain:    798,560 km<sup>2","Storm:  Hermine <br> Landfall:  9/2/2016 <br> Max ppt:  417.2  mm <br> Mean ppt:  42.5  mm <br> Area Receiving Rain:  1,022,144 km<sup>2","Storm:  Julia <br> Landfall:  9/13/2016 <br> Max ppt:  227.4  mm <br> Mean ppt:  29.5  mm <br> Area Receiving Rain:  1,213,344 km<sup>2","Storm:  Matthew <br> Landfall:  10/7/2016 <br> Max ppt:  460  mm <br> Mean ppt:  67.8  mm <br> Area Receiving Rain:    745,584 km<sup>2","Storm:  Harvey <br> Landfall:  8/25/2017 <br> Max ppt:  1278.5  mm <br> Mean ppt:  91.8  mm <br> Area Receiving Rain:  1,391,312 km<sup>2","Storm:  Cindy <br> Landfall:  6/22/2017 <br> Max ppt:  481.1  mm <br> Mean ppt:  44.6  mm <br> Area Receiving Rain:  1,195,152 km<sup>2","Storm:  Nate <br> Landfall:  10/8/2017 <br> Max ppt:  242.2  mm <br> Mean ppt:  32  mm <br> Area Receiving Rain:    804,032 km<sup>2","Storm:  Irma <br> Landfall:  9/10/2017 <br> Max ppt:  532.1  mm <br> Mean ppt:  78.7  mm <br> Area Receiving Rain:    709,344 km<sup>2","Storm:  Emily <br> Landfall:  7/31/2017 <br> Max ppt:  228  mm <br> Mean ppt:  22.1  mm <br> Area Receiving Rain:    847,648 km<sup>2","Storm:  Alberto <br> Landfall:  5/28/2018 <br> Max ppt:  371.3  mm <br> Mean ppt:  54  mm <br> Area Receiving Rain:    913,248 km<sup>2","Storm:  Gordon <br> Landfall:  9/4/2018 <br> Max ppt:  330.9  mm <br> Mean ppt:  38  mm <br> Area Receiving Rain:  1,224,112 km<sup>2","Storm:  Florence <br> Landfall:  9/14/2018 <br> Max ppt:  903.1  mm <br> Mean ppt:  57  mm <br> Area Receiving Rain:  1,154,752 km<sup>2","Storm:  Michael <br> Landfall:  8/10/2018 <br> Max ppt:  194.2  mm <br> Mean ppt:  23.4  mm <br> Area Receiving Rain:  1,348,512 km<sup>2","Storm:  Barry <br> Landfall:  7/13/2019 <br> Max ppt:  530.1  mm <br> Mean ppt:  38.9  mm <br> Area Receiving Rain:    997,408 km<sup>2","Storm:  Imelda <br> Landfall:  9/17/2019 <br> Max ppt:  960.1  mm <br> Mean ppt:  39.7  mm <br> Area Receiving Rain:    691,248 km<sup>2","Storm:  Nestor <br> Landfall:  10/19/2019 <br> Max ppt:  163.9  mm <br> Mean ppt:  32.3  mm <br> Area Receiving Rain:    644,672 km<sup>2","Storm:  Dorian <br> Landfall:  9/6/2019 <br> Max ppt:  384.5  mm <br> Mean ppt:  27  mm <br> Area Receiving Rain:    699,392 km<sup>2"],"textfont":{"size":55},"error_y":{"width":55},"error_x":{"width":55},"line":{"width":55},"xaxis":"x","yaxis":"y","frame":null},{"x":[30,140],"y":[163.85500335693,1278.4879640341],"type":"scatter","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"Mean ppt [mm]","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"cmin":22.0739721686694,"cmax":91.7542671825183,"colorscale":[["0","rgba(0,255,0,1)"],["0.0416666666666667","rgba(42,255,0,1)"],["0.0833333333333333","rgba(85,255,0,1)"],["0.125","rgba(127,255,0,1)"],["0.166666666666667","rgba(170,255,0,1)"],["0.208333333333333","rgba(212,255,0,1)"],["0.25","rgba(251,254,0,1)"],["0.291666666666667","rgba(255,240,0,1)"],["0.333333333333333","rgba(255,225,0,1)"],["0.375","rgba(255,209,0,1)"],["0.416666666666667","rgba(255,195,0,1)"],["0.458333333333333","rgba(255,180,0,1)"],["0.5","rgba(255,163,0,1)"],["0.541666666666667","rgba(255,137,0,1)"],["0.583333333333333","rgba(255,110,0,1)"],["0.625","rgba(255,82,0,1)"],["0.666666666666667","rgba(255,55,0,1)"],["0.708333333333333","rgba(255,28,0,1)"],["0.75","rgba(253,2,3,1)"],["0.791666666666667","rgba(239,5,40,1)"],["0.833333333333333","rgba(223,10,80,1)"],["0.875","rgba(207,16,119,1)"],["0.916666666666667","rgba(192,21,159,1)"],["0.958333333333333","rgba(175,26,199,1)"],["1","rgba(160,32,240,1)"]],"showscale":true,"color":[22.0739721686694,91.7542671825183],"line":{"color":"rgba(255,127,14,1)"}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>

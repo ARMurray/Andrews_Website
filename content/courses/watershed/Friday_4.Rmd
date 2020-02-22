@@ -6,12 +6,12 @@ output:
   blogdown::html_page:
     toc: true
     toc_depth: 2
-linktitle: Friday (4)
+linktitle: "Friday (4)"
 menu:
   watershed:
-    parent: Fridays (R)
-    weight: 140
-    type: docs
+    parent: fridays
+    weight: 40
+type: docs
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
