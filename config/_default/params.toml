@@ -55,8 +55,7 @@ phone = ""
 address = "3101 Murray Hall, University of North Carolina, Chapel Hill, 27514, USA"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
-office_hours = """Wednesday 10:00 to 12:00<br>
-                  Thursday 10:00 to 12:00"""
+office_hours = "Tuesday 10:00 to 12:00<br>Wednesday 10:00 to 12:00"
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
 appointment_url = ""
