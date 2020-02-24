@@ -16,7 +16,7 @@ type: docs
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/lecture_8_slides.html)
 
-## Ecohydrology: Interactiona between Hydrological Process and the Biota
+## Ecohydrology: Interactions between Hydrological Process and the Biota
 
 - Chapter 9
 - Hydrologic Controls on Plants and Soil Microorganisms
