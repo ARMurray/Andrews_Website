@@ -266,3 +266,78 @@ Hornberger notes that while larger rock types such as crystalline and metamorphi
 ]
 ???
 Think back to the example of clays and not allowing the flow of water.
+---
+![](aquifer.jpg)
+
+.smallgray[
+Credit: [National Geographic](https://www.nationalgeographic.org/media/aquifer-illo/)
+]
+
+.med[**Aquifer: **"A saturated geological formation that contains and transmits *significant* quantities of water under normal field conditions" ]
+
+???
+- "Significant" is a loose term, but the implication is that it is enough to be used as a water source
+
+- Many aquifers are composed of unconsolidated materials like gravel and sand
+
+- Obviously the more porous the material, the more water the aquifer can hold.
+
+- Artesian Well: well from which water flows under natural pressure without pumping, notice the elevation difference in the aquifer.
+---
+## Artesian Well:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CZ0zZtwzeW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+###A Few More Definitions:
+
+.pull-left[
+.med[
+**Aquiclude: ** A formation that may contain water but does not transmit significant quantities
+
+**Aquifuge: **A formation that neither contains nor transmits significant quantities of water
+
+**Aquitard: **The general term most often used to describe formations that are of low permeability and that may include both aquicludes and aquifuges
+
+**Phreatic Surface: ** The water table, defined as a surface of *zero gauge pressure* within the subsurface and seperates the unsaturated and saturated zones.
+
+**Potentiometric Surface: ** The height to which water rises.
+]]
+
+.pull-right[
+![](FIG6_6.gif)
+
+.small[
+**Figure 6.6** Hydrogeological units. Three piezometers are depicted, which are open in either the confined or unconfined aquifer, as indicated by the short horizontal lines. Note that in unconfined aquifers, the water level in the piezometer (far right) indicates the height of the water table; in confined aquifers, the water level in the piezometers (left and center) rises above the top of the aquifer and indicates the position of the potentiometric surface.]
+]
+
+???
+
+- Water will rise to the height of the phreatic surface. Remember that the phreatic surface of a confined aquifer may be higher than the unconfined aquifer above it.
+
+---
+.center[
+### Well Construction:
+]
+.left-column[
+```{r well, echo=FALSE, out.height='500px', out.width='250px'}
+knitr::include_graphics("well.png")
+```
+]
+.right-column[
+.med[
+- Wells are constructed in a variety of ways
+  - Dug, Auggered, Jetted / Driven
+  
+- Consideration must be given to:
+  - Hydraulic Head
+  - Water Table Depth
+  - Soil Type
+  - Geology
+  - Aquifer type
+  
+  - Wells must be properly screened and cased in ways that reduce vulnerability to contamination while providing sufficient water flow.
+]]
+---
+![](FIG6_7.gif)
+
+---
