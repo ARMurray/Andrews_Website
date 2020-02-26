@@ -18,6 +18,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+.center[<br><br>
+## Watershed Delineation in R<br><br><br><br><br><br>
+.mb[Introduction to Watershed Systems
+
+Andrew Murray | University of North Carolina-Chapel Hill]
+]
 ---
 ### .center[Watershed Delineation]
 
@@ -72,7 +78,101 @@ devtools::install_github("giswqs/whiteboxR")
 Check out all of the available GIS tools [HERE](https://giswqs.github.io/whiteboxR/#available-tools)
 
 ---
+### Create a new project and download the data:
 
+.mb[Whitebox tools will crash if you have spaces in the filepath
+    - 'tool("C:/My Documents/Geog 441 folder/data.tif")' *will not work*
+    - 'tool("C:/My_Documents/Geog_441_Folder/data.tif")' *will work*
+]
+
+- Make sure to create your .rproj in a file folder with no spaces, such as on your desktop.
+  - You can always check this by using the 'here' command from the 'here' library which will show you the filepath of your project.
+
+```{r here, warning=FALSE, eval=FALSE}
+here::here()
+```
+
+```{r here2, warning=FALSE, eval=TRUE, echo=FALSE}
+print("C:/Users/HP/Desktop/delineation")
+```
+.med[
+- Create a folder within this folder and name it 'data'
+- [Click Here to Download the Raster](https://drive.google.com/open?id=1QPXzZMXR7vLOvAE-IiuPEkGGKPMF5J2M)
+  - Make sure to put the raster in your data folder you just created
+]
+
+---
+## Creating an R-Markdown Document
+
+- Create a new R-Markdown document and title it 'Watershed Delineation Part 1'
+- Make sure to put your first and last name in the 'Name' space.
+
+.pull-left[
+![](newRMarkdown.png)
+]
+
+.pull-right[
+![](newRMarkdown1.png)
+
+You can see your new rmarkdown file is named 'untitled' meaning it isn't saved yet, so save it as YOURONYEN_delineation.rmd
+- Next, click the knit dropdown and select 'knit to html'
+
+]
+---
+.pull-left[
+### What just happened?
+
+.med[
+When you click knot, RStudio is taking your code and converting it to a webpage (html document). Once it finishes you will notice a new file has appeared in your project folder with the same name as your r markdown document but ending in the extension .html. RStudio will automatically open this file in a new windown but you can also open it with a web browser like chrome or firefox etc...
+
+This makes your code more readable / shareable and you'll notice it automatically resizes.
+
+- There are tons of things you can do to customize the look and feel of an R Markdown Document.
+
+]]
+
+.pull-right[
+![](rMarkdownOutput.png)
+]
+---
+.pull-left[
+.mb[You can use ## to make text bigger]
+
+\# These
+
+# These
+
+\## Are
+
+## Are
+
+\### All
+
+### All
+
+\#### Different
+
+#### Different
+]
+
+.pull-right[
+.med[You can also use * to italicize and bold font.
+
+\*This is italics*
+
+*This is italics*
+
+\**This is bold**
+
+** This is bold**
+
+You should look at the code of your r markdown document side by side with the output of the html document that was 'knitted' to understand what code makes what output.
+
+Remember to check out the [R Markdown Cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) for a lot more stuff you can add in.
+]
+]
+
+---
 ```{r, message = FALSE, warning = FALSE, eval=FALSE}
 library(raster)
 library(here)
@@ -90,10 +190,6 @@ plot(dem)
 
 .pull-right[
 .med[
-- Create a new R project in your Geog-441 Folder
-- Create a folder in the same folder as your r project and name it 'data'
-- [Click Here to Download the Raster](https://drive.google.com/open?id=1QPXzZMXR7vLOvAE-IiuPEkGGKPMF5J2M)
-  - Make sure to put the raster in your data folder
 ]]
 
 ---
