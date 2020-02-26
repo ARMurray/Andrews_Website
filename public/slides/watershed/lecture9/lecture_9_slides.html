@@ -315,8 +315,105 @@ Credit: [National Geographic](https://www.nationalgeographic.org/media/aquifer-i
   - Wells must be properly screened and cased in ways that reduce vulnerability to contamination while providing sufficient water flow.
 ]]
 ---
+## Steady Groundwater Flow
+.pull-left[
 ![](FIG6_7.gif)
+]
 
+.pull-right[.center[.big[
+`\(h=h_{L}-\frac{q}{K}x\)`&lt;br&gt;.small[(Equation 6.13)]
+]]
+
+.med[Head Decreases linearly with distance from the left boundary; that is, the potentiometric surface is a plane sloping from left to right. ]
+]
+
+.med[From here, we can begin to draw **equipotential** lines and **streamlines** to construct a **flow net**]
+
+???
+So here we are applying Darcy;s law to steady state groundwater flow, which is to say the soil is saturated and it is not changing much (so storage is constant)
+
+- You can see the line drawn to show Potentiometric surface in the confined aquifer, so remember if we punch a hole through the confining layer, this is the level to which the water in the confined aquifer would rise into the unconfined aquifer.
+
+---
+## Steady Groundwater Flow Continued:
+.pull-left[
+.med[**Equipotential: **Lines of equal hydraulic head, constructed by making contour lines from the potentiometric surface
+
+**Stramlines: ** perpendicular lines drawn from equipotential lines to represent the direction of flow within the aquifer.
+
+**Flow net: ** The resulting diagram produced from sketching streamlines
+]]
+.pull-right[
+![](FIG6_8.gif)
+]
+
+???
+
+- Darcy's law indicates that flow should always be from high values of hydraulic head to low values, and in fact must follow the path of steepest descent. 
+
+---
+## Groundwater Flow is not Horizontal
+.pull-left[
+.med[
+You might think that most of groundwater flow would occur at the water table, but water actually flows throughout the saturated zone
+
+- There is a *U-shaped* quality to the flow of groundwater because of the properties of hydraulic head
+
+**streamtube: ** The area between streamlines. groundwater flow, by definition, canoot cross a streamline.
+]]
+
+.pull-right[
+![](FIG6_9.gif)
+]
+
+???
+There is an example in the book where the USGS conducted nitrate testing in an agricultural area and found elevated levels of nitrate at almost every depth they sampled. Highest concentration will not necesarrily be in the shallowest part
+
+---
+## Let's run through an example:
+.pull-left[
+![](FIG6_11.gif)
+
+Formula: `\(Q_{S}=Kbdh\)`
+
+Conductivity of the soil is `\(10^{-10}m s^{-1}\)` (K)&lt;br&gt;
+Distance from one side to the other: `\(100m\)` (b)&lt;br&gt;
+Contour Interval for Hydraulic Head: `\(2m\)` (dh)
+]
+
+.pull-right[
+
+```r
+K &lt;- 10^-10
+b &lt;- 100
+dh &lt;- 2
+Qs &lt;- K*b*dh
+Qs
+```
+
+```
+## [1] 2e-08
+```
+
+Mulitply by `\(3\)` because that's how many streamtubes we have:
+
+```r
+paste0("Discharge is: ",Qs*3," m^3 s^-1")
+```
+
+```
+## [1] "Discharge is: 6e-08 m^3 s^-1"
+```
+
+
+```r
+paste0("Discharge is: ",Qs*3*31536000," m^3 y^-1")
+```
+
+```
+## [1] "Discharge is: 1.89216 m^3 y^-1"
+```
+]
 ---
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
