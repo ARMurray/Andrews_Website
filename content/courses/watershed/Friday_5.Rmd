@@ -1,5 +1,5 @@
 ---
-title: "Friday (5)"
+title: "Watershed Delineation in R"
 date: "2020-01-31T00:00:00+01:00"
 draft: false
 output:
@@ -15,3 +15,14 @@ type: docs
 ---
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/RDay_5.html)
+
+This assignment covers how to use the 'whitebox' package to delineate a watershed from a DEM and export it as a 3D model using the 'rayshader' package.
+
+Steps:
+- (1) Import Data
+- (2) Fill DEM
+- (3) Create Flow Direction Raster
+- (4) Create Flow Accumulation Raster
+- (5) Create and Snap Pour Point
+- (6) Delineate Watershed
+- (7) Make awesome 3D Watershed

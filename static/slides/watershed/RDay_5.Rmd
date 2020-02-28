@@ -218,12 +218,12 @@ You also need to install the 'av' package:
 install.packages('av')
 ```
 
-
+**To create a new chunk, press ctrl + Alt + i at the same time on an empty line within your R-Markdown Document**
 ---
 .pull-left[
 ## Step #1: Import and project raster data
 ```{r, message = FALSE, warning = FALSE, eval=FALSE}
-dem <- raster(here("DEM_34.tif")
+dem <- raster(here("dem17N.tif")
 plot(dem)
 ```
 
