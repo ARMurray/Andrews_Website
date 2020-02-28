@@ -212,6 +212,13 @@ Blocks of code in an R Markdown document are called 'chunks'.
 
 ![](setupChunk.png)
 
+You also need to install the 'av' package:
+
+```{r, eval=FALSE}
+install.packages('av')
+```
+
+
 ---
 .pull-left[
 ## Step #1: Import and project raster data
@@ -503,7 +510,7 @@ The code above will look for a movie called 'movie.mp4' in your project folder a
 .pull-right[
 
 <video width="500" height="400" controls>
-  <source src="/mp4/movie.mp4" type="video/mp4">
+  <source src="movie.mp4" type="video/mp4">
 </video>
 ]
 ---
