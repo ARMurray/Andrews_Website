@@ -5,6 +5,21 @@
     <meta charset="utf-8" />
     <meta name="author" content="Andrew Murray" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
+    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+    <script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+    <script src="libs/leaflet-providers-plugin-2.0.3/leaflet-providers-plugin.js"></script>
+    <link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet" />
+    <script src="libs/HomeButton-0.0.1/home-button.js"></script>
+    <script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script>
+    <link href="libs/PopupTable-0.0.1/popup.css" rel="stylesheet" />
     <link rel="stylesheet" href="my_styles.css" type="text/css" />
   </head>
   <body>
@@ -171,15 +186,71 @@ Remember to check out the [R Markdown Cheatsheet](https://rstudio.com/wp-content
 ]
 
 ---
+.med[
+The top portion of your R-Markdown file contains YAML metadata, which is constrained by '---'. This is basic information for the document when it gets converted to html.
+
+![](yaml.png)
+
+Blocks of code in an R Markdown document are called 'chunks'.
+  - The first chunk is called the 'setup' chunk and should not be deleted
+  - You can set default options here, like wether or not you want code to be run, or visible or not etc... This is also a good place to load your libraries
+    - Go ahead and delete everything below the setup chunk now
+]
+---
+### The Assignment:
+  For this assignment, you will go through all of the steps to delineating a watershed. You will write the assignment in r-markdown and submit with your .rmd and .html files. 
+  - Each step should be started with a new heading using '#'. 
+    - (1) Import Data
+    - (2) Fill DEM
+    - (3) Create Flow Direction Raster
+    - (4) Create Flow Accumulation Raster
+    - (5) Create and Snap Pour Point
+    - (6) Delineate Watershed
+    - (7) Make awesome 3D Watershed
+  - You can add subheadings '##' to describe intermediate steps
+  - Make sure you label your chunks and use the environment settings correctly:
+  
+![](chunk.png)
+
+**TIP: ** The whitebox tools take a long time to run, so once you have run a tool succesfully, change eval = TRUE to eval = FALSE. This will save a lot of time when knitting the R-Markdown to html, keep chunks with plots in them as EVAL = TRUE or they won't show up in your finished document.  
+
+
+---
+### Your Setup Chunk
+
+![](setupChunk.png)
+
+---
+.pull-left[
+## Step #1: Import and project raster data
 
 ```r
-library(raster)
-library(here)
 dem &lt;- raster(here("DEM_34.tif")
 plot(dem)
 ```
-.pull-left[
-![](RDay_5_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+
+.mb[**TIP: **].med[This is a very big dataset because it has very fine spatial resolution. Try to be patient as these tools will take several minutes to run, but if you find that your computer just cannot handle it, you can reduce the resolution of the raster using aggregate. The first argument is the dem, and the second argument is the number of pixels you want to merge into one.]
+
+```r
+course &lt;- raster::aggregate(dem, 8)
+```
+
+]
+.pull-right[
+.med[** Project the raster to UTM 17N**]
+
+```r
+dem17N &lt;- projectRaster(dem,crs = "+proj=utm +zone=17 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs")
+writeRaster(dem17N,here("data/dem17N.tif"))
+```
+&lt;br&gt;&lt;br&gt;
+.center[
+![](dem17N.jpg)
+
+Notice the units on the x and y axes are now in meters instead of degrees
+]
+
 
 ]
 
@@ -188,99 +259,281 @@ plot(dem)
 ]]
 
 ---
-## Filling a DEM
+## Step 2: Filling a DEM
 
 .med[
 DEMs often can have what we refer to as 'sinks' which are typically artifical potholes that show up in the data. When we delineate a watershed, we are only accounting for the flow of water and not the volume of water...
-]
-.big[This means...]
 
-.med[If the DEM thinks water flows into a sink, it will not allow it to flow out, which can mess with our watershed delineation.
+- If the DEM thinks water flows into a sink, it will not allow it to flow out, which can mess with our watershed delineation.
 - A 'fill' tool will find a cell that is surrounded on all sides by higher elevation cells and move it's elevation upwards so that it is no longer a sink.
 ]
-
+![](fillDEM.png)
 ---
-
-## Running the code:
-
-.big[Whitebox is still new] .med[and so it does not 'play nicely' with all of the other packages. For example, your file path cannot have spaces in it, like they would if you are using OneDrive. Therefore I am placing all of my data on my desktop and pointing r to that folder]
-
+.pull-left[
+### Fill Depressions:
+Here we use the wbt_fill_depressions tool. Whitebox tools do not assign results to vectors, they simply write a new raster to you file folder
 
 ```r
-setwd("C:/Users/HP/Desktop/data/")
+wbt_fill_depressions(here("data/DEM_34.tif"),here("data/demFill.tif"))
 ```
-
-Now you can just type file names instead of entire file paths. Although in my code here, I am still using full pathnames because of the format of these slides.
-
+.mb[Check to see if filling did anything:]
+Here we simply subtract the original DEM from the filled DEM and plot it to see what the difference looks like.
 
 ```r
-library(whitebox)
-dem &lt;-  "C:/Users/HP/Desktop/data/DEM_34.tif"
-wbt_fill_depressions(dem, output ='C:/Users/HP/Desktop/data/demFill.tif')
+demFill &lt;- raster(here("data/demFill.tif"))
+demDif &lt;- demFill-dem
+plot(demDif)
 ```
+]
 
-.med[So after you run this code, you should have a *'filled'* DEM with no sinks]
+.pull-right[
+.mb[ &lt;br&gt;&lt;br&gt;&lt;br&gt;
+Here we can see the difference between the original and the filled DEMs:&lt;br&gt;&lt;br&gt;]
+&lt;img src="demDif.jpg" width="600px" height="400px" /&gt;
 
+]
+]
 ---
 .center[## Flow Direction]
 .med[The next step is flow direction, where we look at each raster cell and figure out the steepest gradient. There are two types of flow direction rasters : D8 and D-Infinity]
 ![](flowDirection.png)
-
 ---
+## Flow Direction
 .pull-left[
+.mb[
+We Use D8 flow direction for most applications in hydrology because it is simpler and works well with high resolution data. The output of a flow direction raster is usually in the following discrete numbers:
 
-### D8 = 8 possible directions using 'queen contiguity'
-![](d8.png)
-]
+- East: 1
+- Southeast: 2
+- South: 4
+- Southwest: 8
+- West: 16
+- Northwest: 32
+- North: 64
+- Northeast: 128
 
+]]
 .pull-right[
-### D-Infinity = Infinite possible directions by calculating linear differences between gradients
-![](dInfinity.png)
-
+![](D8table.png)
 ]
 ---
-### Calculate your flow direction raster:
-.pull-left[
-.med[ Now we need to call the filled raster we just created to run the flow direction tool]
-
+### Step 3: Flow Direction
+Using the filled DEM, calculate a flow direction raster:
 
 ```r
-demFill &lt;- "C:/Users/HP/Desktop/data/demFill.tif"
-wbt_d8_pointer(demFill, "C:/Users/HP/Desktop/data/d8_Pointer.tif")
+wbt_d8_pointer(here("data/demFill.tif"),here("data/flowDir.tif"))
+```
+.pull-left[
+### Plot your result!
+
+```r
+flowDir &lt;- raster(here("data/flowDir.tif"))
+plot(flowDir)
 ```
 ]
 .pull-right[
-![](RDay_5_files/figure-html/plotD8-1.png)&lt;!-- --&gt;
+&lt;img src="flowDir.jpg" width="600px" height="400px" /&gt;
 ]
 ---
-.center[
-### Flow Accumulation
-]
-.pull-left[
-.med[Just like flow direction told us which cell water would flow into, flow accumulation tells us how many cells upstream of that cell will flow into it]
+### Step 4: Flow Accumulation
+.med[Just like flow direction told us which cell water would flow into, flow accumulation tells us how many cells upstream of that cell will flow into it and is helpful for finding streams]
+
+- In watershed delineation, flow accumulation is used to *snap* our pour points to the stream network so that we get a properly defined network. This is important since the contributing area of a point 50 feet away from the stream may have a much smaller contributing area than a point within the stream.
+
+Create a flow accumulation raster **using the filled DEM**
 
 ```r
-wbt_d8_flow_accumulation(demFill, "C:/Users/HP/Desktop/data/d8_Accumulation.tif")
+wbt_d8_flow_accumulation(here("data/demFill.tif"),here("data/flowAccumulation.tif"))
+```
+
+---
+### Step 4: Flow Accumulation Continued
+.pull-left[
+.big[Plot your flow accumulation data]
+
+.med[Here I plot the flow accumulation using a log scale because the range of values is so uneven. This is because there are **a lot** of cells with very tiny flow accumulation values, but there are some with huge flow accumulation values closer to the outlet.]
+
+
+```r
+flowAccum &lt;- raster(here("data/flowAccumulation.tif"))
+plot(log(flowAccum))
 ```
 ]
-
 .pull-right[
-![](RDay_5_files/figure-html/plotAccum-1.png)&lt;!-- --&gt;
+&lt;img src="flowAccum.jpg" width="600px" height="400px" /&gt;
+]
+---
+### Step 5: Create and Snap Pour Points
+
+.mb[**Pour Point: ** The outlet of the watershed. You can choose any point, but things to consider:
+  - It should be in a stream, preferably as large a stream as possible
+  - It should be close to the bottom of where you think the watershed is
+  - If you are going to do further hydrological analysis, you could try to put it at a point where you know a gauge exists.
+
+We are going to use our DEM and overlay it onto a simple web map to find the coordinates of our pour point. Then we will use the coordinates to make a spatial point and we will *snap* the point to the stream network using our flow accumulation raster.
+
+
+```r
+# Create a polygon from the extent of the DEM
+bbox &lt;- bboxSpatialPolygon(raster::extent(dem)) 
+
+# Make a map of the polygon and have the map show the coordinates of your mouse location
+mapview(bbox,alpha.regions=0.1)%&gt;%
+  addMouseCoordinates()
+```
+]
+---
+
+### This map shows coordinates in the top-left as you move the mouse.
+.pull-left[
+You can also change the basemap by clicking the layers icon
+
+
+
+<div id="htmlwidget-15174ccfc912964b61a1" style="width:504px;height:400px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-15174ccfc912964b61a1">{"x":{"options":{"minZoom":1,"maxZoom":100,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":false,"bounceAtZoomLimits":false,"maxBounds":[[[-90,-370]],[[90,370]]]},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",1,"CartoDB.Positron",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["CartoDB.DarkMatter",2,"CartoDB.DarkMatter",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap",3,"OpenStreetMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",4,"Esri.WorldImagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenTopoMap",5,"OpenTopoMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"createMapPane","args":["polygon",420]},{"method":"addPolygons","args":[[[[{"lng":[-82.250185185,-82.250185185,-81.74978395,-81.74978395,-82.250185185],"lat":[35.249814815,35.750185185,35.750185185,35.249814815,35.249814815]}]]],null,"bbox",{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"pane":"polygon","stroke":true,"color":"#333333","weight":1,"opacity":0.9,"fill":true,"fillColor":"#6666FF","fillOpacity":0.1,"smoothFactor":1,"noClip":false},"<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"lib/popup/popup.css\"><\/head><body><div class=\"scrollableContainer\"><table class=\"popup scrollable\" id=\"popup\"><tr class='coord'><td><\/td><td><b>Feature ID<\/b><\/td><td align='right'>1&emsp;<\/td><\/tr><tr class='alt'><td>1<\/td><td><b>FID&emsp;<\/b><\/td><td align='right'>0&emsp;<\/td><\/tr><tr><td>2<\/td><td><b>geometry&emsp;<\/b><\/td><td align='right'>sfc_POLYGON&emsp;<\/td><\/tr><\/table><\/div><\/body><\/html>",{"maxWidth":800,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"closeOnClick":true,"className":""},"0",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"stroke":true,"weight":2,"opacity":0.9,"fillOpacity":0.14,"bringToFront":false,"sendToBack":false}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]},{"method":"addHomeButton","args":[-82.250185185,35.249814815,-81.74978395,35.750185185,"Zoom to bbox","<strong> bbox <\/strong>","bottomright"]},{"method":"addLayersControl","args":[["CartoDB.Positron","CartoDB.DarkMatter","OpenStreetMap","Esri.WorldImagery","OpenTopoMap"],"bbox",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]},{"method":"addLegend","args":[{"colors":["#6666FF"],"labels":["0"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"factor","title":"bbox","extra":null,"layerId":null,"className":"info legend","group":"bbox"}]}],"limits":{"lat":[35.249814815,35.750185185],"lng":[-82.250185185,-81.74978395]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      //map.on('click', function (e) {\n      //  var txt = document.querySelector('.lnlt').textContent;\n      //  console.log(txt);\n      //  //txt.innerText.focus();\n      //  //txt.select();\n      //  setClipboardText(txt);\n      //});\n\n      function setClipboardText(text){\n      var id = 'mycustom-clipboard-textarea-hidden-id';\n      var existsTextarea = document.getElementById(id);\n\n      if(!existsTextarea){\n      console.log('Creating textarea');\n      var textarea = document.createElement('textarea');\n      textarea.id = id;\n      // Place in top-left corner of screen regardless of scroll position.\n      textarea.style.position = 'fixed';\n      textarea.style.top = 0;\n      textarea.style.left = 0;\n\n      // Ensure it has a small width and height. Setting to 1px / 1em\n      // doesn't work as this gives a negative w/h on some browsers.\n      textarea.style.width = '1px';\n      textarea.style.height = '1px';\n\n      // We don't need padding, reducing the size if it does flash render.\n      textarea.style.padding = 0;\n\n      // Clean up any borders.\n      textarea.style.border = 'none';\n      textarea.style.outline = 'none';\n      textarea.style.boxShadow = 'none';\n\n      // Avoid flash of white box if rendered for any reason.\n      textarea.style.background = 'transparent';\n      document.querySelector('body').appendChild(textarea);\n      console.log('The textarea now exists :)');\n      existsTextarea = document.getElementById(id);\n      }else{\n      console.log('The textarea already exists :3')\n      }\n\n      existsTextarea.value = text;\n      existsTextarea.select();\n\n      try {\n      var status = document.execCommand('copy');\n      if(!status){\n      console.error('Cannot copy text');\n      }else{\n      console.log('The text is now on the clipboard');\n      }\n      } catch (err) {\n      console.log('Unable to copy.');\n      }\n      }\n\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null},{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      //map.on('click', function (e) {\n      //  var txt = document.querySelector('.lnlt').textContent;\n      //  console.log(txt);\n      //  //txt.innerText.focus();\n      //  //txt.select();\n      //  setClipboardText(txt);\n      //});\n\n      function setClipboardText(text){\n      var id = 'mycustom-clipboard-textarea-hidden-id';\n      var existsTextarea = document.getElementById(id);\n\n      if(!existsTextarea){\n      console.log('Creating textarea');\n      var textarea = document.createElement('textarea');\n      textarea.id = id;\n      // Place in top-left corner of screen regardless of scroll position.\n      textarea.style.position = 'fixed';\n      textarea.style.top = 0;\n      textarea.style.left = 0;\n\n      // Ensure it has a small width and height. Setting to 1px / 1em\n      // doesn't work as this gives a negative w/h on some browsers.\n      textarea.style.width = '1px';\n      textarea.style.height = '1px';\n\n      // We don't need padding, reducing the size if it does flash render.\n      textarea.style.padding = 0;\n\n      // Clean up any borders.\n      textarea.style.border = 'none';\n      textarea.style.outline = 'none';\n      textarea.style.boxShadow = 'none';\n\n      // Avoid flash of white box if rendered for any reason.\n      textarea.style.background = 'transparent';\n      document.querySelector('body').appendChild(textarea);\n      console.log('The textarea now exists :)');\n      existsTextarea = document.getElementById(id);\n      }else{\n      console.log('The textarea already exists :3')\n      }\n\n      existsTextarea.value = text;\n      existsTextarea.select();\n\n      try {\n      var status = document.execCommand('copy');\n      if(!status){\n      console.error('Cannot copy text');\n      }else{\n      console.log('The text is now on the clipboard');\n      }\n      } catch (err) {\n      console.log('Unable to copy.');\n      }\n      }\n\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+]
+.pull-right[
+I chose the coordinates: -81.98964 ,35.29505
+- Next we need to convert these to a point and snap it to the stream network:
+
+
+```r
+# Create the point
+pts &lt;- data.frame(x = -81.98964, y = 35.29505)
+pointSF &lt;- st_as_sf(pts, coords = c("x","y"),crs=4030)
+
+# Project the point to UTM 17N
+pointSF17N &lt;- st_transform(pointSF, crs = 2958)
+st_write(pointSF17N, here("data/pour17N.shp"))
+
+# Snap the point and save it
+wbt_snap_pour_points(here("data/pour17N.shp"),here("data/flowAccumulation.tif"),here("data/pourSnap"),snap_dist = 200)
+```
+
+Here, we are creating the point, projecting it to match the coordinate system of our rasters, then saving a new shapefile called 'pourSnap.shp'. I use a snap distance of 200m
+]
+---
+### Let's see where it snapped too
+Here I color the original point red and the snapped point is the default purple
+
+```r
+snap &lt;- st_read(here("data/pourSnap.shp"))
+mapview(snap)+
+  mapview(pointSF17N, col.regions = 'red')
+```
+
+![](snap_result.png)
+---
+### Step 6: Watershed Delineation
+
+.big[
+We now have:
+  - A flow direction raster built from a corrected DEM
+  - A pour point correctly located along a stream network
+
+We're now ready to delineate the watershed:
+]
+The arguments here are: the floe direction raster, the pour point shapefile, and the output.
+
+```r
+wbt_watershed(here("data/flowDir.tif"),here("data/pourSnap.shp"),here("data/watershed.tif"))
+```
+
+---
+### The result is a raster of the watershed area:
+
+
+```r
+watershed &lt;- raster(here("data/watershed.tif"))
+mapview(watershed)
+```
+
+&lt;img src="delineated.png" width="600px" height="400px" /&gt;
+
+---
+### Mask the original DEM to the watershed you created
+
+.med[
+- The watershed you created is just a boundary, so let's use it to mask the orignal DEM (**the projected one!**)
+
+
+```r
+mask &lt;- mask(dem17N,watershed)
+plot(mask)
+```
 
 ]
-
----
-## Finding Pour Points
-
-- Pour points are the outlets of the watersheds you wish to delineate
-- Your pour point has to be exact, or else you could end up with tiny watersheds
-- We'll find a 
-
-
-
+&lt;img src="mask.jpg" width="600px" height="370px" /&gt;
 ---
 
-Watershed
+## Step 7: Make awesome 3D model of your watershed
+
+The [Rayshader](https://github.com/tylermorganwall/rayshader) package converts rasters into 3D models. This step is computationally intensive and you may need to use raster::aggregate to reduce the spatial resolution before you run it,
+
+The first step is to convert our raster to a matrix that rayshader can interpret:
+
+```r
+## If you need to reduce the resolution
+course &lt;- raster::aggregate(mask,20)
+
+## Convert to matrix
+elmat = raster_to_matrix(course)
+```
+
+---
+
+### Convert matrix to 3D model and export a movie
+
+Next, we convert the matrix to a 3D model and export it as a movie:
+
+```r
+elmat %&gt;%
+  sphere_shade(texture = "imhof1") %&gt;%
+  add_water(detect_water(elmat), color = "imhof1") %&gt;%
+  add_shadow(ray_shade(elmat, zscale = 3), 0.5) %&gt;%
+  add_shadow(ambient_shade(elmat), 0.5) %&gt;%
+  plot_3d(elmat, zscale = 10, fov = 0, theta = 135, zoom = 0.5, phi = 45, windowsize = c(1000, 800))
+Sys.sleep(0.2)
+render_movie(here("movie"))
+```
+
+For this block of code, you should only need to copy and paste it. The only argument you are inputting is 'elmat', which you defined in the previous chunk of code. The last line 'render_moview()' sets the output location of the movie file, which I will have the name 'movie.mp4'
+
+---
+## Embed your movie into your R-Markdown document:
+
+You can embed a video in your r markdown document using this html code:
+.pull-left[
+![](html.png)
+
+The code above will look for a movie called 'movie.mp4' in your project folder and will play it in a window with a height of 400 pixels and a width of 500 pixels. html code **DOES NOT** go inside of a code chunk, just type it in like you would regular text in the white area of your r-markdown document. 
+]
+.pull-right[
+
+&lt;video width="500" height="400" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+]
+---
+### What you need to submit:
+
+An r-Markdown (.rmd) **AND** an html (.html) document that shows the following:
+- Your code for each step
+- the resulting plots for each step
+  - Plot of the projected DEM (Step 1) - 10 pts
+  - Plot of the Filled DEM (Step 2) - 10 pts
+  - Plot of the Original DEM subtracted from the Filled DEM (Step 2) - 10 pts
+  - Plot of the Flow Direction Raster (Step 3) - 10 pts
+  - Plot of the Flow Accumulation Raster (Step 4) - 10 pts
+  - Map of your snapped pour point &amp; your selected pour point (1 map with 2 points) (Step 5) - 10 pts
+  - Plot of your projected raster masked to your watershed boundary - 20 pts
+  - movie of your watershed. - 20 pts
+  
+
+**IF** you are unable to succesfully embed your movie into the r-markdown document to get it to show up in your html document, you can submit the .mp4 file along with your other files.
+
+When you are finished, put your files into a zip file named YOURONYEN_Delineation.zip and upload it to SAKAI.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
