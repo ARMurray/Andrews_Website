@@ -8,8 +8,13 @@
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture1/</loc>
+    <loc>/courses/watershed/lecture01/</loc>
     <lastmod>2020-01-03T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,18 +28,13 @@
   </url>
   
   <url>
-    <loc>/courses/</loc>
-    <lastmod>2020-02-23T00:00:00+01:00</lastmod>
+    <loc>/courses/watershed/lecture10/</loc>
+    <lastmod>2020-03-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture9/</loc>
+    <loc>/courses/watershed/lecture09/</loc>
     <lastmod>2020-02-23T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
-    <lastmod>2020-02-21T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture8/</loc>
+    <loc>/courses/watershed/lecture08/</loc>
     <lastmod>2020-02-17T00:00:00+01:00</lastmod>
   </url>
   
@@ -68,7 +68,7 @@
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture7/</loc>
+    <loc>/courses/watershed/lecture07/</loc>
     <lastmod>2020-02-11T00:00:00+01:00</lastmod>
   </url>
   
@@ -88,12 +88,12 @@
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture5/</loc>
+    <loc>/courses/watershed/lecture05/</loc>
     <lastmod>2020-01-26T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture6/</loc>
+    <loc>/courses/watershed/lecture06/</loc>
     <lastmod>2020-01-26T00:00:00+01:00</lastmod>
   </url>
   
@@ -103,7 +103,7 @@
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture4/</loc>
+    <loc>/courses/watershed/lecture04/</loc>
     <lastmod>2020-01-21T00:00:00+01:00</lastmod>
   </url>
   
@@ -113,12 +113,12 @@
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture3/</loc>
+    <loc>/courses/watershed/lecture03/</loc>
     <lastmod>2020-01-15T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture2/</loc>
+    <loc>/courses/watershed/lecture02/</loc>
     <lastmod>2020-01-12T00:00:00+01:00</lastmod>
   </url>
   
@@ -293,11 +293,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
@@ -462,7 +457,20 @@
   </url>
   
   <url>
+    <loc>/post/2018-10-11-vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/courses/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
   </url>
   
 </urlset>

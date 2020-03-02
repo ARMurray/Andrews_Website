@@ -1,0 +1,31 @@
+---
+date: "2020-01-15T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 3
+menu:
+  watershed:
+    parent: lectures
+    weight: 20
+title: Lecture 3
+type: docs
+
+---
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_3_slides.html)
+
+If we have time we can take a look through [THIS](https://amurraygeo.com/slides/watershed/CountyWaterBudgets.html), which is a presentation a gave awhile ago looking at high level water budgets for US counties.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+- The water balance equation
+- Residence time
+- Runoff ratio
+- Observations
+- The watershed as the fundamental unit
+

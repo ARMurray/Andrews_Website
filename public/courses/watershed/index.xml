@@ -13,10 +13,10 @@
     
     <item>
       <title>Lecture 1</title>
-      <link>/courses/watershed/lecture1/</link>
+      <link>/courses/watershed/lecture01/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture1/</guid>
+      <guid>/courses/watershed/lecture01/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -71,11 +71,39 @@
     </item>
     
     <item>
+      <title>Groundwater Hydrology (Lecture 10)</title>
+      <link>/courses/watershed/lecture10/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/lecture10/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/lecture10/lecture_10_slides.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;material-elements-of-physical-hydrology-chapter-7&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Material: Elements of Physical Hydrology (Chapter 7)&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Outline:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Flow Nets and Natural Basin Yield&lt;/li&gt;
+&lt;li&gt;Regional Groundwater Flow&lt;/li&gt;
+&lt;li&gt;Well Hydrographs&lt;/li&gt;
+&lt;li&gt;Well Tests to Estimate Aquifer Properties&lt;/li&gt;
+&lt;li&gt;Contaminant Hydrogeology&lt;/li&gt;
+&lt;li&gt;Land Subsidence&lt;/li&gt;
+&lt;li&gt;Groundwater Recession&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Lecture 9</title>
-      <link>/courses/watershed/lecture9/</link>
+      <link>/courses/watershed/lecture09/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture9/</guid>
+      <guid>/courses/watershed/lecture09/</guid>
       <description>
 
 
@@ -94,10 +122,10 @@
     
     <item>
       <title>Lecture 8</title>
-      <link>/courses/watershed/lecture8/</link>
+      <link>/courses/watershed/lecture08/</link>
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture8/</guid>
+      <guid>/courses/watershed/lecture08/</guid>
       <description>
 
 
@@ -115,10 +143,10 @@
     
     <item>
       <title>Lecture 7</title>
-      <link>/courses/watershed/lecture7/</link>
+      <link>/courses/watershed/lecture07/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture7/</guid>
+      <guid>/courses/watershed/lecture07/</guid>
       <description>
 
 
@@ -1449,7 +1477,7 @@ annuals &amp;lt;- all_data%&amp;gt;%
     </item>
     
     <item>
-      <title>Friday (5)</title>
+      <title>Watershed Delineation in R</title>
       <link>/courses/watershed/friday_5/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0100</pubDate>
       
@@ -1458,6 +1486,15 @@ annuals &amp;lt;- all_data%&amp;gt;%
 
 
 &lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/watershed/RDay_5.html&#34;&gt;Slides are here!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This assignment covers how to use the ‘whitebox’ package to delineate a watershed from a DEM and export it as a 3D model using the ‘rayshader’ package.&lt;/p&gt;
+&lt;p&gt;Steps:
+- (1) Import Data
+- (2) Fill DEM
+- (3) Create Flow Direction Raster
+- (4) Create Flow Accumulation Raster
+- (5) Create and Snap Pour Point
+- (6) Delineate Watershed
+- (7) Make awesome 3D Watershed&lt;/p&gt;
 </description>
     </item>
     
@@ -1534,10 +1571,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 5</title>
-      <link>/courses/watershed/lecture5/</link>
+      <link>/courses/watershed/lecture05/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture5/</guid>
+      <guid>/courses/watershed/lecture05/</guid>
       <description>
 
 
@@ -1565,10 +1602,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 6</title>
-      <link>/courses/watershed/lecture6/</link>
+      <link>/courses/watershed/lecture06/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture6/</guid>
+      <guid>/courses/watershed/lecture06/</guid>
       <description>
 
 
@@ -1607,10 +1644,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 4</title>
-      <link>/courses/watershed/lecture4/</link>
+      <link>/courses/watershed/lecture04/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture4/</guid>
+      <guid>/courses/watershed/lecture04/</guid>
       <description>
 
 
@@ -1662,10 +1699,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 3</title>
-      <link>/courses/watershed/lecture3/</link>
+      <link>/courses/watershed/lecture03/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture3/</guid>
+      <guid>/courses/watershed/lecture03/</guid>
       <description>
 
 
@@ -1686,10 +1723,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 2</title>
-      <link>/courses/watershed/lecture2/</link>
+      <link>/courses/watershed/lecture02/</link>
       <pubDate>Sun, 12 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture2/</guid>
+      <guid>/courses/watershed/lecture02/</guid>
       <description>
 
 

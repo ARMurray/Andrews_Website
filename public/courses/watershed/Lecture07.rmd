@@ -1,0 +1,35 @@
+---
+date: "2020-02-11T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 7
+menu:
+  watershed:
+    parent: lectures
+    weight: 40
+title: Lecture 7
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_7_slides.html)
+
+## Material:
+
+- Hornberger Chapter 8 (Water in the Unsaturated Zone)
+
+## Outline
+
+- The [mostly] unsaturated zone
+- Evapotranspiration
+- Plants in the Water Cycle
+- Leaf Area Index
+- Transpiration – Stomatal Conductance
+- Observations
+

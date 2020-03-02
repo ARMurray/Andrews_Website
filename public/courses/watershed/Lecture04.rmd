@@ -1,0 +1,33 @@
+---
+date: "2020-01-21T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 4 
+menu:
+  watershed:
+    parent: lectures
+    weight: 25
+title: Lecture 4
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_4_slides.html)
+
+## Outline
+
+- Watersheds – continued
+- Additional considerations
+- Units
+- Observations of watershed area and watershed systems
+- Precipitation
+
+## Resources
+Hornberger Chapter 1 &2 + Appendix 1A
+

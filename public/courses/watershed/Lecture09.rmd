@@ -1,0 +1,28 @@
+---
+date: "2020-02-23T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 9
+menu:
+  watershed:
+    parent: lectures
+    weight: 50
+title: Lecture 9
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture9/lecture_9_slides.html)
+
+## Groundwater Hydraulics
+
+- Hornberger Chapter 6
+- Darcy's Law
+- Water in Natural Formations
+- Steady Groundwater Flow

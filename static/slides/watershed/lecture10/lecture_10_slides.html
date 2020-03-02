@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 10</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-03-02" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+.center[
+##Introduction to Watershed Systems:&lt;br&gt;Lecture 10
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.biggray[Groundwater Hydrology]
+]
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.center[
+.med[Andrew Murray | University of North Carolina - Chapel Hill]
+]
+
+---
+.center[
+## Who cares about groundwater???
+]
+.pull-left[
+.med[
+- Do you drink water? (Then you should care!)&lt;br&gt;
+.mb[
+Example: Mexico City:]
+  - 20 million people
+  - Aquifer is 100 - 500 m thick
+  - Declining at 1-1.5 m per year
+
+So... The aquifer will be dry somewhere between:
+
+```r
+paste0(round(100/1.5,1)," years and ", 500/1," years")
+```
+
+```
+## [1] "66.7 years and 500 years"
+```
+
+]]
+
+.pull-right[
+![](whocares.jpg)
+]
+---
+background-image: url(USAaquiferMAP.png)
+background-size: cover
+
+.center[.big[**Major Aquifers in the United States**]]
+
+???
+- The high plains aquifer is one of the most utilized aquifers in the united states
+
+20% of irrigated land in the U.S. is in the high plains and 30% of groundwater used for irrigation comes from the high plains aquifer
+
+- the high plains aquifer has declined 4 m between 1950 and 2009 and up to 45m in some places
+
+- declines in groundwater also mean higher energy use in order to pump water greater heights.
+
+- Global groundwater depletion is ~145.4 km&lt;sup&gt;3&lt;/sup&gt; (30% of the volume of lake Erie)
+---
+##Flow Nets and Natural Basin Yield
+.pull-left[
+.med[
+- We construct flow nets to model steady flow in groundwater
+
+- The figure to the right shows a 'curvelinear square' bounded by lines of equipotential and stream lines.
+
+- Discharge in = Discharge out and water cannot cross streamlines
+
+- We use a combination of the conservation of mass and Darcy's law to estimate flow
+]]
+.pull-right[
+![](FIG7_1.gif)
+
+**Figure 7.1** Definition sketch for the derivation of the steady groundwater flow equation
+]
+---
+## Flow Nets and Natural Basin Yield
+.pull-left[
+![](FIG7_2.gif)
+
+**Figure 7.2** The natural pattern of groundwater flow in a simple basin (a). Equipotentials are gray and streamlines are blue. Recharge and discharge areas may be distinguished by looking at the angle that an equipotential makes with the water table (b).
+]
+
+.pull-right[
+.med[Recall that areas where water moves downward through the unsaturated zone are areas of recharge and areas where water moves up and out of the ground are areas of discharge
+
+- Remember this is because the **potentiometric surface** (The height to which water rises) may start below the surface and move above the surface.
+
+- Areas of discharge / where the potentiometric surface is above ground are where you would find a stream.
+]]
+---
+## Flow Nets and Natural Basin Yield
+.pull-left[
+.med[Take a moment to **really look** at this plot
+
+- At the location of the piezometer, the **elevation head** is 20m
+
+**BUT**
+- The **hydraulic head** at that point is 40m because it intersects the 40m line of equipotential
+
+**SO...**
+
+- The **pressure head**, which is `\(p/pg=h-z\)`, is 20m
+
+.med[]
+]]
+.pull-right[&lt;br&gt;&lt;br&gt;
+![](FIG7_3.gif)
+
+**Figure 7.3** The hydraulic head along any equipotential is equal to the elevation of its intersection with the water table.
+]
+
+---
+## Flow Nets and Natural Basin Yield
+
+.med[ So let's bring this back to two examples...]
+.pull-left[
+![](FIG7_2a.png)
+
+- The length of the basin is 100m
+- The height of the hill on the right side is 30m
+- The difference in hydraulic head betweeen equpotentials is .5m
+- The hydraulic conductivity is 0.5m per day
+- We will use a value of 1 for `\(b\)`, which is basin width
+]
+
+.pull-right[
+The equation for specific discharge:
+
+`\(Q_{s}=Kbdh\)`
+
+Apply it to this hillslope:
+
+`\((0.5m/day^{-1})(1m)(0.5m)=0.25m^{3}day^{-1}\)`
+
+**But Wait...** Remember that we are only calculating for 1 streamtube here, so we need to multiply by the number of streamtubes which is based on the interval of lines of equipotential:
+
+There are 4 streamtubes so we multiply by 4!
+
+`\(0.25m^{3}*4=1m^{3}day^{-1}\)`
+]
+???
+- So the basin width is basically adding a 3rd dimension. if the basin was 500m wide we would just multiply by 500
+---
+## Let's run through an example:
+.pull-left[
+![](FIG6_11.gif)
+
+Formula: `\(Q_{S}=Kbdh\)`
+
+Conductivity of the soil is `\(10^{-10}m s^{-1}\)` (K)&lt;br&gt;
+Distance from one side to the other: `\(100m\)` (b)&lt;br&gt;
+Contour Interval for Hydraulic Head: `\(2m\)` (dh)
+]
+
+.pull-right[
+
+```r
+K &lt;- 10^-10
+b &lt;- 100
+dh &lt;- 2
+Qs &lt;- K*b*dh
+Qs
+```
+
+```
+## [1] 2e-08
+```
+
+Mulitply by `\(3\)` because that's how many streamtubes we have:
+
+```r
+paste0("Discharge is: ",Qs*3," m^3 s^-1")
+```
+
+```
+## [1] "Discharge is: 6e-08 m^3 s^-1"
+```
+
+
+```r
+paste0("Discharge is: ",Qs*3*31536000," m^3 y^-1")
+```
+
+```
+## [1] "Discharge is: 1.89216 m^3 y^-1"
+```
+]
+---
+## Regional Groundwater Flow
+.pull-left[
+![](FIG7_4.gif)
+
+**Figure 7.4** The effect of basin aspect ratio (lenght to depth) on natural patterns of groundwater flow. The water-table profile is the same for the shallow (a) and deep (b) basins.
+]
+.pull-right[
+.med[
+As you might suspect, groundwater flow may depend on the shape of an aquifer.
+
+a large **aspect ratio** means that the basin is wide and shallow, so a deep basin that is narrow would have a small aspect ratio.
+
+- There is one flaw worth pointing out, which is that soil is more likely to be porpous and less compacted at the surface and less porous and compacted as you descend deeper into the aquifer
+]]
+
+---
+### The Effects of Water-Table Topography
+.pull-left[
+![](FIG7_5.gif)
+
+**Figure 7.5** Regional groundwater flow patterns for the case of local water-table topography. The dashed boxes indicate an individual local flow system. The same equipotential spacing (dh) of 0.003L is used for both the large(a) and small (b) basin aspect ratios.
+]
+.pull-right[
+.med[
+Surface topography plays a critical role in water table topography as it provides much of the elevation head driving localized hydraulic gradients.
+
+- A **local flow system** is where water flows from a topographic high to an adjacent low
+
+- Likewise, a **regional flow system** occurs between a regional (non-adjacent) high and low
+]]
+---
+## Regional Groundwater Flow
+.pull-left[
+.med[
+- If local relief is negligible, but a regional water-table slope exists, only a regional flow system will develop.
+
+- Conversely, if local hill-and-valley topography exists, but no regional slope, only local flow systems will develop.
+
+- If both local and regional topography exists in a basin, all three types of flow systems (local, intermediate, and regional) will develop. As a result, precipitation infiltrating on a hilltop may eventually discharge at an adjacent low or follow a longer flow path toward a regional flow point.
+]
+]
+.pull-right[
+![](FIG7_6.gif)
+
+**Figure 7.6** Groundwater flow patterns for the case of combines regional and local water-table topography. Streamtubes labeled "L," "I," and "R" indicate the local, intermediate, and regional flow systems, respectively. The same equipotential spacing (dh) of 0.003L is used for both the large (a) and small (b) basin aspect ratios.
+]
+---
+### The Impact of Geology
+.pull-left[
+![](FIG7_8.gif)
+
+**Figure 7.8**
+]
+.pull-right[
+.med[
+- So far we have been looking at homogenous aquifers with a known bottom, but geology can really complicate things
+
+- An aquifer at depth speeds up flow due to an increase in conductivity
+
+- An aquitard at depth essentially removes streamtubes and restricts discharge.
+
+- A discontinuous aquifer alters streamtube shape and complicates discharge estimates.
+]]
+---
+## Water Wells Help Inform Us
+.pull-left[
+.med[
+What influences recharge?
+- Precipitation
+- Topography
+- Vegetation
+- Anything else?
+
+When the water table is close to the surface, what sort of effects can plants have on daily and/or seasonal trends in the water table?
+]
+]
+.pull-right[
+![](FIG7_9.gif)
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

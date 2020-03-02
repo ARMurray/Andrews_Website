@@ -1,0 +1,32 @@
+---
+date: "2020-03-01T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 10
+menu:
+  watershed:
+    parent: lectures
+    weight: 60
+title: Groundwater Hydrology (Lecture 10)
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture10/lecture_10_slides.html)
+
+### Material: Elements of Physical Hydrology (Chapter 7)
+
+## Outline:
+- Flow Nets and Natural Basin Yield
+- Regional Groundwater Flow
+- Well Hydrographs
+- Well Tests to Estimate Aquifer Properties
+- Contaminant Hydrogeology
+- Land Subsidence
+- Groundwater Recession

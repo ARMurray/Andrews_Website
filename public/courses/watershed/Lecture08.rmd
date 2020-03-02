@@ -1,0 +1,23 @@
+---
+date: "2020-02-17T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Lecture 8
+menu:
+  watershed:
+    parent: lectures
+    weight: 45
+title: Lecture 8
+type: docs
+
+---
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture_8_slides.html)
+
+## Ecohydrology: Interactions between Hydrological Process and the Biota
+
+- Chapter 9
+- Hydrologic Controls on Plants and Soil Microorganisms
+- Biotic Controls on Hydrological Processes
