@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Friday (6) - Groundwater Mapping</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-03-06" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+.center[
+.big[&lt;br&gt;
+Introduction to Watershed Systems&lt;br&gt;&lt;br&gt;
+
+R-Day #6:&lt;br&gt; Groundwater Mapping
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+Andrew Murray | University of North Carolina - Chapel Hill
+]
+---
+## Mapping of the Water Table / Potentiometric Surface
+
+.pull-left[
+Packages you'll need for this work:
+
+```r
+library(here)
+library(sf)
+library(dataRetrieval)
+library(mapview)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gstat)
+library(sp)
+```
+
+]
+.pull-right[
+Data you'll need for this work:
+
+I have provided a shapefile of all of the USGS groundwater sites with at least 5,000 daily observations. Import the shapefile and map it:
+
+[Download Here](https://drive.google.com/file/d/1BkHLWmPSz6muKdl7KZZOlM4Ci32RH8NT/view?usp=sharing)
+
+
+```
+## Reading layer `NWISMapperExport' from data source `C:\Users\HP\OneDrive - University of North Carolina at Chapel Hill\Geog_441\Homework Assignments\Groundwater\data\NWISMapperExport.shp' using driver `ESRI Shapefile'
+## Simple feature collection with 1647 features and 7 fields
+## geometry type:  POINT
+## dimension:      XY
+## bbox:           xmin: -149.5964 ymin: 17.70497 xmax: -64.77875 ymax: 64.90901
+## epsg (SRID):    4269
+## proj4string:    +proj=longlat +datum=NAD83 +no_defs
+```
+
+
+```r
+shp &lt;- st_read(here::here("data/NWISMapperExport.shp"))%&gt;%
+  mutate(LONGDD = as.numeric(as.character(LONGDD)),
+         LATDD = as.numeric(as.character(LATDD)))
+```
+]
+---
+
+```r
+mapview(shp)%&gt;%
+  addMouseCoordinates()
+```
+
+---
+## Let's narrow down the sites to a cluster in Albany, Georgia
+
+```r
+xmin &lt;- -85.28
+xmax &lt;- -83.0
+ymin &lt;- 30.53
+ymax &lt;- 32.14
+
+albany &lt;- shp%&gt;%
+  dplyr::filter(LONGDD &gt; -85.28 &amp; LONGDD &lt; -83.0 &amp; LATDD &gt; 30.53 &amp; LATDD &lt; 32.14)
+```
+
+All we're doing here is filtering based on lat and lon
+
+---
+
+## Use these stations to download data from USGS
+
+Now that we have filtered to a specific area, let's download the data using the site numbers.
+
+- The readNWISgwl() function from the dataRetrieval package is what we use here
+
+
+```r
+siteNumbers &lt;- albany$SITENO
+groundWater &lt;- readNWISgwl(siteNumbers)
+```
+
+---
+
+## Let's take a look at the data we have now
+
+```r
+ggplot(groundWater)+
+  geom_line(aes(x=lev_dt,y=lev_va,group=site_no, color = site_no))+
+  theme(legend.position = "none") 
+```
+
+```
+## Warning: Removed 1 rows containing missing values (geom_path).
+```
+
+![](Rday_6_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+---
+# Checking Aquifer Codes
+There is some SERIOUS variation here, which probably means we're dealing with wells drilled into different aquifers. We can use the siteInfo attribute to check this
+
+```r
+siteInfo &lt;- attr(groundWater, "siteInfo")
+table(siteInfo$aqfr_cd)
+```
+
+```
+## 
+##  110SFCL 120FLRDU  124CLBR  125CLTN  211PVDC 
+##        4       37       12       12        1
+```
+
+We see from the table above that there are five different aquifers in this dataset. Let's focus on the one with the most sites. We'll get the site numbers from the siteInfo we just created and create a new dataset. We'll also take this opportunity to trim the data, keeping only records after 1985
+
+```r
+flrdu &lt;- siteInfo%&gt;%
+  dplyr::filter(aqfr_cd == "120FLRDU")
+
+sites &lt;- flrdu[,'site_no']
+
+flrduGW &lt;- readNWISgwl(sites)%&gt;%
+  dplyr::filter('lev_dt' &gt; "1985-01-01")%&gt;%
+  dplyr::select('site_no','lev_dt','lev_va')%&gt;%
+  drop_na()
+```
+
+---
+
+# But wait, what about elevation?
+We need to adjust water depth by elevation of the well
+
+```r
+siteElev &lt;- flrdu%&gt;%
+  dplyr::select('site_no','alt_va')
+
+flrduGW &lt;- flrduGW%&gt;%
+  left_join(siteElev)
+```
+
+```
+## Joining, by = "site_no"
+```
+
+```r
+flrduGW$lev_adj &lt;- flrduGW$alt_va-flrduGW$lev_va
+```
+
+---
+Let's take another look
+
+```r
+ggplot(flrduGW)+
+  geom_line(aes(x=lev_dt,y=lev_adj,group=site_no, color = site_no))+
+  theme(legend.position = "none")+
+  labs(x = "Year", y = "Depth in Feet")
+```
+
+![](Rday_6_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+## Surface Interpolation
+We need to interpolate the 'spatial surface' to estimate the water table height. To do this we need to make this data spatial. We can do this by joining the groundwater data back to our sf points for the Albany area
+
+```r
+gwSF &lt;- right_join(albany,flrduGW, by=c("SITENO"="site_no"))
+```
+
+```
+## Warning: Column `SITENO`/`site_no` joining factor and character vector, coercing
+## into character vector
+```
+---
+## Let's take one day and interpolate the surface
+
+```r
+library(gstat) # Use gstat's idw routine
+library(sp)    # Used for the spsample function
+
+oneDay &lt;- gwSF%&gt;%
+  dplyr::filter(lev_dt == "2010-05-23")
+
+gwSP &lt;- as(oneDay, Class = "Spatial")
+
+# Create an empty grid where n is the total number of cells
+grd              &lt;- as.data.frame(spsample(gwSP, "regular", n=5000))
+names(grd)       &lt;- c("X", "Y")
+coordinates(grd) &lt;- c("X", "Y")
+gridded(grd)     &lt;- TRUE  # Create SpatialPixel object
+fullgrid(grd)    &lt;- TRUE  # Create SpatialGrid object
+
+# Add P's projection information to the empty grid
+proj4string(grd) &lt;- proj4string(gwSP)
+
+# Interpolate the grid cells using a power value of 2 (idp=2.0)
+P.idw &lt;- gstat::idw(lev_adj ~ 1, gwSP, newdata=grd, idp=2.0)
+```
+
+```
+## [inverse distance weighted interpolation]
+```
+
+---
+
+## Plot the Raster
+.pull-left[
+
+```r
+# Convert to raster object
+r       &lt;- raster(P.idw)
+
+# Plot
+tm_shape(r) + 
+  tm_raster(n=10,palette = "-RdBu", auto.palette.mapping = FALSE,
+            title="Depth to Water \n(in Feet)")+
+  tm_legend(legend.outside=TRUE)+
+  tm_shape(albany)+
+  tm_symbols()+
+  tm_scale_bar()
+```
+]
+.pull-right[
+
+```
+## Warning: The argument auto.palette.mapping is deprecated. Please use midpoint
+## for numeric data and stretch.palette for categorical data to control the palette
+## mapping.
+```
+
+![](Rday_6_files/figure-html/plot2-1.png)&lt;!-- --&gt;
+]
+
+---
+## Converting to ggplot contours
+Here, we take the raster and convert it to a datafram that ggplot will be able to interperate
+
+```r
+df &lt;- as.data.frame(r, xy=TRUE)
+
+ggplot(df)+
+  geom_contour(aes(x=x, y=y, z=var1.pred))
+```
+
+![](Rday_6_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

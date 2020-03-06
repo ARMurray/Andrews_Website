@@ -1,0 +1,237 @@
+---
+title: "Friday (6) - Groundwater Mapping"
+author: "Andrew Murray"
+date: 'March 6, 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(sf)
+library(dataRetrieval)
+library(mapview)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gstat)
+library(sp)
+library(raster)
+library(tmap)
+```
+
+.center[
+.big[<br>
+Introduction to Watershed Systems<br><br>
+
+R-Day #6:<br> Groundwater Mapping
+]
+<br><br><br>
+Andrew Murray | University of North Carolina - Chapel Hill
+]
+---
+## Mapping of the Water Table / Potentiometric Surface
+
+.pull-left[
+Packages you'll need for this work:
+```{r eval=FALSE}
+library(here)
+library(sf)
+library(dataRetrieval)
+library(mapview)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gstat)
+library(sp)
+```
+
+]
+.pull-right[
+Data you'll need for this work:
+
+I have provided a shapefile of all of the USGS groundwater sites with at least 5,000 daily observations. Import the shapefile and map it:
+
+[Download Here](https://drive.google.com/file/d/1BkHLWmPSz6muKdl7KZZOlM4Ci32RH8NT/view?usp=sharing)
+
+```{r realData, echo=FALSE,message=FALSE,warning=FALSE}
+shp <- st_read("C:/Users/HP/OneDrive - University of North Carolina at Chapel Hill/Geog_441/Homework Assignments/Groundwater/data/NWISMapperExport.shp")%>%
+  mutate(LONGDD = as.numeric(as.character(LONGDD)),
+         LATDD = as.numeric(as.character(LATDD)))
+```
+
+```{r ptsImport, eval=FALSE}
+shp <- st_read(here::here("data/NWISMapperExport.shp"))%>%
+  mutate(LONGDD = as.numeric(as.character(LONGDD)),
+         LATDD = as.numeric(as.character(LATDD)))
+```
+]
+---
+```{r ptsMap, eval=FALSE}
+mapview(shp)%>%
+  addMouseCoordinates()
+```
+
+---
+## Let's narrow down the sites to a cluster in Albany, Georgia
+```{r filt1}
+xmin <- -85.28
+xmax <- -83.0
+ymin <- 30.53
+ymax <- 32.14
+
+albany <- shp%>%
+  dplyr::filter(LONGDD > -85.28 & LONGDD < -83.0 & LATDD > 30.53 & LATDD < 32.14)
+```
+
+All we're doing here is filtering based on lat and lon
+
+---
+
+## Use these stations to download data from USGS
+
+Now that we have filtered to a specific area, let's download the data using the site numbers.
+
+- The readNWISgwl() function from the dataRetrieval package is what we use here
+
+```{r download1}
+siteNumbers <- albany$SITENO
+groundWater <- readNWISgwl(siteNumbers)
+```
+
+---
+
+## Let's take a look at the data we have now
+```{r}
+ggplot(groundWater)+
+  geom_line(aes(x=lev_dt,y=lev_va,group=site_no, color = site_no))+
+  theme(legend.position = "none") 
+```
+
+---
+# Checking Aquifer Codes
+There is some SERIOUS variation here, which probably means we're dealing with wells drilled into different aquifers. We can use the siteInfo attribute to check this
+```{r}
+siteInfo <- attr(groundWater, "siteInfo")
+table(siteInfo$aqfr_cd)
+```
+
+We see from the table above that there are five different aquifers in this dataset. Let's focus on the one with the most sites. We'll get the site numbers from the siteInfo we just created and create a new dataset. We'll also take this opportunity to trim the data, keeping only records after 1985
+```{r filt2, message=FALSE, warning=FALSE}
+flrdu <- siteInfo%>%
+  dplyr::filter(aqfr_cd == "120FLRDU")
+
+sites <- flrdu[,'site_no']
+
+flrduGW <- readNWISgwl(sites)%>%
+  dplyr::filter('lev_dt' > "1985-01-01")%>%
+  dplyr::select('site_no','lev_dt','lev_va')%>%
+  drop_na()
+```
+
+---
+
+# But wait, what about elevation?
+We need to adjust water depth by elevation of the well
+```{r}
+siteElev <- flrdu%>%
+  dplyr::select('site_no','alt_va')
+
+flrduGW <- flrduGW%>%
+  left_join(siteElev)
+
+flrduGW$lev_adj <- flrduGW$alt_va-flrduGW$lev_va
+```
+
+---
+Let's take another look
+```{r}
+ggplot(flrduGW)+
+  geom_line(aes(x=lev_dt,y=lev_adj,group=site_no, color = site_no))+
+  theme(legend.position = "none")+
+  labs(x = "Year", y = "Depth in Feet")
+```
+
+---
+## Surface Interpolation
+We need to interpolate the 'spatial surface' to estimate the water table height. To do this we need to make this data spatial. We can do this by joining the groundwater data back to our sf points for the Albany area
+```{r}
+gwSF <- right_join(albany,flrduGW, by=c("SITENO"="site_no"))
+```
+---
+## Let's take one day and interpolate the surface
+```{r}
+library(gstat) # Use gstat's idw routine
+library(sp)    # Used for the spsample function
+
+oneDay <- gwSF%>%
+  dplyr::filter(lev_dt == "2010-05-23")
+
+gwSP <- as(oneDay, Class = "Spatial")
+
+# Create an empty grid where n is the total number of cells
+grd              <- as.data.frame(spsample(gwSP, "regular", n=5000))
+names(grd)       <- c("X", "Y")
+coordinates(grd) <- c("X", "Y")
+gridded(grd)     <- TRUE  # Create SpatialPixel object
+fullgrid(grd)    <- TRUE  # Create SpatialGrid object
+
+# Add P's projection information to the empty grid
+proj4string(grd) <- proj4string(gwSP)
+
+# Interpolate the grid cells using a power value of 2 (idp=2.0)
+P.idw <- gstat::idw(lev_adj ~ 1, gwSP, newdata=grd, idp=2.0)
+```
+
+---
+
+## Plot the Raster
+.pull-left[
+```{r plot, eval=FALSE}
+# Convert to raster object
+r       <- raster(P.idw)
+
+# Plot
+tm_shape(r) + 
+  tm_raster(n=10,palette = "-RdBu", auto.palette.mapping = FALSE,
+            title="Depth to Water \n(in Feet)")+
+  tm_legend(legend.outside=TRUE)+
+  tm_shape(albany)+
+  tm_symbols()+
+  tm_scale_bar()
+```
+]
+.pull-right[
+```{r plot2, echo=FALSE}
+# Convert to raster object
+r <- raster(P.idw)
+
+# Plot
+tm_shape(r) + 
+  tm_raster(n=10,palette = "-RdBu", auto.palette.mapping = FALSE,
+            title="Depth to Water \n(in Feet)")+
+  tm_legend(legend.outside=TRUE)+
+  tm_shape(albany)+
+  tm_symbols()+
+  tm_scale_bar()
+```
+]
+
+---
+## Converting to ggplot contours
+Here, we take the raster and convert it to a datafram that ggplot will be able to interperate
+```{r}
+df <- as.data.frame(r, xy=TRUE)
+
+ggplot(df)+
+  geom_contour(aes(x=x, y=y, z=var1.pred))
+```

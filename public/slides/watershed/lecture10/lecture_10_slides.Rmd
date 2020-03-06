@@ -263,3 +263,206 @@ When the water table is close to the surface, what sort of effects can plants ha
 .pull-right[
 ![](FIG7_9.gif)
 ]
+---
+.pull-left[
+### We Expect Different Behaviors in Wells from Confined and Unconfined Aquifers
+
+
+.big[Unconfined Aquifers:]
+.med[
+- In an unconfined aquifer the height of the water in the well should be equal to the water table
+- May exhibit daily behaviors but will more likely show seasonal variability
+  - Could be due to precipitation regimes or the impacts of (or lack of) evapotranspiration.
+- If the water table is really close to the surface, you may see daily changes as transpirational demands directly drive local water table height.
+]]
+.pull-right[
+.mb[Recharge Happens as a Result of:]
+- Infiltration from the surface
+- Seepage from lakes and rivers
+- Artifical Recharge<br><br>
+![](recharge.jpg)
+Credit: Andy Fisher
+]
+
+???
+This could also be affected by wether or not the ground freezes.
+---
+## Water Content in an Unconfined Aquifer
+.pull-left[
+![](FIG7_11.gif)
+
+.mb[
+**Specific Yield: ** The volume of water that is lost from the aquifer from a $1m$ drop in an area of $1m^{2}$
+]]
+
+.pull-right[
+.med[
+Consider the figure to the left and think about how water moves through the ground.
+
+- In a cubic meter of soil, there cannot be a cubic meter of water ... that would be a pond!
+
+So how much water is an a cubic meter of soil?
+- Is it equal to the pore space?
+  - No!
+
+There are forces of adhesion at work within the pore space, so as the water table drops, the soil above the water table does not become immediately 100% dry.
+
+]]
+---
+
+##The specific yield determines the response of the water table to changes in inputs and outputs:
+
+.mb[
+- Evapotranspiration may affect the position of the water table uniformly over an area.
+- Wells on the other hand have affects at specific points.]
+.pull-left[.med[
+**Drawdown: **The change in water level as a result of pumping through a well
+
+**Cone of Depression: **The pattern surrounding a well during drawdown.
+]]
+.pull-right[
+.center[
+.mb[
+$V_{cone}=\frac{V_{pumped}}{S_{y}}$
+]
+
+Volume of the cone of depression = the volume pumped divided by the specific yield
+]]
+---
+## So What about Confined Aquifers?
+.pull-left[
+.med[
+Remember the **potentiometric surface...**
+- In a confined aquifer, you have to consider pressure.
+- This means when you remove water from an unconfined aquifer
+  - You are lowering the potentiometric surface, but not necesarrily below the confining layer.
+  - Therefore the aquifer is still saturated... the actual water level has not decreased. You are only reducing the water pressure within the confined aquifer.
+]]
+.pull-right[
+![](FIG7_12.gif)
+
+**Figure 7.12** The storativity of a confined aquifer. For a 1-m decline in the potentiometric surface, the volume of water produced per unit aquifer area is the storativity, S. The aquifer material is not drained and remains saturated.
+]
+---
+## So What about Confined Aquifers?
+.pull-left[
+.med[
+**Storativity: ** The volume of water produced per unit aquifer area per unit decline in the potentiometric surface
+
+**Total Stress: ** The downward force on an object by the overlying layer divided by the area of the plane.
+
+**Effective Stress: **The upward pressure of the aquifer solids + the water pressure
+
+The stresses **MUST** cancel out, otherwise movement would occur.
+]]
+.pull-right[
+![](FIG7_12.gif)
+
+**Figure 7.12** The storativity of a confined aquifer. For a 1-m decline in the potentiometric surface, the volume of water produced per unit aquifer area is the storativity, S. The aquifer material is not drained and remains saturated.
+]
+
+???
+But wait... how can you remove water from an unoncfined aquifer and not see the water level decrease? You can't compress water.... so what is happening?
+---
+.mb[
+In general, because water and aquifer materials are not easily compressible, storativity < specific yield
+
+**Storativity** ranges from 0.005 - 0.00005
+
+**Specific Yield** ranges from 0.01 - 0.30
+
+Remember these values are 'unitless' so you can almost think of them as percent.
+- For an unconfined aquifer with an area of $1m^{2}$ that drops $1m$, that means you would have a specific yield of between .01 and .03 $m^{3}$
+]
+.med[
+A **leaky** aquifer occurs in a semi-confined aquifer. This is where bounding aquitards contribute additional water which may increase storativity.
+]
+---
+.center[
+### Differences Between Confined and Unconfined Aquifer<br>Response to Well Pumping
+]
+.pull-left[
+![](FIG7_14.gif)
+
+]
+.pull-right[
+**Figure 7.14** The cone of depression in an unconfined **(a)** and confined **(b)** aquifer. The wells are being pumped at a constant rate ( $Q_{p}$ ), and hydraulic heads are being monitored at two piezometers at radial distances $r_{1}$ and $r_{2}$ from the pumping well
+
+Because **specific yield > storativity**, the effects of pumping from a confined and unconfinedd aquifer at the same rate are different. 
+
+- Removing the same amount of water from these two aquifers results in greater lowering of the potentiometric surface than the water table.
+
+- Notice how the wells are drilled into the confined aquifer. The wells are sealed off from the unconfined aquifer, which means the water level in the weell may be different than the water table.
+]
+???
+Atmospheric pressure can exert forces onto the water table.
+
+- In an unonfined aquifer, the pressure is exerted uniformly over the aquifer so water level does not change and water is only slightly compressible.
+
+- In a confined aquifer, atmospheric pressure can actually change the water level inside of a well as the pressure is not exerted over the confined portion of the aquifer.
+---
+## Testing Properties of Aquifers Over Space
+.pull-left[
+![](FIG7_16.jpg)
+
+**Figure 7.16** Map of the potentiometric surface around a groundwater pumping center in Maryland, United States. Contours are feet relative to mean sea level. (Original level was approximately 10 feet above mean sea level.)
+]
+.pull-right[
+.med[<br><br><br>
+.mb[Using a lot of Wells:]
+
+Here, we can see an example of a pumping station, which is withdrawing large amounts of water from an unconfined aquifer. We can see how large of an impact there is around the Washington D.C. area.
+]]
+---
+.pull-left[
+## Using one well:
+.mb[**Slug Test:**]
+.med[
+In a slug test, you pump a bunch of water out of a well really fast and time how long it takes to come back to normal levels.
+
+$Q=2\pi rLK\frac{dh}{dr}$
+
+Q is flow into the well, r is the radius of the well, L is the length of the screened portion of the well, K is the hydraulic conductivity
+
+
+r can vary betweeen $R$ and $R_{e}$ which would be $dh$
+
+]]
+.pull-right[
+![](FIG7_17.jpg)
+
+**Figure 7.17** Schematic for slug test. $R_{e}$ is the radial distance beyond which the perturbation by the slug has no effect. Note that the right side of the figure depicts conditions initially, before the slug is removed, and the left side depicts conditions that evolve through time after the slug test is initiated.
+]
+---
+
+.pull-left[
+
+.mb[**Measuring the Return of Water**]
+![](FIG7_18.jpg)
+
+**Figure 7.18** Slug test results for a well near Oyster, Virginia, USA
+]
+.pull-right[
+.mb[**Measuring Drawdown**]
+![](FIG7_19.jpg)
+
+**Figure 7.19** Pumping test results for the Madhupur aquifer in Kapasia, Bangladesh, for the Cooper-Jacob method.
+]
+---
+## Considering Subsidence 
+.pull-left[
+![](FIG7_22.gif)
+
+**Figure 7.22** Land Subsidence in Mexico City.
+]
+.pull-right[
+.med[
+Think about subsidence in the context of dewatering...
+
+- When water is removed, the effective pressure from the water upward on the overlying surface decreases.
+- This increases the downward pressure onto the aquifer leading to compression
+- Thus the land surface actually lowers in elevation
+- Long term studies need to consider changes in surface elvation and aquifer depth.
+  - K values may also change with commpaction.
+]
+]
