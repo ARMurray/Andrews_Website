@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/plotly-binding-4.9.2/plotly.js"></script>
+    <script src="libs/typedarray-0.1/typedarray.min.js"></script>
+    <script src="libs/jquery-1.11.3/jquery.min.js"></script>
+    <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+    <link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: inverse, center, middle
+background-image: url('HurricaneSpace.png')
+background-size: cover
+
+# Coupling Surface-Groundwater Connectivity and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products.
+
+
+&lt;br&gt;
+.large[&lt;br&gt;&lt;br&gt;&lt;br&gt;Andrew Murray | University of North Carolina - Chapel Hill]
+
+???
+
+Hello to all of you hopefully future colleagues. My name is Andrew Murray, I'm a 3rd year PhD student here in the department and I'm excited share just a little bit of my research with you today. As you can see from the title here, we're talking about about the effects of extreme precipitation on connectivity and how we measure it using remote sensing. 
+---
+exclude: true
+
+
+
+
+---
+&lt;video width="100%" height="100%" controls id="my_video"&gt;
+    &lt;source src="/mp4/florenceSmall.mp4" type="video/mp4" preload&gt;
+&lt;/video&gt;
+
+???
+Now , connectivity is just what hydrologists call it when the soil becomes saturated and surface water begins to intermingle with groundwater, which is what happens when we have bad floods. Here is an extreme example of connectivity from Hurricane Florence. This is a video I took myself just down the street in Chapel Hill. But these systems can connect without serious flooding too... maybe there isn't any noticable flooding at all. I care about this because when surface and groundwater become connected, like they do after extreme rainfall, contaminants on the surface can mobilize and move into groundwater. Think of things like gasoline, or industrial waste, or even agricultural runoff from factory farms. Depending where you are, the contaminants change. 
+
+- Cyclones can have devastating impacts in various ways
+  - Wind
+  - Water
+  - Homelessness
+  - Food Security
+  - Sickness
+
+---
+
+## .center[Tropical Cyclones in the United States since 2015]
+
+.pull-left[
+&lt;table class="table" style="font-size: 17px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Name &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Landfall &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Max Cat &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Name &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Landfall &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Max Cat &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ana &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2015-05-10 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Irma &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2017-09-10 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Bill &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2015-06-16 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TD &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Emily &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2017-07-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Bonnie &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2016-05-29 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Alberto &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2018-05-28 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Colin &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2016-06-07 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Gordon &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2018-09-04 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hermine &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2016-09-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Florence &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2018-09-14 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Julia &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2016-09-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Michael &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2018-08-10 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Matthew &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2016-10-07 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Barry &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2019-07-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Harvey &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2017-08-25 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Imelda &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2019-09-17 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Cindy &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2017-06-22 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Nestor &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2019-10-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; TS &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nate &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2017-10-08 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dorian &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2019-09-06 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; H5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+![Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.](max_ppt.png)
+Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.
+
+]
+
+???
+So what do I mean by 'extreme precipitation'? Well, there are many definitions and it depends on who you ask, but for my work, I'm focusing on tropical cyclones that have made landfall in the United States since 2015. The reason for stopping at 2015 is because that was the year the satellite I'm using was launched. Check out the table on the left. It may surprise some of you to see that the southeastern United States has been hit by twenty tropical cyclones since 2015. Most folks only focus on the really devestating hurricanes like Matthew, Harvey, Florence etc... but the truth is that we get hit by these storms all the time and they can have significant impacts on all sorts of things from public health to food supply through crop yields. This map on the right side of your screen shows the maximum amount of rainfall experienced by a single tropical cyclone since 2015 greater than 100mm, which is about 4 inches. The areas of brightest pink saw more than 20" of rainfall in a single event! Notice that landfalls range from May to late October, which is important because depending on the time of year, the landscape wil react differently to receiving this amount of rain.
+
+---
+## .center[Cyclone Precipitation a Function of Wind speed?]
+
+.pull-left[
+####&lt;br&gt; - There is no correlation between storm wind speed and either rainfall distribution or intensity
+
+####&lt;br&gt; - Try to predict **max** rainfall from wind speed at landfall: `\(p = .25\)` / `\(r^{2}=.019\)`
+
+####&lt;br&gt; - Try to predict **mean** rainfall from wind speed at landfall: `\(p=.06\)` / `\(r^{2}=.065\)`
+
+]
+
+
+
+.pull-right[
+&lt;div class="figure"&gt;
+<div id="htmlwidget-b051349bed0adcaea4a8" style="width:504px;height:350px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b051349bed0adcaea4a8">{"x":{"visdat":{"b34158740ed":["function () ","plotlyVisDat"]},"cur_data":"b34158740ed","attrs":{"b34158740ed":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"scatter","mode":"markers","marker":{"line":{"color":"rgb(0, 0, 0)","width":2}},"color":{},"colors":["#00FF00","#14FF00","#29FF00","#3EFF00","#53FF00","#68FF00","#7CFF00","#91FF00","#A6FF00","#BBFF00","#D0FF00","#E4FF00","#F9FF00","#FFF900","#FFF200","#FFEA00","#FFE300","#FFDC00","#FFD400","#FFCD00","#FFC600","#FFBE00","#FFB700","#FFB000","#FFA800","#FF9E00","#FF9000","#FF8300","#FF7500","#FF6800","#FF5A00","#FF4D00","#FF3F00","#FF3200","#FF2500","#FF1700","#FF0A00","#FD0004","#F50318","#ED052C","#E5083F","#DE0B53","#D60D66","#CE107A","#C6128E","#BF15A1","#B718B5","#AF1AC8","#A71DDC","#A020F0"],"size":20,"hoverinfo":"text","text":{},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Wind speed at Landfall [Kts]","titlefont":{"family":"Arial, sans-serif","size":18,"color":"black"},"showticklabels":true,"tickangle":0,"tickfont":{"family":"Arial, sans-serif","size":18,"color":"black"},"zeroline":true,"showline":true,"mirror":"ticks","gridcolor":"rgba(127,127,127,1)","gridwidth":1,"zerolinecolor":"rgba(0,0,0,1)","zerolinewidth":1,"linecolor":"rgba(0,0,0,1)","linewidth":1},"yaxis":{"domain":[0,1],"automargin":true,"title":"Max ppt at Single Point [mm] ","titlefont":{"family":"Arial, sans-serif","size":18,"color":"black"},"showticklabels":true,"tickangle":0,"tickfont":{"family":"Arial, sans-serif","size":18,"color":"black"},"zeroline":true,"showline":true,"mirror":"ticks","gridcolor":"rgba(127,127,127,1)","gridwidth":1,"zerolinecolor":"rgba(0,0,0,1)","zerolinewidth":1,"linecolor":"rgba(0,0,0,1)","linewidth":1},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":1.5,"x":100},"title":"Storm Wind Intensity vs Precipitation"},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[40,50,30,45,70,30,75,115,45,75,115,50,40,60,80,140,65,34.8,39,78],"y":[262.37200571224,409.01898956299,465.19199371338,246.5860004425,417.21798634529,227.42899347842,460.02100551128,1278.4879640341,481.08100128174,242.23100280762,532.08398604393,228.03300285339,371.26200354472,330.85198837519,903.10598707199,194.19600319862,530.0620059967,960.10002148151,163.85500335693,384.47500610352],"type":"scatter","mode":"markers","marker":{"colorbar":{"title":"meanPpt","ticklen":2},"cmin":22.0739721686694,"cmax":91.7542671825183,"colorscale":[["0","rgba(0,255,0,1)"],["0.0416666666666667","rgba(42,255,0,1)"],["0.0833333333333333","rgba(85,255,0,1)"],["0.125","rgba(127,255,0,1)"],["0.166666666666667","rgba(170,255,0,1)"],["0.208333333333333","rgba(212,255,0,1)"],["0.25","rgba(251,254,0,1)"],["0.291666666666667","rgba(255,240,0,1)"],["0.333333333333333","rgba(255,225,0,1)"],["0.375","rgba(255,209,0,1)"],["0.416666666666667","rgba(255,195,0,1)"],["0.458333333333333","rgba(255,180,0,1)"],["0.5","rgba(255,163,0,1)"],["0.541666666666667","rgba(255,137,0,1)"],["0.583333333333333","rgba(255,110,0,1)"],["0.625","rgba(255,82,0,1)"],["0.666666666666667","rgba(255,55,0,1)"],["0.708333333333333","rgba(255,28,0,1)"],["0.75","rgba(253,2,3,1)"],["0.791666666666667","rgba(239,5,40,1)"],["0.833333333333333","rgba(223,10,80,1)"],["0.875","rgba(207,16,119,1)"],["0.916666666666667","rgba(192,21,159,1)"],["0.958333333333333","rgba(175,26,199,1)"],["1","rgba(160,32,240,1)"]],"showscale":false,"color":[33.2297463259781,35.846615298151,62.9780226719471,28.8964127216149,42.4920101356357,29.5080177309673,67.7970636407585,91.7542671825183,44.6498153670162,32.0061153946725,78.7144506185401,22.0739721686694,54.0479275454653,38.0183218317434,56.9798169801145,23.4188658963426,38.9107259613805,39.7108973897521,32.3289593727486,26.9738168994451],"size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"colorbar":{"title":"","ticklen":2},"cmin":22.0739721686694,"cmax":91.7542671825183,"colorscale":[["0","rgba(0,255,0,1)"],["0.0416666666666667","rgba(42,255,0,1)"],["0.0833333333333333","rgba(85,255,0,1)"],["0.125","rgba(127,255,0,1)"],["0.166666666666667","rgba(170,255,0,1)"],["0.208333333333333","rgba(212,255,0,1)"],["0.25","rgba(251,254,0,1)"],["0.291666666666667","rgba(255,240,0,1)"],["0.333333333333333","rgba(255,225,0,1)"],["0.375","rgba(255,209,0,1)"],["0.416666666666667","rgba(255,195,0,1)"],["0.458333333333333","rgba(255,180,0,1)"],["0.5","rgba(255,163,0,1)"],["0.541666666666667","rgba(255,137,0,1)"],["0.583333333333333","rgba(255,110,0,1)"],["0.625","rgba(255,82,0,1)"],["0.666666666666667","rgba(255,55,0,1)"],["0.708333333333333","rgba(255,28,0,1)"],["0.75","rgba(253,2,3,1)"],["0.791666666666667","rgba(239,5,40,1)"],["0.833333333333333","rgba(223,10,80,1)"],["0.875","rgba(207,16,119,1)"],["0.916666666666667","rgba(192,21,159,1)"],["0.958333333333333","rgba(175,26,199,1)"],["1","rgba(160,32,240,1)"]],"showscale":false,"color":"rgb(0, 0, 0)","width":2}},"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"text":["Storm:  Ana <br> Landfall:  2015-05-10 <br> Max ppt:  262.4  mm <br> Mean ppt:  33.2  mm <br> Area Receiving Rain:    932,368 km<sup>2","Storm:  Bill <br> Landfall:  2015-06-16 <br> Max ppt:  409  mm <br> Mean ppt:  35.8  mm <br> Area Receiving Rain:  1,194,800 km<sup>2","Storm:  Bonnie <br> Landfall:  2016-05-29 <br> Max ppt:  465.2  mm <br> Mean ppt:  63  mm <br> Area Receiving Rain:  1,457,296 km<sup>2","Storm:  Colin <br> Landfall:  2016-06-07 <br> Max ppt:  246.6  mm <br> Mean ppt:  28.9  mm <br> Area Receiving Rain:    798,560 km<sup>2","Storm:  Hermine <br> Landfall:  2016-09-02 <br> Max ppt:  417.2  mm <br> Mean ppt:  42.5  mm <br> Area Receiving Rain:  1,022,144 km<sup>2","Storm:  Julia <br> Landfall:  2016-09-13 <br> Max ppt:  227.4  mm <br> Mean ppt:  29.5  mm <br> Area Receiving Rain:  1,213,344 km<sup>2","Storm:  Matthew <br> Landfall:  2016-10-07 <br> Max ppt:  460  mm <br> Mean ppt:  67.8  mm <br> Area Receiving Rain:    745,584 km<sup>2","Storm:  Harvey <br> Landfall:  2017-08-25 <br> Max ppt:  1278.5  mm <br> Mean ppt:  91.8  mm <br> Area Receiving Rain:  1,391,312 km<sup>2","Storm:  Cindy <br> Landfall:  2017-06-22 <br> Max ppt:  481.1  mm <br> Mean ppt:  44.6  mm <br> Area Receiving Rain:  1,195,152 km<sup>2","Storm:  Nate <br> Landfall:  2017-10-08 <br> Max ppt:  242.2  mm <br> Mean ppt:  32  mm <br> Area Receiving Rain:    804,032 km<sup>2","Storm:  Irma <br> Landfall:  2017-09-10 <br> Max ppt:  532.1  mm <br> Mean ppt:  78.7  mm <br> Area Receiving Rain:    709,344 km<sup>2","Storm:  Emily <br> Landfall:  2017-07-31 <br> Max ppt:  228  mm <br> Mean ppt:  22.1  mm <br> Area Receiving Rain:    847,648 km<sup>2","Storm:  Alberto <br> Landfall:  2018-05-28 <br> Max ppt:  371.3  mm <br> Mean ppt:  54  mm <br> Area Receiving Rain:    913,248 km<sup>2","Storm:  Gordon <br> Landfall:  2018-09-04 <br> Max ppt:  330.9  mm <br> Mean ppt:  38  mm <br> Area Receiving Rain:  1,224,112 km<sup>2","Storm:  Florence <br> Landfall:  2018-09-14 <br> Max ppt:  903.1  mm <br> Mean ppt:  57  mm <br> Area Receiving Rain:  1,154,752 km<sup>2","Storm:  Michael <br> Landfall:  2018-08-10 <br> Max ppt:  194.2  mm <br> Mean ppt:  23.4  mm <br> Area Receiving Rain:  1,348,512 km<sup>2","Storm:  Barry <br> Landfall:  2019-07-13 <br> Max ppt:  530.1  mm <br> Mean ppt:  38.9  mm <br> Area Receiving Rain:    997,408 km<sup>2","Storm:  Imelda <br> Landfall:  2019-09-17 <br> Max ppt:  960.1  mm <br> Mean ppt:  39.7  mm <br> Area Receiving Rain:    691,248 km<sup>2","Storm:  Nestor <br> Landfall:  2019-10-19 <br> Max ppt:  163.9  mm <br> Mean ppt:  32.3  mm <br> Area Receiving Rain:    644,672 km<sup>2","Storm:  Dorian <br> Landfall:  2019-09-06 <br> Max ppt:  384.5  mm <br> Mean ppt:  27  mm <br> Area Receiving Rain:    699,392 km<sup>2"],"textfont":{"size":55},"error_y":{"width":55},"error_x":{"width":55},"line":{"width":55},"xaxis":"x","yaxis":"y","frame":null},{"x":[30,140],"y":[163.85500335693,1278.4879640341],"type":"scatter","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"Mean ppt [mm]","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"cmin":22.0739721686694,"cmax":91.7542671825183,"colorscale":[["0","rgba(0,255,0,1)"],["0.0416666666666667","rgba(42,255,0,1)"],["0.0833333333333333","rgba(85,255,0,1)"],["0.125","rgba(127,255,0,1)"],["0.166666666666667","rgba(170,255,0,1)"],["0.208333333333333","rgba(212,255,0,1)"],["0.25","rgba(251,254,0,1)"],["0.291666666666667","rgba(255,240,0,1)"],["0.333333333333333","rgba(255,225,0,1)"],["0.375","rgba(255,209,0,1)"],["0.416666666666667","rgba(255,195,0,1)"],["0.458333333333333","rgba(255,180,0,1)"],["0.5","rgba(255,163,0,1)"],["0.541666666666667","rgba(255,137,0,1)"],["0.583333333333333","rgba(255,110,0,1)"],["0.625","rgba(255,82,0,1)"],["0.666666666666667","rgba(255,55,0,1)"],["0.708333333333333","rgba(255,28,0,1)"],["0.75","rgba(253,2,3,1)"],["0.791666666666667","rgba(239,5,40,1)"],["0.833333333333333","rgba(223,10,80,1)"],["0.875","rgba(207,16,119,1)"],["0.916666666666667","rgba(192,21,159,1)"],["0.958333333333333","rgba(175,26,199,1)"],["1","rgba(160,32,240,1)"]],"showscale":true,"color":[22.0739721686694,91.7542671825183],"line":{"color":"rgba(255,127,14,1)"}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+&lt;p class="caption"&gt;Wind speed at landfall plotted against maximum total rainfall experienced at a single point per cyclone event and colored by average mean precipitation experienced over the impacted land area &lt;/p&gt;
+&lt;/div&gt;
+]
+
+???
+Here is another way of looking at this. Many people associate the intensity of a tropical storm with it's windspeed. We like to get caught up in what 'category' a storm will be when it makes landfall, and while windspeed is important for things like damage to structures, the spatial impacts of windspeed are often concentrated to relatively small areas when compared to rainfall. This plot on the right shows windspeed on the x-axis and maximum rainfall at a single pint on the y-axis. Let's take a look at some of these points. Hurricane Michael is on the bottom right. This storm was characterized by very high winds, it was fast moving, and it didn't actually drop that much rain. If you were impacted by Michael, you may recall that it really only lasted a couple of hours in the Carolinas. Tropical Storm Imelda, which you'll find at the top-left on the other hand was never a hurricane and was only a tropical storm by about 2 mph, however it dropped a tremendous amount of rain over eastern Texas and western Louisiana. Hurricane Harvey, top right, was just an all around absolute monster in every sense of the word, slow-moving, high wind, high precipitation
+
+---
+###.center["Waterborne disease outbreaks in the United States between 1948 and 1998 were **immediately preceded** by precipitation .red[events above the 80th percentile], with a two-month lag in groundwater"]
+.right[-Curriero et al., 2001 ]
+
+###.center["Public water systems in large metropolitan areas have substantial portions of their customer base at risk for a waterborne outbreak .red[during a flooding event]"]
+.right[-Exum et al., 2018 ]
+
+
+###.center["There is an increased risk for GI illness among consumers whose drinking water source may be impacted by combined sewer overflows (CSOs) .red[after extreme precipitation.]"]
+.right[-Jagai et al., 2015 ]
+
+
+???
+
+Is there evidence to link public health, drinking water and extreme rainfall? YES! Lot's of studies have linked extreme rainfall to contamination of groundwater and in turn public health. Did you know that there are over 60 million people in the United States who self supply drinking water from privately owned wells? and that these wells are totally unregulated, meaning they don't need to be tested. Additionally, if you want to get your water tested for chemicals such as benzene, which is a carcinogenic component of gasoline, the test can cost more than $500? The safe drinking water act protects us from these contaminants by mandating that public water utilities conduct regular testing. So I pose this question to you... If you lived in a house in eastern North Carolina, where your water came from a well in your back yard, and you went through Hurricane Florence, would you pay $500 to get your water tested? Most people wodln't and you can't blame them, that's a lot of money. You might point out to me that a lot of states offer free testing after these evetns but often they don't even know where groundwater contamination is likely to occur. I hope that my research will lead to emergency responders being more informed as to where contamination may be more likely.
+
+---
+### A Groundwater Vulnerability Index
+.left-column[
+.big[**D**].med[epth to water table]
+
+.big[**R**].med[echarge]
+
+.big[**A**].med[quifer Media]
+
+.big[**S**].med[oil Media]
+
+.big[**T**].med[opography]
+
+.big[**I**].med[mpact of the Vadose Zone]
+
+.big[**C**].med[onductivity]
+]
+
+.right-column[
+![](DRASTIC.png)
+]
+
+???
+
+The DRASTIC Index was a big project completed by the National groundwater well association and EPA in 1983. The point of it was to use geophysical data to estimate the risk to groundwater. It accounts for the height of the water table, the rate of recharge of groundwater, the composition of the aquifer, the soil composition, topography, the composition of the vadose zone and conductivity, which can be thought of us the speed with which water can move throught the soil. This index has been widely used but it misses quite a few important components. For one thing, it assumes conditions are static. What I mean by this is that it doesn't account for the current state of the landscape, such as how much vegetation there is or how saturated the soil is. When researchers calculate a DRASTIC index, they do it once, and there is no temporal component to it. My goal is to change this by adding in soil moisture and vegetation compnents measured from satellites. 
+
+---
+
+### &lt;br&gt;Hypothesis:
+
+&lt;br&gt;&lt;br&gt;.med[Geophysical landscape features, temporal variability of soil moisture, and land cover are major drivers of groundwater vulnerability to contamination. Extreme precipitation events such as **tropical cyclones overwhelm and impose changes to each of these variables in measurable ways**. Investigating the relationships and the ways in which to measure these impacts will enable future forecasting of vulnerability and better inform disaster response efforts, directly and positively affecting human health.]
+
+
+---
+.center[
+&lt;div class="centered"&gt;
+&lt;video width="900" height="550" controls autoplay&gt;
+  &lt;source src="/img/Florence.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+
+
+![](florenceLegend.png)
+
+]
+
+???
+Let's take a look at how soil moisture actually does change during an extreme rainfall event, in this case, Hurricane Florence. The Carolinas were saturated prior to landfall of Florence. Note how long drying takes to occur and the variance across the state
+---
+##Patterns from SMAP are Evident
+![](florence.png)
+
+???
+
+You may not have noticed just by looking at the animation, but take a look at these side by side maps pf wetting and drying. On the left side, we can see wetting, which is the increase in soil moisture between the day before landfall of Hurricane Florence and the peak soil moisture measured after landfall. The map on the right shows us drying, which is the change in soil moisture between the peak and the lowest measured soil moisture within three weeks after Hurricane Florence made landfall. We can see that wetting closely mirrors precipitation, but drying is much more spatially complex. Deconstructing why and how this is happening is the crux of my dissertation research.
+
+---
+.center[
+## Summary
+]
+
+--
+
+.big[
+- Extreme precipitation can lead to waterborne illness
+]
+
+--
+
+.big[
+- Over 60 Million Americans obtain water from private wells
+]
+
+--
+
+.big[
+- Improvement on a dated vulnerability index is needed
+]
+
+--
+
+.big[
+- Substantial data is available for the establishment of relationships between landscape and extreme precipitation
+]
+
+--
+
+.big[
+- The success of this research may help in response efforts to extreme precipitation events and benefit public health
+]
+
+
+???
+
+As much as I would like to drone on and on about all of this for hours, let's bring it back to the main points of my research. 
+**FORWARD**
+We know that extreme precipitation can leadd to waterborne illness. 
+**FORWARD**
+We know that over 60 million people in the United States self supply water from private wells and that not only do they rarely test their water, but testing can be prohibitively expensive.
+**FORWARD**
+There are indices that exist for quantifying vulnrability but they need to be updated, there is a lot of data out there that would allow us to update it.
+**FORWARD**
+Finally, Succeeding in establishing these relationships between soil moisture and surface/groundwater connectivity may help to inform the public, as well as emergency responders of where groundwater resources are most vulnerable to contamination following extreme precipitation events. This would allow responders to direct testing kits to areas likely to be vulnerable to contamination with a science based approach as opposed to more subjective political approaches.
+
+---
+
+.center[ 
+## References
+
+Caldwell, Martyn M, and James H Richards. 1989. “Hydraulic Lift: Water Efflux from Upper Roots Improves Effectiveness of Water Uptake by Deep Roots.” Oecologia 79 (1): 1–5.
+
+Exum, Natalie G., et al. "Extreme precipitation, public health emergencies, and safe drinking water in the USA." Current environmental health reports 5.2 (2018): 305-315.
+
+Jagai, Jyotsna S., et al. "Extreme precipitation and emergency room visits for gastrointestinal illness in areas with and without combined sewer systems: an analysis of Massachusetts data, 2003–2007." Environmental health perspectives 123.9 (2015): 873-879.
+
+Rushton, KR, VHM Eilers, and RC Carter. 2006. “Improved Soil Moisture Balance Methodology for Recharge Estimation.” Journal of Hydrology 318 (1-4): 379–99.
+
+Vereecken, H, J Maes, and J Feyen. 1990. “Estimating Unsaturated Hydraulic Conductivity from Easily Measured Soil Properties.” Soil Science 149 (1): 1–12.
+]
+
+???
+
+As usual, there is much more to this story and if anyone is interested please reach out. I will leave you with one quick plug for the department which is to say that while I am in no way overly seasoned, I have been in one other geography department and know of many others and I can say with confidence I have not observed a stronger community of people who care and support one another in the way we do here regardless of our wide swath of passions and research interests. Thanks for taking the time to listen and I hope to meet all of you in person sometime soon!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
