@@ -28,7 +28,7 @@ background-size: cover
 
 ???
 
-Hello to all of you hopefully future colleagues. My name is Andrew Murray, I'm a 3rd year PhD student here in the department and I'm excited share just a little bit of my research with you today. As you can see from the title here, we're talking about about the effects of extreme precipitation on connectivity and how we measure it using remote sensing. 
+Hello to all of you hopefully future colleagues. My name is Andrew Murray, I'm a 3rd year PhD student here in the department and I'm excited share just a little bit of my research with you today. You may notice that I am in fact on a distant tropical island, enjoying the sun and breeze. There is no COVID-19 here and everything is fine.(sigh) Sadly this is just a virtual background and I am stuck in my house with a 4 year old, two cats, a dog and my lovely partner who I am trying not to push to the edge, but I digress. I am a physical geographer / hydrologist and as you can see from the title here, we're talking about about the effects of extreme precipitation on connectivity and how we measure it using remote sensing. 
 ---
 exclude: true
 
@@ -229,7 +229,7 @@ Is there evidence to link public health, drinking water and extreme rainfall? YE
 
 ???
 
-The DRASTIC Index was a big project completed by the National groundwater well association and EPA in 1983. The point of it was to use geophysical data to estimate the risk to groundwater. It accounts for the height of the water table, the rate of recharge of groundwater, the composition of the aquifer, the soil composition, topography, the composition of the vadose zone and conductivity, which can be thought of us the speed with which water can move throught the soil. This index has been widely used but it misses quite a few important components. For one thing, it assumes conditions are static. What I mean by this is that it doesn't account for the current state of the landscape, such as how much vegetation there is or how saturated the soil is. When researchers calculate a DRASTIC index, they do it once, and there is no temporal component to it. My goal is to change this by adding in soil moisture and vegetation compnents measured from satellites. 
+So how do we figure this out. We know a lot about the physical environment and by combining that data we can build an index for physical vulnerability. The DRASTIC Index was one such project completed by the National groundwater well association and EPA in 1983. The point of it was to use geophysical data to estimate the risk to groundwater. It accounts for the height of the water table, the rate of recharge of groundwater, the composition of the aquifer, the soil composition, topography, the composition of the vadose zone and conductivity, which can be thought of us the speed with which water can move throught the soil. This index has been widely used but it misses quite a few important components. For one thing, it assumes conditions are static. What I mean by this is that it doesn't account for the current state of the landscape, such as how much vegetation there is or how saturated the soil is. When researchers calculate a DRASTIC index, they do it once, and there is no temporal component to it. My goal is to change this by adding in soil moisture and vegetation compnents measured from satellites. We've come a long way, computationally since 1983 and we have much more detailed observations of the earth which means it's time for an overhaul.
 
 ---
 
@@ -252,21 +252,19 @@ The DRASTIC Index was a big project completed by the National groundwater well a
 ]
 
 ???
-Let's take a look at how soil moisture actually does change during an extreme rainfall event, in this case, Hurricane Florence. The Carolinas were saturated prior to landfall of Florence. Note how long drying takes to occur and the variance across the state
+Let's take a look at how soil moisture actually does change during an extreme rainfall event, in this case, Hurricane Florence. The units here are cubic meters of water per cubic meter so light blue is dry and purple/pink is saturated. The Carolinas were saturated prior to landfall of Florence. Note how long drying takes to occur and the variance across the state
 ---
 ##Patterns from SMAP are Evident
 ![](florence.png)
 
 ???
 
-You may not have noticed just by looking at the animation, but take a look at these side by side maps pf wetting and drying. On the left side, we can see wetting, which is the increase in soil moisture between the day before landfall of Hurricane Florence and the peak soil moisture measured after landfall. The map on the right shows us drying, which is the change in soil moisture between the peak and the lowest measured soil moisture within three weeks after Hurricane Florence made landfall. We can see that wetting closely mirrors precipitation, but drying is much more spatially complex. Deconstructing why and how this is happening is the crux of my dissertation research.
+You may not have noticed just by looking at the animation, but take a look at these side by side maps of wetting and drying. On the left side, we can see wetting, which is the increase in soil moisture between the day before landfall of Hurricane Florence and the peak soil moisture measured after landfall. The map on the right shows us drying, which is the change in soil moisture between the peak and the lowest measured soil moisture within three weeks after Hurricane Florence made landfall. We can see that wetting closely mirrors precipitation, but drying is much more spatially complex. Deconstructing why and how this is happening is the crux of my dissertation research.
 
 ---
 .center[
 ## Summary
 ]
-
---
 
 .big[
 - Extreme precipitation can lead to waterborne illness
@@ -278,19 +276,13 @@ You may not have noticed just by looking at the animation, but take a look at th
 - Over 60 Million Americans obtain water from private wells
 ]
 
---
-
 .big[
 - Improvement on a dated vulnerability index is needed
 ]
 
---
-
 .big[
 - Substantial data is available for the establishment of relationships between landscape and extreme precipitation
 ]
-
---
 
 .big[
 - The success of this research may help in response efforts to extreme precipitation events and benefit public health
@@ -299,14 +291,23 @@ You may not have noticed just by looking at the animation, but take a look at th
 
 ???
 
+
 As much as I would like to drone on and on about all of this for hours, let's bring it back to the main points of my research. 
+
 **FORWARD**
+
 We know that extreme precipitation can leadd to waterborne illness. 
+
 **FORWARD**
+
 We know that over 60 million people in the United States self supply water from private wells and that not only do they rarely test their water, but testing can be prohibitively expensive.
+
 **FORWARD**
+
 There are indices that exist for quantifying vulnrability but they need to be updated, there is a lot of data out there that would allow us to update it.
+
 **FORWARD**
+
 Finally, Succeeding in establishing these relationships between soil moisture and surface/groundwater connectivity may help to inform the public, as well as emergency responders of where groundwater resources are most vulnerable to contamination following extreme precipitation events. This would allow responders to direct testing kits to areas likely to be vulnerable to contamination with a science based approach as opposed to more subjective political approaches.
 
 ---
