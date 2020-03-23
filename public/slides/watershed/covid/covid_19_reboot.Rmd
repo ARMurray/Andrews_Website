@@ -1,0 +1,202 @@
+---
+title: "Covid 19 Reboot"
+author: "Andrew Murray"
+date: 'March 22, 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+.center[
+.big[<br><br>
+**Geography-441 COVID-19 Reboot**
+]
+Andrew Murray | University of North Carolina - Chapel Hill
+<br><br><br>
+.med[Link to live lecture: https://unc.zoom.us/j/471894689]
+]
+
+---
+
+.center[
+##Important Updates]
+
+.mb[
+- We are switching to asynchronous learning
+
+- Everything will be handled via zoom
+  - Live Lectures
+  - Recorded Lectures
+  - Office Hours
+  
+- We still have a lot to do!
+]
+
+---
+
+## Features of zoom
+.mb[
+- Please check out this helpful list of tips which may help if you are having trouble getting access to zoom: [LINK](https://docs.google.com/document/d/1EY6TGomkDk_wkPu61tW0lBG6YZIYTTqEFjbklLA4kto/edit)
+
+- Check out these videos from zoom for more in depth features: [LINK](https://support.zoom.us/hc/en-us/articles/206618765-Zoom-Video-Tutorials)
+
+- Basic Features:
+  - Screen Sharing
+  - Chat
+  - Raise hands
+  - Recording
+]
+
+---
+## Asynchronous Learning
+
+.mb[This is and will continue to be a trying time for all of us]
+.med[
+- You may not have a reliable internet connection
+- You may have family obligations
+- You probably have other courses
+etc...]
+
+.big[
+**Please Attend Class at our regular times if at all possible**
+]
+
+.med[
+Your attendance grade has already been calculated, and is posted in sakai
+
+- Our remaining classes will be more interactive and less lecture based
+]
+???
+
+We only have two more chapters to get through and are then switching to reading journal articles (hopefully with author discussions) and working on Final Projects.
+---
+
+### Grades - Where do they stand and where are they headed?
+
+.pull-left[
+.med[
+**New Grade Allocation:**
+
+Graded Homework: 30%
+
+Mid-term Exam: 15%
+
+Final Project: 45%
+
+Class Participation: 10%
+
+]]
+
+.pull-right[
+.med[
+Your work is still being graded as normal.
+
+Remaining Work:
+- 4 graded assignments
+  - Paper Annotations
+  - Author Discussions
+- Final Project
+]]
+
+.med[
+The University has announced the option to switch to a pass/fail for this semester, which is [DETAILED HERE](https://registrar.unc.edu/files/2020/03/emergency-grading-accomodation.pdf)
+
+**Many of you are doing really well in this class and my hope is that you continue to put in the work if you are able**
+]
+---
+
+### Graded Assignments
+
+.med[
+The remaining 4 assignments will be annotations of papers that we will read as a class. Each Monday, I will announce the paper and we will discuss it on the following Monday.
+]
+
+### Remaining Chapters
+
+.med[
+We have two chapters remaininging and we will work through those on Wednesdays. Once we finish with those chpaters, we will turn towards the final project. *Although this may change based on availability of guest speakers who I am still scheduling*
+
+### Final Project
+
+.med[
+For the final project you will select a USGS gauging site and conduct a watershed level analysis from start to finish, using what we have covered and a bit more. I will supply a grading rubric for this on Friday (March 27)
+]]
+
+---
+
+## Annotations & Author Discussions
+
+.pull-left[
+.med[
+The rest of your homework assignments will consist of reading and synthesizing academic journal articles. Your annotations should follow the following format:
+
+- One page in length (no less than 3/4 of page), fine to go a little bit over
+- Single Spaced
+- 12-point font
+- Make sure to include your name, and paper title at the top
+]]
+
+.pull-right[
+
+**Grading Rubric**
+
+|Category|Description|Points|
+|--------|------|--------|
+|Synthesis|Please synthesize the main arguments<br>of the paper. Identify the problem the author is solving, why it is important, and the methods they used, along with the results|60|
+|Learned|Identify something you learned, either a concept or a technique that you were not previously familiar with.|15|
+|Disagree/ Confused|Identify something you either disagree with, were surprised or confused by.|15|
+|Questions|Include **TWO** questions for the author. One must be about the the paper, and the other can either be about the paper or something else of interest|10|
+
+]
+
+---
+.left-column[
+### First Paper
+
+.med[
+Title: *Applying Climate Change Risk Management Tools to Integrate Streamflow Projections and Social Vulnerability*
+
+Author: Sheila Saia 
+.center[
+```{r sheila, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("sheila.jpg")
+```
+
+
+
+[DOWNLOAD THE PAPER](https://drive.google.com/open?id=1g9-8fu0JyzVtWQ4J0fL6ipiZ7kr_3FyV)]
+]]
+.right-column[
+*Abstract:* Shifts in streamflow, due to future climate and land use change, may pose risks to nearby human communities. Projecting the spatial distribution and impacts of these risks requires consideration of biophysical and socioeconomic factors. Models like the Soil and Water Assessment Tool (SWAT) can project spatial distributions of hydrologic risk due to shifting biophysical factors like climate and land use, but cannot account for socioeconomic factors influencing a community’s capacity to adapt to future streamflow changes. To address this limitation, we used a risk matrix to classify subbasins in a large river basin in the southeastern USA based on (1) percent increase in SWAT simulated 10-year and extreme high flows due to climate and land use change between baseline (1982-2002) and projected (2050-2070) periods and (2) degree of community vulnerability according to a Social Vulnerability Index (SVI). We compared spatial distributions of high risk subbasins based on SWAT results, SVI results, and the integration of SWAT and SVI results using a risk matrix. Large increases in simulated 10-year and extreme high flows occurred in middle and lower parts of the river basin and socially vulnerable communities were distributed throughout. We identified 16, 7, and 14 unique high risk subbasins using SWAT results, SVI results, and SWAT and SVI results, respectively. By using a risk matrix, we identified subbasins with vulnerable communities that are projected to experience future increases in streamflow due to climate and land use change. These results serve as a starting point for subsequent climate change adaptation planning.
+
+
+.mb[
+ALSO, Check out Sheila's [Website](https://sheilasaia.rbind.io/#about)
+]
+]
+
+---
+## What to focus on...
+
+.med[
+**Final Project:**
+- Start thinking about where you want your focus watershed to be and some topics you might be interested in. I would spend some time on the USGS website, looking at gauge data. Find an area you're interested in and investigate gauge locations and what the date range of available data is.
+
+
+**Paper for Next Week:**
+- You should spend a significant amount of time reading this paper and be prepared to engage with Sheila next Monday. We are going to be very lucky to be able to engage with some great scientists over the next few weeks and it's important that we come prepared. Think critically about the paper and the science. Google things you don't understand, read up on the models being discussed.
+
+**Lecture Wednesday:**
+- Wednesday will be a more traditional lecture as we finish up the Hornberger textbook. I will be starting on Chapter 5, which is streams and floods. Please look through the chapter before Wednesday. If you no longer have access to your book, please let me know.
+]
