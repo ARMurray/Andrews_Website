@@ -88,6 +88,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 30
   identifier = "exams"
 
+[[menu.watershed]]
+  name = "Resources"
+  weight = 40
+  identifier = "resources"
+
 ## Weights for Tropical Cyclone Project
 [[menu.cyclones]]
   name = "Overview"
