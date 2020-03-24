@@ -30,4 +30,13 @@ Once you have the Cisco AnyConnect software installed, you want to run it and co
 
 Once you click 'Connect' a second window will open with login options:
 
-![](img/watershed/vpn/vpn2.png)
+![](/img/watershed/vpn/vpn2.png)
+Here, you should select 'UNCCampus' for the Group, enter your onyen for Username, and you personal password for Password. For the second password, you need to obtain a 6-digit code from duo, which is a secondary authentication service we use at UNC. If you have not already set up duo, go [here](https://its.unc.edu/2-step/) to do so.
+
+At this point, you should be able to connect, and you will receive a prompt to connect that looks like this:
+
+![](/img/watershed/vpn/prompt.png)
+
+Click 'Accept'.
+
+You are now connected to the UNC vpn and we can get started with connecting to the VCL.
