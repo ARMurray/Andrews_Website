@@ -1,0 +1,31 @@
+---
+date: "2020-03-25T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: 'Lecture 11'
+menu:
+  watershed:
+    parent: lectures
+    weight: 80
+title: Lecture 11 (Streams and Floods)
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture11/lecture_11_slides.html)
+
+
+## Overview
+
+### Materials: Hornberger Chapter 5
+
+- Hydrographs
+- Movement of Flood Waves
+- Flood Routing
+- Flood Frequency Analysis
