@@ -9,7 +9,7 @@ toc: true
 type: docs
 ---
 
-<iframe src="https://giphy.com/embed/SsBKt9ouN5Xsyq3R4Z" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/SsBKt9ouN5Xsyq3R4Z">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/SsBKt9ouN5Xsyq3R4Z" width="720" height="405" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a></p>
 
 
 ## More Information Coming Soon!
