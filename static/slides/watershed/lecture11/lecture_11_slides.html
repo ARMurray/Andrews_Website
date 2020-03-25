@@ -32,6 +32,172 @@ March 25, 2020
 ]
 
 ---
+.center[
+## Folsom Dam
+]
+
+.pull-left[
+[VIDEO](https://www.kcra.com/article/5-things-to-know-about-folsom-dam-raise-project/30617937)
+
+&lt;img src="folsomMap.png" width="100%" /&gt;
+]
+
+.pull-right[
+.med[
+- Basin area = ~5,000 km&lt;sup&gt;2&lt;/sup&gt;
+
+- Built in 1948 to prevent a 500 year flood
+
+- Two major floods in 1955 and 1986 led to a reevaluation
+  - Turns out it only prevented a 70 year flood!
+  
+- Multiple construction projects to expand protections since.
+]]
+
+???
+
+The American River flows through Sacremento where more than one million people live. The functions of dams are many. Mainly they are there to provide water to a region in times of drought and protect downstream areas from flooding. 
+
+---
+
+## Hydrographs
+.pull-left[
+.med[
+**Stage Hydrograph:** The actual height of the water from the reference point
+
+**Discharge Hydrograph:** The volume of water passing the reference point per unit time
+]
+![](FIG5_1.gif)
+]
+
+.pull-right[
+.med[
+We create discharge hydrographs by taking a lot of measurements at know river stages:
+]
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Field discharge measurement at Big Spring, White County, Tennessee -155 cubic feet per second. Measuring with the &lt;a href="https://twitter.com/SonTekYSI?ref_src=twsrc%5Etfw"&gt;@SonTekYSI&lt;/a&gt; FlowTracker 2. &lt;a href="https://t.co/EhQ79cYBSE"&gt;pic.twitter.com/EhQ79cYBSE&lt;/a&gt;&lt;/p&gt;&amp;mdash; Karst Springs (@KarstSprings) &lt;a href="https://twitter.com/KarstSprings/status/861666455317774336?ref_src=twsrc%5Etfw"&gt;May 8, 2017&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+[Data from a Hurricane](https://waterdata.usgs.gov/nc/nwis/dv?cb_00045=on&amp;cb_00060=on&amp;cb_00065=on&amp;format=gif_stats&amp;site_no=02105769&amp;referred_module=sw&amp;period=&amp;begin_date=2018-09-01&amp;end_date=2018-10-31)
+
+- Why does discharge appear more 'flashy' than stage?
+
+]
+
+???
+You'll notice that discharge is much more 'flashy'. flashiness is a term hydrologists often use to describe how quickly quantities rise and fall. 
+
+Why would discharge 'seem' to decrease faster than stage?
+
+---
+.center[
+## Measuring Discharge
+]
+
+.pull-left[
+![](FIG5_2.gif)
+
+**Figure 5.2** Schematic diagram of a stream gauging station used to record flow depth (stage) as a function of time. The resulting stage hydrograph can be converted to a discharge hydrograph using a rating curve.
+]
+.pull-right[
+![](ratingCurve.png)
+**A Rating Curve** shows actual discharge measurements that were taken in the field. Once you take a discharge measurement, you compare it to the stage of the river at the time you took the measurement. This requires a river gauge. You then fit a line to estimate the 'rating curve'.
+]
+
+???
+
+So the plot on the right shows points which represent the measurements of discharge physically taken by a person in the field. The x-axis shows the stage of the river, and the y-axis shows the measured discharge. The more points we are able to add to this plotm the more accurate our rating curve will be. This is especially important at low and high stage. What do you think the relationship between level and discharge is? Is it linear? or is it exponential? Why?
+
+What do you think the purpose of the stilling well is?
+
+Going back to the hurricane hydrograph, discharge becomes uncertain once the river overflows it's banks, for the same reason that the relationship between stage and discharge is exponential. This becomes even more true as water moves into the floodplane.
+
+---
+
+.pull-left[
+##Relation and Variation
+.center[
+.mb[Hyetograph vs. Hydrograph]
+]
+![](FIG5_4.gif)
+
+**Figure 5.4** Hyetograph (*black bars, scale at right*) and hydrograph (*blue line, scale at left*) for Holiday Creek near Andersonville, Virginia.
+]
+.pull-right[
+![](FIG5_5.gif)
+
+**Figure 5.5** Annualhydrographs for three rivers in catchments in three climate zones illustrating the differences among streamflow in perennial (a), ephemeral (b), and snowmelt (c) streams.
+]
+
+???
+
+On the left you can see the relationship between precipitation and discharge. Is there a direct relationship between precipitation and discharge? There are other factors like evapotranspiration. You might see less discharge late in the summer caused by the same amount of rainfall because of the increase in vegetation.
+
+On the right, we see three ddifferent examples of hydrographs for different climate zones. This is a bit confusing, notice the x-axis starts at October 1 instead of January 1, so the spring snowmelt appears over towards the right.
+
+What this really all comes down to is why we study these things. There are so many variables that contribute to the response of rivers and streams to precipitation that it is very difficult to predict exactly what is going to happen. Herein lies the reasons for why hydrologists do what they do. We are trying to understand all of the different things that go into these relationships so that we CAN know in the future, but there is still uncertainty and things change. land use changes, seasons change, management changes...
+
+---
+.left-column[
+.mb[Discharge Moving through a watershed]
+.med[
+- The top plot shows unaltered data
+
+- The bottom plot shows normalized data
+
+- Why does normalized discharge decrease between nested catchments?
+]
+]
+.right-column[
+.center[
+&lt;img src="FIG5_6.gif" width="75%" /&gt;
+]
+**Figure 5.6** Hydrographs for three nested basins. Discharge increases downstream in the stream network due to increased drainage area (*a*). Dividing discharge by catchment area (*b*) reveals both attenuation and delay of the flood wave as it moves downstream.
+
+]
+---
+## A Step Farther...
+
+.med[
+So... if we can see that hydrographs decrease (or attenuate) per unit of drainage area as we move downwards through the watershed, what can we deduce from this relationship...?
+]
+
+--
+
+.mb[
+- The change in hydrographs reflects the change in storage for a given length of stream.
+]
+
+---
+.center[
+### Reservoir Routing
+]
+.pull-left[
+![](lecture_11_slides_files/figure-html/df51-1.png)&lt;!-- --&gt;
+]
+.pull-right[**Table 5.2** Inflow hydrograph for reservoir routing example
+
+```
+##    Time Inflow
+## 1  0.00   0.70
+## 2  0.25   0.90
+## 3  0.50   2.00
+## 4  0.75   5.00
+## 5  1.00   9.00
+## 6  1.25   6.70
+## 7  1.50   5.00
+## 8  1.75   3.80
+## 9  2.00   2.80
+## 10 2.25   2.30
+## 11 2.50   1.80
+## 12 2.75   1.50
+## 13 3.00   1.20
+## 14 3.25   1.00
+## 15 3.50   0.85
+## 16 3.75   0.70
+```
+
+(Time is in days and inflow is in m&lt;sup&gt;3&lt;/sup&gt;s&lt;sup&gt;-1&lt;/sup&gt;)
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
