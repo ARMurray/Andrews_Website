@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/lecture11/lecture_11_slides.html)
 
+[Recording is here!](https://unc.zoom.us/rec/share/3tJMP6300H1JG6vQ70jmRpY6Bqbdaaa81SZK-_ILmEyWuyk0yIESRUkbCaN88SPG)
 
 ## Overview
 
