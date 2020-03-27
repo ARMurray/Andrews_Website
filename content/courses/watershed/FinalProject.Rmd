@@ -1,0 +1,85 @@
+---
+date: "2020-03-26T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: "Final Project"
+menu:
+  watershed:
+    parent: exams
+    weight: 20
+title: Final Project
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Watershed Scale Analysis
+
+Your final project is going to consist of a watershed delineation and analysis. We are going to include most of what we have worked on throughout the semester but you should also go a bit farther.
+
+### Required
+
+(A) Delineate a watershed based on a USGS stream gauge of your choice.
+(B) Calculate an Annual Water Budget for your watershed
+(B) Calculate Exceedance and Recurrence curve and probabilities.
+  - Create an exceedance probability curve for precipitation
+  - Calculate the amount of precipitation that would qualify as a:
+    - Once in 5 year event
+    - Once in 10 year event
+    - Once in 20 year event
+    
+### Up to you
+
+  From here, your project is basically up to you. However, you need to include an additional major analysis that investigates an issue. This is where choosing your gauge station is going to make a difference. Some ideas for an analysis are:
+  
+#### Effect of Landcover on your watershed:
+  The Multi-Resolution Land Characteristis Consortium (MRLC) hosts the USGS land cover datasets. A national dataset of land cover is available for 2001, 2004, 2006, 2008, 2011, 2013 and 2016. [View datasets here](https://www.mrlc.gov/data). You could investigate how landcover has affected runoff ratios over a certain time period.
+  
+#### Forest Fire Prevelance relatede to rainfall
+  You could investigate wether or not there is a correlation between rainfall and forest fire prevelance in your watershed. This could be year to year or within a single year. There are plenty of data on wildfire locations. One source is [USGS GeoMAC](https://www.geomac.gov/)
+  
+#### Flood Routing
+  You could pursue a flood routing problem if you have multiple gauges within your watershed. I could see this as an analysis of a single event (such as a Hurricane) or a general analysis of storage regimes over a number of years.
+  
+## Grading Rubric
+
+Your grade will be made up of the following:
+
+Proposal: 10%
+Final Submission: 70%
+Final Presentation: 20%
+
+### Proposal
+
+  Write one paragraph about your proposed analysis and submit it through Sakai. You should include your propsed USGS gauge site and location. I'm looking for proposals that push past what we have done this semester but are still accomplishable. This is an opportunity for you to really push into exploring the things you are interested in. If you are unsure of how you will accomplish a certain analysis, that's okay! We will have time to talk about how to accomplish specific tasks.
+
+**Due Date: April 3rd @ Noon**
+
+### Final Submission
+
+  Your final submission must include the requred components listed above and submitted as a zip file. Your zip file must include:
+  - Your entire project folder:
+    - Your .RMD file
+    - Your data folder
+    - Your html output file
+    - Any additional scripts you may have used for data processing
+
+I should be able to open your submission and run your code without any alterations. This means you must use the 'here()' package to load data in your scripts, the same way we've been doing all semester. I will be reading your html files for grading purposes but if I catch an error, I should be able to open your code quickly and find the source of the error.
+
+|Category|Poor|	Acceptable|	Good	|Excellent|	Points Possible|
+|:------:|:--:|:---------:|:-----:|:-------:|:-------------:|
+|Introduction|	No Introduction|	Describes the watershed, and location but lacks any additional information|	Includes gauge site, location, description of variables and statement of your problem|	Includes robust description of the gauge, site, and watershed with reference to the proposed analysis and it's importance	|10|
+|Delineation|	Delineation is incomplete and/or incorrectly completed|	Delineation appears complete but intermediate steps are not included or shown|	Delineation and all intermediate steps have clear plots to show the steps to delineation but there are minor errors in approach and code|	All intermediate steps are clearly presented and code is perfect|	20|
+|PPT Analysis|	PPT analysis is missing or has significant errors|	Analysis shows plots but labels and/or axes are incorrect or unclear|	Plots are included and clear with minor code issues|	Includes clear and readable plots of precipitation, exceedance curve and descrition of return rates. All code is working|20|
+|Code|	Significant code is missing or does not work|	Some code is missing and much of it does not work|	Most of the code works with minor issues. Comments are not clear on how code works|	All code works perfectly and is easily readable. Comments explain the steps you are taking|	15|
+|Explanation|	Your analysis and steps do not include any text explaining the steps and results of your analyses|	Your steps include minimal explanation but is either incomplete or incorrect|	Explanations are consistent throughout your entire submission and you clearly explain what is happening in each step|	Explanations are clear, and your document reads as a clear step-by-step synthesis of all of your required steps, as well as your analysis|	15|
+|Individual Analysis|	Problem and analysis are not clear or are incomplete|Problem is stated but approach is incomplete or incorrect|	Problem is stated and analysis clearly suggests grasp of the problem. A new analysis was attempted with minor flaws|	Problem is stated and backed up. A clear approach is presented and an anlysis was conducted that was not covered in class|	20|
+
+### Video Presentation
+
+You will need to create a 5-minute video presentation with slides where you introduce your watershed, do a quick walk-through of your gauge site, and characteristics of precipitation and run-off regimes. Describe your additional analysis and the approach you took to address your topic.

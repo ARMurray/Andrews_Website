@@ -1,0 +1,151 @@
+---
+date: "2020-03-26T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: "Final Project"
+menu:
+  watershed:
+    parent: exams
+    weight: 20
+title: Final Project
+type: docs
+
+---
+
+
+
+<div id="watershed-scale-analysis" class="section level2">
+<h2>Watershed Scale Analysis</h2>
+<p>Your final project is going to consist of a watershed delineation and analysis. We are going to include most of what we have worked on throughout the semester but you should also go a bit farther.</p>
+<div id="required" class="section level3">
+<h3>Required</h3>
+<ol style="list-style-type: upper-alpha">
+<li>Delineate a watershed based on a USGS stream gauge of your choice.</li>
+<li>Calculate an Annual Water Budget for your watershed</li>
+<li>Calculate Exceedance and Recurrence curve and probabilities.</li>
+</ol>
+<ul>
+<li>Create an exceedance probability curve for precipitation</li>
+<li>Calculate the amount of precipitation that would qualify as a:
+<ul>
+<li>Once in 5 year event</li>
+<li>Once in 10 year event</li>
+<li>Once in 20 year event</li>
+</ul></li>
+</ul>
+</div>
+<div id="up-to-you" class="section level3">
+<h3>Up to you</h3>
+<p>From here, your project is basically up to you. However, you need to include an additional major analysis that investigates an issue. This is where choosing your gauge station is going to make a difference. Some ideas for an analysis are:</p>
+<div id="effect-of-landcover-on-your-watershed" class="section level4">
+<h4>Effect of Landcover on your watershed:</h4>
+<p>The Multi-Resolution Land Characteristis Consortium (MRLC) hosts the USGS land cover datasets. A national dataset of land cover is available for 2001, 2004, 2006, 2008, 2011, 2013 and 2016. <a href="https://www.mrlc.gov/data">View datasets here</a>. You could investigate how landcover has affected runoff ratios over a certain time period.</p>
+</div>
+<div id="forest-fire-prevelance-relatede-to-rainfall" class="section level4">
+<h4>Forest Fire Prevelance relatede to rainfall</h4>
+<p>You could investigate wether or not there is a correlation between rainfall and forest fire prevelance in your watershed. This could be year to year or within a single year. There are plenty of data on wildfire locations. One source is <a href="https://www.geomac.gov/">USGS GeoMAC</a></p>
+</div>
+<div id="flood-routing" class="section level4">
+<h4>Flood Routing</h4>
+<p>You could pursue a flood routing problem if you have multiple gauges within your watershed. I could see this as an analysis of a single event (such as a Hurricane) or a general analysis of storage regimes over a number of years.</p>
+</div>
+</div>
+</div>
+<div id="grading-rubric" class="section level2">
+<h2>Grading Rubric</h2>
+<p>Your grade will be made up of the following:</p>
+<p>Proposal: 10%
+Final Submission: 70%
+Final Presentation: 20%</p>
+<div id="proposal" class="section level3">
+<h3>Proposal</h3>
+<p>Write one paragraph about your proposed analysis and submit it through Sakai. You should include your propsed USGS gauge site and location. I’m looking for proposals that push past what we have done this semester but are still accomplishable. This is an opportunity for you to really push into exploring the things you are interested in. If you are unsure of how you will accomplish a certain analysis, that’s okay! We will have time to talk about how to accomplish specific tasks.</p>
+<p><strong>Due Date: April 3rd @ Noon</strong></p>
+</div>
+<div id="final-submission" class="section level3">
+<h3>Final Submission</h3>
+<p>Your final submission must include the requred components listed above and submitted as a zip file. Your zip file must include:
+- Your entire project folder:
+- Your .RMD file
+- Your data folder
+- Your html output file
+- Any additional scripts you may have used for data processing</p>
+<p>I should be able to open your submission and run your code without any alterations. This means you must use the ‘here()’ package to load data in your scripts, the same way we’ve been doing all semester. I will be reading your html files for grading purposes but if I catch an error, I should be able to open your code quickly and find the source of the error.</p>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="7%" />
+<col width="20%" />
+<col width="12%" />
+<col width="16%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Category</th>
+<th align="center">Poor</th>
+<th align="center">Acceptable</th>
+<th align="center">Good</th>
+<th align="center">Excellent</th>
+<th align="center">Points Possible</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Introduction</td>
+<td align="center">No Introduction</td>
+<td align="center">Describes the watershed, and location but lacks any additional information</td>
+<td align="center">Includes gauge site, location, description of variables and statement of your problem</td>
+<td align="center">Includes robust description of the gauge, site, and watershed with reference to the proposed analysis and it’s importance</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">Delineation</td>
+<td align="center">Delineation is incomplete and/or incorrectly completed</td>
+<td align="center">Delineation appears complete but intermediate steps are not included or shown</td>
+<td align="center">Delineation and all intermediate steps have clear plots to show the steps to delineation but there are minor errors in approach and code</td>
+<td align="center">All intermediate steps are clearly presented and code is perfect</td>
+<td align="center">20</td>
+</tr>
+<tr class="odd">
+<td align="center">PPT Analysis</td>
+<td align="center">PPT analysis is missing or has significant errors</td>
+<td align="center">Analysis shows plots but labels and/or axes are incorrect or unclear</td>
+<td align="center">Plots are included and clear with minor code issues</td>
+<td align="center">Includes clear and readable plots of precipitation, exceedance curve and descrition of return rates. All code is working</td>
+<td align="center">20</td>
+</tr>
+<tr class="even">
+<td align="center">Code</td>
+<td align="center">Significant code is missing or does not work</td>
+<td align="center">Some code is missing and much of it does not work</td>
+<td align="center">Most of the code works with minor issues. Comments are not clear on how code works</td>
+<td align="center">All code works perfectly and is easily readable. Comments explain the steps you are taking</td>
+<td align="center">15</td>
+</tr>
+<tr class="odd">
+<td align="center">Explanation</td>
+<td align="center">Your analysis and steps do not include any text explaining the steps and results of your analyses</td>
+<td align="center">Your steps include minimal explanation but is either incomplete or incorrect</td>
+<td align="center">Explanations are consistent throughout your entire submission and you clearly explain what is happening in each step</td>
+<td align="center">Explanations are clear, and your document reads as a clear step-by-step synthesis of all of your required steps, as well as your analysis</td>
+<td align="center">15</td>
+</tr>
+<tr class="even">
+<td align="center">Individual Analysis</td>
+<td align="center">Problem and analysis are not clear or are incomplete</td>
+<td align="center">Problem is stated but approach is incomplete or incorrect</td>
+<td align="center">Problem is stated and analysis clearly suggests grasp of the problem. A new analysis was attempted with minor flaws</td>
+<td align="center">Problem is stated and backed up. A clear approach is presented and an anlysis was conducted that was not covered in class</td>
+<td align="center">20</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="video-presentation" class="section level3">
+<h3>Video Presentation</h3>
+<p>You will need to create a 5-minute video presentation with slides where you introduce your watershed, do a quick walk-through of your gauge site, and characteristics of precipitation and run-off regimes. Describe your additional analysis and the approach you took to address your topic.</p>
+</div>
+</div>

@@ -71,6 +71,151 @@
     </item>
     
     <item>
+      <title>Final Project</title>
+      <link>/courses/watershed/finalproject/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/finalproject/</guid>
+      <description>
+
+
+&lt;div id=&#34;watershed-scale-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Watershed Scale Analysis&lt;/h2&gt;
+&lt;p&gt;Your final project is going to consist of a watershed delineation and analysis. We are going to include most of what we have worked on throughout the semester but you should also go a bit farther.&lt;/p&gt;
+&lt;div id=&#34;required&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Required&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: upper-alpha&#34;&gt;
+&lt;li&gt;Delineate a watershed based on a USGS stream gauge of your choice.&lt;/li&gt;
+&lt;li&gt;Calculate an Annual Water Budget for your watershed&lt;/li&gt;
+&lt;li&gt;Calculate Exceedance and Recurrence curve and probabilities.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an exceedance probability curve for precipitation&lt;/li&gt;
+&lt;li&gt;Calculate the amount of precipitation that would qualify as a:
+&lt;ul&gt;
+&lt;li&gt;Once in 5 year event&lt;/li&gt;
+&lt;li&gt;Once in 10 year event&lt;/li&gt;
+&lt;li&gt;Once in 20 year event&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;up-to-you&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Up to you&lt;/h3&gt;
+&lt;p&gt;From here, your project is basically up to you. However, you need to include an additional major analysis that investigates an issue. This is where choosing your gauge station is going to make a difference. Some ideas for an analysis are:&lt;/p&gt;
+&lt;div id=&#34;effect-of-landcover-on-your-watershed&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Effect of Landcover on your watershed:&lt;/h4&gt;
+&lt;p&gt;The Multi-Resolution Land Characteristis Consortium (MRLC) hosts the USGS land cover datasets. A national dataset of land cover is available for 2001, 2004, 2006, 2008, 2011, 2013 and 2016. &lt;a href=&#34;https://www.mrlc.gov/data&#34;&gt;View datasets here&lt;/a&gt;. You could investigate how landcover has affected runoff ratios over a certain time period.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;forest-fire-prevelance-relatede-to-rainfall&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Forest Fire Prevelance relatede to rainfall&lt;/h4&gt;
+&lt;p&gt;You could investigate wether or not there is a correlation between rainfall and forest fire prevelance in your watershed. This could be year to year or within a single year. There are plenty of data on wildfire locations. One source is &lt;a href=&#34;https://www.geomac.gov/&#34;&gt;USGS GeoMAC&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;flood-routing&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Flood Routing&lt;/h4&gt;
+&lt;p&gt;You could pursue a flood routing problem if you have multiple gauges within your watershed. I could see this as an analysis of a single event (such as a Hurricane) or a general analysis of storage regimes over a number of years.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;grading-rubric&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Grading Rubric&lt;/h2&gt;
+&lt;p&gt;Your grade will be made up of the following:&lt;/p&gt;
+&lt;p&gt;Proposal: 10%
+Final Submission: 70%
+Final Presentation: 20%&lt;/p&gt;
+&lt;div id=&#34;proposal&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Proposal&lt;/h3&gt;
+&lt;p&gt;Write one paragraph about your proposed analysis and submit it through Sakai. You should include your propsed USGS gauge site and location. I’m looking for proposals that push past what we have done this semester but are still accomplishable. This is an opportunity for you to really push into exploring the things you are interested in. If you are unsure of how you will accomplish a certain analysis, that’s okay! We will have time to talk about how to accomplish specific tasks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Due Date: April 3rd @ Noon&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;final-submission&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Final Submission&lt;/h3&gt;
+&lt;p&gt;Your final submission must include the requred components listed above and submitted as a zip file. Your zip file must include:
+- Your entire project folder:
+- Your .RMD file
+- Your data folder
+- Your html output file
+- Any additional scripts you may have used for data processing&lt;/p&gt;
+&lt;p&gt;I should be able to open your submission and run your code without any alterations. This means you must use the ‘here()’ package to load data in your scripts, the same way we’ve been doing all semester. I will be reading your html files for grading purposes but if I catch an error, I should be able to open your code quickly and find the source of the error.&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;14%&#34; /&gt;
+&lt;col width=&#34;7%&#34; /&gt;
+&lt;col width=&#34;20%&#34; /&gt;
+&lt;col width=&#34;12%&#34; /&gt;
+&lt;col width=&#34;16%&#34; /&gt;
+&lt;col width=&#34;27%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Category&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Poor&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Acceptable&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Good&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Excellent&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Points Possible&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Introduction&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No Introduction&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Describes the watershed, and location but lacks any additional information&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Includes gauge site, location, description of variables and statement of your problem&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Includes robust description of the gauge, site, and watershed with reference to the proposed analysis and it’s importance&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Delineation&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Delineation is incomplete and/or incorrectly completed&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Delineation appears complete but intermediate steps are not included or shown&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Delineation and all intermediate steps have clear plots to show the steps to delineation but there are minor errors in approach and code&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;All intermediate steps are clearly presented and code is perfect&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;PPT Analysis&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;PPT analysis is missing or has significant errors&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Analysis shows plots but labels and/or axes are incorrect or unclear&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Plots are included and clear with minor code issues&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Includes clear and readable plots of precipitation, exceedance curve and descrition of return rates. All code is working&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Code&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Significant code is missing or does not work&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Some code is missing and much of it does not work&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Most of the code works with minor issues. Comments are not clear on how code works&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;All code works perfectly and is easily readable. Comments explain the steps you are taking&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Explanation&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Your analysis and steps do not include any text explaining the steps and results of your analyses&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Your steps include minimal explanation but is either incomplete or incorrect&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Explanations are consistent throughout your entire submission and you clearly explain what is happening in each step&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Explanations are clear, and your document reads as a clear step-by-step synthesis of all of your required steps, as well as your analysis&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Individual Analysis&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Problem and analysis are not clear or are incomplete&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Problem is stated but approach is incomplete or incorrect&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Problem is stated and analysis clearly suggests grasp of the problem. A new analysis was attempted with minor flaws&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Problem is stated and backed up. A clear approach is presented and an anlysis was conducted that was not covered in class&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;video-presentation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Video Presentation&lt;/h3&gt;
+&lt;p&gt;You will need to create a 5-minute video presentation with slides where you introduce your watershed, do a quick walk-through of your gauge site, and characteristics of precipitation and run-off regimes. Describe your additional analysis and the approach you took to address your topic.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Lecture 11 (Streams and Floods)</title>
       <link>/courses/watershed/lecture11/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
@@ -129,6 +274,14 @@
 
 &lt;div id=&#34;here-are-some-resources-for-coding-in-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Here are some resources for coding in R&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf&#34;&gt;R Markdown Cheatsheet&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;data-links&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Links&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.usgs.gov/core-science-systems/ngp/tnm-delivery&#34;&gt;Digital Elevation Data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.geomac.gov/&#34;&gt;Fire Data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mrlc.gov/data&#34;&gt;Land Cover&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More to come!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -144,6 +297,7 @@
 
 &lt;div id=&#34;here-are-some-resources-for-using-the-vcl&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Here are some resources for using the VCL&lt;/h2&gt;
+&lt;p&gt;I am going to demo in windows, but if you are using a MAC, &lt;a href=&#34;/files/VCL_Mac_Setup.pdf&#34;&gt;CLICK HERE&lt;/a&gt; for instructions.&lt;/p&gt;
 &lt;p&gt;The Virtual Computing Lab (VCL) is essentially a remote computer that you can connect to at UNC in order to have access to specialty software and more computing power than you may have on your personal laptop. In order to use the VCL, you need to use a Virtual Private Network (VPN) to log into the UNC network. Essentially logging into the VPN makes it appear as though you are on campus, and therefore gives you access to all of the things you would normally have access to if you were on campus and logged into eduroam.&lt;/p&gt;
 &lt;p&gt;To log into the UNC VPN, you need to download the software that will let you do it. You can do that &lt;a href=&#34;https://uncch.service-now.com/kb_view.do?sysparm_article=KB0010155&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Once you have the Cisco AnyConnect software installed, you want to run it and connect to ‘vpn.unc.edu’.&lt;/p&gt;
