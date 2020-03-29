@@ -18,6 +18,9 @@ type: docs
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+[Lecture Recording Here!](https://unc.zoom.us/rec/share/3tJMP6300H1JG6vQ70jmRpY6Bqbdaaa81SZK-_ILmEyWuyk0yIESRUkbCaN88SPG)
+
+
 ## Watershed Scale Analysis
 
 Your final project is going to consist of a watershed delineation and analysis. We are going to include most of what we have worked on throughout the semester but you should also go a bit farther.
