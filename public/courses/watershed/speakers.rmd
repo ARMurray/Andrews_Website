@@ -57,7 +57,7 @@ Krissy received an undergraduate degree in biology/environmental science and geo
 
 ## Speaker: [Sam Zipper](https://www.samzipper.com/)
 
-![](SamZipper.png){width='200px'}
+![](SamZipper.png)
 
 ### Title: Groundwater Pumping Impacts on Real Stream Networks: Testing the Performance of Simple Management Tools
 
