@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Speaker: [Sheila Saia](https://sheilasaia.rbind.io/#about)
-```{r sheilaPic, out.width='200px'}
+```{r sheilaPic, out.width='200px', echo=FALSE}
 knitr::include_graphics('sheila.jpg')
 ```
 
@@ -36,7 +36,7 @@ Sheila Saia (say "sigh-yah") is a postdoctoral researcher at NC State University
 
 ## Speaker: [Kristina Hopkins](https://www.usgs.gov/staff-profiles/kristina-hopkins?qt-staff_profile_science_products=0#qt-staff_profile_science_products)
 
-```{r krissyPic, out.width='200px'}
+```{r krissyPic, out.width='200px', echo=FALSE}
 knitr::include_graphics('KrissyHopkins.jpg')
 ```
 
@@ -53,7 +53,7 @@ Krissy received an undergraduate degree in biology/environmental science and geo
 
 ## Speaker: Joseph Delesantro
 
-```{r josephPic, out.width='200px'}
+```{r josephPic, out.width='200px', echo=FALSE}
 knitr::include_graphics('Joseph_Delesantro.png')
 ```
 
@@ -63,7 +63,7 @@ knitr::include_graphics('Joseph_Delesantro.png')
 
 ## Speaker: [Sam Zipper](https://www.samzipper.com/)
 
-```{r samPic, out.width='200px'}
+```{r samPic, out.width='200px', echo=FALSE}
 knitr::include_graphics('SamZipper.png')
 ```
 
