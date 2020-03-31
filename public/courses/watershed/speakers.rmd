@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Speaker: [Sheila Saia](https://sheilasaia.rbind.io/#about)
 
-![](sheila.jpg){width='200px'}
+![](/img/sheila.jpg){width='200px'}
 
 Sheila Saia (say "sigh-yah") is a postdoctoral researcher at NC State University and a member of the Biosystems Analytics Lab, which is lead by Dr. Natalie Nelson in the Bio & Ag Engineering Department. Her  current research uses data analytics (i.e., data wrangling, statistical and physically-based modeling, and data visualizing) to predict and minimize human impacts on water resources at regional and national scales. She's broadly interested in research questions exploring the relationships between humans, climate, and water resources (water quantity and water quality).
 
@@ -36,7 +36,7 @@ Sheila Saia (say "sigh-yah") is a postdoctoral researcher at NC State University
 
 ## Speaker: [Kristina Hopkins](https://www.usgs.gov/staff-profiles/kristina-hopkins?qt-staff_profile_science_products=0#qt-staff_profile_science_products)
 
-![](KrissyHopkins.jpg){width='200px'}
+![](/img/KrissyHopkins.jpg){width='200px'}
 
 Krissy Hopkins studies the impacts of urbanization on rivers and streams, focused on understanding how the intensity and type of development impacts water quality and quantity. This includes examining the impacts of different types of stormwater management strategies, both conventional and infiltration-based (i.e., green infrastructure), on watershed hydrology and nutrient fluxes. Her work also focuses on translating ecosystem functions into ecosystem services and values by applying ecosystem services approaches to floodplain systems and green stormwater infrastructure.
 
@@ -50,14 +50,14 @@ Krissy received an undergraduate degree in biology/environmental science and geo
 
 ## Speaker: Joseph Delesantro
 
-![](Joseph_Delesantro.png){width='200px'}
+![](/img/Joseph_Delesantro.png){width='200px'}
 
 ### Title:
 
 
 ## Speaker: [Sam Zipper](https://www.samzipper.com/)
 
-![](SamZipper.png)
+![](/img/SamZipper.png)
 
 ### Title: Groundwater Pumping Impacts on Real Stream Networks: Testing the Performance of Simple Management Tools
 
