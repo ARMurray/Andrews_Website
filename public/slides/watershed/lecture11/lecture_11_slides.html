@@ -285,7 +285,7 @@ This can be simplified using the table by simply converting it to:
 .mb[Okay...]
 .pull-left[
 .med[
-So we have done the first part, but now we need to separate out `\(V_{2}\)` from `\(O_{2}\)`
+So we have done the first part, but now we need to separate out `\(V_{2}\)` from `\(O_{2}\)` after solving for *D*
 
 We can use equation 5.4 for this... 
 
@@ -299,7 +299,331 @@ then:
 ]]
 .pull-right[
 ![](FIG5_9.gif)
+
+**Figure 5.9** Outflow versus *(2V/dt) + O* (**column D**) for the reservoir routing example based on low outflow values in table 5.1. Equation 5.5 provides a fit to the observed relationship useful for completing the calculations in the reservoir routing example.
 ]
+
+---
+## How to make table 5.3
+
+Remember Equation (5.3)... We start out with knowing columns A, B and C so let's start there:
+
+We know the inflow hydrograph with time in days and inflow in `\(m^{3}s^{-1}\)`
+
+```r
+time &lt;- c(0,0.25,0.5,0.75,1,1.25,1.5,1.75,2,2.25,2.5,2.75,3,3.25,3.5,3.75)
+A &lt;- c(.7,.9,2,5,9,6.7,5,3.8,2.8,2.3,1.8,1.5,1.2,1,0.85,0.7)
+```
+
+From **A**, we can construct **B** as it is just the current line (or measurement) plust the one after it. I'm going to use a ['for loop'](https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r?utm_source=adwords_ppc&amp;utm_campaignid=1658343521&amp;utm_adgroupid=63833879975&amp;utm_device=c&amp;utm_keyword=%2Bloops%20%2Br&amp;utm_matchtype=b&amp;utm_network=g&amp;utm_adpostion=&amp;utm_creative=319519154118&amp;utm_targetid=aud-299261629654:kwd-589281898934&amp;utm_loc_interest_ms=&amp;utm_loc_physical_ms=9009666&amp;gclid=CjwKCAjw95D0BRBFEiwAcO1KDGXRjgczsMeS4w0smM8taxzUzUZORtnVaZGIdalZbOd96oxVTAM5cxoCJikQAvD_BwE) for this.
+
+```r
+B &lt;- list()
+for(n in 1:length(A)){
+  a1 &lt;- A[n]
+  a2 &lt;- A[n+1]
+  b &lt;- a1+a2
+  B &lt;- append(B,b)
+}
+print(as.character(B))
+```
+
+```
+##  [1] "1.6"  "2.9"  "7"    "14"   "15.7" "11.7" "8.8"  "6.6"  "5.1"  "4.1"  "3.3"  "2.7"  "2.2"  "1.85"
+## [15] "1.55" "NA"
+```
+
+
+
+---
+### How to make table 5.3 cont'd...
+
+For our example, remember that the volume of the reservoir is `\(3,700,000m^{3}\)` and the outflow is 0 because the reservoir is about to crest the weir. So the initial value of C can be calculated as: `\(\frac{2V_{n}}{\Delta t}-O_{n}\)` . **TIME IS IN SECONDS**. The time step is .25 days so we need to convert that to seconds
+
+
+```r
+C &lt;- c((2*3700000)/(.25*24*60*60))
+C[1]
+```
+
+```
+## [1] 342.5926
+```
+
+So now we have A, B for the entire time period and C for the first step. We can now get D for the first step since D = B + C
+
+
+```r
+D &lt;- list() # Create an empty list called D
+D[1] &lt;- as.numeric(B[1])+as.numeric(C[1]) # Add B1 and C1 together and assign to D1
+```
+
+Okay... we now have *A,B,C and D* for the first step, but remember that *D* has components of both Volume and Outflow and we need to split them up. We can go back to equation 5.4 which relates the height of the water above the crest to outflow when we know the length of the spill way (how wide the crest is). Recall that we are given a table of water depth at the dam and how that relates to volume of the reservoir. **The reservoir spillway is 20m long**. We can actually calculate a range of *column D* values for known water heights.
+
+---
+### Reservoir Routing Continued
+
+Take a look at table 5.1 in your book (page 128).
+
+We can relate outflow to volume of the resrvoir now when we know the depth of the water at the spillway. Recall that `\(h_{weir}\)` is the total depth of water at the spillway minus the height of the weir: `\(h_{weir}=h-h_{spillway}\)`. 
+
+We can calculate O (outflow) using equation 5.4: `\(O=2.2h_{weir}^{3/2}W_{c}\)` Remember `\(W_{c}\)` is the length of the weir / spillway (20m). For example, when the depth of water is 11.3 meters and `\(h_{weir}=1.22\)` we can calculate O and also `\(\frac{2V}{\Delta t}+O\)` (column D)
+
+
+```r
+O &lt;- 2.2*(1.22^(3/2))*20
+O
+```
+
+```
+## [1] 59.2915
+```
+
+
+```r
+D122 &lt;- ((2*4930000)/(.25*24*60*60))+O
+D122
+```
+
+```
+## [1] 515.773
+```
+
+So now we have already solved a really interesting problem, by being able to say what outflow will be with a known height / volume in the reservoir, but we still have not related it to the inflow hydrograph, which is important since we want to know what the effects of inflow are going to be on outflow so we can plan for it.
+
+---
+### Reservoir Routing Continued...
+
+.mb[Back to finishing table 5.3:]
+
+So far we have columns **A** &amp; **B** for all of the time steps and we have column C and D for the first time step. 
+
+*Column E* is going to tell us the outflow at `\(t_{n+1}\)` for the inflow at `\(t_{n}\)` . In other words, if we know what the inflow is now, and we know the relationship between volume and height, we can tell what outflow will be at the next time step, in this case, .25 days (6 hours). In order to calculate *E* we need to add *column D* and the relationship with outflow. We can do this by plotting the relationship between column D and outflow like we did on the previous slide. Honberger points out that this may not work at discharges greater than `\(50m^{3}s^{-1}\)` so we'll just calculate outflow and plot the discharges less than that:
+
+First, let's recreate table 5.1 from the book. 
+
+
+```r
+table5_1 &lt;- data.frame("h" = c(1.01,10.4,10.7,11,11.3,11.6,11.9,12.2,12.5,12.8),
+                       "Vol" = c(3690000,3980000,4300000,4610000,4930000,5270000,5600000,5950000,6290000,6640000))
+```
+---
+
+```r
+table5_1
+```
+
+```
+##        h     Vol
+## 1   1.01 3690000
+## 2  10.40 3980000
+## 3  10.70 4300000
+## 4  11.00 4610000
+## 5  11.30 4930000
+## 6  11.60 5270000
+## 7  11.90 5600000
+## 8  12.20 5950000
+## 9  12.50 6290000
+## 10 12.80 6640000
+```
+
+So now let's calculate the rest of the columns:
+
+Create a new column for `\(h_{weir}\)` and calculate it by subtracting 10.1 from h
+
+```r
+table5_1$hweir &lt;- table5_1$h-10.1
+```
+
+Create a new column for *O* and calculate it using equation 5.4 with the `\(h_{weir}\)` column you just created
+
+```r
+table5_1$O &lt;- 2.2*(table5_1$hweir^(3/2))*20
+```
+
+Create a column for *D* and calculate it using the Volume column and the O column you just created
+
+```r
+table5_1$D &lt;- ((2*table5_1$Vol)/(.25*24*60*60))+table5_1$O
+```
+
+---
+.pull-left[
+Let's take a look:
+
+```r
+table5_1
+```
+
+```
+##        h     Vol hweir          O        D
+## 1   1.01 3690000 -9.09        NaN      NaN
+## 2  10.40 3980000  0.30   7.229938 375.7485
+## 3  10.70 4300000  0.60  20.449352 418.5975
+## 4  11.00 4610000  0.90  37.567859 464.4197
+## 5  11.30 4930000  1.20  57.839502 514.3210
+## 6  11.60 5270000  1.50  80.833162 568.7961
+## 7  11.90 5600000  1.80 106.257950 624.7765
+## 8  12.20 5950000  2.10 133.900321 684.8262
+## 9  12.50 6290000  2.40 163.594817 746.0022
+## 10 12.80 6640000  2.70 195.208319 810.0231
+```
+
+.med[So now we can plot this to use for our *E* calculations:
+We need to fit a curve to this relationship to use it to calculate E
+]
+]
+
+.pull-right[
+
+```r
+ggplot(table5_1)+
+  geom_line(aes(x=D,y=O))+
+  geom_point(aes(x=D,y=O),col='red')+
+  ylim(ymin=0,ymax=60)+xlim(xmin=340,xmax=570)
+```
+
+![](lecture_11_slides_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+
+]
+
+---
+.pull-left[
+## Fitting a curve
+
+
+```r
+exponential.model &lt;- lm(log(table5_1$O)~ table5_1$D)  # Create the model
+exp.predict &lt;- exp(predict(exponential.model,list(Level=table5_1$D)))
+```
+
+
+```r
+ggplot()+
+  geom_line(aes(x=table5_1$D,y=table5_1$O))+
+  geom_line(aes(x=table5_1$D,y=exp.predict),col = 'blue')+
+  geom_point(aes(x=table5_1$D,y=table5_1$O),col='red')+
+  ylim(ymin=0,ymax=60)+xlim(xmin=340,xmax=570)
+```
+
+So now we can estimate the vvalue of O from any input of D, as you can see, this is not a well fitting model but for the purposes of demonstration it's fine. We are not focusing on model fitting right now (but it is important!)
+]
+.pull-right[
+Plot the curve we just fitted to the data
+![](lecture_11_slides_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+]
+
+---
+
+### Calculating the rest of table 5.3
+
+So now, we can estimate the first step of *column E* from the output of the curve we just fit by getting the formula from it. For now, let's use the formula provided by Hornberger:
+
+`\(O = -2.64x10^{-6}(2V/\Delta t+O)^{3}+0.00408(2V/ \Delta t+O)^{2}-1.68(2v/\Delta t+O)+202.6\)`
+
+
+So we plug in D to this formula to get E
+
+```r
+E &lt;- list()
+E[1] &lt;- (-2.64*10^(-6))*as.numeric(D[1])^(3)+.00408*as.numeric(D[1])^(2)-1.68*as.numeric(D[1])+202.6
+E[1]
+```
+
+```
+## [[1]]
+## [1] 0.05946621
+```
+
+Keep in mind that this formula will be different for a different reservoir, and was created specifically for this example. We would find a new formula by fitting a good curve.
+
+---
+### Reservoir Routing Continued...
+
+So we now have columns **A &amp; B** for all of the time steps and we have **C, D &amp; E** for the first time step. We now have to iterate through some steps to get the rest.
+
+To get column C at step 2, we use the formula: `\(C2=D1-2*E1\)`
+
+Before we do that, let us consider timing. We don't want to do these calculations 1 by 1 because it will take forever, so let's code them in a way that will save us time while still allowing us to build off of each step.
+
+To get C we need E from the step before and to get E we need D and to get D we need C and so on...
+
+Let's create a table with what we have and then fill in the missing values 1 by 1:
+
+
+```r
+table &lt;- as.data.frame(time)
+table$A &lt;- A
+table$B &lt;- as.numeric(B)
+```
+
+
+---
+
+```r
+table
+```
+
+```
+##    time    A     B
+## 1  0.00 0.70  1.60
+## 2  0.25 0.90  2.90
+## 3  0.50 2.00  7.00
+## 4  0.75 5.00 14.00
+## 5  1.00 9.00 15.70
+## 6  1.25 6.70 11.70
+## 7  1.50 5.00  8.80
+## 8  1.75 3.80  6.60
+## 9  2.00 2.80  5.10
+## 10 2.25 2.30  4.10
+## 11 2.50 1.80  3.30
+## 12 2.75 1.50  2.70
+## 13 3.00 1.20  2.20
+## 14 3.25 1.00  1.85
+## 15 3.50 0.85  1.55
+## 16 3.75 0.70    NA
+```
+
+---
+
+```r
+C &lt;- 342.6
+tableComplete &lt;- data.frame()
+for(n in 1:nrow(table)){
+  row &lt;- table[n,]
+  D &lt;- row$B+C
+  E &lt;- (-2.64*10^(-6))*as.numeric(D)^(3)+.00408*as.numeric(D)^(2)-1.68*as.numeric(D)+202.6
+  newRow &lt;- data.frame("time"=row$time,"A"=row$A,"B"=row$B,"C"=C,"D"=D,"E"=E)
+  tableComplete &lt;- rbind(tableComplete,newRow)
+  C &lt;- D - 2*E
+}
+```
+
+---
+
+```r
+tableComplete
+```
+
+```
+##    time    A     B        C        D          E
+## 1  0.00 0.70  1.60 342.6000 344.2000 0.06087622
+## 2  0.25 0.90  2.90 344.0782 346.9782 0.60013952
+## 3  0.50 2.00  7.00 345.7780 352.7780 1.79174330
+## 4  0.75 5.00 14.00 349.1945 363.1945 4.14707549
+## 5  1.00 9.00 15.70 354.9003 370.6003 5.98154931
+## 6  1.25 6.70 11.70 358.6372 370.3372 5.91418869
+## 7  1.50 5.00  8.80 358.5089 367.3089 5.15034434
+## 8  1.75 3.80  6.60 357.0082 363.6082 4.24612614
+## 9  2.00 2.80  5.10 355.1159 360.2159 3.44612966
+## 10 2.25 2.30  4.10 353.3237 357.4237 2.80879277
+## 11 2.50 1.80  3.30 351.8061 355.1061 2.29457967
+## 12 2.75 1.50  2.70 350.5169 353.2169 1.88548799
+## 13 3.00 1.20  2.20 349.4459 351.6459 1.55226490
+## 14 3.25 1.00  1.85 348.5414 350.3914 1.29075116
+## 15 3.50 0.85  1.55 347.8099 349.3599 1.07880437
+## 16 3.75 0.70    NA 347.2023       NA         NA
+```
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
