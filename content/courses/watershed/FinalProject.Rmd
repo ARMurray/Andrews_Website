@@ -18,7 +18,7 @@ type: docs
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Lecture Recording Here!](https://unc.zoom.us/rec/share/3tJMP6300H1JG6vQ70jmRpY6Bqbdaaa81SZK-_ILmEyWuyk0yIESRUkbCaN88SPG)
+[Lecture Recording Here!](https://unc.zoom.us/rec/share/tO5HCOnV91pIZoHwzG7FQJAeJqHUaaa8gCBMrvFYmU9n6cOXJSls-tJjMga3Bk15?startTime=1585325773000)
 
 
 ## Watershed Scale Analysis
