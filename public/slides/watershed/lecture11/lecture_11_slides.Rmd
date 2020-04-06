@@ -384,7 +384,7 @@ So far we have columns **A** & **B** for all of the time steps and we have colum
 First, let's recreate table 5.1 from the book. 
 
 ```{r}
-table5_1 <- data.frame("h" = c(1.01,10.4,10.7,11,11.3,11.6,11.9,12.2,12.5,12.8),
+table5_1 <- data.frame("h" = c(10.1,10.4,10.7,11,11.3,11.6,11.9,12.2,12.5,12.8),
                        "Vol" = c(3690000,3980000,4300000,4610000,4930000,5270000,5600000,5950000,6290000,6640000))
 ```
 ---

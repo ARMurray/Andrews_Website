@@ -4,12 +4,12 @@ draft: false
 output:
   blogdown::html_page:
     toc: false
-linktitle: 'Lecture 11'
+linktitle: 'Lecture 12'
 menu:
   watershed:
     parent: lectures
-    weight: 80
-title: Lecture 11 (Streams and Floods)
+    weight: 90
+title: Lecture 12 (Streams and Floods)
 type: docs
 
 ---
