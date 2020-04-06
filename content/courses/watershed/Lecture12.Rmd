@@ -18,7 +18,7 @@ type: docs
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Slides are here!](https://amurraygeo.com/slides/watershed/lecture11/lecture_12_slides.html)
+[Slides are here!](https://amurraygeo.com/slides/watershed/lecture12/lecture_12_slides.html)
 
 ## Overview
 
