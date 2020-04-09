@@ -20,6 +20,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Slides are here!](https://amurraygeo.com/slides/watershed/lecture12/lecture_12_slides.html)
 
+[Lectre Recording is here!](https://unc.zoom.us/rec/share/6txXLor_9V9JT4Xq-HmAHZUTRbnEaaa82nVL_PQEnU7BrJ7JmltWydG92pdWVfQf?startTime=1586189494000)
+
+
 ## Overview
 
 This is a continuation of lecture 11 where we move into flood routing in rivers as opposed to reservoirs, which we focused on last class. 
