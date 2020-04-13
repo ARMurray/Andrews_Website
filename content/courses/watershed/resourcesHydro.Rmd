@@ -22,6 +22,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [USGS National Water Information Sytem](https://waterdata.usgs.gov/nwis)
 
+[Digital Sand Tank](https://www.hydroframe.org/groundwater-education-tools)
+
 ### Documents
 
 [How does a USGS streamgage work?](https://pubs.usgs.gov/fs/2011/3001/pdf/fs2011-3001.pdf)
