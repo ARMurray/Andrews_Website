@@ -1,0 +1,35 @@
+---
+date: "2020-03-23T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: 'Hydrology'
+menu:
+  watershed:
+    parent: resources
+    weight: 5
+title: Hydro Resources
+type: docs
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hydrology Resources
+
+[USGS National Water Information Sytem](https://waterdata.usgs.gov/nwis)
+
+### Documents
+
+[How does a USGS streamgage work?](https://pubs.usgs.gov/fs/2011/3001/pdf/fs2011-3001.pdf)
+
+### Videos
+
+[Anatomy of a USGS Gauging Station](https://www.youtube.com/watch?v=BaSgOHYhj_o&feature=youtu.be)
+
+[Measuring Streamflow](https://www.usgs.gov/media/videos/streamflow-gaging-station-and-measurement-san-pedro-river-az)
+
+[Adam Ward Lectures](https://www.wardhydrolab.com/teaching-resources.html). Dr. Adam Ward is a professor of hydrology at Indiana University and has made all of his online lectures and resourced publicly available in response to COVID-19.

@@ -349,6 +349,32 @@ Final Presentation: 20%&lt;/p&gt;
     </item>
     
     <item>
+      <title>Hydro Resources</title>
+      <link>/courses/watershed/resourceshydro/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/watershed/resourceshydro/</guid>
+      <description>
+
+
+&lt;div id=&#34;hydrology-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Hydrology Resources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://waterdata.usgs.gov/nwis&#34;&gt;USGS National Water Information Sytem&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;documents&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Documents&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://pubs.usgs.gov/fs/2011/3001/pdf/fs2011-3001.pdf&#34;&gt;How does a USGS streamgage work?&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;videos&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Videos&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=BaSgOHYhj_o&amp;amp;feature=youtu.be&#34;&gt;Anatomy of a USGS Gauging Station&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.usgs.gov/media/videos/streamflow-gaging-station-and-measurement-san-pedro-river-az&#34;&gt;Measuring Streamflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.wardhydrolab.com/teaching-resources.html&#34;&gt;Adam Ward Lectures&lt;/a&gt;. Dr. Adam Ward is a professor of hydrology at Indiana University and has made all of his online lectures and resourced publicly available in response to COVID-19.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>R Resources</title>
       <link>/courses/watershed/resourcesr/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
@@ -365,7 +391,19 @@ Final Presentation: 20%&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.usgs.gov/core-science-systems/ngp/tnm-delivery&#34;&gt;Digital Elevation Data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.geomac.gov/&#34;&gt;Fire Data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.mrlc.gov/data&#34;&gt;Land Cover&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;More to come!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://owi.usgs.gov/R/training-curriculum/intro-curriculum/USGS/&#34;&gt;USGS R Packages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nhgis.org/&#34;&gt;Census Data&lt;/a&gt; NHGIS is the best source for Census data that is easy to plug into GIS and/or R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learning-links&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Learning Links&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt;. If you can’t figure out how to approach something, data camp probably has a tutorial on it!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;Geocomputation with R&lt;/a&gt; is a really excellent &lt;strong&gt;and free&lt;/strong&gt;, online textbook for geographers who want to use R. Following this textbook will give you foundational understanding of the way that geographic operations are done in R.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://ropenlabs.web.unc.edu/&#34;&gt;R Open Labs&lt;/a&gt;. These are still happening virtually. Check out their &lt;a href=&#34;http://ropenlabs.web.unc.edu/latest-news/&#34;&gt;news link&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lectures&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lectures&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://resources.rstudio.com/rstudio-conf-2020/object-of-type-closure-is-not-subsettable-jenny-bryan&#34;&gt;Jenny Bryan: Object of type ‘closure’ is not subsettable&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;line-block&#34;&gt;      Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming! Programming involves considerably more troubleshooting and debugging than many of us expected (or signed up for). The ability to solve your own problems is an incredibly powerful stealth skill that is worth cultivating with intention. This talk will help you nurture your inner problem solver, covering both general debugging methods and specific ways to implement them in the R ecosystem.&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

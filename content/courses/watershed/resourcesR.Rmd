@@ -31,4 +31,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Land Cover](https://www.mrlc.gov/data)
 
-More to come!
+[USGS R Packages](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/USGS/)
+
+[Census Data](https://nhgis.org/) NHGIS is the best source for Census data that is easy to plug into GIS and/or R.
+
+### Learning Links
+
+[Data Camp](https://www.datacamp.com/). If you can't figure out how to approach something, data camp probably has a tutorial on it!
+
+[Geocomputation with R](https://geocompr.robinlovelace.net/) is a really excellent **and free**, online textbook for geographers who want to use R. Following this textbook will give you foundational understanding of the way that geographic operations are done in R. 
+
+[R Open Labs](http://ropenlabs.web.unc.edu/). These are still happening virtually. Check out their [news link](http://ropenlabs.web.unc.edu/latest-news/)
+
+### Lectures
+[Jenny Bryan: Object of type 'closure' is not subsettable](https://resources.rstudio.com/rstudio-conf-2020/object-of-type-closure-is-not-subsettable-jenny-bryan)
+
+|       Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming! Programming involves considerably more troubleshooting and debugging than many of us expected (or signed up for). The ability to solve your own problems is an incredibly powerful stealth skill that is worth cultivating with intention. This talk will help you nurture your inner problem solver, covering both general debugging methods and specific ways to implement them in the R ecosystem.
