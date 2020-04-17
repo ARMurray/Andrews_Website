@@ -1,0 +1,23 @@
+---
+date: "2020-03-25T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+  toc: false
+linktitle: 'Other Recordings'
+menu:
+  watershed:
+  parent: lectures
+weight: 95
+title: Other Recordings
+type: docs
+
+---
+  
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Monday, April 13, 2020
+In this recording I went over the process for downloading Census data from NHGIS and getting it into R.
+
+[Recording Here](https://unc.zoom.us/rec/share/udYsCuDM2VhJbLeXs0SYYK8EONm7X6a80SNL-PEKyxuxOejNnlorfzrmsALsjqiS?startTime=1586794396000)
