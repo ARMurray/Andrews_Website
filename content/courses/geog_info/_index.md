@@ -15,3 +15,6 @@ type: docs
 ## More Information Coming Soon!
 
 ... but what else do you need to know REALLY???? This class is going to be awesome!!!
+
+
+[Check out some test slides](https://amurraygeo.com/slides/intro_geographic_information/Day01/slides.html)

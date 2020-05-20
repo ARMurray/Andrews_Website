@@ -1,0 +1,20 @@
+#my_video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.red {color:red; }
+
+.bigred {color:red; font-size:42px;}
+
+.big {color:black; font-size:42px;}
+
+.med {color:black; font-size:24px;}
+
+.small {color:black; font-size:20px;}
+
+.mb {color:black; font-size:36px;}
