@@ -12,6 +12,8 @@ output:
       highlightStyle: github
       countIncrementalSlides: false
     seal: false
+    includes:
+      after_body: "afterInit.html"
 ---
 
 ```{r setup, include=FALSE}
@@ -55,20 +57,15 @@ Like many of their songs, it involves a dragon.]
 
 ### Here is another test, this time I am using a local audio file
 
+I removed the ogg tag since I don't think it will make a difference
+
 <audio controls>
   <source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/mpeg">
-  <source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/ogg"/>
 </audio>
 
 ---
-
-### Trying something else here...
-
-<audio controls preload="none" style="width:480px;">
- <source src=/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/mp4" />
- <p>Your browser does not support HTML5 audio.</p>
- </audio>
- <p>
- <strong>Download Audio:</strong>
- <a href="path-to-m4a.m4a">M4A</a>
- </p>
+ <audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/ogg"/>
+</audio>
+ 
