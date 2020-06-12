@@ -24,9 +24,13 @@ type: docs
 
 ## What to expect
 
+This course will be a mix of reading, discussion and computer work. I'm going to introduce you to basic geographic concepts and we're going to quickly move into working with geographic information systems to reinforce these concepts. This course really is somewhat of a guinea pig for the fall semester geography courses so I anticipate we will run into some issues with computers and software. Thus, it is extremely important that in these first few days of class, you work to identify potential problems. I will be providing an exercise to work through as a way to check for potential issues so that we can try to catch as many of them as early as possible.
+
+We will be using **Piazza** to help facilitate class discussion and as a platform to ask questions that others may also have. [Click here](https://piazza.com/class/kbchpg3on0h4se?cid=3#) to go to our course page.
+
 ## Materials
 
-We will be using [Essentials of Geographic Information Systems](https://open.umn.edu/opentextbooks/textbooks/essentials-of-geographic-information-systems), which is a free and open source textbook.
+We will be reading [Essentials of Geographic Information Systems](https://open.umn.edu/opentextbooks/textbooks/essentials-of-geographic-information-systems), which is a free and open source textbook.
 
 ## Calendar
 

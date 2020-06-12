@@ -4,7 +4,7 @@ author: "Andrew Murray"
 date: 'June 22, 2020'
 output:
   xaringan::moon_reader:
-    css: ["default", "my_styles.css"]
+    css: ["default"]
     lib_dir: libs
     nature:
       ratio: "16:9"
@@ -38,11 +38,29 @@ March 25, 2020
 ]
 
 ---
-<video width="25%" height="25%" controls id="my_video">
+.pull-left[
+<video width="100%" height="100%" controls id="my_video">
     <source src="/mp4/d01_s01.mp4" type="video/mp4" preload>
 </video>
 
+Andrew Murray
+PhD Candidate (Geography)
+]
+
+.pull-right[
 ## Welcome to Geography 370
+
+Move through the slides at your own pace and I will provide commentary along the way.
+
+- These slides are in a format called 'xaringan' and use the following [keyboard shortcuts](https://bookdown.org/yihui/rmarkdown/xaringan-key.html):
+
+- Press 'f' to toggle fullscreen
+
+- type a number + 'enter' to go to that slide
+
+- press 'home' to return to the first slide
+
+]
 ---
 
 ### Here is another test, this time I am using a local audio file
