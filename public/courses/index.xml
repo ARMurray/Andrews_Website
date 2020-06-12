@@ -13,18 +13,246 @@
     <item>
       <title>Course Overview</title>
       <link>/courses/geog_info/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>/courses/geog_info/</guid>
       <description>
 
-&lt;p&gt;&lt;iframe src=&#34;https://giphy.com/embed/SsBKt9ouN5Xsyq3R4Z&#34; width=&#34;720&#34; height=&#34;405&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#welcome-to-geography-370&#34;&gt;Welcome to Geography 370!&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#a-few-quick-points&#34;&gt;A few quick points:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-expect&#34;&gt;What to expect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#materials&#34;&gt;Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#calendar&#34;&gt;Calendar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&#34;more-information-coming-soon&#34;&gt;More Information Coming Soon!&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip; but what else do you need to know REALLY???? This class is going to be awesome!!!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/intro_geographic_information/Day01/slides.html&#34; target=&#34;_blank&#34;&gt;Check out some test slides&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;welcome-to-geography-370&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Welcome to Geography 370!&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/slides/intro_geographic_information/Day01/slides.html&#34;&gt;Click here to get started!&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;a-few-quick-points&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A few quick points:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;This course will be asynchronous, which means that you will be responsible for viewing the lectures and completing the work on your own schedule.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I will be available to talk with you one-on-one as needed throughout the course to help with issues along the way (and I am sure there will be many!) with weekly (virtual) office hours and by appointment.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are using advanced software for this class and we will need to navigate how to manage this as some of you will not have access to the software, or possibly a stable internet connection. I will do my best to help you navigate these obstacles.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-to-expect&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What to expect&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Materials&lt;/h2&gt;
+&lt;p&gt;We will be using &lt;a href=&#34;https://open.umn.edu/opentextbooks/textbooks/essentials-of-geographic-information-systems&#34;&gt;Essentials of Geographic Information Systems&lt;/a&gt;, which is a free and open source textbook.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calendar&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calendar&lt;/h2&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;21%&#34; /&gt;
+&lt;col width=&#34;31%&#34; /&gt;
+&lt;col width=&#34;18%&#34; /&gt;
+&lt;col width=&#34;21%&#34; /&gt;
+&lt;col width=&#34;8%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Topic&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Reading&lt;/th&gt;
+&lt;th&gt;Assignment&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;June 22, 2020&lt;/td&gt;
+&lt;td&gt;Course Introduction&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Software Test&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;June 23, 2020&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;week1/d01/&#34;&gt;Lecture 1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Spatial thinking and concepts&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html&#34;&gt;Chapter 1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;Software Test&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;June 24, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;June 25, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;June 26, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;June 29, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;June 30, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 1, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 2, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 3, 2020&lt;/td&gt;
+&lt;td&gt;HOLIDAY&lt;/td&gt;
+&lt;td&gt;NO&lt;/td&gt;
+&lt;td&gt;CLASS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 6, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 7, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 8, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 9, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 10, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 13, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 14, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 15, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 16, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 17, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 20, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 21, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 22, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 23, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;July 24, 2020&lt;/td&gt;
+&lt;td&gt;Reading Day&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;July 27, 2020&lt;/td&gt;
+&lt;td&gt;Final Exam&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -34,29 +262,19 @@
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/courses/watershed/</guid>
-      <description>
-
-&lt;h1 id=&#34;intro-to-watershed-systems&#34;&gt;Intro to Watershed Systems&lt;/h1&gt;
-
+      <description>&lt;h1 id=&#34;intro-to-watershed-systems&#34;&gt;Intro to Watershed Systems&lt;/h1&gt;
 &lt;p&gt;Introduction to hydrologic and geomorphic processes in watersheds as applied to problems in flood analysis, water quality, and interactions of hydrology and environmental sciences. Drainage networks, nested catchments, and distribution and controls of precipitation, evaporation, runoff, and groundwater flow. Includes local field trips. (EES)
 Requisites: Prerequisite, ENEC 202 or GEOG 110; permission of the instructor for students lacking the prerequisite.
 Gen Ed: PL, EE- Field Work.
 Grading status: Letter grade.&lt;/p&gt;
-
 &lt;h2 id=&#34;the-basics&#34;&gt;The Basics&lt;/h2&gt;
-
 &lt;p&gt;Welcome to Watershed Hydrology!&lt;/p&gt;
-
 &lt;p&gt;When: Monday / Wednsday / Friday 12:20 -&amp;gt; 1:10&lt;/p&gt;
-
 &lt;p&gt;Where: 204 Carolina Hall&lt;/p&gt;
-
-&lt;p&gt;Office Hours: &lt;a href=&#34;https://amurraygeo.com/#contact&#34; target=&#34;_blank&#34;&gt;See my contact info&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;Office Hours: &lt;a href=&#34;https://amurraygeo.com/#contact&#34;&gt;See my contact info&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;book-for-the-course&#34;&gt;Book for the course&lt;/h3&gt;
-
 &lt;p&gt;&lt;em&gt;Elements of Physical Hydrology&lt;/em&gt; - Second Edition, by George Hornberger.
-&lt;img src=&#34;/img/hornberger.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/hornberger.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     

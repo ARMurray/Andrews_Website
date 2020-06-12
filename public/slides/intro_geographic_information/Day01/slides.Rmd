@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br><br>
 
-.mb[**Streams and Floods**]
+.mb[**Welcome to the class!**]
 
 <br><br><br>
 
@@ -38,21 +38,11 @@ March 25, 2020
 ]
 
 ---
-## This is a test of the audio features
+<video width="25%" height="25%" controls id="my_video">
+    <source src="/mp4/d01_s01.mp4" type="video/mp4" preload>
+</video>
 
-- This audio is from the internet
-
-<audio controls>
-  <source src="http://www.discoveringstatistics.com/repository/misc/dio_killing_the_dragon.mp3" type="audio/mpeg">
-  <source src="http://www.discoveringstatistics.com/repository/misc/dio_killing_the_dragon.ogg" type="audio/ogg"/>
-</audio>
-
-
-.center[Here's the audio.
-
-It is a song by the band Dio.
-
-Like many of their songs, it involves a dragon.]
+## Welcome to Geography 370
 ---
 
 ### Here is another test, this time I am using a local audio file

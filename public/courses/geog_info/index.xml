@@ -6,10 +6,43 @@
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0100</lastBuildDate>
     
 	    <atom:link href="/courses/geog_info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Monday</title>
+      <link>/courses/geog_info/week1/d01/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/geog_info/week1/d01/</guid>
+      <description>
+
+
+&lt;div id=&#34;monday-monday-monday&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Monday Monday Monday…&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week Overview</title>
+      <link>/courses/geog_info/week1/wk1_overview/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/geog_info/week1/wk1_overview/</guid>
+      <description>
+
+
+&lt;div id=&#34;welcome-to-geography-370&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Welcome to Geography 370&lt;/h1&gt;
+&lt;div id=&#34;introduction-to-geographic-information&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction to Geographic Information&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

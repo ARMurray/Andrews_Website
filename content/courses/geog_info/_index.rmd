@@ -1,0 +1,63 @@
+---
+date: "2020-01-10T00:00:00+01:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: true
+linktitle: Geog 370
+summary: Introduction to Geographic Information
+title: "Course Overview"
+type: docs
+---
+
+# Welcome to Geography 370!
+
+[Click here to get started!](https://amurraygeo.com/slides/intro_geographic_information/Day01/slides.html)
+
+## A few quick points:
+
+- This course will be asynchronous, which means that you will be responsible for viewing the lectures and completing the work on your own schedule.
+
+- I will be available to talk with you one-on-one as needed throughout the course to help with issues along the way (and I am sure there will be many!) with weekly (virtual) office hours and by appointment.
+
+- We are using advanced software for this class and we will need to navigate how to manage this as some of you will not have access to the software, or possibly a stable internet connection. I will do my best to help you navigate these obstacles.
+
+## What to expect
+
+## Materials
+
+We will be using [Essentials of Geographic Information Systems](https://open.umn.edu/opentextbooks/textbooks/essentials-of-geographic-information-systems), which is a free and open source textbook.
+
+## Calendar
+
+| Date          | Topic               | Description | Reading | Assignment  |
+| ------------- | ------------------- | ----------- | ------------- | ----- |
+| June 22, 2020 | Course Introduction |             | Software Test ||
+| June 23, 2020 | [Lecture 1](week1/d01/)| Spatial thinking and concepts| [Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html)| [Software Test]() |
+| June 24, 2020 |                     |             |               ||
+| June 25, 2020 |                     |             |               ||
+| June 26, 2020 |                     |             |               ||
+| June 29, 2020 |                     |             |               ||
+| June 30, 2020 |                     |             |               ||
+| July 1, 2020  |                     |             |               ||
+| July 2, 2020  |                     |             |               ||
+| July 3, 2020  | HOLIDAY             | NO          | CLASS         ||
+| July 6, 2020  |                     |             |               ||
+| July 7, 2020  |                     |             |               ||
+| July 8, 2020  |                     |             |               ||
+| July 9, 2020  |                     |             |               ||
+| July 10, 2020 |                     |             |               ||
+| July 13, 2020 |                     |             |               ||
+| July 14, 2020 |                     |             |               ||
+| July 15, 2020 |                     |             |               ||
+| July 16, 2020 |                     |             |               ||
+| July 17, 2020 |                     |             |               ||
+| July 20, 2020 |                     |             |               ||
+| July 21, 2020 |                     |             |               ||
+| July 22, 2020 |                     |             |               ||
+| July 23, 2020 |                     |             |               ||
+| July 24, 2020 | Reading Day         |             |               ||
+| July 27, 2020 | Final Exam          |             |               ||
+
+
+
