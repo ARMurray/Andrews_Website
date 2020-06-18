@@ -72,7 +72,8 @@ Move through the slides at your own pace and I will provide commentary along the
 - Software Introduction
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_03.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s03.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
@@ -93,7 +94,8 @@ Today we are simply going to talk about what you can expect to learn throughout 
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_04.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s04.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
@@ -109,7 +111,8 @@ Consider these important questions which describe the most basic ideas around ge
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_05.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s05.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
@@ -130,7 +133,8 @@ knitr::include_graphics("streetview.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_06.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s06.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
@@ -155,7 +159,8 @@ knitr::include_graphics("vr_mars.jpg")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_07.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s07.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
@@ -167,6 +172,15 @@ In the past decade, we have seen geographic information used in all sorts of coo
  Environmental Research
 <div class="clear:both:margin-top:20px;margin-bottom:20px;float:left;width:100%;"><a href="http://visualoop.com/infographics/tracking-trouble-in-the-arctic"><img style="width:80%; height:auto;" src="http://visualoop.com/media/2017/02/Tracking-trouble-in-the-Arctic.jpg" /></a></div>
 ]
+
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s08.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
+
+???
+
+Tracking migratory patterns makes use of geographic information to learn more about bird behaviors. We can do this with ease now using GPS small enough to safely attach to the foot of a bird.
 
 ---
 
@@ -181,7 +195,8 @@ knitr::include_graphics("NLCD_Change.jpg")
 We use data collected from sattelites to understand how humans are changing the planet. In this example we can see land cover change in the United states between 2001 and 2016. Dark green means that nothing has changed, whereas dark red means that area has changed entirely. A specific example would be clearcutting a forest to build a new stadium.
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_09.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s09.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ---
@@ -195,7 +210,8 @@ knitr::include_graphics("food.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_10.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s10.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
