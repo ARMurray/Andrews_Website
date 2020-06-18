@@ -72,16 +72,11 @@ Move through the slides at your own pace and I will provide commentary along the
 - Software Introduction
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/slide_02.mp4" type="audio/mpeg">
-  <track kind="captions" label="English SubTitles" src="/slides/intro_geographic_information/Day01/audio/slide02.srt" srclang="en" />
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_03.mp3" type="audio/mpeg">
 </audio>
 
 ???
 Today we are simply going to talk about what you can expect to learn throughout this course and how we are going to learn it. I'm going to introduce some basic concepts to you and we will talk about the syllabus, and the materials (both reading and software).
-
----
-<br><br><br>
-##.center[What is Geographic Information?]
 
 ---
 
@@ -97,7 +92,13 @@ Today we are simply going to talk about what you can expect to learn throughout 
 - How can we be sure that geographic information we create or use is of good quality?
 ]
 
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_04.mp3" type="audio/mpeg">
+</audio>
+
 ???
+
+Consider these important questions which describe the most basic ideas around geographhic information. What does it mean to assign information to a place? How do we do that? What then? What more can we learn from information or data that has a spatial component? How will we make sure that we are being responsible and accurate with our use of this information?
 
 ---
 
@@ -107,7 +108,15 @@ Today we are simply going to talk about what you can expect to learn throughout 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfdKzsrqOKtXRCBaSKPOA5xN-axPJCs55zF4ahWTQyvxWWFg/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 ]
 
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_05.mp3" type="audio/mpeg">
+</audio>
+
+???
+Please take a moment and reflect on what you think of when you consider the term 'geographic information'. Don't overthink it, just the first thing that pops into your head. You can write a word or a couple of sentences, doesn't matter. (These answers are anonymous)
+
 ---
+
 .pull-left[
 ```{r echo=FALSE, out.height= 600, out.width= 400}
 knitr::include_graphics("waze.png")
@@ -120,15 +129,38 @@ knitr::include_graphics("streetview.png")
 ```
 ]
 
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_06.mp3" type="audio/mpeg">
+</audio>
+
 ???
-Selecting a restaurant or finding a gas station. It helps us finding things in places we are not familiar. It helps us navigate and feel safe that we will get to our destination even if we take a detour.  It helps us finding so many important things such as….
+I use waze all the time, and for me, it is one of the first things I think about when describing geographic information to others. Do you use google maps? then you already use GIS. Where's the closest place to get gas? What time do I need to leave if I have to be in Raleigh by 5:00? I want pizza. What level of hungry am I? Should I order pizza from that place down the street? Theirs another pizza place I really like, but it's much farther... is it worth that additional time? These are just some of lifes important questions that we solve by making use of geographic information.
+
 ---
 
-.pull-right[
+.pull-left[
 ```{r echo=FALSE, out.height= 600, out.width= 350}
 knitr::include_graphics("pokemongo.png")
 ```
 ]
+
+.pull-right[
+<br>
+<br>
+<br>
+<br>
+```{r echo=FALSE, out.height= 400, out.width= 650}
+knitr::include_graphics("vr_mars.jpg")
+```
+]
+
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_07.mp3" type="audio/mpeg">
+</audio>
+
+???
+In the past decade, we have seen geographic information used in all sorts of cool ways, from pokemon go to the rise of virtual reality. For example, microsoft and NASA are now working to be able to bring everyone to Mars (no spaceship required) using the microsoft hololense, an augmented reality system that uses spatial imformation to project images in relative space. 
+
 
 ---
 .center[
@@ -146,8 +178,29 @@ knitr::include_graphics("NLCD_Change.jpg")
 
 ???
 
----
+We use data collected from sattelites to understand how humans are changing the planet. In this example we can see land cover change in the United states between 2001 and 2016. Dark green means that nothing has changed, whereas dark red means that area has changed entirely. A specific example would be clearcutting a forest to build a new stadium.
 
-```{r echo=FALSE, out.height= 400, out.width= 450}
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_09.mp3" type="audio/mpeg">
+</audio>
+
+---
+.center[
+
+## Food Security
+
+```{r echo=FALSE, out.height= 500, out.width= 600}
 knitr::include_graphics("food.png")
 ```
+]
+
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day01/audio/d01_s_10.mp3" type="audio/mpeg">
+</audio>
+
+???
+
+We can use geographic information to investigate food security and help to identify food deserts, a term we use to describe an area that lacks physical access to healthy and diverse selections of food.
+
+---
+
