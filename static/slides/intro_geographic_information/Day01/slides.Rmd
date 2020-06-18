@@ -4,7 +4,7 @@ author: "Andrew Murray"
 date: 'June 22, 2020'
 output:
   xaringan::moon_reader:
-    css: ["default"]
+    css: ["default", "my_styles.css"]
     lib_dir: libs
     nature:
       ratio: "16:9"
@@ -80,3 +80,74 @@ Move through the slides at your own pace and I will provide commentary along the
 Today we are simply going to talk about what you can expect to learn throughout this course and how we are going to learn it. I'm going to introduce some basic concepts to you and we will talk about the syllabus, and the materials (both reading and software).
 
 ---
+<br><br><br>
+##.center[What is Geographic Information?]
+
+---
+
+## .center[Important Questions for Class]
+<br>
+.mb[
+- What do we mean by “geographic information”?
+
+- What do we do with this geographic information?
+
+- How do we represent geographic information digitally, not as traditional analog maps?
+
+- How can we be sure that geographic information we create or use is of good quality?
+]
+
+???
+
+---
+
+## .center[What do you think of when you think about geographic information?]
+
+.center[
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfdKzsrqOKtXRCBaSKPOA5xN-axPJCs55zF4ahWTQyvxWWFg/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+]
+
+---
+.pull-left[
+```{r echo=FALSE, out.height= 600, out.width= 400}
+knitr::include_graphics("waze.png")
+```
+]
+
+.pull-right[
+```{r echo=FALSE, out.height= 600, out.width= 400}
+knitr::include_graphics("streetview.png")
+```
+]
+
+???
+Selecting a restaurant or finding a gas station. It helps us finding things in places we are not familiar. It helps us navigate and feel safe that we will get to our destination even if we take a detour.  It helps us finding so many important things such as….
+---
+
+.pull-right[
+```{r echo=FALSE, out.height= 600, out.width= 350}
+knitr::include_graphics("pokemongo.png")
+```
+]
+
+---
+.center[
+ Environmental Research
+<div class="clear:both:margin-top:20px;margin-bottom:20px;float:left;width:100%;"><a href="http://visualoop.com/infographics/tracking-trouble-in-the-arctic"><img style="width:80%; height:auto;" src="http://visualoop.com/media/2017/02/Tracking-trouble-in-the-Arctic.jpg" /></a></div>
+]
+
+---
+
+.center[
+```{r echo=FALSE, out.height= 600, out.width= 900}
+knitr::include_graphics("NLCD_Change.jpg")
+```
+]
+
+???
+
+---
+
+```{r echo=FALSE, out.height= 400, out.width= 450}
+knitr::include_graphics("food.png")
+```
