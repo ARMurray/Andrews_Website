@@ -220,3 +220,72 @@ We can use geographic information to investigate food security and help to ident
 
 ---
 
+.pull-left[
+.mb[ 
+
+- National Geospatial-Intelligence Agency
+
+- Mapping of Corona virus
+
+- Election Mapping
+]
+.center[
+```{r echo=FALSE, out.height= 250, out.width= 250}
+knitr::include_graphics("nga.png")
+```
+]]
+.pull-right[
+```{r echo=FALSE, out.height= 300, out.width= 600}
+knitr::include_graphics("corona.png")
+```
+
+```{r echo=FALSE, out.height= 300, out.width= 600}
+knitr::include_graphics("electoral.jpg")
+```
+]
+
+???
+
+Did you know the United States has an entire intelligence agency devoted to spatial information? Right now, geographers and public health officials are working aggressively to combat the spread of COVID-19 using geographic information. In just a few short months, we'll all be glued to the news cycle, carefully scrutinizing electoral maps to try and predict what the future will bring. The point is that geographic information is everywhere and we use it every day wether we're aware of it or not. These examples demonstrate just a tiny amount of the power of geographic information and it is powerful stuff and with great power, comes great responsibility.
+
+---
+
+## .center[Geographic Concepts & Questions]
+
+.med[
+.pull-left[
+- **Questions about geographic location:**
+  - Where is it?
+  - Why is it here or there?
+  - How much of it is here or there?
+
+- **Questions about geographic distribution:**
+  - Is it distributed locally or globally?
+  - Is it spatially clustered or dispersed?
+  - Where are the boundaries?
+
+- **Questions about geographic association:**
+  - What else is near it?
+  - What else occurs with it?
+  - What is absent in its presence?
+]
+.pull-right[
+<br>
+- **Questions about geographic interaction:**
+  - Is it linked to someplace else?
+  - What is the nature of this association?
+  - How much interaction occurs between the locations?
+
+- **Questions about geographic change:**
+  - Has it always been here?
+  - How has it changed over time and space?
+  - What causes its movement, expansion, or contraction?
+
+]]
+
+???
+
+The study of geographic or spatial information is as much about critical thinking as it is anything else. Consider these questions and try to apply them to things in the real world. Maybe a virus... these questions are all being asked currently about COVID-19. But hey, they are also all being asked about McDonalds... or a million other things. These are great starting points when pondering a question that has a geographic component.
+
+---
+
