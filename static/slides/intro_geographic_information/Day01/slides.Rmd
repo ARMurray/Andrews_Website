@@ -70,8 +70,16 @@ Move through the slides at your own pace and I will provide commentary along the
 - Software Introduction
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day01/audio/slide_02.mp4" type="audio/mpeg">
+  <track kind="captions" label="English SubTitles" src="/slides/intro_geographic_information/Day01/audio/slide02.srt" srclang="en" />
 </audio>
 
 ---
- 
+<div id="audioCenter">
+        <audio controls>
+            <source src="/slides/intro_geographic_information/Day01/audio/slide_02.mp4">
+            <track kind="captions" label="English SubTitles" src="/slides/intro_geographic_information/Day01/audio/slide02.srt" srclang="en" />
+            Your browser does not support the audio element.
+            </audio>
+        <p style="color:white">This Section Has been Selected from Lesson 1 section 1 to allow the Test Taker to sample the audio</p>
+</div>
