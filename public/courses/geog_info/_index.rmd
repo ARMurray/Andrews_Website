@@ -36,32 +36,32 @@ We will be reading [Essentials of Geographic Information Systems](https://open.u
 
 | Date          | Topic               | Description | Reading | Assignment  |
 | ------------- | ------------------- | ----------- | ------------- | ----- |
-| June 22, 2020 | Course Introduction |             | Software Test ||
+| June 22, 2020 | Course Introduction |             |               |       |
 | June 23, 2020 | [Lecture 1](week1/d01/)| Spatial thinking and concepts| [Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html)| [Software Test]() |
-| June 24, 2020 |                     |             |               ||
-| June 25, 2020 |                     |             |               ||
-| June 26, 2020 |                     |             |               ||
-| June 29, 2020 |                     |             |               ||
-| June 30, 2020 |                     |             |               ||
-| July 1, 2020  |                     |             |               ||
-| July 2, 2020  |                     |             |               ||
+| June 24, 2020 | GIS & Intro to ArcGIS | Finish Chapter 1 & Introduce GIS software |  | Assign Lab 1|
+| June 25, 2020 | Maps and Projections  | Introduce Maps, coordinate systems and Projections | [Chapter 2](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s06-map-anatomy.html) ||
+| June 26, 2020 | Map Abstractions    | Finish Chapter 2 | [Chapter 2](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s06-map-anatomy.html) | Lab 1 Due + Quiz 1 + Assign Lab 2 |
+| June 29, 2020 | Data & Where to find them | All about data | [Chapter 3](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s07-data-information-and-where-to-.html) | Lab 2 due + Assign lab 3|
+| June 30, 2020 | Data Models for GIS |             | [Chapter 4](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s08-data-models-for-gis.html)              ||
+| July 1, 2020  | Data Models for GIS |             | [Chapter 4](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s08-data-models-for-gis.html)| Lab 3 due + Assign Lab 4|
+| July 2, 2020  | Geospatial Data Management | What to do with data | [Chapter 5](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s09-geospatial-data-management.html) | Quiz 2 (will not include chapter 5)|
 | July 3, 2020  | HOLIDAY             | NO          | CLASS         ||
-| July 6, 2020  |                     |             |               ||
-| July 7, 2020  |                     |             |               ||
-| July 8, 2020  |                     |             |               ||
-| July 9, 2020  |                     |             |               ||
-| July 10, 2020 |                     |             |               ||
-| July 13, 2020 |                     |             |               ||
-| July 14, 2020 |                     |             |               ||
-| July 15, 2020 |                     |             |               ||
-| July 16, 2020 |                     |             |               ||
-| July 17, 2020 |                     |             |               ||
-| July 20, 2020 |                     |             |               ||
-| July 21, 2020 |                     |             |               ||
-| July 22, 2020 |                     |             |               ||
-| July 23, 2020 |                     |             |               ||
+| July 6, 2020  | Geospatial Data Management cont'd | Finishing Chapter 5 | [Chapter 5](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s09-geospatial-data-management.html) | Lab 4 due |
+| July 7, 2020  | Data Characteristics & Visualization |             | [Chapter 6](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s10-data-characteristics-and-visua.html) | Assign Lab 5 |
+| July 8, 2020  | Data Characteristics & Visualization | Finish Chapter 6 | [Chapter 6](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s10-data-characteristics-and-visua.html)  ||
+| July 9, 2020  | Vector Operations   |             | [Chapter 7](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html) | Lab 5 due + Assign Lab 6|
+| July 10, 2020 | Vector Operations cont'd| Finish Chapter 7| [Chapter 7](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html) | Quiz 3  |
+| July 13, 2020 | Raster Data |  |  [Chapter 8](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s12-geospatial-analysis-ii-raster-.html)  ||
+| July 14, 2020 |  Raster Data cont'd |             | [Chapter 8](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s12-geospatial-analysis-ii-raster-.html) | Lab 6 due + Assign Lab 7|
+| July 15, 2020 | Final Project Overview |  Introduce final project |               | Assign Final Project|
+| July 16, 2020 | Cartographic Principles|             | [Chapter 9](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s13-cartographic-principles.html) | Lab 7 due|
+| July 17, 2020 | Cartographic Principles cont'd |             | [Chapter 9](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s13-cartographic-principles.html)  | Quiz 4 |
+| July 20, 2020 | GIS Project Management |             | [Chapter 10](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s14-gis-project-management.html) | **Final Project Proposal Due**|
+| July 21, 2020 | Individual Meetings | I will meet individually to discuss your final project | ||
+| July 22, 2020 | Advanced Topics in ArcGIS |             |               ||
+| July 23, 2020 | Advanced Topics in ArcGIS |             |               ||
 | July 24, 2020 | Reading Day         |             |               ||
-| July 27, 2020 | Final Exam          |             |               ||
+| July 27, 2020 | **Final Project Due** |             |               |**Final Project Due**|
 
 
 

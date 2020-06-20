@@ -6,6 +6,7 @@
     <meta name="author" content="Andrew Murray" />
     <meta name="date" content="2020-06-22" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -33,7 +34,7 @@ March 25, 2020
 ---
 .pull-left[
 &lt;video width="100%" height="100%" controls id="my_video"&gt;
-    &lt;source src="/mp4/d01_s01.mp4" type="video/mp4" preload&gt;
+    &lt;source src="/mp4/Day_01_intro.mp4" type="video/mp4" preload&gt;
 &lt;/video&gt;
 
 Andrew Murray
@@ -53,22 +54,216 @@ Move through the slides at your own pace and I will provide commentary along the
 
 - press 'home' to return to the first slide
 
+- press 'p' to access the text for the slide audio (useful for those who cannot use audio or need a an audio aid)
+
 ]
 ---
 
-### Here is another test, this time I am using a local audio file
+### Todays Roadmap
 
-I removed the ogg tag since I don't think it will make a difference
+- Course Content &amp; Goals
+- Course Syllabus
+- Software Introduction
 
 &lt;audio controls&gt;
-  &lt;source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/mpeg"&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+Today we are simply going to talk about what you can expect to learn throughout this course and how we are going to learn it. I'm going to introduce some basic concepts to you and we will talk about the syllabus, and the materials (both reading and software).
+
+---
+
+## .center[Important Questions for Class]
+&lt;br&gt;
+.mb[
+- What do we mean by “geographic information”?
+
+- What do we do with this geographic information?
+
+- How do we represent geographic information digitally, not as traditional analog maps?
+
+- How can we be sure that geographic information we create or use is of good quality?
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Consider these important questions which describe the most basic ideas around geographhic information. What does it mean to assign information to a place? How do we do that? What then? What more can we learn from information or data that has a spatial component? How will we make sure that we are being responsible and accurate with our use of this information?
+
+---
+
+## .center[What do you think of when you think about geographic information?]
+
+.center[
+&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfdKzsrqOKtXRCBaSKPOA5xN-axPJCs55zF4ahWTQyvxWWFg/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading…&lt;/iframe&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+Please take a moment and reflect on what you think of when you consider the term 'geographic information'. Don't overthink it, just the first thing that pops into your head. You can write a word or a couple of sentences, doesn't matter. (These answers are anonymous)
+
+---
+
+.pull-left[
+&lt;img src="waze.png" width="400" height="600" /&gt;
+]
+
+.pull-right[
+&lt;img src="streetview.png" width="400" height="600" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+I use waze all the time, and for me, it is one of the first things I think about when describing geographic information to others. Do you use google maps? then you already use GIS. Where's the closest place to get gas? What time do I need to leave if I have to be in Raleigh by 5:00? I want pizza. What level of hungry am I? Should I order pizza from that place down the street? Theirs another pizza place I really like, but it's much farther... is it worth that additional time? These are just some of lifes important questions that we solve by making use of geographic information.
+
+---
+
+.pull-left[
+&lt;img src="pokemongo.png" width="350" height="600" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="vr_mars.jpg" width="650" height="400" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s07.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+In the past decade, we have seen geographic information used in all sorts of cool ways, from pokemon go to the rise of virtual reality. For example, microsoft and NASA are now working to be able to bring everyone to Mars (no spaceship required) using the microsoft hololense, an augmented reality system that uses spatial imformation to project images in relative space. 
+
+
+---
+.center[
+ Environmental Research
+&lt;div class="clear:both:margin-top:20px;margin-bottom:20px;float:left;width:100%;"&gt;&lt;a href="http://visualoop.com/infographics/tracking-trouble-in-the-arctic"&gt;&lt;img style="width:80%; height:auto;" src="http://visualoop.com/media/2017/02/Tracking-trouble-in-the-Arctic.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s08.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Tracking migratory patterns makes use of geographic information to learn more about bird behaviors. We can do this with ease now using GPS small enough to safely attach to the foot of a bird.
+
+---
+
+.center[
+&lt;img src="NLCD_Change.jpg" width="900" height="600" /&gt;
+]
+
+???
+
+We use data collected from sattelites to understand how humans are changing the planet. In this example we can see land cover change in the United states between 2001 and 2016. Dark green means that nothing has changed, whereas dark red means that area has changed entirely. A specific example would be clearcutting a forest to build a new stadium.
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s09.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
 &lt;/audio&gt;
 
 ---
- &lt;audio controls&gt;
-  &lt;source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/mpeg"&gt;
-  &lt;source src="/slides/intro_geographic_information/Day01/audio/test.m4a" type="audio/ogg"/&gt;
+.center[
+
+## Food Security
+
+&lt;img src="food.png" width="600" height="500" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d01_s10.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
 &lt;/audio&gt;
+
+???
+
+We can use geographic information to investigate food security and help to identify food deserts, a term we use to describe an area that lacks physical access to healthy and diverse selections of food.
+
+---
+
+.pull-left[
+.mb[ 
+
+- National Geospatial-Intelligence Agency
+
+- Mapping of Corona virus
+
+- Election Mapping
+]
+.center[
+&lt;img src="nga.png" width="250" height="250" /&gt;
+]]
+.pull-right[
+&lt;img src="corona.png" width="600" height="300" /&gt;
+
+&lt;img src="electoral.jpg" width="600" height="300" /&gt;
+]
+
+???
+
+Did you know the United States has an entire intelligence agency devoted to spatial information? Right now, geographers and public health officials are working aggressively to combat the spread of COVID-19 using geographic information. In just a few short months, we'll all be glued to the news cycle, carefully scrutinizing electoral maps to try and predict what the future will bring. The point is that geographic information is everywhere and we use it every day wether we're aware of it or not. These examples demonstrate just a tiny amount of the power of geographic information and it is powerful stuff and with great power, comes great responsibility.
+
+---
+
+## .center[Geographic Concepts &amp; Questions]
+
+.med[
+.pull-left[
+- **Questions about geographic location:**
+  - Where is it?
+  - Why is it here or there?
+  - How much of it is here or there?
+
+- **Questions about geographic distribution:**
+  - Is it distributed locally or globally?
+  - Is it spatially clustered or dispersed?
+  - Where are the boundaries?
+
+- **Questions about geographic association:**
+  - What else is near it?
+  - What else occurs with it?
+  - What is absent in its presence?
+]
+.pull-right[
+&lt;br&gt;
+- **Questions about geographic interaction:**
+  - Is it linked to someplace else?
+  - What is the nature of this association?
+  - How much interaction occurs between the locations?
+
+- **Questions about geographic change:**
+  - Has it always been here?
+  - How has it changed over time and space?
+  - What causes its movement, expansion, or contraction?
+
+]]
+
+???
+
+The study of geographic or spatial information is as much about critical thinking as it is anything else. Consider these questions and try to apply them to things in the real world. Maybe a virus... these questions are all being asked currently about COVID-19. But hey, they are also all being asked about McDonalds... or a million other things. These are great starting points when pondering a question that has a geographic component.
+
+---
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -117,6 +312,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -157,17 +378,6 @@ var slideElements
     })
   })
 
-</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 </script>
 
 <script>
