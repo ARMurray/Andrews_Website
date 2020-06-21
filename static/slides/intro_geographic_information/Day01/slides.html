@@ -264,6 +264,252 @@ Did you know the United States has an entire intelligence agency devoted to spat
 The study of geographic or spatial information is as much about critical thinking as it is anything else. Consider these questions and try to apply them to things in the real world. Maybe a virus... these questions are all being asked currently about COVID-19. But hey, they are also all being asked about McDonalds... or a million other things. These are great starting points when pondering a question that has a geographic component.
 
 ---
+.center[
+&lt;img src="slide13.png" width="900" height="650" /&gt;
+]
+
+???
+So what we will focus on this class is how to take the location and attributes of people/places/things/landscapes and learn how to answer these questions. As with all science, our ability to answer questions heavily relies on our data being accurate, complete and organized.
+
+---
+
+## You will learn...
+
+.pull-left[
+## Techniques
+
+.med[
+Where to find GIS data, how to generate GIS data; how to do GIS analysis and create basic maps.
+
+- Google Maps / Google Earth
+- ArcGIS Online
+- ArcGIS Pro
+- GPS
+]]
+
+.pull-right[
+## Theory
+
+.med[
+How to interpret geographic information and understand the underlying assumptions
+
+- Data management  
+- Projections 
+- Spatial analysis 
+- How GPS works 
+- Cartography
+]
+]
+
+???
+
+Here are some the things you can expect to learn throughout this course. We will spend a lot of time talking about theory but it's important for us to work through applied exercises to reinforce what you're learning and to build your skillsets. My hope is that everyone will come out of this course possessing sound fundamentals of theory in geographic information but will also feel comfortable using it in your future work, whether that is professionally, in your other classes, or for a side project you are personally interested in. 
+
+---
+
+## Important notes for this online edition of class...
+
+.pull-left[
+### Lectures
+
+.med[
+- Released each day at midnight
+  - links are on Sakai in the calendar, or [here](https://amurraygeo.com/courses/geog_info/)
+  
+- Class Discussion will be held on [Piazza](piazza.com/unc/summer2020/geog370/home)
+  - Make sure you signup [here](piazza.com/unc/summer2020/geog370)
+  
+I will make material related announcements in Piazza so it is imprtant you check it and set up notifications if needed. 
+] 
+]
+
+.pull-right[
+.med[
+
+### Materials
+
+- Textbook: We will be using [Essentials of Geographic Information Systems](https://open.umn.edu/opentextbooks/textbooks/essentials-of-geographic-information-systems), which is free and available online. It is also mobile friendly.
+
+### Software:
+- We will start out using ArcGIS Online and will move into using ArcGIS Pro. If you have a windows computer, you can download and install ArcGIS Pro from [UNC](https://guides.lib.unc.edu/software/software). Otherwise you will use it remotely.
+
+]
+]
+
+???
+
+The way this class will work is that lectures will be released every day at midnight, giving you the entire day to view the lecture. I will add links to lectures to the course calendar which you can find on the 'Overview' section of Geog-370 on my personal website or on the syllabus which can be found on Sakai. We will be using Piazza for class discussion. This should be your first stop for all class related questions. By using Piazza I can anser questions that many of you may have and save you all time on getting answers. We are going to be reading the Essentials of Geographic Information Systems which is compltely free and online. I have found this book also works well on my phone so if you need to read but are not in front of a computer, this should really help. I also suggest downloading the PDF and using some sort of notetaking app or software. I have provided a few examples on the syllabus. As for software, we will be using ArcGIS Online and ArcGIS Pro. As the name suggest, ArcGIS Online is totally online and no software is needed. ArcGIS Pro requires a windows computer but don't worry. If you don't have a windows computer you will be able to use ArcGIS Pro remotely, by logging into a campus computer from wherever you are. 
+
+---
+.pull-left[
+### Syllabus (Abbreviated)
+
+**It is important to note** that this syllabus can change, especially as we are diving into some uncertain waters regarding holding this course online.
+
+**Instructor:** Andrew Murray
+**Email:** armurray@live.unc.edu
+**Virtual Office Hours:** Wednesdays and Fridays 2:00pm – 3:00pm and by [appointment](https://calendly.com/armurray-1/office-hours)
+
+**Course Objectives:**
+
+1. Become conversant with the terminology surrounding geographic data and technologies.
+2. Understand the data models and coordinate systems used to represent geographic data (maps) digitally.
+3. Become a critical and savvy consumer (and perhaps producer) of geographic data – i.e. be a geographic data quality expert.
+4. Be able to carry out basic cartographic design projects and simple spatial analyses, and articulately describe the processes/tools used to do so.
+5. Become skilled with the use of ArcGIS software tools at a day-to-day level – i.e. be able to use the ArcGIS tools for the most common tasks.
+
+]
+
+.pull-right[
+**Course Website**
+I host all of the lectures on my personal website: https://amurraygeo.com/courses/geog_info/. However, all course related information, including necessary links to lectures, data, and anything else will always be available through our sakai site.
+
+**Textbook**
+Course text:  Essentials of Geographic Information Systems by  Jonathan Campbell. This is a free and open source textbook which you can access online or download as a pdf here:
+https://open.umn.edu/opentextbooks/textbooks/essentials-of-geographic-information-systems
+
+I suggest that you download the pdf version and use an annotation software for highlighting and notes. I use drawboard pdf, but some other options are:
+
+Flexcil: https://www.flexcil.com/
+
+Adobe Acrobat (Free through NC): https://software.sites.unc.edu/software/adobe-creative-cloud/
+
+**Attendance Policy**
+This course is entirely asynchronous, so there is no ‘attendance’. However, course lectures will be released every day at midnight and you will be responsible for working through them at your own pace. There are still deadlines that you must adhere to so please pay close attention to the course calendar.
+
+]
+
+???
+
+This slide breaks down a lot of what we have already discussed but be sure to be familiar with it. I will note here that while there is no attendance component to this class, it is really important that you do not get behind. GIS courses are absolutely notorious for being the type of classes where you think assignments will only take you an hour or two but end up taking far longer. There is also a class participation component which is meant to help you stay engaged.
+
+---
+
+.pull-left[
+**Assignments**
+
+The goal of this course is for you to succeed at learning the material, and in order to accomplish this we will have a combination of quizzes and labs. Quizzes will be geared toward measuring objective theoretical knowledge, labs will focus on developing technical skills with ArcGIS Online.
+
+**Labs**
+
+Lab assignments will be indicated on the course calendar.  There will be one to two labs per week and seven over the course of the session.  Labs will be submitted electronically through sakai. Specific instructions will accompany assignments. Labs are to be done individually. I encourage you to work together and discuss tactics on Piazza, but everyone needs to submit individual lab reports done on their own. 
+ 
+Lab assignments that are turned in late will be deducted 10 points (one letter grade) per day. Some of you will likely be in other timezones so please note that all times posted are in Eastern Standard Time. Labs are due at 11:59 PM, so if a lab is due on July 1, it must be submitted on or before 11:59 on July 1 and as of 12:00 am on July 2, it is one day late.
+]
+
+.pull-right[
+I am concerned about access to both high-performance computers and high-speed internet. Therefore, all of our labs will be done using either ArcGIS online or ArcGIS pro, which are both esris softwares, run remotely on other computers that you will connect to via the internet. You will need a stable internet connection for this class, though you should not need a high-speed connection or excessive amounts of data.
+ 
+**Quizzes**
+
+Quizzes will typically occur each friday and will cover the material for that week including lecture and reading materials. 
+
+
+**Class Participation**
+
+Class participation will be in the form of engagement on Piazza. I will occasionally post questions and/or promts which you will need to respond to.
+]
+
+???
+
+Expect about one quiz a week and about 2 lab assignments. As noted, all labs and quizzes must be done on your own. I encourage conversation on Piazza about how best to complete lab assignments, but everyone is responsible for their own work. 
+
+---
+
+.pull-left[
+**Grading**
+
+Lab completion: 25%
+
+Quiz grades: 25%
+
+Participation: 10%
+
+Final Project: 40%
+ 
+Final grades will be assigned using the UNC plus/minus letter grade system with the following score breakdown: A = 95-100; A- = 90-94; B+ = 87-89; B = 83-86; B- = 80-82; C+ = 77-79; C = 73-76; C- = 70-72; D+ = 67-69; D = 63-66; D- = 60-62; and F &lt; 60.
+ 
+**Students with Disabilities**
+
+We routinely work with UNC Accessibility Resources &amp; Service staff to accommodate any special needs for students with Disabilities.
+
+]
+
+.pull-right[
+**Honor Code**
+
+Students taking this course agree to abide by the provisions of the University of North Carolina at Chapel Hill Honor Code. Infractions will be referred to the Honor Court. If you have questions about your responsibility under the honor code, please bring them to your instructor or consult with the office of the Dean of Students or the Instrument of Student Judicial Governance. This document, adopted by the Chancellor, the Faculty Council, and the Student Congress, contains all policies and procedures pertaining to the student honor system. Your full participation and observance of the honor code is expected (honor.unc.edu).
+
+ 
+**Getting Help**
+
+Your first stop in getting help with a concept you may be struggling with in this class should be our Piazza page. I ask that if you have a question for me, that you ask it there. I will be actively responding to questions on Piazza and you have the option to ask them so that you remain anonymous to your classmates if you wish. This will allow everyone to benefit from answers to questions and it will save time.
+]
+
+???
+
+You will be graded through labs, quizzes, participation and a Final Project. You can expect one quiz each week and about seven labs.
+
+---
+.center[
+### For tomorrow (Tuesday)
+]
+
+.mb[
+- Your first participation assignment is to signup and login to Piazza and post an introduction about yourself in the [Class Introductions](https://piazza.com/class/kbchpg3on0h4se?cid=7) post.
+
+- Read [Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html) of the textbook
+
+- Try logging in to both ArcGIS Online and the VCL (Instructions on the folloing slides)
+
+]
+
+???
+
+For tomorrow, please signup and login to Piazza and post an introduction under the 'Class Introductions' question. Also make sure you read chapter 1 in the textbook. 
+Finally, If you are worried about a stable internet connection or access to the software, I highly reccomend you try to connect to both ArcGIS Online, and ArcGIS Pro via the VCL. Steps for these are on the next slides.
+
+---
+
+## Virtual Computing Lab (VCL)
+.pull-left[
+.med[
+- Step 1: Connect to the campus network using the VPN: [Instructions here](https://guides.lib.unc.edu/mejo-equipment-room/vpn/)
+
+- Step 2: Connect to the VCL: [Instructions here](https://guides.lib.unc.edu/software/software)
+
+  - When you create a new reservation, you want to select the environment titled: *DAVIS LIBRARY RESEARCH HUB Esri Microsoft *
+  
+- Once logged in, open ArcGIS Pro
+  You will be asked to sign in to the software: clcik 'enterprise login' then type UNC in the box labeled 'Your ArcGIS organization's URL'. Then use your ONYEN to sign in.
+]
+]
+
+.pull-right[
+&lt;img src="vcl.png" width="500" height="400" /&gt;
+]
+
+???
+You can think of the VCL as a bunch of computers owned by UNC, where they install various types of software for our collective use. Using the UNC VPN, which is a way for us to remotely login to the campus network, we can connect to these computers and use the software remotely. 
+
+---
+
+## ArcGIS Online
+
+.med[
+- Go to [ArcGIS.com](https://www.arcgis.com/index.html#) and click 'Sign In'.
+
+- In the box labeled *Enterprise Login* enter: UNC
+
+- Use your ONYEN to finish signing in.
+
+]
+
+???
+
+Take some time to login to ArcGIS Online and have a loook around. There is a ton of stuff you can view and create through ArcGIS Online and we'll get into that later, but I encourage you to at least make sure you can sign in and navigate around the website. 
+
+That's all for today, time to get to work and I will see you tomorrow and on Piazza!
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
