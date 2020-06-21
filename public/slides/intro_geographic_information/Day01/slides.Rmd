@@ -430,14 +430,14 @@ Adobe Acrobat (Free through NC): https://software.sites.unc.edu/software/adobe-c
 **Attendance Policy**
 This course is entirely asynchronous, so there is no ‘attendance’. However, course lectures will be released every day at midnight and you will be responsible for working through them at your own pace. There are still deadlines that you must adhere to so please pay close attention to the course calendar.
 
-]
-
-???
-
 <audio controls>
   <source src="/slides/intro_geographic_information/Day01/audio/d01_s16.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
+]
+
+???
+
 
 This slide breaks down a lot of what we have already discussed but be sure to be familiar with it. I will note here that while there is no attendance component to this class, it is really important that you do not get behind. GIS courses are absolutely notorious for being the type of classes where you think assignments will only take you an hour or two but end up taking far longer. There is also a class participation component which is meant to help you stay engaged.
 
