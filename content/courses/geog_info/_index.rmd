@@ -12,7 +12,7 @@ type: docs
 
 # Welcome to Geography 370!
 
-[Click here to get started!](https://amurraygeo.com/slides/intro_geographic_information/Day01/slides.html)
+[Click here to get started!](https://murraygeo.com/slides/intro_geographic_information/Day01/slides.html)
 
 ## A few quick points:
 
