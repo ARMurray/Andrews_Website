@@ -33,6 +33,18 @@ Andrew Murray | University of North Carolina - Chapel Hill
 
 ---
 
+### A few notes
+
+.med[
+- Office Hours: Wednesdays & Fridays 2:00 3:00 or [by appointment](https://calendly.com/armurray-1/office-hours?month=2020-06)
+
+   - Office Hours will be held on zoom at this permanent link: https://unc.zoom.us/j/97092252432 
+   
+Office Hours: A time where I am availabe to talk about anything. No issue is too small and in this virtual class I especially urge you to use them so that I can help you get the most out of this class.
+
+- My website has been temporarily moved from Amurraygeo.com to Murraygeo.com so please use that url instead. Here is the link to the course page: https://murraygeo.com/courses/geog_info/
+]
+---
 ### Everything has a place...
 
 .med[
@@ -53,7 +65,7 @@ Andrew Murray | University of North Carolina - Chapel Hill
 
 ???
 
-If you signed up for this class then I can only assume that you have an interest in the role that location plays in our everyday lives. From designing the layout of a grocery store to planning a city to understanding global climate change, geography and GIS is everywhere.
+If you signed up for this class then I can only assume that you have an interest in the role that location plays in our everyday lives. From designing the layout of a grocery store to planning a city to understanding global climate change, geography and GIS are everywhere. Literally, the positions of items at grocery stores are decided very deliberately based on spatial information. Have you ever noticed that necessities like milk and eggs are at the back of the store? You have to walk through the whole store just to get there, which increases your chances of buying something you may not need. Some uses are more obvious, like the planning of the now doscontinued light rail project that was meant to connect Chapel Hill and Durham. Weaving a new rail system into two already developed urban areas takes a lot of knowledge about spatil information. What is the shortest route? Who owns what, and where can we build? Where should stations be located so we can serve the community in the most useful way? Are there animal populations already at risk that we need to condier? How will the noise from the trains affect the communities closest to the rails? There are hundreds of geographically based questions that go into conceptualizing a project like that. GIS allows us to tackle these questions and it is getting increasingly easy to do so. Thanks to the increased evolution of computer technology, there are things that take seconds or minutes now that used to take hours or days. My personal feelings are that in today's world and most certainly in the future, being data and geographically literate are going to be essential to success in the workplace. Learning GIS will absolutely make you a more attractive candidate for most fields, and it is more and more in demand.
 
 ---
 .pull-left[
@@ -78,6 +90,9 @@ John Snow
 knitr::include_graphics("snowmap_1854.jpg")
 ```
 ]
+
+???
+So where did GIS start? Many point to John Snow, an english epidemiologist who was trying to find the source of the 1854 Cholera outbreak in London. Originally thought to be an airborne disease that people were contracting simply by breathing, John Snow mapped the disease in an attempt to associate it spatially with other potential sources. What he found was that deaths were occuring close to the water pumps, and so hypothesized that it was ion fact the water which was mobilizing the bacteria causing cholera. John Snow is widely considered a pioneer in the field of epidemiology but you can clearly see the foundations of GIS here as well. 
 
 ---
 
