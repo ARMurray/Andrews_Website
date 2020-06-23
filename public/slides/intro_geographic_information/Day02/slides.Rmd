@@ -1,0 +1,297 @@
+---
+title: "Day 2"
+author: "Andrew Murray"
+date: 'June 23, 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+    includes:
+      after_body: "afterInit.html"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br><br>
+.center[
+## Introduction to Geographic Information
+### Lecture 2
+.mb[
+Spatial Thinking & Concepts
+]
+<br><br>
+Andrew Murray | University of North Carolina - Chapel Hill
+]
+
+---
+
+### Everything has a place...
+
+.med[
+- Everything exists in space
+
+- Understanding the 'where' helps us understand the what/when/how
+
+- However, 'where' is just the starting point.
+
+### GIS...
+
+- Allows us to leverage location into an infinite number of applications
+
+- The last few decades have seen GIS technologies evolve exponentially
+
+- A simple spatial analysis that took an hour ten years ago takes only seconds now
+]
+
+???
+
+If you signed up for this class then I can only assume that you have an interest in the role that location plays in our everyday lives. From designing the layout of a grocery store to planning a city to understanding global climate change, geography and GIS is everywhere.
+
+---
+.pull-left[
+### Where did GIS start?
+
+.med[
+```{r echo=FALSE, out.height= 200, out.width= 200}
+knitr::include_graphics("snow.PNG")
+```
+
+John Snow
+
+- Epidemiologist
+- 1854 Cholera outbreak in London
+- 616 people killed
+- Cholera was thought to spread through the air
+- Snow's map lead to the discovery that it was actually the water
+]
+]
+.pull-right[
+```{r echo=FALSE, out.height= 600, out.width= 600}
+knitr::include_graphics("snowmap_1854.jpg")
+```
+]
+
+---
+
+<iframe width="100%" height="640px" src="https://yalemaps.maps.arcgis.com/apps/PublicInformation/index.html?appid=d7deb67f810d46dfacb80ff80ac224e9" frameborder="0" scrolling="no"></iframe>
+
+
+---
+
+## Mental Maps
+
+.med[
+In chapter 1 we read about mental maps.
+
+- When you give directions, do you use North / East / South /West?
+  - Do you use landmarks?
+
+- If you asked everyone in your family to draw a mpa of your neighborhood, would they look the same?
+]
+.center[
+```{r echo=FALSE, out.height= 300, out.width= 800}
+knitr::include_graphics("LA.png")
+```
+]
+
+---
+
+### Mental Maps vs 'real' maps
+
+.mb[
+- Mental maps are how we reproduce our view of reality
+  - They are unique to each individual
+  
+- When we use GIS to create maps, we use geometry to duplicate real-world positions of people/places/things etc...
+
+  - At it's core, GIS is all about geometry... shapes / distances / relative locations...
+  
+]
+
+---
+.center[
+## Location
+]
+.pull-left[
+### What is location?
+
+```{r echo=FALSE, out.height= 350, out.width= 300}
+knitr::include_graphics("oldwell.png")
+```
+]
+
+.pull-right[
+.med[
+
+**The Old well is located at:**
+
+- 35.912050 degrees north, 79.051237 degrees west.
+- On East Cameron Ave.
+- Chapel Hill
+- Orange County
+- Earth...
+
+### These are all correct...
+]]
+???
+
+The earth is a 
+
+---
+
+### The old well is an example of a place which can be accurately represented by a single point.
+.pull-left[
+**What about...?**
+.med[
+- the Rocky Mountains
+
+- The Mississippi river
+
+- The Atlantic Ocean
+
+]]
+
+.pull-right[
+```{r echo=FALSE, out.height= 350, out.width= 300}
+knitr::include_graphics("rockies.png")
+```
+
+The google maps location of the Rocky mountains
+]
+
+---
+
+### Global Positioning System
+.pull-left[
+```{r echo=FALSE, out.height= 450, out.width= 450}
+knitr::include_graphics("gps.jpg")
+```
+]
+
+.pull-right[
+.mb[
+- A set of 24 sattelites in constant orbit around the earth.
+
+- Linking to at least **three** of them can give you a location on the planet
+
+- Linking to **four** gives you altitude as well
+]
+]
+
+---
+
+.pull-left[
+### Direction
+.med[
+The three norths
+
+- Magnetic North
+- True North
+- Grid North
+
+For most maps we use true north as the benchmark for direction.
+
+However, we can also use landmarks as benchmarks
+  - The movie theater is two blocks north of city hall
+
+]]
+
+.pull-right[
+```{r echo=FALSE, out.height= 400, out.width= 400}
+knitr::include_graphics("direction.jpg")
+```
+]
+
+---
+
+### Distance
+.pull-left[
+
+```{r echo=FALSE, out.height= 350, out.width= 550}
+knitr::include_graphics("greatcircle.png")
+```
+
+]
+
+.pull-right[
+.med[
+- We measure distance all sorts of ways
+  - Miles
+  - Kilometers
+  - Days
+  - Number of flights
+
+- What is the shortest distance?
+  - straight line
+  - great circle route
+]
+]
+
+---
+
+### Space
+.pull-left[
+```{r echo=FALSE, out.height= 200, out.width= 300}
+knitr::include_graphics("underground.jpg")
+```
+
+```{r echo=FALSE, out.height= 250, out.width= 300}
+knitr::include_graphics("classroom.jpg")
+```
+]
+
+.pull-right[
+
+.med[
+*Space* might be the most ambiguous term we use in geography. 
+
+- Space can refer to anything from a classroom to the universe (multiverse?)
+
+- But typically we are talking about topological space 
+
+*topological space is concerned with the nature of relationships and the connectivity of locations within a given space.*
+]
+]
+---
+### Navigation
+.pull-left[
+*Navigation is the destination-oriented movement through space.*
+
+```{r echo=FALSE, out.height= 250, out.width= 300}
+knitr::include_graphics("prime_air.jpg")
+```
+]
+
+.pull-right[
+.med[
+
+- Discovering ancient Maya civilizations!
+
+- Modern network routing!
+
+- Getting to the grocery store!
+]
+]
+
+---
+
+## For Tomorrow...
+
+.med[
+We are starting our first lab, so make sure you can login to [ArcGIS Online](https://www.arcgis.com/home/index.html)
+
+- Click 'Sign in'
+- Under enterprise login enter 'UNC'
+- Then use your ONYEN
+
+More instructions tomorrow!
+
+]

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 2</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-06-23" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 2
+.mb[
+Spatial Thinking &amp; Concepts
+]
+&lt;br&gt;&lt;br&gt;
+Andrew Murray | University of North Carolina - Chapel Hill
+]
+
+---
+
+### Everything has a place...
+
+.med[
+- Everything exists in space
+
+- Understanding the 'where' helps us understand the what/when/how
+
+- However, 'where' is just the starting point.
+
+### GIS...
+
+- Allows us to leverage location into an infinite number of applications
+
+- The last few decades have seen GIS technologies evolve exponentially
+
+- A simple spatial analysis that took an hour ten years ago takes only seconds now
+]
+
+???
+
+If you signed up for this class then I can only assume that you have an interest in the role that location plays in our everyday lives. From designing the layout of a grocery store to planning a city to understanding global climate change, geography and GIS is everywhere.
+
+---
+.pull-left[
+### Where did GIS start?
+
+.med[
+&lt;img src="snow.PNG" width="200" height="200" /&gt;
+
+John Snow
+
+- Epidemiologist
+- 1854 Cholera outbreak in London
+- 616 people killed
+- Cholera was thought to spread through the air
+- Snow's map lead to the discovery that it was actually the water
+]
+]
+.pull-right[
+&lt;img src="snowmap_1854.jpg" width="600" height="600" /&gt;
+]
+
+---
+
+&lt;iframe width="100%" height="640px" src="https://yalemaps.maps.arcgis.com/apps/PublicInformation/index.html?appid=d7deb67f810d46dfacb80ff80ac224e9" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+
+
+---
+
+## Mental Maps
+
+.med[
+In chapter 1 we read about mental maps.
+
+- When you give directions, do you use North / East / South /West?
+  - Do you use landmarks?
+
+- If you asked everyone in your family to draw a mpa of your neighborhood, would they look the same?
+]
+.center[
+&lt;img src="LA.png" width="800" height="300" /&gt;
+]
+
+---
+
+### Mental Maps vs 'real' maps
+
+.mb[
+- Mental maps are how we reproduce our view of reality
+  - They are unique to each individual
+  
+- When we use GIS to create maps, we use geometry to duplicate real-world positions of people/places/things etc...
+
+  - At it's core, GIS is all about geometry... shapes / distances / relative locations...
+  
+]
+
+---
+.center[
+## Location
+]
+.pull-left[
+### What is location?
+
+&lt;img src="oldwell.png" width="300" height="350" /&gt;
+]
+
+.pull-right[
+.med[
+
+**The Old well is located at:**
+
+- 35.912050 degrees north, 79.051237 degrees west.
+- On East Cameron Ave.
+- Chapel Hill
+- Orange County
+- Earth...
+
+### These are all correct...
+]]
+???
+
+The earth is a 
+
+---
+
+### The old well is an example of a place which can be accurately represented by a single point.
+.pull-left[
+**What about...?**
+.med[
+- the Rocky Mountains
+
+- The Mississippi river
+
+- The Atlantic Ocean
+
+]]
+
+.pull-right[
+&lt;img src="rockies.png" width="300" height="350" /&gt;
+
+The google maps location of the Rocky mountains
+]
+
+---
+
+### Global Positioning System
+.pull-left[
+&lt;img src="gps.jpg" width="450" height="450" /&gt;
+]
+
+.pull-right[
+.mb[
+- A set of 24 sattelites in constant orbit around the earth.
+
+- Linking to at least **three** of them can give you a location on the planet
+
+- Linking to **four** gives you altitude as well
+]
+]
+
+---
+
+.pull-left[
+### Direction
+.med[
+The three norths
+
+- Magnetic North
+- True North
+- Grid North
+
+For most maps we use true north as the benchmark for direction.
+
+However, we can also use landmarks as benchmarks
+  - The movie theater is two blocks north of city hall
+
+]]
+
+.pull-right[
+&lt;img src="direction.jpg" width="400" height="400" /&gt;
+]
+
+---
+
+### Distance
+.pull-left[
+
+&lt;img src="greatcircle.png" width="550" height="350" /&gt;
+
+]
+
+.pull-right[
+.med[
+- We measure distance all sorts of ways
+  - Miles
+  - Kilometers
+  - Days
+  - Number of flights
+
+- What is the shortest distance?
+  - straight line
+  - great circle route
+]
+]
+
+---
+
+### Space
+.pull-left[
+&lt;img src="underground.jpg" width="300" height="200" /&gt;
+
+&lt;img src="classroom.jpg" width="300" height="250" /&gt;
+]
+
+.pull-right[
+
+.med[
+*Space* might be the most ambiguous term we use in geography. 
+
+- Space can refer to anything from a classroom to the universe (multiverse?)
+
+- But typically we are talking about topological space 
+
+*topological space is concerned with the nature of relationships and the connectivity of locations within a given space.*
+]
+]
+---
+### Navigation
+.pull-left[
+*Navigation is the destination-oriented movement through space.*
+
+&lt;img src="prime_air.jpg" width="300" height="250" /&gt;
+]
+
+.pull-right[
+.med[
+
+- Discovering ancient Maya civilizations!
+
+- Modern network routing!
+
+- Getting to the grocery store!
+]
+]
+
+---
+
+## For Tomorrow...
+
+.med[
+We are starting our first lab, so make sure you can login to [ArcGIS Online](https://www.arcgis.com/home/index.html)
+
+- Click 'Sign in'
+- Under enterprise login enter 'UNC'
+- Then use your ONYEN
+
+More instructions tomorrow!
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

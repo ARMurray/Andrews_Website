@@ -1,6 +1,6 @@
 ---
 date: "2020-06-23T00:00:00-05:00"
-draft: false
+draft: true
 output:
   blogdown::html_page:
     toc: false
@@ -14,3 +14,8 @@ type: docs
 ---
   
 ## Goals for today
+
+- Thinking Spatially
+- Basic Geographic Concepts
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day02/slides.html)
