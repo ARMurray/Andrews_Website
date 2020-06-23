@@ -46,7 +46,7 @@ Office Hours: A time where I am availabe to talk about anything. No issue is too
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s02.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s02.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -70,7 +70,7 @@ Office Hours: A time where I am availabe to talk about anything. No issue is too
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s03.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s03.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -103,7 +103,7 @@ knitr::include_graphics("snowmap_1854.jpg")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s04.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s04.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -142,7 +142,7 @@ knitr::include_graphics("LA.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s07.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s07.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -165,7 +165,7 @@ In chapter 1, we learned about mental maps, and I hope you have given some real 
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s08.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s08.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -198,7 +198,7 @@ knitr::include_graphics("oldwell.png")
 ### These are all correct...
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s09.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s09.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -230,7 +230,7 @@ The google maps location of the Rocky mountains
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s10.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s10.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -257,7 +257,7 @@ knitr::include_graphics("gps.jpg")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s11.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s11.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -289,7 +289,7 @@ knitr::include_graphics("direction.jpg")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s12.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s12.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -321,7 +321,7 @@ knitr::include_graphics("greatcircle.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s13.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s13.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -356,7 +356,7 @@ knitr::include_graphics("classroom.jpg")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s14.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s14.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -385,7 +385,7 @@ knitr::include_graphics("prime_air.jpg")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s15.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s15.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -409,7 +409,7 @@ More instructions tomorrow!
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day02/audio/d02_s16.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day02/audio/d02s16.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
