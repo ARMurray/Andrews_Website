@@ -66,7 +66,7 @@ Popular cloud-based programs (online)
 
 <br>
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d03s02.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day03/audio/d03s02.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -99,7 +99,7 @@ knitr::include_graphics("arcgis.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d03s03.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day03/audio/d03s03.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -125,7 +125,7 @@ If you land a job with a focus in GIS, chances are you are going to be using som
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d03s04.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day03/audio/d03s04.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -159,7 +159,7 @@ The current pandemic has raised all sorts of questions around the ethics of trac
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d03s05.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day03/audio/d03s05.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -189,7 +189,7 @@ Tips: Once you have created and saved a map or a web app, you can access them in
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day01/audio/d03s06.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day03/audio/d03s06.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
