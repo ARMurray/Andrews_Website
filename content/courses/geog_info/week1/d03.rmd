@@ -17,6 +17,7 @@ type: docs
 
 - Finish Chapter 1 in the textbook
 - Introduction to GIS software
+- The future of GIS
 - Starting Lab 1
 
 [Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day03/slides.html)

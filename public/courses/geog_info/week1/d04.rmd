@@ -1,0 +1,19 @@
+---
+date: "2020-06-25T00:00:00-05:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Thursday
+menu:
+  geog_info:
+    parent: week1
+    weight: 40
+title: Thursday
+type: docs
+---
+  
+## Goals for today
+
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day02/slides.html)
