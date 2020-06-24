@@ -1,6 +1,6 @@
 ---
 date: "2020-06-24T00:00:00-05:00"
-draft: true
+draft: false
 output:
   blogdown::html_page:
     toc: false
