@@ -1,0 +1,22 @@
+---
+date: "2020-06-24T00:00:00-05:00"
+draft: true
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Wednesday
+menu:
+  geog_info:
+    parent: week1
+    weight: 30
+title: Wednesday
+type: docs
+---
+
+## Goals for today
+
+- Finish Chapter 1 in the textbook
+- Introduction to GIS software
+- Starting Lab 1
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day03/slides.html)

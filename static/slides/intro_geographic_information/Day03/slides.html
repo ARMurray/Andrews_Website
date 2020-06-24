@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 3</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-06-24" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 3
+.mb[
+Spatial Thinking &amp; Concepts
+
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Andrew Murray | University of North Carolina - Chapel Hill
+
+June 24, 2020
+]]
+
+---
+
+### Learning Objective:
+*To define and describe how a geographic information system (GIS) is applied, its development, and its future.*
+
+.med[
+
+The term GIS is used in a lot of different ways but when we say GIS we are typically talking about:
+
+- A computer program that is capable of performing complex spatial operations
+
+  - In recent years, many web-based GIS programs have become available
+]
+
+.pull-left[
+Popular standalone programs (on your computer):
+  - ArcMap / ArcGIS Pro (ESRI)
+  - QGIS
+  - GRASS
+
+]
+
+.pull-right[
+.med[
+Popular cloud-based programs (online)
+- ArcGIS Online
+- Google Earth Engine
+]]
+
+&lt;br&gt;
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d03s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+What is a GIS? The term GIS is thrown around a lot and can refer to many different things. Many people use it as a verb at this point to describe doing anything with spatial data. What most people mean when they talk about a GIS is a computer-based software which is capable of performing basic to complex spatial operations. What is a spatial operation you ask? A spatial operation just refers to things we do with shapes. We can draw a circle around a dot and count how many dots fall within the circle (a buffer). We can measure the shortest distance between two points while staying on a network of lines that connect them (network analysis) and about a million other things. Your textbook says that google maps and bing and apple maps etc... are not GIS programs and while I tend to agree with that assessment, it's really a subjective point to make and depends on how you use it.
+
+---
+
+### ESRI &amp; ArcGIS
+.med[
+If you land a job with a focus in GIS, chances are you are going to be using some form of ArcGIS...
+
+- Environmental Systems Research Institute (ESRI)
+  - World leader in GIS software
+    - Estimated 43% of all GIS users are using esri products
+    - Absolutely the leader in cutting edge technologies
+- ArcMap
+  - The original ArcGIS desktop application (On the way out, **you should not be learning this**)
+- ArcGIS Pro
+  - Cutting edge replacement of ArcMap (You should be learning this)
+- ArcGIS Online
+  - Lightweight online GIS (Still very capable and cutting edge)
+]
+
+.center[
+&lt;img src="arcgis.png" width="500" height="200" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d03s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+If you land a job with a focus in GIS, chances are you are going to be using some form of ArcGIS. ArcGIS is a product developed by a company called esri which has been the world leader in GIS software since it's inception in 1969. They currently have an estimated 43% of the world marketshare of GIS users and honestly that's probably the lowest it has ever been. Now I am a huge supporter of free and open software and that is what I use most of the time, but the simple fact is that esri is the big company that can afford to pay developers to build better products. They are the cutting edge software and most open source GIS softwares are in some way imitating them. My advice is that you learn GIS by making use of esri products for two reasons. First, if you end up in a job that requires GIS, chances are they will have an ArcGIS subscription. Second, if they don't, learning a GIS software other than ArcGIS after already learning ArcGIS is much easier than trying to learn ArcGIS after learning on another program. These are my personal opinions so you can take from them what you will but I believe this is the way you will get the most out of learning GIS. I will also add that you are entering GIS during a transitional phase where there is an ongoing shift from the desktop to the cloud. ArcMap is the original desktop program and is basically on life support at this point, there are no more updates coming and it will be unsupported in the coming years, it is already supposed to be obsolete but it has gotten several extensions because of the slow adoption of ArcGIS Pro. ArcGIS Pro has now been around for a few years and is the replacement for ArcMap. It is built from the ground up to interact with the cloud, especially in combination with ArcGIS online.  
+
+---
+.center[
+### Three Approaches to GIS
+]
+
+.med[
+
+1. Application
+  - Using GIS as a tool to solve problems (This is really what we're focusing on here)
+
+2. Developer
+  - More along the lines of a programmer
+  - Creating the tools that users want instead of using them to solve problems
+
+3. GIS Science
+  - Particularly interested in the implications of applications such as societal implications of GIS based decisions, quantifying error and emerging topics (like personal data security and loactional privacy)
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d03s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+We read in the textbook about the three approaches to GIS. Application is sort of the introductory level of GIS user and probably the most common. A GIS user focused on application might be working for a company or organization attempting to determine solutions to very specific problems. For example, I once applied to be a GIS specialist for Papa Johns Pizza (before I knew that guy was awful). The job there was to use GIS to do things like find the best places to locate new Papa Johns franchises. As you might imagine, this might include using GIS to find gaps in the Papa Johns service area... delineating service areas where a lot of potential customers could be served within the smallest possible delivery radius, determining the optimal locations for distribution centers based on available workforce and distance to franchise locations etc... Maybe you work for a waste management company and your job is to route the recylcing trucks through a county in the most efficient way possible. These are examples of applications.
+
+Developers on the other hand are doing the actual programming of the tools that application users depend on. This is mostly programming. If you are familiar with coding at all you may have heard of the Python programming language. ArcGIS is built on Python, which means if you're feeling fancy you can write your own GIS tools in python and use them in ArcGIS Pro. I have encountered VERY few instances in the past ten years where I needed to write my own tool but it does occasionally happen, usually its something very specific that noone else needs, which is pretty darn rare. 
+
+GIS Science really refers to the critical thought that goes into the use and results from using GIS. The textbook sets this apart from the application user but I would argue it is sort of ignorant to try to apply GIS as a user without considering the implications of what you are doing. It is really important to consider the implications of your use of GIS. People lie with maps all the time, I mean constantly. The manipulation of projections and spatial information is rampant today as GIS becomes more accesible. The problem is that the technology is becoming easier to access and use, but that does not make people geographically literate. I'll give you an example. There is a proposed natural gas pipeline that wil run through Virginia and North Carolina called the Atlantic Coast pipeline. As part of the impact study, the developers had to prove that they were not going to disproportionately affect vulnerable communities. The proposed route of the pipeline was to run directly through the land of the lumbee tribe, a native american community centered around Lumberton, NC. The developer conducted a GIS-based analysis that counted race and income of the counties that the pipeline would run through. Now this data is available at a much finer scale, for example Census tracts which are much smaller than counties. Had the analysis been done at the Census tract level, the report would have found that the pipeline did in fact disporportionately affect minority communities. However, since the analysis was done at the larger, county level, the statistics showed that that the area was predominantly white, even though the white residents in reality lived much farther from the proposed pipeline route and would be largely unaffected. This is due to a spatial offset... sort of the geographic equivelant of moving the mean by iintroducing huge outliers. As a researcher, I am typically using GIS in an applied way but it is important to my work that I am informed by a foundation in GIS science. 
+
+---
+
+.center[
+### GIS Futures
+]
+
+.med[
+The examples that the textbook gives on the 'geoweb' are already a reality...
+
+- Instagram / Snapchat / Facebook
+  - Social media tags your location so others can see related posts from the same place
+
+- Phones
+  - We are being tracked constantly, A lot is already being done with our locational data.
+
+You can search a business on google, like the grocery store and it will tell you how busy it is based on the number of geo-hits they are getting from that location. Things like this are super convenient but are we comfortable being used for this data?
+
+- Covid-19
+The current pandemic has raised all sorts of questions around the ethics of tracking citizens. Is it okay to release the constant locations of everyone if it means saving lives? How many lives does it need to save to be worth it? These are important questions without simple answers...
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d03s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Where is GIS now and where is it going? Well... most of the examples the textbook points out as 'futures' are already commonplace. I can go on instagram and see a post from a friend and then look at all the other posts that other people posted from that same place. I can use the snapchat map to see what people are posting in certain places. Right now, debates are raging about how to track the spread of COVID-19. Do we require everyone to be tracked so that we can literally see the spread of the virus? The up side is obvious, we could literally track the spread of the virus, but so are the downsides, what are our rights and personal privacy worth? If we allow the government to do this now, is there any turning back, or will we live in an increasingly surveilance based state with people always watching. These are tough questions without simple answers and no matter your personal feelings on these topics, we can acknowledge that geographic information is powerful, getting more powerful and requires critical thought to guide it into the future. This is a technology that is growing, it is not going away and there are career opportunities for people with GIS experience in most fields. My challenge to you is to always think about the implications of your work because it may be more significant than you imagine no matter what your area of interest. My work, for example, focuses on trying to figure out where people are most vulnerable to having their drinking water contaminated. If I am succesful in my research, state officials and decision makers might rely on my work to make decisions on where to allocate resources in the aftermath of a Hurricane. If that happens, I need to be sure that I did everything in my power to make sure I didn't disregard a variable that may be the deciding factor between a certain vulnerable population receiving or being denied aid. 
+
+---
+
+## Lab 1
+
+### Getting Started with ArcGIS Online
+
+.med[
+1. I have created a group for our class where we can access course materials in the future. I have added those of you that have an active account. If you have not been added, please login to ArcGIS online and send me an email with your username so I can add you. [Click here for the group page](https://arcg.is/11zfaj0)
+
+2. Complete the [Get Started with ArcGis Online Tutorial](https://learn.arcgis.com/en/projects/get-started-with-arcgis-online/)
+
+3. In this tutorial you will create a map and a web app from that map. When you finish, you need to submit two things to through [Sakai]():
+  
+  1. A link to your Map
+  
+  2. A link to your web app.
+
+Tips: Once you have created and saved a map or a web app, you can access them in your *Content* tab. Make sure you click the *Share* and select 'everyone'. Then share the URL. 
+
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day01/audio/d03s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+With that, let's get started with the first lab. For this lab we are just getting familiar with ArcGIS Online, some of the things it can do and how to share our work. You will be following along with a tutorial to get you going. The link is provided here on this slide but you can also find a full description and link on Sakai under assignments. In this tutorial you will create a map and then a web app. The only thing you need to submit are two URLs which I can then use to view your work online. There are no questions, the point of this is for you to learn your way around ArcGIS Online and some of the basic capabilities. I have created a group for our class that we will use going forward. It won't be necesarry for this lab but please try to access our group page. If you cannot access our group page then I have not added you yet. Please send me a quick email with your username (it is usually your ONYEN_UNC). If you have questions, please do not hesitate to post them on the Piazza page for Lab 1.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

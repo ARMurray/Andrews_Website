@@ -15,3 +15,5 @@ type: docs
 
 # Welcome to Geography 370
 ## Introduction to Geographic Information
+
+The first week will largely be spent getting up and running. We will learn about the basics of geographic information and discuss some of the ways we will approach learning it. The reading includes the first two chapters of the textbook and we will get going on the first two labs of the session.
