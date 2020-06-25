@@ -16,4 +16,4 @@ type: docs
 ## Goals for today
 
 
-[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day02/slides.html)
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day04/slides.html)

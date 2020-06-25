@@ -1,0 +1,38 @@
+---
+title: "Day 3"
+author: "Andrew Murray"
+date: 'June 24, 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+    includes:
+      after_body: "afterInit.html"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br><br>
+.center[
+## Introduction to Geographic Information
+### Lecture 3
+.mb[
+Spatial Thinking & Concepts
+
+
+<br><br><br>
+
+Andrew Murray | University of North Carolina - Chapel Hill
+
+June 24, 2020
+]]
+
+---

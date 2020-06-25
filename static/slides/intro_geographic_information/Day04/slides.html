@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 3</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-06-24" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
+    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 4
+.mb[
+&lt;br&gt;
+*Map Anatomy*
+
+&lt;br&gt;&lt;br&gt;
+
+Andrew Murray | University of North Carolina - Chapel Hill
+
+June 25, 2020
+]]
+
+---
+.center[
+### Topics For Today:
+]
+.mb[
+- Basic map types
+  - Reference
+  - Thematic
+  - Dynamic
+
+- Coordinate Systems
+- Projections 
+
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Today I'm going to introduce you to some popular types of maps that users of GIS often create. I am then going to talk about coordinate systems and projections, which are probably some of the most foundational pieces of GIS that often go overlooked.
+
+---
+
+### Reference Maps
+
+.pull-left[
+.med[
+- Represent geography as accurately as possible
+- Are used for navigation
+  - Hiking
+  - Aviation
+  - Navigation at sea
+
+- Reference maps typically have a lot going on in the, because they are meant to convey a lot of information
+]
+]
+
+.pull-right[
+&lt;img src="refmap.jpg" width="400" height="400" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Many people think of reference maps when they first consider cartography. After all, the origination of the art was to try and map the world as accurately as possible. Reference maps are what most people over the age of, let's say 35 think about when they consider the word map. It is how our parents and grandparents navigated the many roads and highways when they were our age. That is not to say that we don't use reference maps anymore, on the contrary we use them a lot. We use them for hiking, fishing, precision navigation in both flying and sailing and more. We also use reference maps for city planning and management, for example when we need to map property lines for locating utilities in our neighborhoods.
+
+---
+.center[
+### Thematic Maps
+]
+
+.med[
+- Convey Information about places other than relative location
+
+- For example, the map you are making for Lab 1 would be considered a thematic map.
+
+- Used often to visualize things like Census data, or election data etc...
+]
+.center[
+&lt;img src="thematic.jpg" width="700" height="300" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Where as reference maps are for navigation and being able to accurately determine distances and relative locations, thematic maps are more about conveying attribute data. For example, the maps you are creating in Lab 1 would be considered thematic maps because they are telling you something about the population within each administrative boundary. Probably the most popular source for thematic map data is the U.S. Census. If you have ever seen maps showing income, or race, or population, those data came from the U.S. Census. We also use thematic maps to convey political data. When you follow an election on the news and they show those maps of which county went for who, those are thematic maps. It is less about the location then it is about the numbers representing some other variable. Visualizing data in thematic maps helps us to investigate potential relationships. For example we can see hotspots start to become clear in a thematic map. You may have noticed that in your thematic map of Houston in lab one that the closer to downtown you get, the more people there are without cars. While that may seem fairly intuitive, there are plenty of times where you will use GIS where hotspots will appear that are confusing and then you have to figure out why those hotspots are where they are.
+
+---
+
+.center[
+### Dynamic Maps
+]
+
+.med[
+- Any map that the end-user has control over
+- Examples:L Google Maps, Waze, Bing Maps etc...
+- Users can often zoom, change layers and basemaps
+
+]
+
+<div id="htmlwidget-f47c575c8d9a2069594b" style="width:800px;height:300px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f47c575c8d9a2069594b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Dynamic maps are sort of just what they sound like... they are just maps where the user can manipulate them at will. They most likely can zoom in and out, and the things tat are displayed on the map probably change when you zoom, like in google maps. You might be able to add or remove layers. You might be able to change the basemap. A basemap by the way, is the default background map. For example, when you open google maps, it shows a basic map background, but you can change it to satellite imagery. There are a lot of different basemaps that exist, like USGS topo maps, satellite maps, gray scale maps, even lord of the rings styled basemaps. Dynamic maps are great and they are flashy and they are useful but it is important to consider when to use them. If you are trying to convey a very specific message through a map, you probably don't want to use a dynamic map because the user is just going to mess around with it and look at different stuff. On the other hand, dynamic maps are fantastic if you want to present a lot of data and let the user explore the things they are personally interested in. This map by the way is an example of a dynamic map, you should be able to interact with it directly on this slide. 
+
+---
+.center[
+### Scale
+]
+
+When we describe scale in cartography, we often use a representative fraction, which is unit less. For example, you may see something on a map that says 1:100 which would mean that 1 inch on the map = 100 inches in the real world. It also means that 1 meter on the map = 100 meters in the real world. The units don't matter, just the ratio. 
+.pull-left[
+.center[
+.mb[
+**Large Scale**
+]
+ **Less Area / More Detail**
+&lt;img src="largescale.png" width="400" height="300" /&gt;
+]]
+
+.pull-right[
+.center[
+.mb[
+**Small Scale**
+]
+  **More Area / Less Detail**
+&lt;img src="smallscale.png" width="400" height="300" /&gt;
+]]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Scale is obvious and confusing at the same time. In cartography we always have to show units of distance so that someone reading a map can have a frame of reference. Sometimes when we look at maps we don't need them because we can figure something out from context. For example, you might say that you never look at the scale bar on google maps. That is probably for two reasons. first, google has done a great job of providing dynamic maps which have things embedded that are of relatively constant size. Second, you are probably usually looking at geographic areas you are somewhat familiar with. So when you look at a map on google, you can see the street layout and you have a pretty reasonable idea of how long a city block is for example. However this i not always the case and it is important for us to provide a reference scale for those who are unfamiliar with a specific area. This is especially true in large scale maps.
+
+---
+
+### Geographic Coordinate Systems (GCS)
+
+.pull-left[
+&lt;img src="GCS.png" width="500" height="450" /&gt;
+]
+
+.pull-right[
+.med[
+The Earth **IS NOT A SPHERE**
+
+- We refer to the shape of the earth as a GEOID
+
+- We use latitude and longitude to describe points on the earths surface
+
+- There have been many different GCSs to describe points on the earth. No two are the same because the earth is not a perfect sphere.
+
+- The two most common ones in use today are NAD83 and WGS84
+]
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s07.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Okay so now we are getting into geographic Coordinate systems. These describe latitude and longitude. It is important to remember that the earth is not a perfect sphere. We call the shape of the earth a geoid and it is irregular. Therefore it is very difficult to determine exact locations and thus there have been hundreds of attempts at the creation of accurate GCSs. Latitude refers to degrees north or south of the equator. Longitude refers to degrees east or west of the prime meridian, which is the north/south line that runs through Greenwich, England. I should point out that a lot of people get mixed up with latitude and longitude (including me on a regular basis). You see, in math we often refer to X,Y coordinates, however when we refer to geographic coordinates we often say lat/lon. This would imply that X is latitude and y is longitude but it is actually the opposite. We refer to degrees of longitude as the x coordinate and degrees of latitude as the y coordinate. It's sort of backwards but that's the way it is. The two coordinate systems you will most often encounter are NAD83 and WGS84. The NAD83 coordinate system is specifically for data that exists in North America. Most of the time when you download data from local or state agencies in the United States, the coordinate system will be NAD83. WGS84 is a worldwide coordinate system. If you download international data, it will most likely come in WGS84. Geographic coordinate systems tell us where something is on the globe, but the globe is three dimensional. Maps are two-dimensional, meaning you have to be able to print them out an display them on a sheet of paper. This brings us to projections...
+
+---
+### The GEOID
+.pull-left[
+&lt;img src="geoid.jpg" width="500" height="350" /&gt;
+]
+
+.pull-right[
+.mb[
+Did You know that gravity varies across the globe?
+
+We Have satellites that measure the changes in earths gravitational field and the surface of the 'geoid'
+
+Read about it [here](https://earthobservatory.nasa.gov/features/GRACE/page3.php)
+]
+]
+---
+### Projections
+
+Projections are how we take a globe and make it flat:
+
+&lt;iframe width="860" height="500" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s08.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Your textbook does a really nice job of explaining the differences between geographic coordinate systems and projections but honestly, I think this video is even better. Projections are complicated but they are important. I'm not kidding when I say I think you should watch this video two or three times. It is loaded with good information but it moves very quickly. 
+
+---
+.mb[
+I strongly suggest you take a lot of time and explore these links to try and understand how projections really affect the way we view maps:
+
+[The True Size of...](http://thetruesize.com/)
+
+[Interactive Projections](http://metrocosm.com/compare-map-projections.html)
+
+[Projection Transitions](https://bl.ocks.org/mbostock/3711652)
+
+[Mercator Puzzle](http://hive.sewanee.edu/ldale/maps/10/06-LOCAL.html)
+
+[Gravity Map of the U.S.](https://mrdata.usgs.gov/gravity/map-us.html)
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s09.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Here are the links mentioned in the previous video, along with a couple of extras. I really think you should take the remaning class time and just spend it exploring these links and learning about projections. Tomorrow, we will start on the second lab so if you have not finished lab 1 already, make sure you do so by tomorrow.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
