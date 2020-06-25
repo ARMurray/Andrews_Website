@@ -292,7 +292,7 @@ knitr::include_graphics("proj2.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s04.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day04/audio/d04s11.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -310,7 +310,7 @@ knitr::include_graphics("proj3.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s11.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day04/audio/d04s12.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
@@ -333,7 +333,7 @@ Here is one final example of identical points in the United States to illustrate
 ]
 ]
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s09.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day04/audio/d04s13.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
