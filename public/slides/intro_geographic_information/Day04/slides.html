@@ -1,35 +1,37 @@
----
-title: "Day 3"
-author: "Andrew Murray"
-date: 'June 24, 2020'
-output:
-  xaringan::moon_reader:
-    css: ["default", "my_styles.css"]
-    lib_dir: libs
-    nature:
-      ratio: "16:9"
-      highlightLines: true
-      highlightStyle: github
-      countIncrementalSlides: false
-    seal: false
-    includes:
-      after_body: "afterInit.html"
----
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 3</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-06-24" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
+    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(leaflet)
-```
 
-<br><br>
+
+
+&lt;br&gt;&lt;br&gt;
 .center[
 ## Introduction to Geographic Information
 ### Lecture 4
 .mb[
-<br>
+&lt;br&gt;
 *Map Anatomy*
 
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 Andrew Murray | University of North Carolina - Chapel Hill
 
@@ -51,10 +53,10 @@ June 25, 2020
 
 ]
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s02.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -77,15 +79,13 @@ Today I'm going to introduce you to some popular types of maps that users of GIS
 ]
 
 .pull-right[
-```{r echo=FALSE, out.height= 400, out.width= 400}
-knitr::include_graphics("refmap.jpg")
-```
+&lt;img src="refmap.jpg" width="400" height="400" /&gt;
 ]
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s03.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -104,15 +104,13 @@ Many people think of reference maps when they first consider cartography. After 
 - Used often to visualize things like Census data, or election data etc...
 ]
 .center[
-```{r echo=FALSE, out.height= 300, out.width= 700}
-knitr::include_graphics("thematic.jpg")
-```
+&lt;img src="thematic.jpg" width="700" height="300" /&gt;
 ]
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s04.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -131,16 +129,13 @@ Where as reference maps are for navigation and being able to accurately determin
 
 ]
 
-```{r echo=FALSE,out.height=300, out.width=800}
-leaflet()%>%
-  addTiles()%>%
-  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
-```
+<div id="htmlwidget-f47c575c8d9a2069594b" style="width:800px;height:300px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f47c575c8d9a2069594b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s05.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -158,9 +153,7 @@ When we describe scale in cartography, we often use a representative fraction, w
 **Large Scale**
 ]
  **Less Area / More Detail**
-```{r echo=FALSE, out.height= 300, out.width= 400}
-knitr::include_graphics("largescale.png")
-```
+&lt;img src="largescale.png" width="400" height="300" /&gt;
 ]]
 
 .pull-right[
@@ -169,15 +162,13 @@ knitr::include_graphics("largescale.png")
 **Small Scale**
 ]
   **More Area / Less Detail**
-```{r echo=FALSE, out.height= 300, out.width= 400}
-knitr::include_graphics("smallscale.png")
-```
+&lt;img src="smallscale.png" width="400" height="300" /&gt;
 ]]
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s06.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -188,9 +179,7 @@ Scale is obvious and confusing at the same time. In cartography we always have t
 ### Geographic Coordinate Systems (GCS)
 
 .pull-left[
-```{r echo=FALSE, out.height= 450, out.width= 500}
-knitr::include_graphics("GCS.png")
-```
+&lt;img src="GCS.png" width="500" height="450" /&gt;
 ]
 
 .pull-right[
@@ -207,10 +196,10 @@ The Earth **IS NOT A SPHERE**
 ]
 ]
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s07.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s07.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -219,9 +208,7 @@ Okay so now we are getting into geographic Coordinate systems. These describe la
 ---
 ### The GEOID
 .pull-left[
-```{r echo=FALSE, out.height= 350, out.width= 500}
-knitr::include_graphics("geoid.jpg")
-```
+&lt;img src="geoid.jpg" width="500" height="350" /&gt;
 ]
 
 .pull-right[
@@ -238,12 +225,12 @@ Read about it [here](https://earthobservatory.nasa.gov/features/GRACE/page3.php)
 
 Projections are how we take a globe and make it flat:
 
-<iframe width="860" height="500" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+&lt;iframe width="860" height="500" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s08.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s08.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
@@ -264,11 +251,144 @@ I strongly suggest you take a lot of time and explore these links to try and und
 [Gravity Map of the U.S.](https://mrdata.usgs.gov/gravity/map-us.html)
 ]
 
-<audio controls>
-  <source src="/slides/intro_geographic_information/Day04/audio/d04s09.mp3" type="audio/mpeg">
-  <p>Your browser doesn't support HTML5 audio.</p>
-</audio>
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s09.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
 
 ???
 
-Here are the links mentioned in the previous video, along with a couple of extras. I really think you should take the remaning class time and just spend it exploring these links and learning about projections. Tomorrow, we will start on the second lab so if you have not finished lab 1 already, make sure you do so by tomorrow. 
+Here are the links mentioned in the previous video, along with a couple of extras. I really think you should take the remaning class time and just spend it exploring these links and learning about projections. Tomorrow, we will start on the second lab so if you have not finished lab 1 already, make sure you do so by tomorrow.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

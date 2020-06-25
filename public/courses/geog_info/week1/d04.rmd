@@ -15,5 +15,12 @@ type: docs
   
 ## Goals for today
 
+- Basic map types
+  - Reference
+  - Thematic
+  - Dynamic
+
+- Coordinate Systems
+- Projections 
 
 [Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day04/slides.html)
