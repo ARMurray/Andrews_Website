@@ -129,8 +129,8 @@ Where as reference maps are for navigation and being able to accurately determin
 
 ]
 
-<div id="htmlwidget-f47c575c8d9a2069594b" style="width:800px;height:300px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f47c575c8d9a2069594b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b4f4d7591d34fac4f13e" style="width:800px;height:300px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b4f4d7591d34fac4f13e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
 
 &lt;audio controls&gt;
   &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s05.mp3" type="audio/mpeg"&gt;
@@ -203,12 +203,12 @@ The Earth **IS NOT A SPHERE**
 
 ???
 
-Okay so now we are getting into geographic Coordinate systems. These describe latitude and longitude. It is important to remember that the earth is not a perfect sphere. We call the shape of the earth a geoid and it is irregular. Therefore it is very difficult to determine exact locations and thus there have been hundreds of attempts at the creation of accurate GCSs. Latitude refers to degrees north or south of the equator. Longitude refers to degrees east or west of the prime meridian, which is the north/south line that runs through Greenwich, England. I should point out that a lot of people get mixed up with latitude and longitude (including me on a regular basis). You see, in math we often refer to X,Y coordinates, however when we refer to geographic coordinates we often say lat/lon. This would imply that X is latitude and y is longitude but it is actually the opposite. We refer to degrees of longitude as the x coordinate and degrees of latitude as the y coordinate. It's sort of backwards but that's the way it is. The two coordinate systems you will most often encounter are NAD83 and WGS84. The NAD83 coordinate system is specifically for data that exists in North America. Most of the time when you download data from local or state agencies in the United States, the coordinate system will be NAD83. WGS84 is a worldwide coordinate system. If you download international data, it will most likely come in WGS84. Geographic coordinate systems tell us where something is on the globe, but the globe is three dimensional. Maps are two-dimensional, meaning you have to be able to print them out an display them on a sheet of paper. This brings us to projections...
+Okay so now we are getting into geographic Coordinate systems. These describe latitude and longitude. It is important to remember that the earth is not a perfect sphere. We call the shape of the earth a geoid and it is irregular. Therefore it is very difficult to determine exact locations and thus there have been hundreds of attempts at the creation of accurate GCSs. Latitude refers to degrees north or south of the equator. Longitude refers to degrees east or west of the prime meridian, which is the north/south line that runs through Greenwich, England. I should point out that a lot of people get mixed up with latitude and longitude (including me on a regular basis). You see, in math we often refer to X,Y coordinates, however when we refer to geographic coordinates we often say lat/lon. This would imply that X is latitude and y is longitude but it is actually the opposite. We refer to degrees of longitude as the x coordinate and degrees of latitude as the y coordinate. It's sort of backwards but that's the way it is. The two coordinate systems you will most often encounter are NAD83 and WGS84. The NAD83 coordinate system is specifically for data that exists in North America. Most of the time when you download data from local or state agencies in the United States, the coordinate system will be NAD83. WGS84 is a worldwide coordinate system. If you download international data, it will most likely come in WGS84. Geographic coordinate systems tell us where something is on the globe, but the globe is three dimensional. Maps are two-dimensional, meaning you have to be able to print them out and display them on a sheet of paper. This brings us to projections...
 
 ---
 ### The GEOID
 .pull-left[
-&lt;img src="geoid.jpg" width="500" height="350" /&gt;
+&lt;img src="geoid.jpg" width="500" height="300" /&gt;
 ]
 
 .pull-right[
@@ -220,12 +220,6 @@ We Have satellites that measure the changes in earths gravitational field and th
 Read about it [here](https://earthobservatory.nasa.gov/features/GRACE/page3.php)
 ]
 ]
----
-### Projections
-
-Projections are how we take a globe and make it flat:
-
-&lt;iframe width="860" height="500" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;audio controls&gt;
   &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s08.mp3" type="audio/mpeg"&gt;
@@ -234,12 +228,80 @@ Projections are how we take a globe and make it flat:
 
 ???
 
+Okay, so just quickly before projections, take a look at the link on this slide to check out a bit more about the 'geoid' and to see how gravity actually changes all over the world.
+---
+### Projections
+
+Projections are how we take a globe and make it flat:
+
+&lt;iframe width="860" height="500" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s09.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
 Your textbook does a really nice job of explaining the differences between geographic coordinate systems and projections but honestly, I think this video is even better. Projections are complicated but they are important. I'm not kidding when I say I think you should watch this video two or three times. It is loaded with good information but it moves very quickly. 
 
 ---
-.mb[
-I strongly suggest you take a lot of time and explore these links to try and understand how projections really affect the way we view maps:
+.med[
 
+
+**REMEMBER**:
+
+There are three factors in projecting a map onto a flat surface:
+
+**1.** Shape   **2.** Distance   **3.** Direction
+
+It is possible to maintain two of these when projecting, but not all three.
+]
+.center[
+&lt;img src="proj1.png" width="700" height="350" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s10.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+The difference between a coordinate system and a projection system is the physical location on a globe (coordinate system) vs. the location on a flat surface (projection system). A coordinate system, for example will give you latitude and longitude based on a system of assigning those values to a physical location on the earth (example: from a GPS unit). As we know, the earth is not perfectly round so there have been different geographic coordinate systems over the years. In order to get a representation of the globe onto a map (flat surface) we must push and pull different parts, thus introducing some error. As you can see in the figure above, the coordinates of these three points are all the same in both projections and will always be the same. However, the distances between them change as the projection changes and we stretch and shrink different parts of the globe to make it lie flat.
+
+---
+.center[
+&lt;img src="proj2.png" width="900" height="450" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+To give you an example, take these point locations above. We can project them different ways. I have first projected them into a Europe Equal Area Conic Projection and then reprojected them into UTM 11N. I then ran the ‘Generate Near Table’ tool on each of these differently projected point layers to calculate all of the distances between each of the points (using the planar method). The geographic coordinates of these points have not changed, but their location on a flat (planar) surface has shifted. Notice the different ‘NEAR_DIST’ values in the table above (units are meters). ArcGIS can sometimes make this hard to understand because it projects on the fly and is so good at adjusting distances between projections it can actually prevent you from making mistakes that would otherwise help you understand these concepts.
+
+---
+.center[
+.med[
+Changing the projection does not affect the coordinates of a place (Longitude and Latitude) on the surface of the earth, just how they are pushed and pulled to fit onto a flat surface.
+]
+&lt;img src="proj3.png" width="900" height="350" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s11.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Here is one final example of identical points in the United States to illustrate how these places apparently have different distances between them when shown on a map, even though they are identical.
+---
+.mb[I strongly suggest you take a lot of time and explore these links to try and understand how projections really affect the way we view maps:
+
+.center[
 [The True Size of...](http://thetruesize.com/)
 
 [Interactive Projections](http://metrocosm.com/compare-map-projections.html)
@@ -250,14 +312,14 @@ I strongly suggest you take a lot of time and explore these links to try and und
 
 [Gravity Map of the U.S.](https://mrdata.usgs.gov/gravity/map-us.html)
 ]
-
+]
 &lt;audio controls&gt;
   &lt;source src="/slides/intro_geographic_information/Day04/audio/d04s09.mp3" type="audio/mpeg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
 &lt;/audio&gt;
 
 ???
-
+If you remember nothing else, remember this. Projecting a map is the process of stretching the globe onto a flat surface. When doing this, it is possible to preserve 2 out of the three variables of shape, distance and direction but not all three. A projection is not a GCS. A projection is the mathematical conversion from a GCS to a flat map.
 Here are the links mentioned in the previous video, along with a couple of extras. I really think you should take the remaning class time and just spend it exploring these links and learning about projections. Tomorrow, we will start on the second lab so if you have not finished lab 1 already, make sure you do so by tomorrow.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
