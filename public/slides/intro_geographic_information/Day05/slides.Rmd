@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introduction to Geographic Information
 ### Lecture 5
 .mb[
-Map Abstracton<br>
+Map Abstraction<br>
 +<br>
 Lab #2
 
@@ -45,13 +45,14 @@ knitr::include_graphics("abstraction.png")
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day03/audio/d05s02.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day05/audio/d05s02.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
 
-Abstraction is the process of converting the real world into a map. Obviously, one of these would be easier to use to give directions or to locate a specific building. The choices we make in the abstraction or map making process are essential in order for other people to know what they are looking at and to be able to use your map succesfully.
+First things first, today's lecture is going to be a short one. I was hoping to introduce lab 2 today but I am still working through a couple of technical issues so we will push that to Monday. I think you have enough to work on today anyway. I'm going to quickly go over abstraction which is the last part of chapter 2, and then you have a quiz that is due tonight at midnight (EST).
+Abstraction is the process of converting the real world into a map. Obviously, one of these images would be easier to use to give directions or to locate a specific building. The choices we make in the abstraction or map making process are essential in order for other people to know what they are looking at and to be able to use your map successfully. For example, green polygons in the left hand image are used to show green space. This indicates that there are probably a mix of trees and other non-developed lands in those area. By representing that space as pale green, it gives the viewer some significant information. First, the use of green probably indicates vegetation, not paved surfaces. Second, those areas are probably not important to the purpose of the map. The point of this map is obviously to display the layout of buildings. If we left it as dense and mixed tree cover, it would simply distract the viewer from the purpose of the map. This particular map seems to have an elevated focus on the Glaxo research building which is shown in red. Also shown in red is the closest visitors parking garage, so this map appears to be intended for visitors to the Glaxo research building, to help them get their bearing upon arriving at the UNC medical campus. Other building names are still included as these could serve as useful reference points for visitors walking between the parking deck and the research building, or further exploring the immediate area.
 
 ---
 .center[
@@ -73,13 +74,13 @@ Continuous Features:
 ]
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day03/audio/d05s03.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day05/audio/d05s03.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 
 ???
 
-When it comes to features, it is important to remember that there are two main types of data that we use in GIS: Vecttors and Rasters. Now we aren't diving into vectors and Rasters just yet but I do want to at least mention them. Vectors are features, made up of geometric shapes. All vectors are made up of points. points are like the atomic building blocks of GIS. YEs we use points, lines and polygons but both lines and polygons are made up of groups of points. Rasters on the other hand are continuous surfaces. They are made up of pixels, just like your computer or TV has pixels. All pixels within a raster are the same size within a given raster and they are always rectangular in shape. Right now we're just focused on vectors and remember that the vectors we use almost exclusively are points, lines and polygons. The two types of features we use vectors to display in maps are discrete features and continuous features. Discrete features are typically fixed objects with definitive boundaries. Thinki buildings, roads, places etc... Most things we use points and lines to display are discrete feature, though they can also be represented by polygons. Continuous features are bigger, more fluid features Thinki forests, water bodies, geologic formations. We typically use polygons to delineate continuous features, although that didn't seem to stop google from displaying the entire Rocky mountain range as a single point but go figure.
+When it comes to features, it is important to remember that there are two main types of data that we use in GIS: Vectors and Rasters. Now we aren't diving into vectors and Rasters just yet but I do want to at least mention them. Vectors are features, made up of geometric shapes. All vectors are made up of points. points are like the atomic building blocks of GIS. Yes we use points, lines and polygons but both lines and polygons are made up of groups of points. Rasters on the other hand are continuous surfaces. They are made up of pixels, just like your computer or TV has pixels. All pixels within a raster are the same size within a given raster and they are always rectangular in shape. Right now we're just focused on vectors and remember that the vectors we use almost exclusively are points, lines and polygons. The two types of features we use vectors to display in maps are discrete features and continuous features. Discrete features are typically fixed objects with definitive boundaries. Think buildings, roads, places etc... Most things we use points and lines to display are discrete feature, though they can also be represented by polygons. Continuous features are bigger, more fluid features Think forests, water bodies, geologic formations. We typically use polygons to delineate continuous features, although that didn't seem to stop Google from displaying the entire Rocky mountain range as a single point but go figure.
 
 ---
 .center[
@@ -100,10 +101,14 @@ knitr::include_graphics("vectors.png")
 
 ]
 
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day05/audio/d05s04.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
 
 ???
 
-Something you need to consider is that all of GIS, at it's most basic level, is executed using code. Within ArcGIS you may use a mouse to point and click but every time you execute a spatial operation you are really telling your computer to execute some code. I bring this up because at it's very foundation, vectors are made up of points, as I just mentioned. Every vector is simply manufactured out of points, which are simply a number representing an x coordinate and a nother number representing a y coordinate. The way these coordinates are placed depends on the projection. 
+Something you need to consider is that all of GIS, at it's most basic level, is executed using code. Within ArcGIS you may use a mouse to point and click but every time you execute a spatial operation you are really telling your computer to execute some code. I bring this up because, as I just mentioned, at it's very foundation, vectors are made up of points, remember building blocks. Every vector is simply manufactured out of points, which are simply a number representing an x coordinate and a another number representing a y coordinate. The way these coordinates are placed depends on the projection. So a point would have a single x and a single y. A line will have multiple pairs of X's and Y's and the first pair will be different form the last pair. A polygon will also have multiple pairs of X's and Y's but it's first and last pair will be identical.
 
 ---
 .center[
@@ -123,3 +128,12 @@ You have a quiz to complete covering the material from this week which includes 
 - Lab #1 is still due tonight at midnight so make sure to turn it in on Sakai.
 
 ]
+
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day05/audio/d05s05.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
+
+???
+
+Quiz #1 is now posted on Sakai so please remember to complete it by midnight. You have unlimited time but only one attempt so make sure you have a good internet connection. It is of course open book. As I m entioned, lab 2 is going to be pushed until Monday but if you do want to get a jump on it, I suggest either downloading ArcGIS Pro or making sure you can log in to the VCL. Instructions for both can be found at the link provided on this slide. Hope you all have a nice weekend and as always, please let me know if you run into any major issues (preferably on Piazza).
