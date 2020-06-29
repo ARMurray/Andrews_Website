@@ -1,0 +1,20 @@
+---
+date: "2020-06-25T00:00:00-05:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Monday
+menu:
+  geog_info:
+    parent: week2
+    weight: 10
+title: Monday
+type: docs
+---
+
+Today we're covering chapter three as well as introducing Lab 2
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day06/slides.html)
+
+You can find the full lab 2 Assignment [Here](https://docs.google.com/document/d/1CH-on4t3JTHt1ktIy04U4U0k_Y5U-yzz_3yqJScE0oQ/edit?usp=sharing) and you can find the video tutorial [Here](https://unc.zoom.us/rec/share/-fZ0KrKg8mNJRp3862P5BZA4AJjJX6a80SlM_6EOn0ohlJXxYLSgGgfDEo9V2IIo?startTime=1593401626000)

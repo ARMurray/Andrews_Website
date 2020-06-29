@@ -76,6 +76,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Week 1"
   weight = 10
   identifier = "week1"
+  
+[[menu.geog_info]]
+  name = "Week 2"
+  weight = 20
+  identifier = "week2"
 
 ## Weights for watershed course menu
 [[menu.watershed]]

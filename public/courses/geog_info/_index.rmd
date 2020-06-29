@@ -36,14 +36,14 @@ We will be reading [Essentials of Geographic Information Systems](https://open.u
 
 | Date          | Topic               | Description | Reading | Assignment  |
 | ------------- | ------------------- | ----------- | ------------- | ----- |
-| June 22, 2020 | [Course Introduction](https://amurraygeo.com/slides/intro_geographic_information/Day01/slides.html) |  | | [Read Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html) / [Post your introduction](https://piazza.com/class/kbchpg3on0h4se?cid=7) |
-| June 23, 2020 | Spatial thinking and concepts| | [Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html)| |
-| June 24, 2020 | GIS & Intro to ArcGIS | Finish Chapter 1 & Introduce GIS software |  | Assign Lab 1|
-| June 25, 2020 | Maps and Projections  | Introduce Maps, coordinate systems and Projections | [Chapter 2](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s06-map-anatomy.html) ||
-| June 26, 2020 | Map Abstractions    | Finish Chapter 2 | [Chapter 2](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s06-map-anatomy.html) | Lab 1 Due + Quiz 1 + Assign Lab 2 |
-| June 29, 2020 | Data & Where to find them | All about data | [Chapter 3](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s07-data-information-and-where-to-.html) | Lab 2 due + Assign lab 3|
+| June 22, 2020 | [Course Introduction](https://murraygeo.com/slides/intro_geographic_information/Day01/slides.html) |  | | [Read Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html) / [Post your introduction](https://piazza.com/class/kbchpg3on0h4se?cid=7) |
+| June 23, 2020 | [Spatial thinking and concepts](https://murraygeo.com/slides/intro_geographic_information/Day02/slides.html)| | [Chapter 1](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s05-introduction.html)| |
+| June 24, 2020 | [GIS & Intro to ArcGIS](https://murraygeo.com/slides/intro_geographic_information/Day03/slides.html) | Finish Chapter 1 & Introduce GIS software |  | Assign Lab 1|
+| June 25, 2020 | [Maps and Projections](https://murraygeo.com/slides/intro_geographic_information/Day04/slides.html)  | Introduce Maps, coordinate systems and Projections | [Chapter 2](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s06-map-anatomy.html) ||
+| June 26, 2020 | [Map Abstractions](https://murraygeo.com/slides/intro_geographic_information/Day01/slides.html)    | Finish Chapter 2 | [Chapter 2](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s06-map-anatomy.html) | Lab 1 Due + Quiz 1 |
+| June 29, 2020 | [Data & Where to find them](https://murraygeo.com/slides/intro_geographic_information/Day06/slides.html) | All about data | [Chapter 3](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s07-data-information-and-where-to-.html) | Assign Lab 2|
 | June 30, 2020 | Data Models for GIS |             | [Chapter 4](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s08-data-models-for-gis.html)              ||
-| July 1, 2020  | Data Models for GIS |             | [Chapter 4](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s08-data-models-for-gis.html)| Lab 3 due + Assign Lab 4|
+| July 1, 2020  | Data Models for GIS |             | [Chapter 4](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s08-data-models-for-gis.html)| Lab 2 due + Assign Lab 3|
 | July 2, 2020  | Geospatial Data Management | What to do with data | [Chapter 5](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s09-geospatial-data-management.html) | Quiz 2 (will not include chapter 5)|
 | July 3, 2020  | HOLIDAY             | NO          | CLASS         ||
 | July 6, 2020  | Geospatial Data Management cont'd | Finishing Chapter 5 | [Chapter 5](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s09-geospatial-data-management.html) | Lab 4 due |
