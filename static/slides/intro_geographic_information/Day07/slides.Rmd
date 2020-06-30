@@ -1,0 +1,58 @@
+---
+title: "Day 7"
+author: "Andrew Murray"
+date: 'June 30, 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+    includes:
+      after_body: "afterInit.html"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br><br>
+.center[
+## Introduction to Geographic Information
+### Lecture 6
+.mb[
+Data Models for GIS<br>
+
+
+<br>
+
+Andrew Murray | University of North Carolina - Chapel Hill
+
+June 30, 2020
+]]
+
+---
+
+.center[
+## Rasters
+]
+
+.pull-left[
+```{r echo=FALSE, out.height= 350, out.width= 450}
+knitr::include_graphics("raster.jpg")
+```
+]
+
+.pull-right[
+.med[
+- Rasters are made up of pixels
+- Each square in the image to the left represents a single pixel
+- All pixels within a raster are always the same size
+- We refer to the the length of one side of a pixel as the resolution. So when we say a raster has a resolution of 30 meters, we mean that each pixel is 30m x 30m
+- Satellite imagery is the most common form of raster data
+]
+]
