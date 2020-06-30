@@ -4,7 +4,7 @@ draft: false
 output:
   blogdown::html_page:
     toc: false
-linktitle: Tuesday
+linktitle: Tuesday2
 menu:
   geog_info:
     parent: week2
@@ -19,3 +19,5 @@ Today we cover what rasters are and how we use them in spatial operations.
 
 
 [Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day07/slides.html)
+
+[Zoom link here](https://unc.zoom.us/rec/share/ov5xEYr81WVIEo2Q917if5IHP4LFT6a81XUe_vVcy0jz-nZuM9y-qPbv4XFtoyVy?startTime=1593526405000)
