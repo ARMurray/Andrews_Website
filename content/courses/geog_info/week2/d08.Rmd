@@ -1,0 +1,23 @@
+---
+date: "2020-06-29T00:00:00-05:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Wednesday2
+menu:
+  geog_info:
+    parent: week2
+    weight: 30
+title: Wednesday
+type: docs
+---
+
+## Data Models for GIS: Vectors
+
+Today we cover what rasters are and how we use them in spatial operations.
+
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day08/slides.html)
+
+[Zoom link here](https://unc.zoom.us/rec/share/ucooMOntqzNLQafszhHGGbYFQJjqaaa8hyRN_qAPyh3dEYQKAT-BIjWzwZ5g1wzo?startTime=1593568327000)
