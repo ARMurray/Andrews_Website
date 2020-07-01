@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 9</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-07-02" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 9
+.mb[
+Data Models for GIS: Satellite Imagery &amp; Aerial Photography&lt;br&gt;
+
+
+&lt;br&gt;
+
+Andrew Murray | University of North Carolina - Chapel Hill
+
+July 2, 2020
+]]
+
+
+---
+.pull-left[
+## Satellite Remote Sensing
+.med[
+- There are [more than 1,300 satellites](https://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/) orbiting the Earth.
+
+**Active Satellites** beam signals at the earth and measure various properties about the return of that signal (how long it takes to bounce back, the alteration of the signal etc...)
+
+**Passive Satellites** measure radiation emitted from the earth or reflected energy from natural sources (The Sun)
+
+Active remote sensing is analogous to taking a picture with the flash on while passive remote sensing is analogous to taking a picture using only ambient lighting.
+
+]]
+
+.pull-right[
+[
+&lt;img src="satellites.jpg" width="650" height="300" /&gt;
+](https://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/)
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day09/audio/d09s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+???
+
+Incredibly, there are at least 1,300 satellites in the Earth's orbit that we know about. There are likely several more that we do not know about. Check out the link at the top of the slide for the full list, which is tracked by a group called the Union of Concerned Scientists. There are all sorts of satellites in orbit ranging from military to telecom, earth observation, and even habitable satellites. The satellites we are concerned with in GIS are earth observation satellites, which take imagery of the planet for various reasons. We have satellites that track weather, ice formation, imagery, soil moisture, and even changes in gravity. All earth observation satellites fall within 1 of two main categories, active and passive. Active satellites have a mechanism for sending signals to earth and measuring the return of that signal as it bounces ooff the planet and returns to the satellite, just like radar or taking a picture with a flash. Passive satellites on the other hand make use of natural sources of energy such as radiation emitting from the Earth or the reflection of sunlight off the earths surface. 
+---
+## Example: Hurricanes and Soil Moisture
+
+.center[
+&lt;div class="centered"&gt;
+&lt;video width="800" height="450" controls autoplay&gt;
+  &lt;source src="/img/Florence.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day09/audio/d09s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Here is an example of using a passive remote sensing satellite to measure soil moisture. What you are looking at here is a map of the Carolinas showing soil moisture at a 9km spatial resolution and a 3-hour temporal resolution. You can see a ring representing Hurricane Florence moving in from the right and the impact it has on saturation over the Carolinas. This is part of my dissertation research where I am using GIS and spatial information to try and determine the impacts of extreme precipitation on the landscape and how the amount of water in the soil prior to a storm can either make the impacts of a major hurricane less or worse
+
+---
+background-image: url(/static/slides/intro_geographic_information/Day09/landsat.png)
+background-size: cover
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day09/audio/d09s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Landsat has been the leading U.S. Earth observation satellite fmaily since the prokject first launched in 1972. Since that time there has always been a landsat satellite in the sky. For a long time it was the leading publicly available earth observation satellite but many other countries have launched their own. Arguably the most advanced earth observation satellite in wide use today are the Sentinel-2 satellites maintained by the European Space Agency. The spatial resolution of landsat is 30m so each pixel is 30m by 30m. The landsat satellite has a revisit period of 16 days which means it can create a global image every 16 days. Sentinel satellites have a spatial resolution of 10 meters and a revisit period of 10 days but there are 2 of them spaced equally aprt so really the revisit period is about 5 days
+
+---
+
+### Types of Resolution
+
+.pull-left[
+**Spatial Resolution**
+- "A direct representation of the ground coverage for each pixel shown in the image. If a satellite produces imagery with a 10 m resolution, the corresponding ground coverage for each of those pixels is 10 m by 10 m, or 100 square meters on the ground"
+
+**Spectral Resolution**
+- "The interval size of the wavelengths and the number of intervals being scanned. Multispectral and hyperspectral sensors are those sensors that can resolve a multitude of wavelengths intervals within the spectrum"
+]
+.pull-right[
+**Temporal Resolution**
+- "The amount of time between each image collection period and is determined by the repeat cycle of the satellite’s orbit."
+
+**Radiometric Resolution**
+- "The sensitivity of the sensor to variations in brightness and specifically denotes the number of grayscale levels that can be imaged by the sensor. Typically, the available radiometric values for a sensor are 8-bit (yielding values that range from 0–255 as 256 unique values or as 28 values); 11-bit (0–2,047); 12-bit (0–4,095); or 16-bit (0–63,535)"
+
+]
+****
+
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day09/audio/d09s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+So now we have already mentione two types of resolution. The first was spatial resolution which refers to the pixel size on the earths surface that can be created from the satellite. The second is temporal resolution. How long does it take for the satellite to take two images of the same location on earth. Both of these are really important. Think of a Hurricane for example. If you were relying on the landsat satellite to quantify damage from a Hurricane it might be difficult with a resolution of 30m. Most homes are not 30m x 30m so you would not be able to determine impact on specific buildings and if the timing was off you might have to wait two weeks after the hurricane just to get your first images. In the United States, we often use aerial imagery to respond to major disasters such as Hurricanes. Mounting high resolution sensors onto aircraft allows us to collect imagery immediately following a disaster at high spatial resolutions (because it is so much closer to the surface of the earth than a satellite would be). The obvious tradeoff is that it would take too much time and money to constantly fly planes over the entire globe to get this high resolution data all the time so we only use it when we need to. This is why satellites provide an economic and consistent option. Another type of resolution you should be fmailiar with is Spectral resolution, which tells us what wavelengths of energy a sattelite is capable of capturing. Your basic camera for example captures wavelengths in the visible spectrum (reg / blue &amp; green light) but there are many other forms of energy at other wavelengths such as near infra-red that sattelites measure. Lansat 8 for example has 11 different bands that it measures. Radiomettric resolution refers to how sensitive a sensor is at measuring the values of those wavelengths. In the examples provided here, a satellite with 16-bit resolution would be considered much more sensitive than a satellite with 8-bit resolution.
+
+---
+
+### Aerial Imagery
+
+.pull-left[
+&lt;img src="curvature.jpg" width="450" height="300" /&gt;
+.med[
+When you take a photo of the earth from a single point, you induce curvature effects into the image. This must be geometrically corrected for accurate data use
+
+[Pigeon Remote Sensing](https://www.geographyrealm.com/before-there-were-drones-using-pigeons-for-aerial-photography/)
+]
+
+]
+
+.pull-right[
+.med[
+- Orthophotos are geometrically corrected photos of the earth
+- As you get lower in altitude, the curvature effect increases
+- Historically, Airplanes would fly with cameras facing down and take photos... with known altitude and angle of the photo, it can be geometrically corrected.
+- **Now** we use drones and with the advancement of computer storage and power, we can take hundreds of photos of objects to create both orthoimages and accurate 3D models
+]
+
+[Check out this video](https://www.youtube.com/watch?v=g8mapLUXyGI)
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day09/audio/d09s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Aerial Imagery is the oldest form of remote sensing. In fact, the first recorded use of remote sensing was in the early 1900's when a German inventor started attaching cameras to his homing pigeons to see where they were flying, seriously you can read about it in that link there. Before there were satellites, we used aerial imagery for spying and surveillance on other countries. It's how the United States discovered the building of missile launch sites in Cuba during the Cold war. We still use aerial imagery as it still provides the highest possible resolution images we can obtain. After all, the closer you are to something, the higher quality your picture. The problem with aerial imagery is that the closer you are to the earths surface, the more distorted the edges of the photo become and they are no longer geometrically correct. We can correct this using a process called orthorectification where we bend the phto back using known variable such as altitude, angle of photograph etc... Taking multiple photos of the same object from two locations would allow us to deduce the height of an object on the ground. This is how drones work now, by taking multiple photos of objeccts from different positions and stitching them together to create 3D models.
+
+---
+
+## Assignments
+
+[Quiz #2](https://sakai.unc.edu/portal/site/48c8fde2-8dda-4a15-b542-6f16963c3c57/tool/ef250cf2-feb6-451b-9d80-25fd99cd9b1d/jsf/index/mainIndex#roleSwitch)
+
+- Make sure to complete Quiz #2. It is due Friday night at midnight like usual but it is open now so you can get it out of the way before the Holiday Weekend.
+
+### Lab #3 (Due Monday night July 6 @ Midnight EST): 
+We are going to do some exploring of the Living Atlas data that is available, how to explore it and how to access it through both ArcGIS Online and ArcGIS Pro. Please complete the tutorial and submit the following to Sakai: [CLICK HERE FOR LAB](https://learn.arcgis.com/en/projects/get-started-with-arcgis-living-atlas-of-the-world/)
+
+**A Document with screenshots of the followng steps (25 pts each):**
+
+(1) Browse and search for content: Step 11
+
+(2) Add Living Atlas layers to an ArcGIS Online map: Step 18
+
+(3) Configure an imagery layer from Living Atlas: Step 17
+
+(4) Use Living Atlas content in analysis: Step 6
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day09/audio/d09s07.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+For this weekend we hae two things you need to finish up. First is Quiz #2. This is open now and it is due by Friday night at midnight. I am opening it now though so you can get it out of the way before the holiday weekend. I am also assigning lab #3 which will guide you through using the Living atlas in ArcGIS Online and ArcGIS Pro. You do not need to save any of your maps for submission although it might be useful for you down the road. You only need to submit a document on Sakai with 4 screenshots of the steps here on the bottom of the slide. Also Make sure you have at least looked through chapter 5 by Monday. HOpe everyone is staying well both physically and mentally and I hope you can find a way to enjoy the holiday weekend.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
