@@ -183,7 +183,7 @@ We are going to do some exploring of the Living Atlas data that is available, ho
 
 (2) Add Living Atlas layers to an ArcGIS Online map: Step 18
 
-(3) Configure an imagery layer from Living Atlas: Step 17
+(3) Configure an imagery layer from Living Atlas: Step 7
 
 (4) Use Living Atlas content in analysis: Step 6
 
