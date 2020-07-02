@@ -13,6 +13,8 @@ title: Thursday (July 2)
 type: docs
 ---
 
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day09/slides.html)
+
 ## Objectives for Today:
 - Finish Chapter 4
 - Start Chapter 5
