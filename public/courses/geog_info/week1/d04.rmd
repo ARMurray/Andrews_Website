@@ -4,7 +4,7 @@ draft: false
 output:
   blogdown::html_page:
     toc: false
-linktitle: Thursday
+linktitle: Thursday - June 25
 menu:
   geog_info:
     parent: week1
