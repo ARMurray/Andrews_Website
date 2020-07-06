@@ -1,0 +1,47 @@
+---
+title: "Day 11"
+author: "Andrew Murray"
+date: 'July 7, 2020'
+output:
+  xaringan::moon_reader:
+    css: ["default", "my_styles.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: github
+      countIncrementalSlides: false
+    seal: false
+    includes:
+      after_body: "afterInit.html"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br><br>
+.center[
+## Introduction to Geographic Information
+### Lecture 11
+.mb[
+Geospatial Data Management (Part 2)<br>
+
+
+Andrew Murray | University of North Carolina - Chapel Hill
+
+July 7, 2020
+
+
+]]
+
+---
+
+```{r echo=FALSE, out.height= 400, out.width= 450}
+knitr::include_graphics("gps.jpg")
+```
+
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day10/audio/d10s02.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
