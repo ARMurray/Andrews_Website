@@ -1,0 +1,22 @@
+---
+date: "2020-07-05T00:00:00-05:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Monday - July 6
+menu:
+  geog_info:
+    parent: week3
+    weight: 10
+title: Monday
+type: docs
+---
+
+## Geospatial Data Management
+
+Today we cover data types and data mangement within ArcGIS
+
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day10/slides.html)
+
