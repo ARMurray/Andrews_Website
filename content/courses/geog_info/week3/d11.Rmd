@@ -18,5 +18,5 @@ type: docs
 Today we finish Chapter 5 and start on lab 4
 
 
-[Slides are here]()
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day11/slides.html)
 
