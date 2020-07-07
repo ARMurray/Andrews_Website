@@ -20,3 +20,4 @@ Today we finish Chapter 5 and start on lab 4
 
 [Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day11/slides.html)
 
+[Lab 4 tutorial is here](https://unc.zoom.us/rec/share/99RvLuyv3GxOGoXEyX2cZ5B6EZu9eaa81SUW__Fbz0kNfGZWxnR9OPwwPuppVHXi?startTime=1594125344000)
