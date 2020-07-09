@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 13</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-07-09" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 13
+.mb[
+Data Classification&lt;br&gt;
+&lt;br&gt;
+.med[
+Andrew Murray | University of North Carolina - Chapel Hill
+
+July 9, 2020
+]
+
+]]
+
+---
+### Classifications
+
+.med[
+Classifications come into play in all sorts of data but for today we are focused on choropleth maps.
+
+- A choropleth map is a shaded map (usually polygons) where each area is colored based on a value for a specific attribute.
+
+- Classification is all about how we assign values to colors to make an informative and visually appealing map
+
+- There are many statistical approaches but you can also create your own classes
+]
+
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Classification refers to how we assign values to things we want to use to represent them. In the case of a choropleth map, classification assigns values to colors but there are many other types of maps. You might have a road map for example where the line width of the road is represented by the maximum speed limit, or the number of lanes on the road. You could have a point where the size represents the size of a population. Today I am going to run through the classifications described in chapter 6 of the book and also one additional classification intriduced by esri. Then I will take you through ArcGIS Pro and show you how to apply them.
+
+---
+.left-column[
+### Classifications
+.med[
+- Divides the range of attribute values into equally sized classes.
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+- If you take the maximum (9,818,605) value and divide it by the number of classes you will get the first class break (1,963,787)
+]
+]
+
+.right-column[
+&lt;img src="EqualInterval.png" width="750" height="500" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+Equal interval divides the range into equal sizes, meaning that if you take the maximum value of the attribute and divide it by the number of classes you are using, you will get the first class break as a result. This means that this sort of classiciation is susceptible to outliers, so if you have one value that is really high, it will affect the rest of the map. That is what is happening here. Los Angelas County has skewed the whole map so most of the U.S. is in the lowest class. This is not a very good classification for this map... unless your goal is to show how many people live in L.A. compared to everywhere else I guess. 
+
+---
+
+.left-column[
+### Classifications
+.med[
+- Places equal numbers of observations into each class.
+
+- Almost like adding multiple medians
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+]
+
+.right-column[
+&lt;img src="Quantile.png" width="750" height="500" /&gt;
+]
+
+
+
+???
+
+Quantile on the other hand will make sure there are an equal number of observations in each class, which means if the polygons are roughly the same size you should see roughly the same amount of color for each class when looking at the map. You can see this map tells us a bit more about population variation especially in the more rural parts of the country. You can see the class breaks have lowered considerably because most counties in the Uinted states have populations of less than about 20 thousand people
+
+---
+
+.left-column[
+### Classifications
+.med[
+
+- Utilizes an algorithm to group values in classes that are separated by distinct break points.
+
+- Best used with data that is unevenly distributed but not skewed toward either end of the distribution. 
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+]
+
+.right-column[
+&lt;img src="Jenks.png" width="750" height="500" /&gt;
+]
+
+???
+
+Jenks natural breaks uses an algorithm to detect changes within the data. This is good at showing where groups happen, but for population of the United States it does not perform very well as the data values increase at a fairly stable rate. It does show the outliers though as you can clearly see some of the counties that contain the largest cities. Here you can see L.A. San Francisco, Houston, Dallas, Miami and the northeast corridor between Washington D.C. and Boston stands out as well
+
+---
+
+.left-column[
+### Classifications
+.med[
+- Forms each class by adding and subtracting the standard deviation from the mean of the dataset.
+
+- The method is best suited to be used with data that conforms to a normal distribution.
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+]
+
+.right-column[
+&lt;img src="StandardDev.png" width="750" height="500" /&gt;
+]
+
+???
+
+The standard deviation is pretty self explanatory. Note that in a standard deviation plot however, max and minimum values would be shown as identical because the point is to spot the outliers. Now this is not necesarrily the case in this map because U.S. Population is not normally distributed, instead it is positively skewed, which means most counties have low populations so the mean will be higher than the mode or median. The mean population for U.S. counties is 97,000 and the standard deviation is 309,000 so since you cannot have a population less than zero, all rural counties will be within 1 standard devitation, while only the most populated counties will exist outside of them
+
+---
+
+.left-column[
+### Classifications
+.med[
+- Creates class breaks based on class intervals that have a geometric series.
+
+- Essentially a compromise between equal interval, natural breaks (Jenks), and quantile / balance highlighting changes in middle values and the extreme values.
+]
+]
+
+.right-column[
+&lt;img src="Geometric.png" width="750" height="500" /&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s07.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+???
+
+Geometric interval is an attempt to compromise between equal interval, jenks and quantile to give a distributed classification scheme that accounts for break points that can be detected within the data. Personally, I think this is the best classification scheme for this data that we have looked at so far. 
+
+
+---
+.center[
+### Classifications and Maps in ArcGIS Pro
+
+.big[[VIDEO LINK](https://unc.zoom.us/rec/play/7JItJO7-qj43HtDBsQSDC6MvW469faqshiAf_aFbnUi0AHAANAbwNboRYupNLknlIYO5GNGuotLU9-c3)]
+
+&lt;img src="ArcGISSymbology.png" width="700" height="400" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day13/audio/d13s08.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+ArcGIS has come a long way in it's ability to customize classification settings and in the rest of this lecture, I am going to walk you through how to use some of them. I am also going to take this opportunity to show you a bit more about the statistics the classification schemes make available to you, as well as basic map creation and some additional information about how ArcGIS Pro is structured. I am showing all of this to you in ArcGIS Pro instead of ArcGIS online because as you recall, ArcGIS Online is the lightweight version and is based on ArcGIS Pro, so once you have a full understanding of how all of this is don in ArcGIS Pro, it will be much easier to figure it out in ArcGIS Online. I'll also talk a little about color selection but we'll hone in on that another day. Click the link for the video for the rest of today's class and don't forget lab 4 is due tonight.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
