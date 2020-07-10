@@ -24,4 +24,4 @@ Lab assignment is [HERE](https://docs.google.com/document/d/118XgVmRvZ35TGk3_dZL
 
 CSV with precipitation is available to download [HERE](/data/NC_ppt_2019.csv)
 
-Tutorial is [HERE]
+Tutorial is [HERE](https://unc.zoom.us/rec/play/75coceGp_2k3G4CXsQSDBPYqW9XsLK2s1HcZrvUMzkyzV3MKMVbwMLYTYbOwH8eweq72zph3Vcwzcgna)
