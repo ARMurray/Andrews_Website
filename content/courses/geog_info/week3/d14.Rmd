@@ -20,7 +20,7 @@ Make sure you complete Quiz 3 by midnight tonight
 
 Complete Lab #5 for July 14th
 
-Lab assignment is [HERE]()
+Lab assignment is [HERE](https://docs.google.com/document/d/118XgVmRvZ35TGk3_dZLs577DEyuD8Mas1j3TNn8vcmA/edit?usp=sharing)
 
 CSV with precipitation is available to download [HERE](/data/NC_ppt_2019.csv)
 
