@@ -148,7 +148,7 @@ Overlays can be broken down into:
 - Returns more data... (returns the sum of two layers)
 
 <audio controls>
-  <source src="/slides/intro_geographic_information/Day15/audio/d15s04.mp3" type="audio/mpeg">
+  <source src="/slides/intro_geographic_information/Day15/audio/d15s05.mp3" type="audio/mpeg">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
 ]
@@ -173,6 +173,13 @@ Click the link below to watch the rest of this lecture as I guide you through th
 ]
 
 .mb[[VIDEO LINK](https://unc.zoom.us/rec/play/uJYvceupqTo3HtydtQSDAPZ5W461Lq-sg3Ua_vYEzB3kWiMBNACiNbYaMeucneVejs4ZVpsn6hO1QxyA)]
+
+<br><br><br>
+
+<audio controls>
+  <source src="/slides/intro_geographic_information/Day15/audio/d15s06.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
 
 ???
 
