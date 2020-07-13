@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 15</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-07-13" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 15
+.mb[
+Geospatial Analysis: Vector Operations &lt;br&gt;
+&lt;br&gt;
+.med[
+Andrew Murray | University of North Carolina - Chapel Hill
+
+July 13, 2020
+]
+
+]]
+
+---
+.center[
+### Single vs. Multiple Layer Analysis
+]
+
+.pull-left[
+.med[
+**Single Layer Analysis:**
+
+Operations conducted using a single layer
+- Buffer
+- Merge
+- Dissolve
+- Append
+]
+]
+
+.pull-right[
+.med[
+**Multiple Layer Analysis:**
+
+Operation using multiple layers
+- Intersections
+- Unions
+- Clip
+- Erase
+- Split
+]
+]
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day15/audio/d15s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+As your book points out, the term geoprocessing is sort of a loaded term. Everything you do in GIS can be considered some sort of geoprocessing. It's like any type of writing on a computer could be considered word processing. Vector operations are geoprocessing tools that are applied to vector data types such as polygons, points and lines. The author splits these up by considering single vs multi-layer operations which is not significant but is a useful way to hone in on specific operations that we use for different tasks. Some examples of operations we use a lot in GIS are given here. The buffer is probably the most well known and used operation. Merge, dissolve and append are used for lots of applications although I find them to be most useful in the data cleaning process where I am trying to get my data to the geography I plan on working in. Multiple layer analysis are obviously operations that use two or more spatial layers. Often we will use a single layer operation to feed into a multi-layer operation. For example. If I wanted to find out how many people lived within a five-mile radius of grocery stores, I would first do a single-layer buffer around grocery stores, then use that buffer in a multi-layer analysis to intersect with a population layer.
+
+---
+.pull-left[
+## Buffer
+.med[
+A buffer is simply a measure of distance from a feature into the surrounding area. There many ways to do this...
+]
+&lt;img src="buffer.jpg" width="450" height="280" /&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day15/audio/d15s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+.pull-right[
+
+
+&lt;img src="buffer1.jpg" width="450" height="600" /&gt;
+]
+
+???
+
+A buffer is simplky a measure of distance from a feature. There are many ways to do this such as around points, distance from lines, and distance from polygons. Further, you can determine if you want to buffer the inside or outside of a polygon. I usually refer to buffering the inside of a polygon as a 'negative buffer' and the outside of a polygon as a typical buffer. Buffers are used often to determine proximity statistics, where we are finding the number of something within a distance of something else.
+
+---
+
+## Dissolve / Append / Select
+
+.pull-left[
+&lt;img src="operations1.png" width="400" height="500" /&gt;
+]
+
+.pull-right[
+.med[
+**Dissolve**
+- Generalize features based on an attribute
+
+**Append**
+- Add features to your dataset
+
+**Select**
+- Pull out only certain features, based on an attribute. 
+]
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day15/audio/d15s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+???
+
+A few more operations commonly used in GIS are Dissolve, Append and Select. Dissolve let's us generalize featuers based on an attribute. For example, if you had a layer of all the counties in the U.S. and you ran a dissolve using the state fips attribute, your result would be a layer showing the fifty states. Apend adds features to your data later. So if I appended South Carolina Counties to North Carolina Counties I would have a layer of all Carolina Counties. Select simply pulls out specific features based on an attribute. Now you might ask yourself, what is the difference between a geoprocessing select operation and a selection query like the one we learned about last week and the answer is nothing. Select as a geoprocessing tool is the traditional way of pulling out specific features. ArcGIS and specifically ArcGIS Pro has made great strides in the expansion of their selection tools. In many cases you don't even need to do buffers anymore because you can select features using a query by distance. You will find as you become more comfortable with GIS that there is often more than one route to your destination, meaning that there are often multiple ways to achieve the same result. The ways that I teach you how to do things in GIS might very well be different than other teachers and you may very well find workflows that work better for you. My job is to show you the options and how they work. 
+
+---
+
+.pull-left[
+## Multi-Layer Operations: Overlays
+.med[
+Overlays can be broken down into:
+
+**Intersections**
+- Returns less data... (only the overlapping areas)
+
+**Unions**
+- Returns more data... (returns the sum of two layers)
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day15/audio/d15s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+]
+
+.pull-right[
+&lt;img src="overlays.jpg" width="500" height="500" /&gt;
+]
+
+???
+
+Overlays are a broad category of GIS operations that incolve relating two separate geographic layers. All of the tools presented here are really just slight variations of one another. It all depends on what you are trying to accomplish, but at their core, overlays are all just different ways to select specific areas, refine study areas and conform data from one spatial extent to another spatial extent. We will take a look at some examples of these applications in the following video.
+
+---
+
+## Vector Operations in ArcGIS Pro
+
+.mb[
+Click the link below to watch the rest of this lecture as I guide you through the use of these operations in ArcGIS Pro.
+]
+
+.mb[[VIDEO LINK](https://unc.zoom.us/rec/play/uJYvceupqTo3HtydtQSDAPZ5W461Lq-sg3Ua_vYEzB3kWiMBNACiNbYaMeucneVejs4ZVpsn6hO1QxyA)]
+
+???
+
+In the rest of the lecture, I will guide you through how to use these vector operations in ArcGIS Pro using some of the data layers we have already used in the previous labs.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
