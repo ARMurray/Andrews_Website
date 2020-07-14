@@ -1,0 +1,22 @@
+---
+date: "2020-07-140T00:00:00-05:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Tuesday - July 14
+menu:
+  geog_info:
+    parent: week4
+    weight: 20
+title: Tuesday
+type: docs
+---
+
+# Geospatial Analysis: Raster Operations
+
+[Slides are here](https://murraygeo.com/slides/intro_geographic_information/Day16/slides.html)
+
+[Lab 6 Exercise](https://learn.arcgis.com/en/projects/classify-land-cover-to-measure-shrinking-lakes/)
+
+[Lab 6 Assignment](https://murraygeo.com/slides/intro_geographic_information/day16/slides#5)
