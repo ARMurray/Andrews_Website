@@ -62,8 +62,8 @@ Operation using multiple layers
 
 ???
 
-Hi everyone, today I am simply going to introduce classifications to you and get you going on lab 6. This lab will be another walkthrough with a tutrial from ESRI so it will give you very specific instructions on how to complete the tasks. By now you should be through chapter 8 in the book, and if not, make sure you have at least familiarized yourself with classification.
-Much like in vector analyses, we can break down operations on rasters into categories of single vs multiple layer analyses. Reclassification is most often used to simplify overly complex rasters. We can also run buffers based on cells of a raster rather than vectors. The most common multiple layer anlyses for rasters involve extractions which is an approach for subsetting a raster and overlays which is the process of combining data from multiple rasters, like an intersection in vector analysis. 
+Hi everyone, today I am simply going to introduce classifications to you and get you going on lab 6. This lab will be another walk through with a tutorial from ESRI so it will give you very specific instructions on how to complete the tasks. By now you should be through chapter 8 in the book, and if not, make sure you have at least familiarized yourself with classification.
+Much like in vector analyses, we can break down operations on rasters into categories of single vs multiple layer analyses. Reclassification is most often used to simplify overly complex rasters. We can also run buffers based on cells of a raster rather than vectors. The most common multiple layer analyses for rasters involve extractions which is an approach for sub setting a raster and overlays which is the process of combining data from multiple rasters, like an intersection in vector analysis. 
 
 ---
 .pull-left[
@@ -95,7 +95,7 @@ Raster Reclassification is the process of simplifying a raster with high resolut
 
 ???
 
-Reclassification is the process of taking pixel values within a raster and changing them to different values based on certain criteria. A prime example of this is the creation of the national land cover dataset, which uses remotely sensed data from the landsat satellite and takes ranges of values which are associated with different landcover types. So I won't dive too deep into the world of remote sensing right now but I want to emphasize that landsat is a multiband satellite, so it creates a different raster for each range of wavelengths it measures. By combining those rasters in different combinations, scientists can detect patterns of vegetation which they validate through a process called groundtruthing (literally driving out to a field / forest / lake and using a similar sensor to the satellite on the ground and checking for differences). When they find a range of pixel values that consistently matches up with a vegetation type, they reclassify based on these values to create the NLCD. In short, they take a tremendous amount of satellite data, field work and math and boil it all down to a simplified national raster of land cover. 
+Reclassification is the process of taking pixel values within a raster and changing them to different values based on certain criteria. A prime example of this is the creation of the national land cover dataset, which uses remotely sensed data from the Landsat satellite and takes ranges of values which are associated with different land cover types. So I won't dive too deep into the world of remote sensing right now but I want to emphasize that Landsat is a multiband satellite, so it creates a different raster for each range of wavelengths it measures. By combining those rasters in different combinations, scientists can detect patterns of vegetation which they validate through a process called ground truthing (literally driving out to a field / forest / lake and using a similar sensor to the satellite on the ground and checking for differences). When they find a range of pixel values that consistently matches up with a vegetation type, they reclassify based on these values to create the NLCD. In short, they take a tremendous amount of satellite data, field work and math and boil it all down to a simplified national raster of land cover. 
 
 ---
 ## Extractions
@@ -107,7 +107,7 @@ Reclassification is the process of taking pixel values within a raster and chang
 .pull-right[
 .med[
 &lt;br&gt;
-Rasters often come as (spatially) large datasets and we often need to subset them to work with them
+Rasters often come as (spatially) large data sets and we often need to subset them to work with them
 
 - Can be done with two rasters or a raster extracted to a vector. 
 
@@ -122,7 +122,7 @@ Rasters often come as (spatially) large datasets and we often need to subset the
 
 ???
 
-Extractions are all about subsetting your data. We have already talked extensively on how, when using GIS, we always want our data as small as possible. Raster data is generally very large both spatially and in file size so subsetting it to your area of interest is essential. You can do extractions two ways, with a raster or a vector. Your method will simply depend on your project. If I work for Orange county, I might be downloading a bunch of state or national data that I want to extract to the county, because that's what my project requires. If I have some aerial imagery for a small area on the coast, I may want to extract using that raster.
+Extractions are all about sub setting your data. We have already talked extensively on how, when using GIS, we always want our data as small as possible. Raster data is generally very large both spatially and in file size so sub setting it to your area of interest is essential. You can do extractions two ways, with a raster or a vector. Your method will simply depend on your project. If I work for Orange county, I might be downloading a bunch of state or national data that I want to extract to the county, because that's what my project requires. If I have some aerial imagery for a small area on the coast, I may want to extract using that raster.
 
 ---
 ## Lab #6
