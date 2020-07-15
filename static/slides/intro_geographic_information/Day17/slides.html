@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 17</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-07-15" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 17
+.mb[
+Geospatial Analysis: Raster Data Continued...&lt;br&gt;
+&lt;br&gt;
+.med[
+Andrew Murray | University of North Carolina - Chapel Hill
+
+July 15, 2020
+]
+
+]]
+
+---
+.center[
+### Scale of Analysis
+]
+
+.med[
+**Local**
+- Mathematical transformation to each individual cell in the grid
+
+**Neighborhood**
+- Examine the relationship of an object with similar surrounding objects.
+
+**Zonal**
+- Employed on groups of cells of similar value or like features
+
+**Global**
+- Operations on the entire dataset
+
+]
+.pull-right[
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+???
+
+Scale is a reference to how we apply functions to a raster and they can be broken down into four major categories. LocAL, NEIGHBORHOOD, ZONAL  and global. Local is one pixel at a time, neighborhood is a cluster of neighboring pixels, zonal is groups based on zones from another raster and global is the entire raster all at once. 
+---
+
+## Scale of Analysis: Local 
+
+.pull-left[
+.center[
+&lt;img src="local.jpg" width="250" height="450" /&gt;
+]
+]
+
+.pull-right[
+.med[
+Local operations apply a function to each cell individually
+- Most often used for conversions
+
+- Converting an elevation from meters to feet means you would individually multiply every pixel by 3.28084
+
+- Also used for reclassification - e.g. If pixel Value is &gt; 20 &amp; &lt;40 then new pixel value = 1
+]
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+???
+
+Local analysis refers to operations that are done to each pixel individually. This does not mean that each pixel gets a different function. For example, if you wanted to convert a raster which represents elevation from meters to feet, you would multiply each pixel by 3.28. local operations can be used for other things as well, like reclassification. For example you could write an if then statement to redefine a pixel value. an if/then statement is a query that asks each pixel if it satisfies a set of criteria, and if it does, it get's a value. For example, you could write a statement that says if the pixel value is between 20 and 40, then the new value should be 1. Reclassification can also be done using other scales such as zonal.
+
+---
+.center[
+## Scale of Analysis: Neighborhood
+
+*“Everything is related to everything else, but near things are more related than distant things.”*
+]
+
+.pull-left[
+.med[
+Neighborhood scale refers to operations done on a cluster of pixels. This can be done using a variety of spatial extents but is most often used with a square (a)
+- Local statistics
+- path of least resistance.
+
+In watershed delineation, we use a moving window to figure out flow paths of water
+]
+]
+
+.pull-right[
+&lt;img src="neighborhood.jpg" width="350" height="350" /&gt;
+]
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+The neighborhood scale is one that I probably use the most as it is applied in a lot of terrain and watershed analyses. In a neighborhodd, you consider groups of pixels around each individual pixel. For example you could reduce the resolution of a raster by taking the mean value of each 3x3 set within the raster. You could also use this to identify relationships between pixels and their neighbors such as slope.
+---
+
+## Example: Neighborhood
+
+.pull-left[
+.center[
+&lt;img src="d8.png" width="350" height="350" /&gt;
+]]
+
+.pull-right[
+.med[
+Hydrologist need to delineate watersheds to know where water flows. One step in this process is determining flow direction.
+- This image shows a neighborhood of 3x3 pixels
+- In each neighborhood, the function determines flow direction by figuring out which pixel represents the largest drop in elevation from the center pixel
+- The center pixel is reassigned a value that represents the direction of flow.
+]
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+???
+
+Here is an example of a moving window neighborhood analysis used in watershed delineation. A watershed represents the geographic area where all water that falls onto the land surface eventually flows to a single point, which is usually a large river, depending on the area you are focused on. In order to determine a watershed, you must first determine for every single pixel, what direction water is most likely to flow. We do this by using a 3x3 moving window. For each pixel, we look at it's elevation and compare it to the elevation of each neighboring pixel. We then find the biggest difference between the center pixel and all of it's neighbors. Whereever we find the biggest difference, that represents the steepest slope, and the center pixel is then reassigned a value which represents the direction of that slope.
+
+
+---
+## Scale of Analysis: Zonal
+
+.pull-left[
+.med[
+Employed on groups of cells of similar value or like features (zones).
+
+- Just like with vector data
+
+- Zones are represented by specific pixel values instead of polygons
+
+- Example: Using NLCD as zone raster to calculate mean elevations
+]
+]
+
+.pull-right[
+&lt;img src="zonal.jpg" width="350" height="450" /&gt;
+]
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s06.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+???
+
+We should be fairly familiar with zonal operations by now as we have done them with vectors in a previous lab. Using zonal neighborhoods with rasters works exactly the same way, and in fact uses the same exact tool in ArcGIS Pro. Instead of polygons and an attribute however, rasters just use pixel values to define zones. An example of an application of this would be using the National land cover data set to calculate average elevation for each land cover type. You might see different vegetation types have different mean elevations over the United States. Try to think of some other examples of ways you might utilize zonal neighborhoods.
+
+---
+## Scale of Analysis: Global
+.center[
+.pull-left[
+&lt;img src="Global.jpg" width="250" height="450" /&gt;
+]
+]
+
+.pull-right[
+.med[
+Global simply refers to operations on the entire raster all at once.
+
+Examples:
+- Mean value of the raster
+- Standard Deviation of the Raster
+- Max Value of the Raster
+- etc...
+]
+
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s07.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+]
+
+???
+
+Global scale is the simplest of them all and just refers to operations done on the entire raster all at once. These are typically global statistics with examples being average pixel value... min, max, standard deviation and others. Global stats can be informative but they are not going to give you anything at high resolution since by definition they are a simplification of the entire raster. 
+---
+## Surface Analysis: Spatial Interpolation
+
+.pull-left[
+&lt;img src="surface.jpg" width="350" height="300" /&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s08.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+.pull-right[
+.med[
+Spatial Interpolation is the process of taking information measured at known points, and estimating the information at all points in between them...
+
+Examples:
+
+- Elevation &amp; Surface mapping
+- Precipitation amounts
+- Solar Radiation
+]
+]
+???
+
+Spatial interpolation refers to taking data at known locations and estimating values between those known locations. We do this often for things like precipitation mapping. There are hundreds of rain gauges accross North Carolina, and their daily values can be plugged into an interpolation algorithm to estimate rainfall over the entire land surface. Eseentially interpolation means the conversion from points to a raster surface. 
+---
+## Surface Analysis: Terrain Mapping
+
+.pull-left[
+&lt;img src="terrain.jpg" width="350" height="300" /&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s09.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+.pull-right[
+.med[
+Terrain Mapping makes use of various spatial scales to tell us information about specific patterns in our data.
+
+Examples:
+- Aspect (What direction the slope is facing)
+- Flow direction of water 
+- Slope
+
+]
+]
+???
+
+Like I mentioned before, terrain analysis typically refers to us applying functions at various scales. For these examples they are typically moving window functions telling us about the local neighborhood. 
+
+---
+
+## Tutorial: Spatial Interpolation and 3D visualization in ArcGIS Pro. 
+
+.med[
+For the rest of the lecture, I want to show you how to create a three dimensional surface from point data and use basic 3d visualization tools in ArcGIS Pro. 
+]
+
+.mb[
+[Video Link Here](https://unc.zoom.us/rec/play/6JMvI-n5rTk3TtGd4wSDCvYrW9XoLa2s0yYb_aALyR62AnEBNgH3NbNAMOtJn0P6GJ9tRU0ZMwQwN5bl)
+]
+
+&lt;br&gt;&lt;br&gt;
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day17/audio/d17s10.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
