@@ -13,6 +13,7 @@ title: Final Project
 type: docs
 ---
 
+
 ## Geog 370 - Final Project
 
 For the final project we will bring together pieces of the entire course to run a spatial analysis and present it through multiple pathways. You will have the opportunity to decide what you want to investigate and what story you want to tell. You will download your own data, use spatial operations in GIS to come to a finding, and present that finding through a map, a written analysis, a chart, and you will share a component of it on ArcGIS Online. 
