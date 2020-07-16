@@ -264,6 +264,46 @@
     </item>
     
     <item>
+      <title>Final Project</title>
+      <link>/courses/geog_info/final/final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/courses/geog_info/final/final/</guid>
+      <description>
+
+
+&lt;div id=&#34;geog-370---final-project&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Geog 370 - Final Project&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;For the final project we will bring together pieces of the entire course to run a spatial analysis and present it through multiple pathways. You will have the opportunity to decide what you want to investigate and what story you want to tell. You will download your own data, use spatial operations in GIS to come to a finding, and present that finding through a map, a written analysis, a chart, and you will share a component of it on ArcGIS Online. 
+Your final submission will be a document (either word or pdf) that is approximately 2-3 pages long including figures. You will also publish your map online to ArcGIS as either a web map, a web app or both. &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Grading Breakdown: The Final project is worth 40% of your final grade and will be graded out of a total of 200 points with the following specific grade allocations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proposal&lt;/strong&gt; (25 points): &lt;strong&gt;Due Monday - July 27.&lt;/strong&gt; Please submit at least one paragraph about your proposed project including:
+- The data you plan on using
+- The problem or application you plan to investigate
+- The geoprocessing tools you will use
+- Your expected outcomes.&lt;/p&gt;
+&lt;p&gt;If you are having trouble identifying the exact tool that you should use, please post this in Piazza along with what you hope to accomplish.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt; (25 points): Your introduction should be a half page to a page describing the problem you are investigating, why it is important/interesting and the data you are using.Please include the source of your data and the format you downloaded it in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt; (50 points): This should be 1-2 pages describing the process you went through to investigate your data and establish spatial relationships. You are required to make use of at least two seperate geoprocessing tools to achieve your result. Please note which tools you used and which toolboxes they are from.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Map&lt;/strong&gt; (50 Points): You need to create a polished map that shows the results of your analysis and findings visually and effectively. Make sure your map is in a projection that is appropriate for your study area. Your map must include the following:
+- Map with appropriate symbology
+- Title
+- North arrow
+- Scale bar
+- Legend
+- Data Source
+- Projection Information&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chart&lt;/strong&gt; (25 Points): You should include a chart that shows your data or some statistics about your data. It does not matter what type of chart it is (scatter, bar, box-plot etc…) but it must be legible with understandable title and axis labels.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Online Aspect&lt;/strong&gt; (25 Points):You need to publish some form of your final map to ArcGIS Online in our SSII group. This can simply be an online web map or if you’re feeling extra, you can publish a web app. To get full credit, please make sure your symbology and legend are easily understandable to someone looking at your map for the first time. Also please include a working web link in your final submission.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;help-with-the-final-project&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Help with the final project&lt;/h2&gt;
+&lt;p&gt;If you feel like there are things I have not covered in preparation for this final or there are aspects you are unclear on, please ask questions in &lt;a href=&#34;https://piazza.com/class/kbchpg3on0h4se?cid=33&#34;&gt;Piazza&lt;/a&gt;. I have posted a poll there, as well as an expanding list of places you can look for data.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Friday</title>
       <link>/courses/geog_info/week3/d14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
