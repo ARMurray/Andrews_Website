@@ -1,0 +1,24 @@
+---
+date: "2020-07-170T00:00:00-05:00"
+draft: false
+output:
+  blogdown::html_page:
+    toc: false
+linktitle: Friday - July 17
+menu:
+  geog_info:
+    parent: week4
+    weight: 50
+title: Friday
+type: docs
+---
+
+## Cartography
+
+  Today we are talking about cartography which is really more about the art and aesthetics of map making. The background material for this lecture can be found in [chapter 9](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s13-cartographic-principles.html) of the textbook. 
+  
+### Topics
+
+- Color
+
+[Slides are Here]()

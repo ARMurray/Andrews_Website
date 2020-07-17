@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 19</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrew Murray" />
+    <meta name="date" content="2020-07-17" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+.center[
+## Introduction to Geographic Information
+### Lecture 19
+.mb[
+Cartographic Principles&lt;br&gt;
+&lt;br&gt;
+.med[
+Andrew Murray | University of North Carolina - Chapel Hill
+
+July 17, 2020
+]
+
+]]
+
+---
+.center[
+### Cartography
+
+&lt;img src="Minard.png" width="850" height="500" /&gt;
+]
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day19/audio/d19s02.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+
+???
+
+We have spent most of this course talking about data, spatial operations and how to run analysis, but do not forget from where GIS originated and that is cartography, which is process of making maps. Map making exists at the intersection of art and science. It requires precision and accurate representation while also needing to be not only aesthetically pleasing but also easily interpretable. Making maps can be a frustrating venture because you need to put a lot of work into tweaking a lot of minor details all in order to make your map as simple as possible while conveying the maximum amount of information. I used to get really frustrated because I would spend a lot of time on a map and then I would show it to someone, desperate for a WOW response but was usually met iwht, oh yeah... a map... cool I guess. The reality though is that this is exactly what you want from most maps. For example I usually tell peolpe when they are concerned if their map is good enough to hand it to someone that has no idea what they are working on, like a family member or a roomate and ask them to tell you what the map is for. If they can tell you quickly, without any guidance, then it is probably a good map. The map you see displayed here is not your typical map, but once you realize how to read it you can appreciate the amount of thought that went into it's design. This map was created by Charles Minard in 1869 to depict Napolean's march into Russia in 1812. The march began from the west, in the city of Kovno and proceeded east to Moscow. The tan line represents the advancement to Moscow whereas the black line represents the retreat from Moscow. The width of the line shows the size of the army in total number of soldiers... more than 422,000 at the start and less than 10,000 at the end of the retreat. The harsh Russian winter hit , forcing the retreat, and so Minard added temperature at the bottom, shown with lines linking temperatures to soldier losses due to freezing temperatures along the retreat. This is a really sad map to look at from the perspective of human life, but it is dramatically powerful to visualize just how great Napolean's losses were. To me, this is one of the most impactful examples of symbology demonstrated in cartography.
+
+---
+
+.center[
+## Color
+]
+
+.pull-left[
+.med[
+Color is probably the first thing that people notice when looking at a map.
+
+Color conveys meaning:
+- Red = Danger
+- Green = Money
+- Blue = Water
+- White = Snow
+- etc... etc...
+]
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day19/audio/d19s03.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+]
+
+.pull-right[
+&lt;img src="redblue.jpg" width="500" height="350" /&gt;
+]
+
+???
+
+Color is the most obvious aspect of map styling and is typically the first thing you notice when looking at one. We associate colors with specific meaning and it is important to consider the initial reaction of someone who will view your map. For example, during the cold war, news organizations would often show World maps in a mercator projection with the Soviet Union colored red. This would invoke a sense of fear and danger in viewers who would see the soviet union as this big red, imposing figure. There are several considerations when choosing color such as variation, meaning and contrast.
+
+---
+.pull-left[
+
+## Color
+
+
+&lt;img src="badMap.jpg" width="500" height="350" /&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day19/audio/d19s04.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+]
+
+.pull-right[
+&lt;br&gt;
+.med[
+There are **absolutely** wrong ways to use color...
+
+- Using same color for multiple categories
+  
+- Using too many shades of the same color 
+  - The human eye can only detect about 6 different shades of a single color at a time
+
+- Not considering color-blin friendly palletes
+  - Color blindness affects 1 in 12 men and 1 in 200 women worldwide.
+  
+- Incorrectly conveying safety / danger
+
+]
+]
+
+???
+
+There are plenty of wrong ways to use color so it is important to consider what you are going to use to convey your information. For example, you would not want to convey information in a way that is confusing, like coloring land blue and water green, or symbolozing democrats as red and republicans as blue. Speaking of red and blue by the way, one of the most common forms of color blindness includes the inability to differentitate red and blue. There are more than 300 million color blind people in the world and it affects 1 in 12 men and 1 in 200 women. Look at this map here on the left. This map clearly has multiple categories using the same color. Also the colors do not make much sense. Is green the best? Green shows states with stay at home orders in June, but earlier end dates are in yellow and later are in red. I would think that red would be used to show the first end date for the stay at home order, and green with the last, although I guess that depends on your view of the pandemic. 
+
+---
+
+## Color Selection
+.pull-left[
+&lt;img src="colorBrewer.png" width="500" height="350" /&gt;
+
+.mb[
+[Color Brewer]()
+]
+]
+
+.pull-right[
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;How to create a T-Rex &lt;a href="https://twitter.com/hashtag/TerribleMap?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TerribleMap&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/TerribleMaps?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TerribleMaps&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Trex?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Trex&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/dinosaur?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#dinosaur&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Maps?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Maps&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Map?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Map&lt;/a&gt; &lt;a href="https://t.co/W7LkaAp3Pm"&gt;pic.twitter.com/W7LkaAp3Pm&lt;/a&gt;&lt;/p&gt;&amp;mdash; Terrible Maps (@TerribleMaps) &lt;a href="https://twitter.com/TerribleMaps/status/1125164510958977026?ref_src=twsrc%5Etfw"&gt;May 5, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Yikes &lt;br&gt;&lt;br&gt;-use a legend, not giant floating numbers &lt;br&gt;-the colors could be better&lt;br&gt;-where is the rest of Russia?&lt;br&gt;-center your title &lt;a href="https://t.co/53MeGQxIBk"&gt;https://t.co/53MeGQxIBk&lt;/a&gt;&lt;/p&gt;&amp;mdash; ILoveBadMaps (@bad_maps) &lt;a href="https://twitter.com/bad_maps/status/1232723191484649472?ref_src=twsrc%5Etfw"&gt;February 26, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="/slides/intro_geographic_information/Day19/audio/d19s05.mp3" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser doesn't support HTML5 audio.&lt;/p&gt;
+&lt;/audio&gt;
+
+]
+
+???
+
+There are a lot of great resources for choosing colors out there, but here is one I use a lot called color brewer. You can use this tool to create color palettes that are clear and you can also make sure that they are color-blind friendly. They will also hel you create different scales such as a sequential scale or divergent scale or also qualitative scales. I'm also embedding a couple of tweets here. These two twitter accounts are good places to find how not to create a map and should provide for some amusement. Yesterday I assigned the Final project and I really left it open for you to adapt it to something you're interested in. This project will take you longer than you think it will so I urge you to start on it today. Consider what story you want to tell with your final map and how you might get there. I have opened up a few forums on Piazza with links to data sources and a poll for topics you would like me to dive deeper into. On Monday I will go over more aspects of Map-making but I want you to take our last week as an opportunity to work on your final project in synchronicity with class. I am not assigning another lab and I want our last few classes to be helpful for you to be able to navigate the entire process of getting data, processing it in GIS and creating a polished product and I want you to voice if you think you need more instruction in a particular area. Proposals are due Monday so make sure you spend time looking around the internet for your data and considering what you want to do with it. If you are stuck, post thoughts or questions on Piazza. Other than that, make sure to submit Quiz 4 by tonight and have a great weekend.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script type='text/javascript'>
+
+var slideElements
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll('.remark-slide')
+    return slideElements[slide.getSlideIndex()]
+  }
+
+  slideshow.on('showSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.loop = false
+      vid.currentTime = 0
+      vid.play()
+    })
+  })
+
+  slideshow.on('hideSlide', function (slide) {
+    Array.from(getElementForSlide(slide).querySelectorAll('video, audio')).forEach(function (vid) {
+      vid.pause()
+    })
+  })
+
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
