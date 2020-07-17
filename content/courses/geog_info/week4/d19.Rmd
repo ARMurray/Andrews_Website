@@ -21,4 +21,4 @@ type: docs
 
 - Color
 
-[Slides are Here]()
+[Slides are Here](https://murraygeo.com/slides/intro_geographic_information/Day19/slides.html)
