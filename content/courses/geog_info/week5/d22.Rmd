@@ -15,8 +15,12 @@ type: docs
 
 ## Resources for Making Maps:
 
-Read through these materials to learn how to make polished layouts in ArcGIS Pro.
+Read through these materials to learn how to make polished layouts in ArcGIS Pro. Pay close attention to the use of guides and text formatting as these will make your map appear really polished. I have also added a link on how to add labels to your maps. These can be useful if you have certain things you want to display names for like cities but be careful not to overdo it. You don't want your map to be too busy.
 
 [Make a Layout](https://pro.arcgis.com/en/pro-app/get-started/add-maps-to-a-layout.htm)
 
 [Getting Started Tutorial](https://learn.arcgis.com/en/projects/get-started-with-arcgis-pro/)
+
+[Adding Labels to your map](https://pro.arcgis.com/en/pro-app/get-started/label-your-map.htm)
+
+[Adding Text to your Layout](https://pro.arcgis.com/en/pro-app/help/layouts/text.htm)
