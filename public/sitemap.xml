@@ -28,6 +28,26 @@
   </url>
   
   <url>
+    <loc>/post/pellet/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/courses/geog_info/week5/d23/</loc>
     <lastmod>2020-07-23T00:00:00-05:00</lastmod>
   </url>
@@ -159,21 +179,6 @@
   
   <url>
     <loc>/post/escn/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
   </url>
   
