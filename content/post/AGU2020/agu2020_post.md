@@ -14,6 +14,10 @@ author: Andrew Murray
 
 ## Landscape Response to Tropical Cyclones Measured from SMAP
 
+[Click Here For Global Regression Charts](/tables/Global_Regressions.html)
+
+[Click Here for Regression Charts Binned by storm](/tables/bystorm_Regressions.html)
+
 ### Interactive Maps for Every Tropical Cyclone that has made landfall in the United States since 2015:
 
 | Storm Name | Year | Max Category | Interactive Map                                                           |
@@ -41,6 +45,4 @@ author: Andrew Murray
 | Olga       | 2019 |              | [Interactive](/dashboards/OLGA_Dashboard.html)     |
 | Bertha     | 2020 |              | [Interactive](/dashboards/BERTHA_Dashboard.html)   |
 
-[Click Here For Global Regression Charts](/tables/Global_Regressions.html)
 
-[Click Here for Regression Charts Binned by storm](/tables/bystorm_Regressions.html)
