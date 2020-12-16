@@ -14,6 +14,8 @@ author: Andrew Murray
 
 ## Landscape Response to Tropical Cyclones Measured from SMAP
 
+[Check out the Poster here](agu2020fallmeeting-agu.ipostersessions.com/Default.aspx?s=F2-A0-EA-6D-3B-A6-09-66-56-FE-91-35-64-B9-29-81)
+
 [Click Here For Global Regression Charts](/tables/Global_Regressions.html)
 
 [Click Here for Regression Charts Binned by storm](/tables/bystorm_Regressions.html)
