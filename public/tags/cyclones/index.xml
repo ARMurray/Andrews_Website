@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cyclones on Andrew Murray</title>
+    <link>https://amurraygeo.com/tags/cyclones/</link>
+    <description>Recent content in Cyclones on Andrew Murray</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://amurraygeo.com/tags/cyclones/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AGU 2020</title>
+      <link>https://amurraygeo.com/post/agu2020/agu2020_post/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://amurraygeo.com/post/agu2020/agu2020_post/</guid>
+      <description>
+
+&lt;h2 id=&#34;landscape-response-to-tropical-cyclones-measured-from-smap&#34;&gt;Landscape Response to Tropical Cyclones Measured from SMAP&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;agu2020fallmeeting-agu.ipostersessions.com/Default.aspx?s=F2-A0-EA-6D-3B-A6-09-66-56-FE-91-35-64-B9-29-81&#34; target=&#34;_blank&#34;&gt;Check out the Poster here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/tables/Global_Regressions.html&#34;&gt;Click Here For Global Regression Charts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/tables/bystorm_Regressions.html&#34;&gt;Click Here for Regression Charts Binned by storm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;interactive-maps-for-every-tropical-cyclone-that-has-made-landfall-in-the-united-states-since-2015&#34;&gt;Interactive Maps for Every Tropical Cyclone that has made landfall in the United States since 2015:&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Storm Name&lt;/th&gt;
+&lt;th&gt;Year&lt;/th&gt;
+&lt;th&gt;Max Category&lt;/th&gt;
+&lt;th&gt;Interactive Map&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ana&lt;/td&gt;
+&lt;td&gt;2015&lt;/td&gt;
+&lt;td&gt;H1&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/ANA_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Bill&lt;/td&gt;
+&lt;td&gt;2015&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/BILL_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Two&lt;/td&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/TWO_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Colin&lt;/td&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/COLIN_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Hermine&lt;/td&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;H1&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/HERMINE_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Invest&lt;/td&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/INVEST_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Cindy&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/CINDY_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Emily&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/EMILY_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Harvey&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;H4&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/HARVEY_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Irma&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;H5&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/IRMA_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Maria&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;H5&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/MARIA_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Nate&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;H1&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/NATE_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Alberto&lt;/td&gt;
+&lt;td&gt;2018&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/ALBERTO_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Gordon&lt;/td&gt;
+&lt;td&gt;2018&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/GORDON_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Florence&lt;/td&gt;
+&lt;td&gt;2018&lt;/td&gt;
+&lt;td&gt;H4&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/FLORENCE_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Michael&lt;/td&gt;
+&lt;td&gt;2018&lt;/td&gt;
+&lt;td&gt;H4&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/MICHAEL_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Barry&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;H1&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/BARRY_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Imelda&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/IMELDA_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Karen&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/KAREN_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Sixteen&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/SIXTEEN_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Olga&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/OLGA_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Bertha&lt;/td&gt;
+&lt;td&gt;2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://amurraygeo.com/dashboards/BERTHA_Dashboard.html&#34;&gt;Interactive&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

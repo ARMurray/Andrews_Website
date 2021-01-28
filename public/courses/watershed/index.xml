@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Overview on Andrew Murray</title>
-    <link>/courses/watershed/</link>
+    <link>https://amurraygeo.com/courses/watershed/</link>
     <description>Recent content in Course Overview on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/courses/watershed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lecture 1</title>
-      <link>/courses/watershed/lecture01/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture01/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture01/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture01/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -72,16 +72,16 @@
     
     <item>
       <title>Speaker Series</title>
-      <link>/courses/watershed/speakers/</link>
+      <link>https://amurraygeo.com/courses/watershed/speakers/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/speakers/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/speakers/</guid>
       <description>
 
 
 &lt;div id=&#34;speaker-sheila-saia&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Speaker: &lt;a href=&#34;https://sheilasaia.rbind.io/#about&#34;&gt;Sheila Saia&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/img/sheila.jpg&#34; width=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/sheila.jpg&#34; width=&#34;200&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bio: &lt;/strong&gt;Sheila Saia (say “sigh-yah”) is a postdoctoral researcher at NC State University and a member of the Biosystems Analytics Lab, which is lead by Dr. Natalie Nelson in the Bio &amp;amp; Ag Engineering Department. Her current research uses data analytics (i.e., data wrangling, statistical and physically-based modeling, and data visualizing) to predict and minimize human impacts on water resources at regional and national scales. She’s broadly interested in research questions exploring the relationships between humans, climate, and water resources (water quantity and water quality).&lt;/p&gt;
 &lt;div id=&#34;title-applying-climate-change-risk-management-tools-to-integrate-streamflow-projections-and-social-vulnerability&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Title: Applying Climate Change Risk Management Tools to Integrate Streamflow Projections and Social Vulnerability&lt;/h3&gt;
@@ -92,7 +92,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;speaker-kristina-hopkins&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Speaker: &lt;a href=&#34;https://www.usgs.gov/staff-profiles/kristina-hopkins?qt-staff_profile_science_products=0#qt-staff_profile_science_products&#34;&gt;Kristina Hopkins&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/img/KrissyHopkins.jpg&#34; width=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/KrissyHopkins.jpg&#34; width=&#34;200&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bio: &lt;/strong&gt;Krissy Hopkins studies the impacts of urbanization on rivers and streams, focused on understanding how the intensity and type of development impacts water quality and quantity. This includes examining the impacts of different types of stormwater management strategies, both conventional and infiltration-based (i.e., green infrastructure), on watershed hydrology and nutrient fluxes. Her work also focuses on translating ecosystem functions into ecosystem services and values by applying ecosystem services approaches to floodplain systems and green stormwater infrastructure.&lt;/p&gt;
 &lt;p&gt;Krissy received an undergraduate degree in biology/environmental science and geography from Syracuse University in 2007. She completed her Ph.D. in geology at the University of Pittsburgh in 2014 and completed a post-doctoral fellowship at the National Socio-Environmental Synthesis Center (SESYNC) in Annapolis, Maryland. She joined the U.S. Geological Survey in 2016 as a Research Physical Scientist.&lt;/p&gt;
 &lt;div id=&#34;title-changes-in-eventbased-streamflow-magnitude-and-timing-after-suburban-development-with-infiltrationbased-stormwater-management&#34; class=&#34;section level3&#34;&gt;
@@ -104,7 +104,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;speaker-joseph-delesantro&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Speaker: Joseph Delesantro&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/img/Joseph_Delesantro.png&#34; width=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/Joseph_Delesantro.png&#34; width=&#34;200&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bio: &lt;/strong&gt;Joseph Delesantro is a PhD student studying Environment and Ecology at the University of North Carolina. Joseph obtained his B.S. in Environmental Engineering and his M.S. in Forest Hydrology at the University of Florida. While working as a research associate at Duke University, Joseph began to study the ecohydrology of urban landscapes. He is particularly interested in solute transport dynamics in novel ecosystems and building process based knowledge to inform management and urban design.&lt;/p&gt;
 &lt;div id=&#34;title-jordan-lake-nutrient-study&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Title: Jordan Lake Nutrient Study&lt;/h3&gt;
@@ -115,7 +115,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;speaker-sam-zipper&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Speaker: &lt;a href=&#34;https://www.samzipper.com/&#34;&gt;Sam Zipper&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/img/SamZipper.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/SamZipper.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bio: &lt;/strong&gt;Sam is an Assistant Scientist at the Kansas Geological Survey within the University of Kansas. He is interested in the complex interactions between water, soils, and vegetation – particularly those interactions driven, impacted by, or important to human society and wellbeing. Currently, much of his research focuses on the ability of groundwater flow to laterally transmit the impacts of land use/land cover change that occurs in one location to surrounding ecosystems. Sam works in agricultural, urban, and natural ecosystems.&lt;/p&gt;
 &lt;div id=&#34;title-groundwater-pumping-impacts-on-real-stream-networks-testing-the-performance-of-simple-management-tools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Title: Groundwater Pumping Impacts on Real Stream Networks: Testing the Performance of Simple Management Tools&lt;/h3&gt;
@@ -129,10 +129,10 @@
     
     <item>
       <title>Final Project</title>
-      <link>/courses/watershed/finalproject/</link>
+      <link>https://amurraygeo.com/courses/watershed/finalproject/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/finalproject/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/finalproject/</guid>
       <description>
 
 
@@ -275,10 +275,10 @@ Final Presentation: 20%&lt;/p&gt;
     
     <item>
       <title>Lecture 11 (Streams and Floods)</title>
-      <link>/courses/watershed/lecture11/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture11/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture11/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture11/</guid>
       <description>
 
 
@@ -302,10 +302,10 @@ Final Presentation: 20%&lt;/p&gt;
     
     <item>
       <title>Lecture 12 (Streams and Floods)</title>
-      <link>/courses/watershed/lecture12/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture12/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture12/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture12/</guid>
       <description>
 
 
@@ -329,10 +329,10 @@ Final Presentation: 20%&lt;/p&gt;
     
     <item>
       <title>COVID-19 Reboot</title>
-      <link>/courses/watershed/covid/</link>
+      <link>https://amurraygeo.com/courses/watershed/covid/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/covid/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/covid/</guid>
       <description>
 
 
@@ -341,7 +341,7 @@ Final Presentation: 20%&lt;/p&gt;
 &lt;div id=&#34;overview&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;The Syllabus has been updated: &lt;a href=&#34;/files/GEOG_441_Syllabus_Spring_2019_REVISED.pdf&#34;&gt;Link Here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Syllabus has been updated: &lt;a href=&#34;https://amurraygeo.com/files/GEOG_441_Syllabus_Spring_2019_REVISED.pdf&#34;&gt;Link Here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Lectures will now be given via zoom at this link: &lt;a href=&#34;https://unc.zoom.us/j/471894689&#34; class=&#34;uri&#34;&gt;https://unc.zoom.us/j/471894689&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Office hours have changed to Tuesday/Thursday from 12:30-1:30 at this link: &lt;a href=&#34;https://unc.zoom.us/j/701722313&#34; class=&#34;uri&#34;&gt;https://unc.zoom.us/j/701722313&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -352,10 +352,10 @@ Final Presentation: 20%&lt;/p&gt;
     
     <item>
       <title>Hydro Resources</title>
-      <link>/courses/watershed/resourceshydro/</link>
+      <link>https://amurraygeo.com/courses/watershed/resourceshydro/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/resourceshydro/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/resourceshydro/</guid>
       <description>
 
 
@@ -379,10 +379,10 @@ Final Presentation: 20%&lt;/p&gt;
     
     <item>
       <title>R Resources</title>
-      <link>/courses/watershed/resourcesr/</link>
+      <link>https://amurraygeo.com/courses/watershed/resourcesr/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/resourcesr/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/resourcesr/</guid>
       <description>
 
 
@@ -414,25 +414,25 @@ Final Presentation: 20%&lt;/p&gt;
     
     <item>
       <title>VCL Resources</title>
-      <link>/courses/watershed/resourcesvcl/</link>
+      <link>https://amurraygeo.com/courses/watershed/resourcesvcl/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/resourcesvcl/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/resourcesvcl/</guid>
       <description>
 
 
 &lt;div id=&#34;here-are-some-resources-for-using-the-vcl&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Here are some resources for using the VCL&lt;/h2&gt;
-&lt;p&gt;I am going to demo in windows, but if you are using a MAC, &lt;a href=&#34;/files/VCL_Mac_Setup.pdf&#34;&gt;CLICK HERE&lt;/a&gt; for instructions.&lt;/p&gt;
+&lt;p&gt;I am going to demo in windows, but if you are using a MAC, &lt;a href=&#34;https://amurraygeo.com/files/VCL_Mac_Setup.pdf&#34;&gt;CLICK HERE&lt;/a&gt; for instructions.&lt;/p&gt;
 &lt;p&gt;The Virtual Computing Lab (VCL) is essentially a remote computer that you can connect to at UNC in order to have access to specialty software and more computing power than you may have on your personal laptop. In order to use the VCL, you need to use a Virtual Private Network (VPN) to log into the UNC network. Essentially logging into the VPN makes it appear as though you are on campus, and therefore gives you access to all of the things you would normally have access to if you were on campus and logged into eduroam.&lt;/p&gt;
 &lt;p&gt;To log into the UNC VPN, you need to download the software that will let you do it. You can do that &lt;a href=&#34;https://uncch.service-now.com/kb_view.do?sysparm_article=KB0010155&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Once you have the Cisco AnyConnect software installed, you want to run it and connect to ‘vpn.unc.edu’.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/watershed/vpn/vpn1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/watershed/vpn/vpn1.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Once you click ‘Connect’ a second window will open with login options:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/watershed/vpn/vpn2.png&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/watershed/vpn/vpn2.png&#34; /&gt;
 Here, you should select ‘UNCCampus’ for the Group, enter your onyen for Username, and you personal password for Password. For the second password, you need to obtain a 6-digit code from duo, which is a secondary authentication service we use at UNC. If you have not already set up duo, go &lt;a href=&#34;https://its.unc.edu/2-step/&#34;&gt;here&lt;/a&gt; to do so.&lt;/p&gt;
 &lt;p&gt;At this point, you should be able to connect, and you will receive a prompt to connect that looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/watershed/vpn/prompt.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/watershed/vpn/prompt.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Click ‘Accept’.&lt;/p&gt;
 &lt;p&gt;You are now connected to the UNC vpn and we can get started with connecting to the VCL.&lt;/p&gt;
 &lt;/div&gt;
@@ -441,10 +441,10 @@ Here, you should select ‘UNCCampus’ for the Group, enter your onyen for User
     
     <item>
       <title>Groundwater Hydrology (Lecture 10)</title>
-      <link>/courses/watershed/lecture10/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture10/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture10/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture10/</guid>
       <description>
 
 
@@ -469,10 +469,10 @@ Here, you should select ‘UNCCampus’ for the Group, enter your onyen for User
     
     <item>
       <title>Lecture 9</title>
-      <link>/courses/watershed/lecture09/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture09/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture09/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture09/</guid>
       <description>
 
 
@@ -491,10 +491,10 @@ Here, you should select ‘UNCCampus’ for the Group, enter your onyen for User
     
     <item>
       <title>Lecture 8</title>
-      <link>/courses/watershed/lecture08/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture08/</link>
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture08/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture08/</guid>
       <description>
 
 
@@ -512,10 +512,10 @@ Here, you should select ‘UNCCampus’ for the Group, enter your onyen for User
     
     <item>
       <title>Lecture 7</title>
-      <link>/courses/watershed/lecture07/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture07/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture07/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture07/</guid>
       <description>
 
 
@@ -542,12 +542,12 @@ Here, you should select ‘UNCCampus’ for the Group, enter your onyen for User
     
     <item>
       <title>Friday (4)</title>
-      <link>/courses/watershed/friday_4/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_4/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_4/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_4/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -580,13 +580,13 @@ x %&amp;gt;%
   as.data.frame() %&amp;gt;% 
   ggplot(aes(x=x, y=y)) +
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/watershed/Friday_4_files/figure-html/norm-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/norm-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;duplicate-table-a3.2-by-computing-a-cumulative-distribution-function-for-the-normal-distribution.&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Duplicate Table A3.2 by computing a cumulative distribution function for the normal distribution.&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;P &amp;lt;- ecdf(x)
 plot.ecdf(P)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;now-we-can-use-this-function-to-reconstruct-the-table&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Now we can use this function to reconstruct the table&lt;/h3&gt;
@@ -1718,7 +1718,7 @@ df&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df)+
   geom_col(aes(x=as.factor(Year), y=ppt))+
   labs(x = &amp;quot;Year&amp;quot;, y = &amp;quot;Precipitation [mm]&amp;quot;, title = &amp;quot;Annual Precipitation&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Okay so Hornberger wants us to find the liklihood that in 1985, the annual precipitation will be less than 1,100 mm and to do this we’re going to use &lt;em&gt;equation A3.10&lt;/em&gt; which looks like: &lt;span class=&#34;math inline&#34;&gt;\(z=\frac{a-\overline{x}}{S_{x}}\)&lt;/span&gt;. Recall that &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-value, &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; is the value we’re interested in (1,100 mm in this case), &lt;span class=&#34;math inline&#34;&gt;\(\overline{x}\)&lt;/span&gt; is the mean precipitation over all of the years, and &lt;span class=&#34;math inline&#34;&gt;\(S_{x}\)&lt;/span&gt; is the standard deviation of all of years of precipitation.&lt;/p&gt;
 &lt;p&gt;To get the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; value now we just define the variables and write the equation:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;a &amp;lt;- 1100
@@ -1746,7 +1746,7 @@ for(n in 700:1200){
 ggplot(FzVals)+
   geom_line(aes(x=a,y=Fz*100))+
   labs(x = &amp;quot;mm of Rain (a)&amp;quot;, y = &amp;quot;Percent  [F(z)]&amp;quot;, title = &amp;quot;Percent chance yearly rainfall will be below [a]&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/watershed/Friday_4_files/figure-html/Fz-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/courses/watershed/Friday_4_files/figure-html/Fz-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-lab&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;The Lab!&lt;/h1&gt;
@@ -1847,10 +1847,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Watershed Delineation in R</title>
-      <link>/courses/watershed/friday_5/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_5/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_5/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_5/</guid>
       <description>
 
 
@@ -1869,10 +1869,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Groundwater Mapping in R</title>
-      <link>/courses/watershed/friday_6/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_6/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_6/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_6/</guid>
       <description>
 
 
@@ -1882,10 +1882,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Exam 1</title>
-      <link>/courses/watershed/exam1/</link>
+      <link>https://amurraygeo.com/courses/watershed/exam1/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/exam1/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/exam1/</guid>
       <description>
 
 
@@ -1953,10 +1953,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 5</title>
-      <link>/courses/watershed/lecture05/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture05/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture05/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture05/</guid>
       <description>
 
 
@@ -1984,10 +1984,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 6</title>
-      <link>/courses/watershed/lecture06/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture06/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture06/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture06/</guid>
       <description>
 
 
@@ -2000,10 +2000,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Friday (3) - Spatial Analysis</title>
-      <link>/courses/watershed/friday_3/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_3/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_3/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_3/</guid>
       <description>
 
 
@@ -2026,10 +2026,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 4</title>
-      <link>/courses/watershed/lecture04/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture04/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture04/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture04/</guid>
       <description>
 
 
@@ -2053,10 +2053,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Friday (2)</title>
-      <link>/courses/watershed/friday_2/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_2/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_2/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_2/</guid>
       <description>
 
 
@@ -2081,10 +2081,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 3</title>
-      <link>/courses/watershed/lecture03/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture03/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture03/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture03/</guid>
       <description>
 
 
@@ -2105,10 +2105,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Lecture 2</title>
-      <link>/courses/watershed/lecture02/</link>
+      <link>https://amurraygeo.com/courses/watershed/lecture02/</link>
       <pubDate>Sun, 12 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/lecture02/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/lecture02/</guid>
       <description>
 
 
@@ -2147,10 +2147,10 @@ annuals &amp;lt;- all_data%&amp;gt;%
     
     <item>
       <title>Friday (1)</title>
-      <link>/courses/watershed/friday_1/</link>
+      <link>https://amurraygeo.com/courses/watershed/friday_1/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0100</pubDate>
       
-      <guid>/courses/watershed/friday_1/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/friday_1/</guid>
       <description>
 
 
@@ -2170,7 +2170,7 @@ annuals &amp;lt;- all_data%&amp;gt;%
 &lt;div id=&#34;getting-started-with-r-studio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Getting Started with R Studio&lt;/h2&gt;
 &lt;p&gt;Once you have R and R Studio installed, open and run R Studio. When you first open R Studio it will look something like this:
-&lt;img src=&#34;/img/RStudio_initial.png&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://amurraygeo.com/img/RStudio_initial.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Green Box : This is the ‘console’. Here you can write code and execute it but it won’t be saved anywhere. This is good for doing things quickly or testing something before you put it into your script.&lt;/p&gt;
 &lt;p&gt;Blue Box: This is your ‘environment’. In R studio you will use data which will be imported from files like csv or text files. When you import them they will show up here. Also when you create new things using your code, like a new table or a graph it will also appear here.&lt;/p&gt;
 &lt;p&gt;Orange Box: This is where everything else goes. You will notice the tabs at the top. You can navigate through files and see what packages you have loaded etc… This is also where plots will appear when you create them (This is where you can view a plot as opposed to the ‘data item’ that is the plot in the environment).&lt;/p&gt;
@@ -2180,24 +2180,24 @@ annuals &amp;lt;- all_data%&amp;gt;%
 &lt;li&gt;In the box titled ‘Create project as a subdirectory of:’ navigate to a folder on your computer where you want to store your files for this class.&lt;/li&gt;
 &lt;li&gt;When you have done this click on ‘Create Project’.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/RStudio_project.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://amurraygeo.com/img/RStudio_project.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In the image above you will now see that you have a ‘project’ open and that it is locateed in your specified folder. You can also now see the files you have in this folder in the bottom right window. You don’t have to use projects to execute code but it will make your life MUCH easier down the road by keeping everything very organized. We will use this project for the entire semester and all of the work we do will live inside of it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;okay-lets-code&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Okay let’s code&lt;/h2&gt;
-&lt;p&gt;Click on the &lt;img src=&#34;/img/newscript.png&#34; /&gt; image and choose ‘R Script’. This will open a new pane in the top left where you can write and save scripts. click the save button or ‘ctrl’+‘s’ to save the empty script immediately to your folder. create a new folder called ‘day1’ and save your script as gettingStarted.r&lt;/p&gt;
+&lt;p&gt;Click on the &lt;img src=&#34;https://amurraygeo.com/img/newscript.png&#34; /&gt; image and choose ‘R Script’. This will open a new pane in the top left where you can write and save scripts. click the save button or ‘ctrl’+‘s’ to save the empty script immediately to your folder. create a new folder called ‘day1’ and save your script as gettingStarted.r&lt;/p&gt;
 &lt;p&gt;Copy and paste the following into your script:&lt;/p&gt;
-&lt;p&gt;To execute a single line of code, click the line you want to run and then press ‘ctrl’+‘enter’. You can also highlight a line of code and click the &lt;img src=&#34;/img/run.png&#34; /&gt; button.&lt;/p&gt;
+&lt;p&gt;To execute a single line of code, click the line you want to run and then press ‘ctrl’+‘enter’. You can also highlight a line of code and click the &lt;img src=&#34;https://amurraygeo.com/img/run.png&#34; /&gt; button.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>/courses/watershed/other_lectures/</link>
+      <link>https://amurraygeo.com/courses/watershed/other_lectures/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/courses/watershed/other_lectures/</guid>
+      <guid>https://amurraygeo.com/courses/watershed/other_lectures/</guid>
       <description>
 
 &lt;div id=&#34;monday-april-13-2020&#34; class=&#34;section level2&#34;&gt;

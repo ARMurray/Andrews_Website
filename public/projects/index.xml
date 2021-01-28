@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Andrew Murray</title>
-    <link>/projects/</link>
+    <link>https://amurraygeo.com/projects/</link>
     <description>Recent content in Projects on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     
-	    <atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Coupling Groundwater Vulnerability to Contamination and Extreme Precipitation Events Using Active and Passive Remote Sensing Data Products</title>
-      <link>/projects/cyclones/</link>
+      <link>https://amurraygeo.com/projects/cyclones/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/projects/cyclones/</guid>
+      <guid>https://amurraygeo.com/projects/cyclones/</guid>
       <description>
 
 
 &lt;video width=&#34;100%&#34; height=&#34;100%&#34; controls&gt;
-&lt;source src=&#34;/mp4/florenceSmall.mp4&#34; type=&#34;video/mp4&#34; preload&gt;
+&lt;source src=&#34;https://amurraygeo.com/mp4/florenceSmall.mp4&#34; type=&#34;video/mp4&#34; preload&gt;
 &lt;/video&gt;
 &lt;p&gt;Flooding in Chapel Hill after Hurricane Florence&lt;/p&gt;
 &lt;div id=&#34;hypothesis&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Hypothesis:&lt;/h2&gt;
 &lt;div class=&#34;line-block&#34;&gt;      Geophysical landscape features, temporal variability of soil moisture, and land cover are major drivers of groundwater vulnerability to contamination. Extreme precipitation events such as &lt;strong&gt;tropical cyclones overwhelm and impose changes to each of these variables in measurable ways&lt;/strong&gt;. Investigating the relationships and the ways in which to measure these impacts will enable future forecasting of vulnerability and better inform disaster response efforts, directly and positively affecting human health.&lt;/div&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/dissertation/max_ppt.png&#34; alt=&#34;Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.&#34; /&gt;
+&lt;img src=&#34;https://amurraygeo.com/img/dissertation/max_ppt.png&#34; alt=&#34;Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Maximum precipitation greater than 100 mm experienced during a single tropical cyclone event since the start of the 2015 tropical cyclone season.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

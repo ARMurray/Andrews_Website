@@ -2,84 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Andrew Murray</title>
-    <link>/tags/</link>
+    <link>https://amurraygeo.com/tags/</link>
     <description>Recent content in Tags on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      <title>Cyclones</title>
+      <link>https://amurraygeo.com/tags/cyclones/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>https://amurraygeo.com/tags/cyclones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Extreme Weather</title>
+      <link>https://amurraygeo.com/tags/extreme-weather/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://amurraygeo.com/tags/extreme-weather/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://amurraygeo.com/tags/r/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://amurraygeo.com/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AGU</title>
-      <link>/tags/agu/</link>
+      <link>https://amurraygeo.com/tags/agu/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/agu/</guid>
+      <guid>https://amurraygeo.com/tags/agu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Carbon</title>
-      <link>/tags/carbon/</link>
+      <link>https://amurraygeo.com/tags/carbon/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/carbon/</guid>
+      <guid>https://amurraygeo.com/tags/carbon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Climate</title>
-      <link>/tags/climate/</link>
+      <link>https://amurraygeo.com/tags/climate/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/climate/</guid>
+      <guid>https://amurraygeo.com/tags/climate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Water</title>
-      <link>/tags/water/</link>
+      <link>https://amurraygeo.com/tags/water/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/water/</guid>
+      <guid>https://amurraygeo.com/tags/water/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fracking</title>
-      <link>/tags/fracking/</link>
+      <link>https://amurraygeo.com/tags/fracking/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/fracking/</guid>
+      <guid>https://amurraygeo.com/tags/fracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>methane</title>
-      <link>/tags/methane/</link>
+      <link>https://amurraygeo.com/tags/methane/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/methane/</guid>
+      <guid>https://amurraygeo.com/tags/methane/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wells</title>
-      <link>/tags/wells/</link>
+      <link>https://amurraygeo.com/tags/wells/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/wells/</guid>
+      <guid>https://amurraygeo.com/tags/wells/</guid>
       <description></description>
     </item>
     

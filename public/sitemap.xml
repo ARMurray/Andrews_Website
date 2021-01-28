@@ -1,638 +1,643 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/projects/cyclones/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture01/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture01/</loc>
     <lastmod>2020-01-03T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://amurraygeo.com/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/example/</loc>
+    <loc>https://amurraygeo.com/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/</loc>
+    <loc>https://amurraygeo.com/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/pellet/</loc>
-    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+    <loc>https://amurraygeo.com/post/agu2020/agu2020_post/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+    <loc>https://amurraygeo.com/tags/cyclones/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+    <loc>https://amurraygeo.com/tags/extreme-weather/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+    <loc>https://amurraygeo.com/post/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week5/d23/</loc>
+    <loc>https://amurraygeo.com/tags/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amurraygeo.com/courses/geog_info/week5/d23/</loc>
     <lastmod>2020-07-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week3/d13/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week3/d13/</loc>
     <lastmod>2020-07-08T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week3/d12/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week3/d12/</loc>
     <lastmod>2020-07-07T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week3/d11/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week3/d11/</loc>
     <lastmod>2020-07-06T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week3/d10/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week3/d10/</loc>
     <lastmod>2020-07-05T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week2/d09/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week2/d09/</loc>
     <lastmod>2020-07-01T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week2/d07/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week2/d07/</loc>
     <lastmod>2020-06-29T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week2/d08/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week2/d08/</loc>
     <lastmod>2020-06-29T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week1/d05/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week1/d05/</loc>
     <lastmod>2020-06-25T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week2/d06/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week2/d06/</loc>
     <lastmod>2020-06-25T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week1/d04/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week1/d04/</loc>
     <lastmod>2020-06-25T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week1/d03/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week1/d03/</loc>
     <lastmod>2020-06-24T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week1/d02/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week1/d02/</loc>
     <lastmod>2020-06-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/</loc>
     <lastmod>2020-06-21T12:05:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/speakers/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/speakers/</loc>
     <lastmod>2020-03-30T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/finalproject/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/finalproject/</loc>
     <lastmod>2020-03-26T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture11/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture11/</loc>
     <lastmod>2020-03-25T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture12/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture12/</loc>
     <lastmod>2020-03-25T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/covid/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/covid/</loc>
     <lastmod>2020-03-23T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/resourceshydro/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/resourceshydro/</loc>
     <lastmod>2020-03-23T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/resourcesr/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/resourcesr/</loc>
     <lastmod>2020-03-23T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/resourcesvcl/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/resourcesvcl/</loc>
     <lastmod>2020-03-23T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture10/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture10/</loc>
     <lastmod>2020-03-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture09/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture09/</loc>
     <lastmod>2020-02-23T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/soilmoisture/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/soilmoisture/</loc>
     <lastmod>2020-02-21T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture08/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture08/</loc>
     <lastmod>2020-02-17T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/escn/</loc>
+    <loc>https://amurraygeo.com/post/escn/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture07/</loc>
+    <loc>https://amurraygeo.com/tags/r/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amurraygeo.com/courses/watershed/lecture07/</loc>
     <lastmod>2020-02-11T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/friday_4/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/friday_4/</loc>
     <lastmod>2020-01-31T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/friday_5/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/friday_5/</loc>
     <lastmod>2020-01-31T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/friday_6/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/friday_6/</loc>
     <lastmod>2020-01-31T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/exam1/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/exam1/</loc>
     <lastmod>2020-01-26T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture05/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture05/</loc>
     <lastmod>2020-01-26T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture06/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture06/</loc>
     <lastmod>2020-01-26T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/friday_3/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/friday_3/</loc>
     <lastmod>2020-01-23T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture04/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture04/</loc>
     <lastmod>2020-01-21T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/friday_2/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/friday_2/</loc>
     <lastmod>2020-01-16T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture03/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture03/</loc>
     <lastmod>2020-01-15T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/lecture02/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/lecture02/</loc>
     <lastmod>2020-01-12T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/alberto/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/alberto/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/ana/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/ana/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/barry/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/barry/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/bill/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/bill/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/bonnie/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/bonnie/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/cindy/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/cindy/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/colin/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/colin/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/dorian/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/dorian/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/emily/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/emily/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/florence/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/florence/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/friday_1/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/friday_1/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/gordon/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/gordon/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/harvey/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/harvey/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/hermine/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/hermine/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/imelda/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/imelda/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/irma/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/irma/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/julia/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/julia/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/matthew/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/matthew/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/michael/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/michael/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/nate/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/nate/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/storms/nestor/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/storms/nestor/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/cyclones/tropicalcyclones/</loc>
+    <loc>https://amurraygeo.com/projects/cyclones/tropicalcyclones/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week1/wk1_overview/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week1/wk1_overview/</loc>
     <lastmod>2020-01-10T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/agu/</loc>
+    <loc>https://amurraygeo.com/tags/agu/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/carbon/</loc>
+    <loc>https://amurraygeo.com/tags/carbon/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/carbon/</loc>
+    <loc>https://amurraygeo.com/project/carbon/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/climate/</loc>
+    <loc>https://amurraygeo.com/tags/climate/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/</loc>
+    <loc>https://amurraygeo.com/project/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/water/</loc>
+    <loc>https://amurraygeo.com/tags/water/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/endeavors/</loc>
+    <loc>https://amurraygeo.com/post/endeavors/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/fracking/</loc>
+    <loc>https://amurraygeo.com/tags/fracking/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/methane/</loc>
+    <loc>https://amurraygeo.com/tags/methane/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
+    <loc>https://amurraygeo.com/post/vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/wells/</loc>
+    <loc>https://amurraygeo.com/tags/wells/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/watershed/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/2/</loc>
+    <loc>https://amurraygeo.com/publication_types/2/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/andrew-murray/</loc>
+    <loc>https://amurraygeo.com/authors/andrew-murray/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>https://amurraygeo.com/authors/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/weaver_2017/</loc>
+    <loc>https://amurraygeo.com/publication/weaver_2017/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/fran-kremer/</loc>
+    <loc>https://amurraygeo.com/authors/fran-kremer/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/james-weaver/</loc>
+    <loc>https://amurraygeo.com/authors/james-weaver/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
+    <loc>https://amurraygeo.com/publication_types/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/</loc>
+    <loc>https://amurraygeo.com/publication/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/bo-yang/</loc>
+    <loc>https://amurraygeo.com/authors/bo-yang/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/christopher-nietch/</loc>
+    <loc>https://amurraygeo.com/authors/christopher-nietch/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/beck_2016/</loc>
+    <loc>https://amurraygeo.com/publication/beck_2016/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/dana-macke/</loc>
+    <loc>https://amurraygeo.com/authors/dana-macke/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/erich-emery/</loc>
+    <loc>https://amurraygeo.com/authors/erich-emery/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/garrett-stillings/</loc>
+    <loc>https://amurraygeo.com/authors/garrett-stillings/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/haibin-suh/</loc>
+    <loc>https://amurraygeo.com/authors/haibin-suh/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/hongxing-liu/</loc>
+    <loc>https://amurraygeo.com/authors/hongxing-liu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/jade-young/</loc>
+    <loc>https://amurraygeo.com/authors/jade-young/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/joseph-harwood/</loc>
+    <loc>https://amurraygeo.com/authors/joseph-harwood/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/kevin-berling/</loc>
+    <loc>https://amurraygeo.com/authors/kevin-berling/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/mark-martin/</loc>
+    <loc>https://amurraygeo.com/authors/mark-martin/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/min-xu/</loc>
+    <loc>https://amurraygeo.com/authors/min-xu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/molly-reif/</loc>
+    <loc>https://amurraygeo.com/authors/molly-reif/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/qiusheng-wu/</loc>
+    <loc>https://amurraygeo.com/authors/qiusheng-wu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/richard-beck/</loc>
+    <loc>https://amurraygeo.com/authors/richard-beck/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/richard-stump/</loc>
+    <loc>https://amurraygeo.com/authors/richard-stump/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/shengan-zhan/</loc>
+    <loc>https://amurraygeo.com/authors/shengan-zhan/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/shujie-wang/</loc>
+    <loc>https://amurraygeo.com/authors/shujie-wang/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/song-shu/</loc>
+    <loc>https://amurraygeo.com/authors/song-shu/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/susanna-tong/</loc>
+    <loc>https://amurraygeo.com/authors/susanna-tong/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/yan-huang/</loc>
+    <loc>https://amurraygeo.com/authors/yan-huang/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/zhaoxia-ye/</loc>
+    <loc>https://amurraygeo.com/authors/zhaoxia-ye/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
+    <loc>https://amurraygeo.com/authors/admin/</loc>
   </url>
   
   <url>
-    <loc>/courses/watershed/other_lectures/</loc>
+    <loc>https://amurraygeo.com/courses/watershed/other_lectures/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/2018-10-11-vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
+    <loc>https://amurraygeo.com/post/2018-10-11-vulnerability-to-domestic-wells-from-hydraulic-fracturing/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://amurraygeo.com/categories/</loc>
   </url>
   
   <url>
-    <loc>/courses/</loc>
+    <loc>https://amurraygeo.com/courses/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/final/final/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/final/final/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week3/d14/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week3/d14/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week4/d19/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week4/d19/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week4/d15/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week4/d15/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week5/d20/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week5/d20/</loc>
   </url>
   
   <url>
-    <loc>/projects/</loc>
+    <loc>https://amurraygeo.com/projects/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week4/d16/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week4/d16/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week4/d17/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week4/d17/</loc>
   </url>
   
   <url>
-    <loc>/courses/geog_info/week5/d22/</loc>
+    <loc>https://amurraygeo.com/courses/geog_info/week5/d22/</loc>
   </url>
   
 </urlset>

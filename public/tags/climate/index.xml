@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Climate on Andrew Murray</title>
-    <link>/tags/climate/</link>
+    <link>https://amurraygeo.com/tags/climate/</link>
     <description>Recent content in Climate on Andrew Murray</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://amurraygeo.com/tags/climate/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Carbon Dioxide Evasion in Tropical Alpine Streams</title>
-      <link>/project/carbon/</link>
+      <link>https://amurraygeo.com/project/carbon/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/project/carbon/</guid>
+      <guid>https://amurraygeo.com/project/carbon/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://amurraygeo.com/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://amurraygeo.com/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -60,7 +60,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&#34;/files/AGU_Science_2019.pdf&#34;&gt;Download the poster from AGU ’19 HERE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://amurraygeo.com/files/AGU_Science_2019.pdf&#34;&gt;Download the poster from AGU ’19 HERE&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;import-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Import data&lt;/h2&gt;
 &lt;p&gt;Long thought to be a carbon sink, the Páramo region of the Andes may be a significant carbon source (Carrillo et al. 2019 AFM). We evaluated the spatiotemporal dynamics of CO2 concentration and flux in a high-elevation stream. We measured 15-min dissolved CO2, O2, and discharge, across a wetland-stream transition, characteristic of tropical, alpine environments. Here, we calculate evasion using Vaisala dissolved &lt;span class=&#34;math inline&#34;&gt;\(CO_{2}\)&lt;/span&gt; Sensors and compare estimates to directly measured flux from an eoSense eosFD flux chamber. We also evaluate how evasion relates to other variables such as precipitation and temperature. Our field campaign included in-stream &lt;span class=&#34;math inline&#34;&gt;\(CO_{2}\)&lt;/span&gt; injections to determine the impact of &lt;span class=&#34;math inline&#34;&gt;\(CO_{2}\)&lt;/span&gt; concentration on evasion. Here we ignore these injections and filter them out while we import the rest of our measurements.&lt;/p&gt;
@@ -199,11 +199,11 @@ DCO2Daily &amp;lt;- filt34%&amp;gt;%
     
     <item>
       <title>Climate Game Changers</title>
-      <link>/post/endeavors/</link>
+      <link>https://amurraygeo.com/post/endeavors/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/endeavors/</guid>
-      <description>&lt;p&gt;Check out the story on our field work in Ecuador this past summer as it appears in the &lt;a href=&#34;https://endeavors.unc.edu/climate-game-changers/&#34;&gt;UNC endeavors magazine&lt;/a&gt;.&lt;/p&gt;
+      <guid>https://amurraygeo.com/post/endeavors/</guid>
+      <description>&lt;p&gt;Check out the story on our field work in Ecuador this past summer as it appears in the &lt;a href=&#34;https://endeavors.unc.edu/climate-game-changers/&#34; target=&#34;_blank&#34;&gt;UNC endeavors magazine&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
